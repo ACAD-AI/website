@@ -2,7 +2,7 @@
 
 import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "@/features/language-switcher/language-switcher";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/shared/components/ui/button";
@@ -71,83 +71,215 @@ function DesktopNav() {
 }
 
 function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const [activeSection, setActiveSection] = useState<string>("");
+
+  useEffect(() => {
+    if (!open) {
+      setActiveSection("");
+    }
+  }, [open]);
+
   return (
-    <div
-      className={cn(
-        "overflow-hidden border-t border-white/10 bg-[#171f40] transition-all duration-300 xl:hidden",
-        open ? "max-h-[calc(100vh-5rem)] opacity-100" : "max-h-0 opacity-0",
-      )}
-    >
-      <div className="space-y-6 overflow-y-auto px-4 py-5 sm:px-6">
-        <div className="space-y-4">
-          {mainNav.map((item) => (
-            <div className="space-y-3" key={item.label}>
-              {item.href ? (
-                <Link
-                  className="block text-base font-medium text-white"
-                  href={item.href}
-                  onClick={onClose}
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <p className="text-base font-medium text-white">{item.label}</p>
-              )}
+    <>
+      <button
+        aria-hidden={!open}
+        className={cn(
+          "fixed inset-0 z-40 h-dvh bg-[#040b26]/82 backdrop-blur-md transition-opacity duration-300 xl:hidden",
+          open
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0",
+        )}
+        onClick={onClose}
+        tabIndex={open ? 0 : -1}
+        type="button"
+      />
 
-              {item.items?.length ? (
-                <div className="space-y-2 border-l border-white/10 pl-4">
-                  {item.items.map((subItem) => (
-                    <Link
-                      className="block py-1"
-                      href={subItem.href}
-                      key={subItem.href}
-                      onClick={onClose}
-                    >
-                      <div className="text-sm font-medium text-white/90">
-                        {subItem.label}
-                      </div>
-                      {subItem.description ? (
-                        <p className="mt-1 text-sm leading-5 text-white/55">
-                          {subItem.description}
-                        </p>
-                      ) : null}
-                    </Link>
-                  ))}
-                </div>
-              ) : null}
-            </div>
-          ))}
-        </div>
-
-        <div className="flex flex-col gap-3">
-          <LanguageSwitcher
-            buttonClassName="w-full justify-between"
-            className="w-full"
-            menuClassName="left-0 right-0 min-w-0"
-          />
+      <aside
+        aria-hidden={!open}
+        className={cn(
+          "fixed inset-0 right-0 z-50 flex h-dvh min-h-dvh w-full flex-col bg-[linear-gradient(180deg,#151c37_0%,#141b34_100%)] shadow-[-24px_0_80px_rgba(0,0,0,0.5)] transition-transform duration-300 sm:left-auto sm:max-w-[25rem] sm:border-l sm:border-[#2a315c] xl:hidden",
+          open ? "translate-x-0" : "translate-x-full",
+        )}
+      >
+        <div className="relative z-10 flex items-center justify-between border-b border-white/8 px-5 py-5 sm:px-6">
           <Link
-            className="inline-flex h-11 w-full items-center justify-center rounded-md border border-white/10 px-4 text-sm font-semibold text-white"
-            href="/signup"
+            className="flex shrink-0 items-center gap-2.5 text-base font-semibold tracking-tight text-[#4166ff]"
+            href="/"
             onClick={onClose}
           >
-            Sign Up
+            <Image
+              src="/images/svg/acad-ai-logo.svg"
+              alt="Acadai Logo"
+              width={100}
+              height={100}
+            />
           </Link>
+
           <Button
-            asChild
-            className="h-12 rounded-xl bg-[#2852ff] px-5 text-sm font-semibold text-white hover:bg-[#3c63ff]"
+            aria-label="Close navigation menu"
+            className="size-10 rounded-[20px] border border-white/8 bg-white/4 text-white hover:bg-white/8"
+            onClick={onClose}
+            size="icon"
+            variant="ghost"
           >
-            <Link href="/request-demo" onClick={onClose}>
-              Request a Demo
-            </Link>
+            <X className="size-5" />
           </Button>
         </div>
-      </div>
-    </div>
+
+        <div
+          className={cn(
+            "relative z-10 min-h-0 flex-1 overflow-y-auto px-5 py-6 transition-opacity duration-200 sm:px-6",
+            open ? "opacity-100" : "opacity-0",
+          )}
+        >
+          <div className="space-y-8">
+            <div className="space-y-2">
+              <p className="text-[11px] font-semibold tracking-[0.32em] text-[#86c7ed] uppercase">
+                Explore
+              </p>
+              <p className="max-w-sm text-sm leading-6 text-white/56">
+                Navigate products, resources, and company pages.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              {mainNav.map((item) => (
+                <div className="border-b border-white/8 pb-4" key={item.label}>
+                  {item.items?.length ? (
+                    <>
+                      <button
+                        aria-expanded={activeSection === item.label}
+                        className="flex w-full items-center justify-between py-1 text-left"
+                        onClick={() =>
+                          setActiveSection((current) =>
+                            current === item.label ? "" : item.label,
+                          )
+                        }
+                        type="button"
+                      >
+                        <span className="text-xl font-semibold text-white">
+                          {item.label}
+                        </span>
+                        <ChevronDown
+                          className={cn(
+                            "size-5 text-white/60 transition-transform duration-200",
+                            activeSection === item.label && "rotate-180",
+                          )}
+                        />
+                      </button>
+
+                      <div
+                        className={cn(
+                          "grid transition-all duration-300 ease-out",
+                          activeSection === item.label
+                            ? "grid-rows-[1fr]"
+                            : "grid-rows-[0fr]",
+                        )}
+                      >
+                        <div className="overflow-hidden">
+                          <div className="space-y-1 pt-4">
+                            {item.items.map((subItem) => (
+                              <Link
+                                className={cn(
+                                  "block rounded-2xl px-4 py-3 transition-colors hover:bg-white/5",
+                                )}
+                                href={subItem.href}
+                                key={subItem.href}
+                                onClick={onClose}
+                              >
+                                <div className="space-y-1">
+                                  <div className="text-base font-medium text-white/92">
+                                    {subItem.label}
+                                  </div>
+                                  {subItem.description ? (
+                                    <p className="text-sm leading-6 text-white/48">
+                                      {subItem.description}
+                                    </p>
+                                  ) : null}
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <Link
+                      className="flex items-center justify-between py-1 text-xl font-semibold text-white"
+                      href={item.href ?? "/"}
+                      onClick={onClose}
+                    >
+                      <span>{item.label}</span>
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="space-y-4 rounded-[24px] border border-white/8 bg-white/[0.03] p-4">
+              <div className="space-y-1">
+                <p className="text-sm font-medium text-white">Preferences</p>
+                <p className="text-sm leading-6 text-white/48">
+                  Choose your language and access your account.
+                </p>
+              </div>
+
+              <LanguageSwitcher
+                buttonClassName="w-full justify-between"
+                className="w-full"
+                menuClassName="left-0 right-0 min-w-0"
+              />
+
+              <div className="flex flex-col gap-3">
+                <a
+                  className="inline-flex h-12 items-center justify-center rounded-xl border border-white/10 px-4 text-sm font-semibold text-white transition-colors hover:bg-white/6"
+                  href="https://www.acadai.co/onboarding"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  onClick={onClose}
+                >
+                  Sign Up
+                </a>
+                <Button
+                  asChild
+                  className="h-12 rounded-xl bg-[#2852ff] px-5 text-sm font-semibold text-white hover:bg-[#3c63ff]"
+                >
+                  <Link href="/request-demo" onClick={onClose}>
+                    Request a Demo
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </>
   );
 }
 
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    if (!mobileOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+      }
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleEscape);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [mobileOpen]);
 
   return (
     <header className="sticky top-0 z-40 bg-[#141B34] text-white backdrop-blur-md">
@@ -196,19 +328,13 @@ function Navbar() {
           </div>
 
           <Button
-            aria-label={
-              mobileOpen ? "Close navigation menu" : "Open navigation menu"
-            }
+            aria-label="Open navigation menu"
             className="ml-auto size-11 rounded-xl border border-white/10 bg-white/5 text-white hover:bg-white/10 sm:ml-0 xl:hidden"
-            onClick={() => setMobileOpen((open) => !open)}
+            onClick={() => setMobileOpen(true)}
             size="icon"
             variant="ghost"
           >
-            {mobileOpen ? (
-              <X className="size-5" />
-            ) : (
-              <Menu className="size-5" />
-            )}
+            <Menu className="size-5" />
           </Button>
         </div>
       </div>

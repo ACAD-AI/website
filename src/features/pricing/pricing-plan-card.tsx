@@ -1,6 +1,5 @@
 import { Link } from "@/i18n/navigation";
 import { PrimaryButton } from "@/shared";
-import { Button } from "@/shared/components/ui/button";
 import type { PricingPlan } from "./pricing-types";
 
 interface PricingPlanCardProps {
