@@ -97,7 +97,7 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
       <aside
         aria-hidden={!open}
         className={cn(
-          "fixed inset-0 right-0 z-50 flex h-dvh min-h-dvh w-full flex-col bg-[linear-gradient(180deg,#151c37_0%,#141b34_100%)] shadow-[-24px_0_80px_rgba(0,0,0,0.5)] transition-transform duration-300 sm:left-auto sm:max-w-[25rem] sm:border-l sm:border-[#2a315c] xl:hidden",
+          "fixed inset-0 right-0 z-50 flex h-dvh min-h-dvh w-full flex-col bg-[linear-gradient(180deg,#151c37_0%,#141b34_100%)] shadow-[-24px_0_80px_rgba(0,0,0,0.5)] transition-transform duration-300 sm:left-auto sm:max-w-100 sm:border-l sm:border-[#2a315c] xl:hidden",
           open ? "translate-x-0" : "translate-x-full",
         )}
       >
@@ -216,7 +216,7 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
               ))}
             </div>
 
-            <div className="space-y-4 rounded-[24px] border border-white/8 bg-white/[0.03] p-4">
+            <div className="space-y-4 rounded-[24px] border border-white/8 bg-white/3 p-4">
               <div className="space-y-1">
                 <p className="text-sm font-medium text-white">Preferences</p>
                 <p className="text-sm leading-6 text-white/48">
