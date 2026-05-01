@@ -27,7 +27,6 @@ const Home = () => {
           "Built for institutions, educators, and students — each with their own intuitive workflow."
         }
       />
-      <Footer />
     </div>
   );
 };
