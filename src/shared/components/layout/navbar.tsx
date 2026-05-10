@@ -242,7 +242,7 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
                 </a>
                 <Button
                   asChild
-                  className="h-12 rounded-xl bg-[#2852ff] px-5 text-sm font-semibold text-white hover:bg-[#3c63ff]"
+                  className="h-12 rounded-xl bg-[#1836B2] px-5 text-sm text-white font-semibold"
                 >
                   <Link href="/request-demo" onClick={onClose}>
                     Request a Demo
@@ -321,7 +321,7 @@ function Navbar() {
             </Link>
             <Button
               asChild
-              className="h-12 rounded-xl bg-[#2852ff] px-6 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(40,82,255,0.35)] hover:bg-[#3c63ff]"
+              className="h-12 rounded-xl bg-[#1836B2] px-6 text-sm font-semibold text-white"
             >
               <Link href="/request-demo">Request a Demo</Link>
             </Button>

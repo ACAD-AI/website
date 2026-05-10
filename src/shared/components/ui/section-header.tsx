@@ -97,7 +97,7 @@ export function SectionHeader({
 
       <h2
         className={cn(
-          "max-w-5xl text-5xl md:text-6xl leading-[0.98] font-medium tracking-tight text-white ",
+          "max-w-5xl text-5xl leading-[0.98] font-medium tracking-tight text-white ",
           alignment.content,
           titleClassName,
         )}

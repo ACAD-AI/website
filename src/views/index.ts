@@ -6,3 +6,4 @@ export * from "./faq";
 export * from "./home";
 export * from "./pricing";
 export * from "./reviews";
+export * from "./solutions";

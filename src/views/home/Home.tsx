@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import HeroSection from "@/features/hero/hero-section";
-import { Footer, SectionHeader, TrustBar } from "@/shared";
+import { SectionHeader, TrustBar } from "@/shared";
 
 const Home = () => {
   const t = useTranslations("HomeHero");
