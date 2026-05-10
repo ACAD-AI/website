@@ -10,7 +10,7 @@
     "format": "biome format --write .",
     "typecheck": "tsc --noEmit",
     "prepare": "husky",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged next build"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,css}": [
