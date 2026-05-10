@@ -49,11 +49,11 @@ const HeroSection = ({
         {tagline}
       </div>
 
-      <h1 className="max-w-3xl text-5xl font-bold leading-tight tracking-tight text-white md:text-6xl">
+      <h1 className="max-w-209.25 text-5xl font-medium leading-tight tracking-tight text-white md:text-[64px]">
         {renderHeading()}
       </h1>
 
-      <p className="max-w-xl text-base text-white/60">{subHeading}</p>
+      <p className="max-w-155.25 text-base text-white/60">{subHeading}</p>
 
       {(buttonOne || buttonTwo) && (
         <div className="flex flex-wrap items-center justify-center gap-3">
