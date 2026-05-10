@@ -6,6 +6,7 @@ import { SectionHeader, TrustBar } from "@/shared";
 
 const Home = () => {
   const t = useTranslations("HomeHero");
+  const tHome = useTranslations("Home");
 
   return (
     <div className="flex flex-col space-y-24">
@@ -21,11 +22,9 @@ const Home = () => {
       />
       <TrustBar />
       <SectionHeader
-        eyebrow={"One Platform"}
-        title={"Every Assessment Need, Met."}
-        description={
-          "Built for institutions, educators, and students — each with their own intuitive workflow."
-        }
+        eyebrow={tHome("eyebrow")}
+        title={tHome("title")}
+        description={tHome("description")}
       />
     </div>
   );

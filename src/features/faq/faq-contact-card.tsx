@@ -1,6 +1,10 @@
+import { getTranslations } from "next-intl/server";
+
 import { PrimaryButton } from "@/shared";
 
-export function FaqContactCard() {
+export async function FaqContactCard() {
+  const t = await getTranslations("FAQ.contact");
+
   return (
     <div className="rounded-[28px] border border-[#4D4D7C] bg-[#323261] px-6 py-12 text-center shadow-[0_24px_80px_rgba(8,12,32,0.3)] sm:px-10 sm:py-14">
       <div className="mb-6 flex items-center justify-center">
@@ -18,15 +22,14 @@ export function FaqContactCard() {
       </div>
 
       <h3 className="text-3xl font-medium tracking-tight text-white">
-        Still have questions?
+        {t("title")}
       </h3>
       <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-[#BEC3D5]">
-        Can&apos;t find the answer you&apos;re looking for? Please chat to our
-        friendly team.
+        {t("description")}
       </p>
 
       <div className="mt-8 flex justify-center">
-        <PrimaryButton>Get in touch</PrimaryButton>
+        <PrimaryButton>{t("button")}</PrimaryButton>
       </div>
     </div>
   );

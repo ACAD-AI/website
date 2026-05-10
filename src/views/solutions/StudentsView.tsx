@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import HeroSection from "@/features/hero/hero-section";
 import {
   StudentsCommunitySection,
@@ -6,16 +7,18 @@ import {
   StudentsWallOfLoveSection,
 } from "@/features/students";
 
-const StudentsView = () => {
+const StudentsView = async () => {
+  const t = await getTranslations("StudentsHero");
+
   return (
     <div className="flex flex-col gap-20">
       <HeroSection
-        tagline="Join 3,000+ students improving their GPA"
-        heading="Join the Top 1% of Students."
-        subHeading="This is what straight-A students are gatekeeping from you. Lock in. Level up."
-        buttonOne="Start Here"
+        tagline={t("tagline")}
+        heading={t("heading")}
+        subHeading={t("subHeading")}
+        buttonOne={t("buttonOne")}
         buttonOneArrow
-        buttonTwo="Join Community"
+        buttonTwo={t("buttonTwo")}
       />
       <StudentsFeaturesSection />
       <StudentsCommunitySection />

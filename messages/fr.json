@@ -1,7 +1,8 @@
 {
   "Home": {
+    "eyebrow": "Une seule plateforme",
     "title": "Chaque besoin en évaluation, comblé.",
-    "description": "Conçu pour les établissements, les éducateurs et les étudiants."
+    "description": "Conçu pour les institutions, les éducateurs et les étudiants — chacun avec son propre flux de travail intuitif."
   },
   "HomeHero": {
     "tagline": "Pionniers de l'IA pour l'éducation en Afrique",
@@ -10,5 +11,86 @@
     "subHeading": "Accélérez l'apprentissage des étudiants avec la plateforme d'évaluation IA la plus intuitive au monde",
     "buttonOne": "Commencer maintenant",
     "buttonTwo": "Demander une démo"
+  },
+  "StudentsHero": {
+    "tagline": "Rejoignez 3 000+ étudiants qui améliorent leurs notes",
+    "heading": "Rejoignez le Top 1% des Étudiants.",
+    "subHeading": "Voilà ce que les étudiants brillants vous cachent. Concentrez-vous. Progressez.",
+    "buttonOne": "Commencer ici",
+    "buttonTwo": "Rejoindre la communauté"
+  },
+  "StudentsFeatures": {
+    "leftTitle": "Des examens qui vous apprennent",
+    "leftDescription": "Pour chaque examen que votre enseignant vous donne sur Acad AI, nous vous retournerons votre résultat avec un retour personnalisé qui montre exactement où vous avez réussi — et où vous avez échoué sur chaque question.",
+    "leftButton": "Se concentrer maintenant",
+    "rightTitle": "Testez-vous avant que votre enseignant ne le fasse",
+    "flashcardsTitle": "Fiches",
+    "flashcardsDescription": "Convertissez des PDFs volumineux et des diapositives en fiches qui vous aident à comprendre les sujets plus rapidement, pour une mémoire à long terme.",
+    "quizzesTitle": "Quiz pratiques",
+    "quizzesDescription": "Résolvez des questions d'examen standard avec un minuteur pour entrer dans le vrai examen en toute confiance."
+  },
+  "StudentsCommunity": {
+    "eyebrow": "Communauté",
+    "title": "Vous n'avez pas à le faire seul.",
+    "description": "Nous voulons être avec vous à chaque étape de votre parcours de réussite académique en vous donnant de nouveaux astuces d'étude, des réponses à vos questions et plus de soutien.",
+    "button": "Oui, s'il vous plaît"
+  },
+  "StudentsWallOfLove": {
+    "eyebrow": "Mur d'amour",
+    "title": "Ce que disent vos pairs",
+    "button": "Voir notre mur d'amour"
+  },
+  "StudentsCTA": {
+    "line1": "Vous n'avez plus d'excuses.",
+    "line2": "Obtenez ce A+.",
+    "button": "S'inscrire"
+  },
+  "FAQ": {
+    "eyebrow": "FAQ",
+    "title": "Questions fréquemment posées",
+    "description": "Tout ce que vous devez savoir sur Acad AI.",
+    "items": {
+      "whatIsAcadAi": {
+        "question": "Qu'est-ce qu'ACAD AI ?",
+        "answer": "Acad AI est une plateforme d'évaluation et d'apprentissage qui automatise l'ensemble du processus d'examen. Nous aidons les écoles et les enseignants à générer, distribuer et noter les évaluations en quelques minutes. Récemment, nous avons lancé un Mode Étude (bêta) pour aider les étudiants à maîtriser leurs matières plus rapidement."
+      },
+      "questionTypes": {
+        "question": "Quels types de questions Acad AI prend-il en charge ?",
+        "answer": "Actuellement, Acad AI prend en charge les questions théoriques, à choix multiples (QCM) et à compléter. Que vous ayez besoin de tester une compréhension approfondie par des réponses ouvertes ou une mémorisation rapide par des questions objectives, notre IA est optimisée pour générer et noter ces formats avec précision."
+      },
+      "finalGrades": {
+        "question": "Qui est responsable des notes finales sur Acad AI ?",
+        "answer": "L'enseignant a toujours le dernier mot. Notre IA fournit des suggestions de notation de « première passe », des retours détaillés et une décomposition par rubrique pour gagner du temps, mais chaque note peut être révisée, modifiée et approuvée par un éducateur avant que les résultats soient communiqués aux étudiants."
+      },
+      "sharedInformation": {
+        "question": "Quelles informations sont partagées avec les modèles d'IA ?",
+        "answer": "Nous partageons uniquement des données d'évaluation anonymisées, telles que les questions d'examen et les réponses des étudiants, nécessaires pour que l'IA effectue la notation ou génère des supports d'étude. Nous ne partageons jamais d'informations personnellement identifiables (IPI) telles que les noms ou adresses e-mail avec les modèles de langage."
+      },
+      "trainingData": {
+        "question": "Utilisez-vous les données des étudiants pour entraîner vos modèles ?",
+        "answer": "Non. Nous respectons la propriété intellectuelle et la vie privée. Les soumissions des étudiants et les données scolaires ne sont jamais utilisées pour entraîner ou améliorer des modèles d'IA tiers. Vos données vous appartiennent."
+      },
+      "examMalpractice": {
+        "question": "Comment Acad AI prévient-il la fraude aux examens ?",
+        "answer": "Nous utilisons la surveillance Web active pour maintenir l'équité des examens. Si un étudiant quitte l'onglet d'examen pour ouvrir une autre application ou un site web, il reçoit un avertissement immédiat. S'il tente de quitter l'onglet une deuxième fois, le système soumet automatiquement son examen. Cela empêche les étudiants de chercher des réponses ou d'utiliser des outils externes. Nous désactivons également le copier-coller pour garantir que tout le travail est original et réalisé dans la fenêtre de test sécurisée."
+      },
+      "gradingReliability": {
+        "question": "Quelle est la fiabilité de la notation Acad AI ?",
+        "answer": "Acad AI est très précis et conçu pour suivre des rubriques ou des schémas de notation spécifiques. Bien que nos notes suggérées par l'IA soient conçues pour être cohérentes et objectives, nous les considérons comme un projet de haute qualité que les enseignants peuvent affiner, garantissant que l'élément humain de la notation n'est jamais perdu."
+      },
+      "freePlan": {
+        "question": "Puis-je utiliser Acad AI gratuitement ?",
+        "answer": "Oui ! Les enseignants et les étudiants reçoivent des crédits gratuits lors de l'inscription. Nous organisons également des promotions régulières et des programmes de parrainage pour vous aider à continuer à utiliser la plateforme gratuitement. Pour les écoles et les institutions, nous proposons un programme pilote dédié pour tester gratuitement notre suite complète de fonctionnalités."
+      },
+      "lmsSupport": {
+        "question": "Puis-je utiliser Acad AI avec le LMS de mon école ?",
+        "answer": "Oui. Acad AI vous permet de télécharger les notes et les retours des étudiants dans un fichier CSV propre et organisé. Cela vous permet de conserver un enregistrement portable de vos résultats et de mettre facilement à jour vos carnets de notes externes dans des outils comme Google Classroom ou Canvas."
+      }
+    },
+    "contact": {
+      "title": "Vous avez encore des questions ?",
+      "description": "Vous ne trouvez pas la réponse que vous cherchez ? Discutez avec notre équipe sympathique.",
+      "button": "Nous contacter"
+    }
   }
 }

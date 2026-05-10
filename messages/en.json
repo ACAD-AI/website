@@ -1,7 +1,8 @@
 {
   "Home": {
+    "eyebrow": "One Platform",
     "title": "Every Assessment Need, Met.",
-    "description": "Built for institutions, educators, and students."
+    "description": "Built for institutions, educators, and students — each with their own intuitive workflow."
   },
   "HomeHero": {
     "tagline": "Pioneering AI for Education in Africa",
@@ -10,5 +11,86 @@
     "subHeading": "Accelerate student learning with the world's most intuitive AI assessment platform",
     "buttonOne": "Get started now",
     "buttonTwo": "Request Demo"
+  },
+  "StudentsHero": {
+    "tagline": "Join 3,000+ students improving their GPA",
+    "heading": "Join the Top 1% of Students.",
+    "subHeading": "This is what straight-A students are gatekeeping from you. Lock in. Level up.",
+    "buttonOne": "Start Here",
+    "buttonTwo": "Join Community"
+  },
+  "StudentsFeatures": {
+    "leftTitle": "Exams that teach you",
+    "leftDescription": "For every exam your teacher gives you on Acad AI, we'll return your result with personal feedback that shows exactly where you cooked — and where you missed it on each question.",
+    "leftButton": "Lock In Now",
+    "rightTitle": "Test yourself before your teacher does",
+    "flashcardsTitle": "Flashcards",
+    "flashcardsDescription": "Convert bulky PDFs and slides into flashcards that help you understand subjects faster, for long-term memory.",
+    "quizzesTitle": "Practice Quizzes",
+    "quizzesDescription": "Solve standard exam questions with a timer so you walk into the real exam with confidence."
+  },
+  "StudentsCommunity": {
+    "eyebrow": "Community",
+    "title": "You don't have to do it alone.",
+    "description": "We want to be with you through every step of your academic success journey by giving you new study hacks, answers to your questions, and more support in other ways.",
+    "button": "Yes please"
+  },
+  "StudentsWallOfLove": {
+    "eyebrow": "Wall of Love",
+    "title": "What your peers are saying",
+    "button": "See our Wall of Love"
+  },
+  "StudentsCTA": {
+    "line1": "You're out of excuses.",
+    "line2": "Get that A+.",
+    "button": "Sign me up"
+  },
+  "FAQ": {
+    "eyebrow": "FAQs",
+    "title": "Frequently Asked Questions",
+    "description": "Everything you need to know about Acad AI.",
+    "items": {
+      "whatIsAcadAi": {
+        "question": "What is ACAD AI?",
+        "answer": "Acad AI is a assessment and learning platform that automates the entire exam process. We help schools and teachers generate, deliver, and grade assessments in minutes. Recently, we launched a Study Mode (beta) for students to help them master their subjects faster."
+      },
+      "questionTypes": {
+        "question": "What question types does Acad AI support?",
+        "answer": "Currently, Acad AI supports Theory, Multiple Choice (MCQ), and Fill-in-the-Blanks. Whether you need to test deep understanding through open-ended answers or quick recall through objective questions, our AI is optimized to generate and grade these formats accurately."
+      },
+      "finalGrades": {
+        "question": "Who is responsible for final grades on Acad AI?",
+        "answer": "The teacher always has the final say. Our AI provides 'first-pass' grading suggestions, detailed feedback, and rubric breakdown to save time, but every score can be reviewed, edited, and approved by an educator before results are released to students."
+      },
+      "sharedInformation": {
+        "question": "What information is shared with the AI models?",
+        "answer": "We only share anonymized assessment data, such as exam questions and student answers, necessary for the AI to perform grading or generate study materials. We never share personally identifiable information (PII) like names or email addresses with the language models."
+      },
+      "trainingData": {
+        "question": "Do you train models using student data?",
+        "answer": "No. We respect intellectual property and privacy. Student submissions and school data are never used to train or improve third-party AI models. Your data remains your own."
+      },
+      "examMalpractice": {
+        "question": "How does Acad AI prevent exam malpractice?",
+        "answer": "We use active Web Proctoring to keep exams fair. If a student leaves the exam tab to open another app or website, they receive an immediate warning. If they attempt to leave the tab a second time, the system automatically submits their exam. This prevents students from searching for answers or using external tools. We also disable copy-pasting to ensure all work is original and completed within the secure testing window."
+      },
+      "gradingReliability": {
+        "question": "How reliable is Acad AI grading?",
+        "answer": "Acad AI is highly accurate and built to follow specific rubrics or marking schemes. While our AI suggested grades are designed to be consistent and objective, we view them as a high-quality draft for teachers to refine, ensuring the human element of grading is never lost."
+      },
+      "freePlan": {
+        "question": "Can I use Acad AI for free?",
+        "answer": "Yes! Teachers and students receive free credits upon sign-up. We also run regular promotions and referral programs to help you keep using the platform for free. For schools and institutions, we offer a dedicated pilot program to test our full suite of features for free."
+      },
+      "lmsSupport": {
+        "question": "Can I use Acad AI with my school's LMS?",
+        "answer": "Yes. Acad AI lets you download student scores and feedback into a clean, organized CSV file. This allows you to keep a portable record of your results and easily update your external gradebooks in tools like Google Classroom or Canvas."
+      }
+    },
+    "contact": {
+      "title": "Still have questions?",
+      "description": "Can't find the answer you're looking for? Please chat to our friendly team.",
+      "button": "Get in touch"
+    }
   }
 }
