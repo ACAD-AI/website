@@ -9,54 +9,54 @@ export const faqItems: FaqItem[] = [
     id: "what-is-acad-ai",
     question: "What is ACAD AI?",
     answer:
-      "ACAD AI is an assessment platform for institutions, educators, and students. It helps teams create, deliver, review, and improve assessments with AI-assisted workflows.",
+      "Acad AI is a assessment and learning platform that automates the entire exam process. We help schools and teachers generate, deliver, and grade assessments in minutes. Recently, we launched a Study Mode (beta) for students to help them master their subjects faster.",
   },
   {
     id: "question-types",
     question: "What question types does Acad AI support?",
     answer:
-      "The platform is designed to support objective and written assessments, including quizzes, exams, and structured academic evaluations. Exact question types can be configured based on your assessment workflow.",
+      "Currently, Acad AI supports Theory, Multiple Choice (MCQ), and Fill-in-the-Blanks. Whether you need to test deep understanding through open-ended answers or quick recall through objective questions, our AI is optimized to generate and grade these formats accurately.",
   },
   {
     id: "final-grades",
     question: "Who is responsible for final grades on Acad AI?",
     answer:
-      "Educators and institutions remain in control of final grading decisions. ACAD AI supports the review process, but academic oversight stays with the teaching team.",
+      "The teacher always has the final say. Our AI provides 'first-pass' grading suggestions, detailed feedback, and rubric breakdown to save time, but every score can be reviewed, edited, and approved by an educator before results are released to students.",
   },
   {
     id: "shared-information",
     question: "What information is shared with the AI models?",
     answer:
-      "Only the information required to process the assessment workflow is used. The exact data shared depends on the feature being used and your institution's configuration.",
+      "We only share anonymized assessment data, such as exam questions and student answers, necessary for the AI to perform grading or generate study materials. We never share personally identifiable information (PII) like names or email addresses with the language models.",
   },
   {
     id: "training-data",
     question: "Do you train models using student data?",
     answer:
-      "Dummy answer for now: ACAD AI is designed with privacy-first principles, and institutions can review how data is handled before rollout.",
+      "No. We respect intellectual property and privacy. Student submissions and school data are never used to train or improve third-party AI models. Your data remains your own.",
   },
   {
     id: "exam-malpractice",
     question: "How does Acad AI prevent exam malpractice?",
     answer:
-      "Dummy answer for now: platform controls, audit trails, educator review flows, and institutional policies all work together to reduce abuse and improve accountability.",
+      "We use active Web Proctoring to keep exams fair. If a student leaves the exam tab to open another app or website, they receive an immediate warning. If they attempt to leave the tab a second time, the system automatically submits their exam. This prevents students from searching for answers or using external tools. We also disable copy-pasting to ensure all work is original and completed within the secure testing window.",
   },
   {
     id: "grading-reliability",
     question: "How reliable is Acad AI grading?",
     answer:
-      "Dummy answer for now: grading assistance is intended to improve consistency and speed while keeping human oversight in place for quality assurance.",
+      "Acad AI is highly accurate and built to follow specific rubrics or marking schemes. While our AI suggested grades are designed to be consistent and objective, we view them as a high-quality draft for teachers to refine, ensuring the human element of grading is never lost.",
   },
   {
     id: "free-plan",
     question: "Can I use Acad AI for free?",
     answer:
-      "Dummy answer for now: availability of a free tier depends on the product plan, institution access, and the use case you're signing up for.",
+      "Yes! Teachers and students receive free credits upon sign-up. We also run regular promotions and referral programs to help you keep using the platform for free. For schools and institutions, we offer a dedicated pilot program to test our full suite of features for free.",
   },
   {
     id: "lms-support",
     question: "Can I use Acad AI with my school's LMS?",
     answer:
-      "Dummy answer for now: LMS compatibility is part of the intended workflow, and integrations can be discussed based on your institution's stack.",
+      "Yes. Acad AI lets you download student scores and feedback into a clean, organized CSV file. This allows you to keep a portable record of your results and easily update your external gradebooks in tools like Google Classroom or Canvas.",
   },
 ];
