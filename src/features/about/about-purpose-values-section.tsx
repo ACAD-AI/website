@@ -9,7 +9,13 @@ import {
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-import { FeatureCard, SectionHeader } from "@/shared";
+import {
+  FadeIn,
+  FeatureCard,
+  SectionHeader,
+  Stagger,
+  StaggerItem,
+} from "@/shared";
 
 import {
   InteractivePurposeGallery,
@@ -60,15 +66,17 @@ export async function AboutPurposeValuesSection() {
         <InteractivePurposeGallery panels={panels} />
 
         <div className="mx-auto mt-20 max-w-[920px] lg:mt-28">
-          <SectionHeader
-            eyebrow={tValues("eyebrow")}
-            title={tValues("title")}
-            titleClassName="max-w-2xl text-4xl leading-tight sm:text-5xl"
-          />
+          <FadeIn>
+            <SectionHeader
+              eyebrow={tValues("eyebrow")}
+              title={tValues("title")}
+              titleClassName="max-w-2xl text-4xl leading-tight sm:text-5xl"
+            />
+          </FadeIn>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+          <Stagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
             {values.map((value, index) => (
-              <div
+              <StaggerItem
                 className={
                   index === values.length - 1
                     ? "sm:col-span-2 lg:col-span-2 lg:col-start-3"
@@ -81,9 +89,9 @@ export async function AboutPurposeValuesSection() {
                   icon={value.icon}
                   title={tValues(`${value.key}Title`)}
                 />
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </Stagger>
         </div>
       </div>
     </section>

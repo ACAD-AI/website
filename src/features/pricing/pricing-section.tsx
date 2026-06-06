@@ -4,7 +4,14 @@ import { ArrowUpRight } from "lucide-react";
 import { useMemo, useState } from "react";
 
 import { Link } from "@/i18n/navigation";
-import { ctaButtonVariants, PrimaryButton, SectionHeader } from "@/shared";
+import {
+  ctaButtonVariants,
+  FadeIn,
+  PrimaryButton,
+  SectionHeader,
+  Stagger,
+  StaggerItem,
+} from "@/shared";
 import { cn } from "@/shared/lib/utils";
 
 import {
@@ -32,7 +39,7 @@ export function PricingSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(49,91,255,0.18),transparent_22%),radial-gradient(circle_at_74%_88%,rgba(34,69,177,0.24),transparent_26%)]" />
 
       <div className="relative mx-auto flex w-full max-w-330 flex-col items-center gap-12 sm:gap-14">
-        <div className="w-full max-w-6xl pt-8 sm:pt-12">
+        <FadeIn className="w-full max-w-6xl pt-8 sm:pt-12">
           <SectionHeader
             align="center"
             className="gap-4"
@@ -42,7 +49,7 @@ export function PricingSection() {
             title="Simple. Honest. Built for Africa."
             titleClassName="max-w-6xl text-[3rem] sm:text-6xl lg:text-[5rem]"
           />
-        </div>
+        </FadeIn>
 
         <div className="inline-flex items-center rounded-2xl border border-[#e3e8f5] bg-[#eef1fb] p-1 shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:border-transparent dark:bg-[#45417c] dark:shadow-[0_16px_32px_rgba(8,12,32,0.2)]">
           {pricingAudienceOrder.map((audience) => {
@@ -88,7 +95,7 @@ export function PricingSection() {
           ) : (
             <div className="space-y-16">
               {hasPlans ? (
-                <div
+                <Stagger
                   className={cn(
                     "grid gap-4",
                     activeAudience === "students"
@@ -97,9 +104,11 @@ export function PricingSection() {
                   )}
                 >
                   {content.plans?.map((plan) => (
-                    <PricingPlanCard key={plan.id} plan={plan} />
+                    <StaggerItem key={plan.id}>
+                      <PricingPlanCard plan={plan} />
+                    </StaggerItem>
                   ))}
-                </div>
+                </Stagger>
               ) : null}
 
               <div className="mx-auto max-w-3xl text-center">

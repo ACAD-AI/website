@@ -3,7 +3,13 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
-import { ctaButtonVariants, SectionHeader } from "@/shared";
+import {
+  ctaButtonVariants,
+  FadeIn,
+  SectionHeader,
+  Stagger,
+  StaggerItem,
+} from "@/shared";
 
 import { StatCard } from "./stat-card";
 
@@ -17,26 +23,29 @@ export function NumbersStorySection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_73%_82%,rgba(25,79,204,0.22),transparent_30%)]" />
 
       <div className="relative mx-auto w-full max-w-[1180px]">
-        <SectionHeader
-          align="left"
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          description={t("description")}
-          titleClassName="text-4xl leading-tight sm:text-5xl"
-          descriptionClassName="leading-7 sm:text-base"
-        />
+        <FadeIn>
+          <SectionHeader
+            align="left"
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            description={t("description")}
+            titleClassName="text-4xl leading-tight sm:text-5xl"
+            descriptionClassName="leading-7 sm:text-base"
+          />
+        </FadeIn>
 
         <div className="mt-12 grid items-center gap-10 lg:mt-14 lg:grid-cols-[0.95fr_1.2fr] lg:gap-6">
           <div>
-            <div className="grid gap-5 sm:grid-cols-2">
+            <Stagger className="grid gap-5 sm:grid-cols-2">
               {stats.map((stat) => (
-                <StatCard
-                  key={stat}
-                  label={t(`stats.${stat}.label`)}
-                  value={t(`stats.${stat}.value`)}
-                />
+                <StaggerItem key={stat}>
+                  <StatCard
+                    label={t(`stats.${stat}.label`)}
+                    value={t(`stats.${stat}.value`)}
+                  />
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
 
             <Link
               className={ctaButtonVariants({
@@ -50,7 +59,7 @@ export function NumbersStorySection() {
             </Link>
           </div>
 
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+          <FadeIn className="relative aspect-[4/3] overflow-hidden rounded-xl">
             <Image
               alt={t("imageAlt")}
               className="object-cover"
@@ -58,7 +67,7 @@ export function NumbersStorySection() {
               sizes="(min-width: 1024px) 55vw, 100vw"
               src="/images/numbers-story-educator.png"
             />
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

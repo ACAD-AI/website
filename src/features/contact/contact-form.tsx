@@ -5,6 +5,7 @@ import { CircleCheckBig } from "lucide-react";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
 
+import { Stagger, StaggerItem } from "@/shared";
 import { Button } from "@/shared/components/ui/button";
 import { cn } from "@/shared/lib/utils";
 
@@ -188,22 +189,23 @@ export function ContactForm() {
                 title="How can we help?"
                 totalSteps={totalSteps}
               >
-                <div className="grid gap-4 sm:grid-cols-2">
+                <Stagger className="grid gap-4 sm:grid-cols-2">
                   {inquiryOptions.map((option) => (
-                    <ContactOptionCard
-                      description={option.description}
-                      isActive={formData.inquiryType === option.value}
-                      key={option.value}
-                      label={option.label}
-                      onClick={() =>
-                        setFormData((current) => ({
-                          ...current,
-                          inquiryType: option.value,
-                        }))
-                      }
-                    />
+                    <StaggerItem key={option.value}>
+                      <ContactOptionCard
+                        description={option.description}
+                        isActive={formData.inquiryType === option.value}
+                        label={option.label}
+                        onClick={() =>
+                          setFormData((current) => ({
+                            ...current,
+                            inquiryType: option.value,
+                          }))
+                        }
+                      />
+                    </StaggerItem>
                   ))}
-                </div>
+                </Stagger>
               </ContactStepShell>
             ) : null}
 
@@ -216,22 +218,23 @@ export function ContactForm() {
                 title="What&apos;s your role?"
                 totalSteps={totalSteps}
               >
-                <div className="grid gap-4 sm:grid-cols-3">
+                <Stagger className="grid gap-4 sm:grid-cols-3">
                   {roleOptions.map((option) => (
-                    <ContactOptionCard
-                      icon={option.icon}
-                      isActive={formData.role === option.value}
-                      key={option.value}
-                      label={option.label}
-                      onClick={() =>
-                        setFormData((current) => ({
-                          ...current,
-                          role: option.value,
-                        }))
-                      }
-                    />
+                    <StaggerItem key={option.value}>
+                      <ContactOptionCard
+                        icon={option.icon}
+                        isActive={formData.role === option.value}
+                        label={option.label}
+                        onClick={() =>
+                          setFormData((current) => ({
+                            ...current,
+                            role: option.value,
+                          }))
+                        }
+                      />
+                    </StaggerItem>
                   ))}
-                </div>
+                </Stagger>
               </ContactStepShell>
             ) : null}
 

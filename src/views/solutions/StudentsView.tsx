@@ -6,6 +6,7 @@ import {
   StudentsFeaturesSection,
   StudentsWallOfLoveSection,
 } from "@/features/students";
+import { FadeIn } from "@/shared";
 
 const StudentsView = async () => {
   const t = await getTranslations("StudentsHero");
@@ -20,10 +21,18 @@ const StudentsView = async () => {
         buttonOneArrow
         buttonTwo={t("buttonTwo")}
       />
-      <StudentsFeaturesSection />
-      <StudentsCommunitySection />
-      <StudentsWallOfLoveSection />
-      <StudentsCTASection />
+      <FadeIn>
+        <StudentsFeaturesSection />
+      </FadeIn>
+      <FadeIn>
+        <StudentsCommunitySection />
+      </FadeIn>
+      <FadeIn>
+        <StudentsWallOfLoveSection />
+      </FadeIn>
+      <FadeIn>
+        <StudentsCTASection />
+      </FadeIn>
     </div>
   );
 };
