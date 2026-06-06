@@ -13,7 +13,7 @@ export function ContactSection() {
             align="center"
             className="gap-4"
             description="Tell us a little about you and we'll take it from there."
-            descriptionClassName="max-w-2xl text-white/62"
+            descriptionClassName="max-w-2xl text-[#5b6b8c] dark:text-white/62"
             eyebrow="Contact"
             title="Let's talk."
             titleClassName="max-w-3xl text-[3rem] sm:text-6xl lg:text-[5rem]"

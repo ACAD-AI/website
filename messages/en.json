@@ -2,7 +2,70 @@
   "Home": {
     "eyebrow": "One Platform",
     "title": "Every Assessment Need, Met.",
-    "description": "Built for institutions, educators, and students — each with their own intuitive workflow."
+    "description": "Built for institutions, educators, and students — each with their own intuitive workflow.",
+    "audiences": {
+      "institutions": {
+        "title": "For Institutions",
+        "description": "Digitize all your assessments 100%. From mock tests to term exams, get audit-ready results in minutes, not weeks.",
+        "linkLabel": "Explore"
+      },
+      "educators": {
+        "title": "For Educators",
+        "description": "Save time with our AI that grades your quizzes based on your marking guide and returns feedback to your students.",
+        "linkLabel": "Learn more"
+      },
+      "students": {
+        "title": "For Students",
+        "description": "Study like the top 1% with our AI study mode and get instant feedback on your exams that help you improve.",
+        "linkLabel": "See how"
+      }
+    }
+  },
+  "HomeNumbers": {
+    "eyebrow": "Trusted. Proven. Growing.",
+    "title": "Numbers tell our story.",
+    "description": "We exist to improve the lives of educators and learners.",
+    "button": "See our Wall of Love",
+    "imageAlt": "Educator working on a laptop",
+    "stats": {
+      "assessments": {
+        "value": "200+",
+        "label": "Assessments processed"
+      },
+      "hours": {
+        "value": "5000+",
+        "label": "Hours of marking saved"
+      },
+      "accuracy": {
+        "value": "100%",
+        "label": "Accuracy"
+      },
+      "performance": {
+        "value": "89%",
+        "label": "Improved student performance"
+      }
+    }
+  },
+  "HomeReleases": {
+    "eyebrow": "Latest Releases",
+    "title": "What's New in Acad AI",
+    "description": "We're constantly improving how assessments work for everyone.",
+    "itemLabel": "New",
+    "button": "Sign me up",
+    "items": {
+      "proctoring": {
+        "title": "Webcam Proctoring",
+        "description": "Keep exams fair with smart monitoring built for scale."
+      },
+      "studyMode": {
+        "title": "Study Mode",
+        "description": "Turn notes into quizzes and flashcards in seconds."
+      },
+      "rubrics": {
+        "title": "Custom Rubrics",
+        "description": "Make Acad AI grade exactly like you with your custom rubrics."
+      }
+    }
   },
   "HomeHero": {
     "tagline": "Pioneering AI for Education in Africa",
@@ -18,6 +81,241 @@
     "subHeading": "This is what straight-A students are gatekeeping from you. Lock in. Level up.",
     "buttonOne": "Start Here",
     "buttonTwo": "Join Community"
+  },
+  "InstitutionsHero": {
+    "eyebrow": "For Institutions",
+    "title": "Exam Results Ready in Minutes, Not Days",
+    "description": "End exam malpractice and stress with an assessment system that grades theory, math, and every question type instantly.",
+    "button": "Request a Demo"
+  },
+  "EducatorsHero": {
+    "eyebrow": "For Educators",
+    "title": "Spend less time grading.\nMore time teaching.",
+    "description": "With a secure system that grades theory quizzes and provides rich, personalized feedback for all your students.",
+    "button": "Get started now"
+  },
+  "EducatorsPlayground": {
+    "title": "Test it Out",
+    "description": "Curious how our AI grades assignments? Use your own data or use sample data, and see Acad AI in action — fast, accurate, and built for educators who value their time.",
+    "sampleButton": "Use Sample data",
+    "questionLabel": "Question",
+    "questionPlaceholder": "e.g What are the causes of climate change",
+    "questionDescription": "The exam or assignment question you want to grade",
+    "modelLabel": "Model Answer",
+    "modelPlaceholder": "e.g The main causes of climate change include...",
+    "modelDescription": "An ideal or reference answer to compare against. Optional but helps improve grading.",
+    "studentLabel": "Student's Answer",
+    "studentPlaceholder": "e.g I think climate change happens because of...",
+    "studentDescription": "The student's response to the question. This is what Acad AI will grade.",
+    "gradeButton": "Grade answer",
+    "demoResult": "Demo result: Strong answer. It identifies the core causes and would benefit from one supporting example."
+  },
+  "EducatorsInAction": {
+    "title": "Acad AI in Action.",
+    "subtitle": "It's Easier Than You Think · Watch This",
+    "imageAlt": "Acad AI educator assessment workflow demonstration"
+  },
+  "EducatorsFeatures": {
+    "eyebrow": "All-in-One Platform",
+    "title": "Everything You Need for Better Exams",
+    "description": "Why use separate platforms when a system like ours is available and reliable?",
+    "button": "Start for free",
+    "items": {
+      "questionGenerator": {
+        "title": "Question Generator",
+        "description": "Turn your lesson into ready-made exam questions in seconds. Edit or customize as needed."
+      },
+      "malpracticeControl": {
+        "title": "Malpractice Control",
+        "description": "Students can't copy, paste, or switch tabs while taking your examination."
+      },
+      "instantFeedback": {
+        "title": "Instant Feedback",
+        "description": "Give each student clear, helpful automatic feedback personalized to their answers."
+      },
+      "examSetup": {
+        "title": "Standard Exam Setup",
+        "description": "Timed, autosaving exams in a controlled environment without distractions."
+      },
+      "exportResults": {
+        "title": "Export Results",
+        "description": "Download organized results instantly. You stay in control and can review or adjust before sharing."
+      },
+      "automaticGrading": {
+        "title": "Automatic Grading",
+        "description": "Hundreds of exams across multiple choice, theory, and cloze questions graded in minutes."
+      }
+    }
+  },
+  "EducatorsWorkflow": {
+    "eyebrow": "How It Works",
+    "title": "Five steps. That's it.",
+    "introTitle": "A scroll-through exam workflow that saves you hours at every stage",
+    "description": "Generate questions, secure your exams, and review AI-generated results in one seamless flow.",
+    "button": "Reclaim my time",
+    "steps": {
+      "create": {
+        "title": "Create an Examination",
+        "description": "Set your questions or generate them instantly from your lesson notes using AI.",
+        "imageAlt": "Acad AI examination creation dashboard"
+      },
+      "secure": {
+        "title": "Secure the Exam",
+        "description": "Set timing, access rules, and malpractice controls before students begin.",
+        "imageAlt": "Acad AI examination security settings"
+      },
+      "deliver": {
+        "title": "Share with Students",
+        "description": "Invite your class and deliver the assessment from one organized workspace.",
+        "imageAlt": "Acad AI student examination delivery dashboard"
+      },
+      "grade": {
+        "title": "Grade Instantly",
+        "description": "Let Acad AI grade every response and produce clear, useful feedback in minutes.",
+        "imageAlt": "Acad AI automatic grading dashboard"
+      },
+      "review": {
+        "title": "Review and Publish",
+        "description": "Check results, make any final adjustments, and release feedback when you're ready.",
+        "imageAlt": "Acad AI results review dashboard"
+      }
+    }
+  },
+  "EducatorsTestimonials": {
+    "title": "Don't just take our word for it.",
+    "button": "See our Wall of Love",
+    "items": {
+      "sundays": {
+        "quote": "\"Acad AI gave me back my Sundays. The feedback quality is incredible.\"",
+        "author": "Dr. Adaeze O.",
+        "organization": "Lecturer, UNILAG"
+      },
+      "essays": {
+        "quote": "\"I used to dread marking 200 essays. Now it's a 15-minute review.\"",
+        "author": "Prof. Tunde A.",
+        "organization": "OAU"
+      },
+      "feedback": {
+        "quote": "\"My students get feedback the same day. Their performance has soared.\"",
+        "author": "Mrs. Fatima B.",
+        "organization": "Mrs. Fatima B."
+      },
+      "review": {
+        "quote": "\"I used to dread marking 200 essays. Now it's a 15-minute review.\"",
+        "author": "Dr. Adaeze O.",
+        "organization": "OAU"
+      }
+    }
+  },
+  "EducatorsFaq": {
+    "eyebrow": "FAQs",
+    "title": "Common questions, answered."
+  },
+  "InstitutionsTypes": {
+    "eyebrow": "Built For",
+    "title": "Institutions of every size and shape.",
+    "items": {
+      "secondarySchools": {
+        "title": "Secondary Schools",
+        "description": "Seamlessly transition from paper-based exams to 100% digital assessments. Results are ready in minutes, not days.",
+        "imageAlt": "Digital assessment platform for secondary schools"
+      },
+      "distanceLearning": {
+        "title": "Open Distance and e-Learning",
+        "description": "Deliver secure assessments to learners wherever they are, with instant grading and clear performance insights.",
+        "imageAlt": "Digital assessment platform for distance learning"
+      },
+      "corporateTraining": {
+        "title": "Corporate Training",
+        "description": "Measure employee knowledge and training outcomes with scalable assessments and audit-ready results.",
+        "imageAlt": "Digital assessment platform for corporate training"
+      }
+    }
+  },
+  "InstitutionsGoldStandard": {
+    "title": "The Gold Standard for Institutional Assessments.",
+    "eyebrow": "Admin Dashboard",
+    "description": "From enrollment to results — every signal in one view.",
+    "imageAlt": "Acad AI institutional admin dashboard",
+    "benefits": {
+      "digitized": "100% digitized",
+      "scalable": "Scalable for 100 or 100,000 learners",
+      "auditReady": "Fully audit-ready"
+    }
+  },
+  "QuestionTypes": {
+    "eyebrow": "Acad AI helps you grade",
+    "title": "All Question Types, Instantly",
+    "items": {
+      "multiChoice": "Multi Choice",
+      "fillGap": "Fill in the Gap",
+      "theory": "Theory",
+      "essay": "Essay",
+      "mathematics": "Mathematics",
+      "caseStudy": "Case Study",
+      "diagram": "Diagram"
+    }
+  },
+  "InstitutionsInAction": {
+    "title": "Acad AI in Action.",
+    "subtitle": "It's Easier Than You Think · Watch This",
+    "imageAlt": "Acad AI assessment platform demonstration"
+  },
+  "InstitutionsPlatformFeatures": {
+    "eyebrow": "All-in-One Platform",
+    "title": "Everything You Need for Better Exams",
+    "description": "Why use separate platforms when a system like ours is available and reliable?",
+    "items": {
+      "questionGenerator": {
+        "title": "Question Generator",
+        "description": "Turn your lesson into ready-made exam questions in seconds. Edit or customize as needed."
+      },
+      "malpracticeControl": {
+        "title": "Malpractice Control",
+        "description": "Students can't copy, paste, or switch tabs while taking your examination."
+      },
+      "instantFeedback": {
+        "title": "Instant Feedback",
+        "description": "Give each student clear, helpful automatic feedback personalized to their answers."
+      },
+      "examSetup": {
+        "title": "Standard Exam Setup",
+        "description": "Timed, autosaving exams in a controlled environment without distractions."
+      },
+      "exportResults": {
+        "title": "Export Results",
+        "description": "Download organized results instantly. You stay in control and can review or adjust before sharing."
+      },
+      "automaticGrading": {
+        "title": "Automatic Grading",
+        "description": "Hundreds of exams across multiple choice, theory, and cloze questions graded in minutes."
+      },
+      "reportCards": {
+        "title": "Report Card Generation",
+        "description": "Download organized results instantly. You stay in control and can review or adjust before sharing."
+      }
+    }
+  },
+  "InstitutionsSecurity": {
+    "eyebrow": "Security First",
+    "title": "Your Institutional Data, Protected.",
+    "description": "Security isn't an add-on; it's our foundation.",
+    "items": {
+      "sovereignty": {
+        "title": "Data Sovereignty",
+        "description": "You own 100% of your data. We never use your proprietary marking guides or student records to train external models."
+      },
+      "standards": {
+        "title": "Global Standards",
+        "description": "Fully compliant with data privacy laws, including end-to-end encryption for all learner and institutional information."
+      }
+    }
+  },
+  "InstitutionsCTA": {
+    "title": "Move your institution\ninto the future today.",
+    "description": "Join the institutions saving thousands of hours and delivering better learning outcomes with Acad AI.",
+    "primaryButton": "Get started for Free",
+    "secondaryButton": "Request Demo"
   },
   "StudentsFeatures": {
     "leftTitle": "Exams that teach you",
@@ -92,5 +390,87 @@
       "description": "Can't find the answer you're looking for? Please chat to our friendly team.",
       "button": "Get in touch"
     }
+  },
+  "AboutHero": {
+    "eyebrow": "About Acad AI",
+    "title": "Revolutionizing Education with AI.",
+    "description": "We're building the assessment infrastructure for the next generation of African learners — and the educators who shape them.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "Acad AI's mission is to improve the quality of education for educators and learners by using AI to make assessment, study, and learning support easier, fairer, and more accessible for everyone.",
+    "missionTitle": "Our Mission",
+    "missionDescription": "Our vision is to be a trusted leader in AI-powered education by building tools that help educators teach better and help learners learn with confidence, creating a more inclusive and effective education system for all.",
+    "whyTitle": "Our Why",
+    "whyDescription": "200M+ African learners rely on assessments, yet the systems are slow, manual, and error-prone. Teachers are overwhelmed, and students face unfair, delayed, and unclear results. Even national exams lack the data needed to improve learning — holding back real progress."
+  },
+  "AboutBackedBy": {
+    "eyebrow": "Backed By"
+  },
+  "AboutStory": {
+    "eyebrow": "Our Story",
+    "title": "Making Education Better for Teachers and Students",
+    "paragraph1": "Acad AI started with one question:",
+    "paragraph1Bold": "why does a teacher spend their entire weekend marking, when their students wait days for feedback they barely remember asking for?",
+    "paragraph2": "We began as a grading tool for one university lecturer. Today, we're a full assessment platform — for institutions, educators, and students — built and shipped from Africa, for the world.",
+    "paragraph3": "Our journey is just beginning. The future of learning is personal, instant, and fair. We're here to build it.",
+    "location": "Lagos, NIG"
+  },
+  "AboutWhy": {
+    "title": "Why we exist",
+    "description": "Acad AI was created to ease the burden of exam creation and grading for educators, while ensuring students receive clear, timely feedback to support real learning."
+  },
+  "AboutPurposePanels": {
+    "whyImageAlt": "Educator using Acad AI",
+    "educatorsTitle": "Built for educators",
+    "educatorsDescription": "We give teachers back the time they need to teach, mentor, and support every learner with confidence.",
+    "educatorsImageAlt": "Educator reviewing assessment results",
+    "learnersTitle": "Made for learners",
+    "learnersDescription": "We help students understand their progress with timely feedback that turns every assessment into a chance to improve.",
+    "learnersImageAlt": "Learner receiving helpful assessment feedback"
+  },
+  "AboutValues": {
+    "eyebrow": "Our Values",
+    "title": "What we hold sacred.",
+    "customerFirstTitle": "Customer First",
+    "customerFirstDescription": "Teachers, students, and learning institutions are our north star.",
+    "transparencyTitle": "Transparency",
+    "transparencyDescription": "We're open about what we do and why we do it. You have a right to know how it all works.",
+    "respectTitle": "Respect",
+    "respectDescription": "Respect is about safeguarding what matters. Your data is safe with us; we value your trust, and we treat each user with the care they deserve.",
+    "ownershipTitle": "Ownership",
+    "ownershipDescription": "You can count on us to deliver, support you, and make your experience smooth. We stand behind every feature and every promise.",
+    "excellenceTitle": "Excellence",
+    "excellenceDescription": "We don't settle for \"good enough.\" Our mission demands we push for high quality, because students' futures depend on it.",
+    "speedTitle": "Speed with Care",
+    "speedDescription": "We know that speed is important, and so is your trust in us. You can count on us to handle all grades and every piece of feedback with care.",
+    "fairnessTitle": "Fairness",
+    "fairnessDescription": "Fairness is at the heart of Acad AI, from the way assessments are graded to how feedback is given and progress is tracked."
+  },
+  "AboutTeam": {
+    "eyebrow": "Our Team",
+    "title": "Meet the team behind Acad AI",
+    "description": "We are a team of engineers, designers, and researchers bringing together experience, skills, and a shared goal: to improve education through AI."
+  },
+  "AboutFeatured": {
+    "eyebrow": "Featured In",
+    "title": "They're talking about Us",
+    "description": "Acad AI has been featured for redefining how grading and learning happen. See who's paying attention.",
+    "readBlog": "Read blog"
+  },
+  "AboutNewsletter": {
+    "title": "Keep Up with AI in Education",
+    "description": "Monthly insights from the Acad AI team. No spam, ever.",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Enter full name",
+    "roleLabel": "Role",
+    "rolePlaceholder": "Select Role",
+    "roleStudent": "Student",
+    "roleTeacher": "Teacher",
+    "roleAdmin": "Institution Admin",
+    "roleResearcher": "Researcher",
+    "roleOther": "Other",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "Enter email address",
+    "submitButton": "Send me updates",
+    "successMessage": "You're subscribed. Watch your inbox for the next update."
   }
 }

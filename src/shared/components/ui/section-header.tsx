@@ -54,7 +54,7 @@ function renderTitle(title: string, titleAccent?: string) {
   return (
     <>
       {before}
-      <span className="text-white">{titleAccent}</span>
+      <span className="text-[#1836b2] dark:text-white">{titleAccent}</span>
       {after}
     </>
   );
@@ -86,7 +86,7 @@ export function SectionHeader({
         <div className={cn("flex w-full items-center", alignment.eyebrow)}>
           <span
             className={cn(
-              "inline-flex items-center gap-2 text-xs font-semibold tracking-[0.42em] text-[#86c7ed] uppercase sm:text-sm",
+              "inline-flex items-center gap-2 text-xs font-semibold tracking-[0.42em] text-[#1836b2] uppercase sm:text-sm dark:text-[#86c7ed]",
               eyebrowClassName,
             )}
           >
@@ -97,7 +97,7 @@ export function SectionHeader({
 
       <h2
         className={cn(
-          "max-w-5xl text-5xl leading-[0.98] font-medium tracking-tight text-white ",
+          "max-w-5xl text-5xl leading-[0.98] font-medium tracking-tight text-[#141b34] dark:text-white ",
           alignment.content,
           titleClassName,
         )}
@@ -108,7 +108,7 @@ export function SectionHeader({
       {description ? (
         <p
           className={cn(
-            "max-w-3xl text-base leading-8 text-white/65 sm:text-lg",
+            "max-w-3xl text-base leading-8 text-[#5b6b8c] sm:text-lg dark:text-white/65",
             alignment.content,
             descriptionClassName,
           )}

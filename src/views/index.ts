@@ -1,3 +1,4 @@
+export * from "./about";
 export * from "./blog";
 export * from "./blog-post";
 export * from "./contact";

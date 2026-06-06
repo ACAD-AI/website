@@ -33,7 +33,7 @@ function Field({
   return (
     <input
       className={cn(
-        "h-14 w-full rounded-xl border border-transparent bg-[#1b2141] px-4 text-base text-white outline-none transition-colors placeholder:text-white/28 focus:border-[#486fff]",
+        "h-14 w-full rounded-xl border border-[#cbd5eb] bg-white px-4 text-base text-[#141b34] outline-none transition-colors placeholder:text-[#7c86a0] focus:border-[#486fff] dark:border-transparent dark:bg-[#1b2141] dark:text-white dark:placeholder:text-white/28",
         className,
       )}
       {...props}
@@ -48,7 +48,7 @@ function TextArea({
   return (
     <textarea
       className={cn(
-        "min-h-34 w-full rounded-xl border border-transparent bg-[#1b2141] px-4 py-4 text-base text-white outline-none transition-colors placeholder:text-white/28 focus:border-[#486fff]",
+        "min-h-34 w-full rounded-xl border border-[#cbd5eb] bg-white px-4 py-4 text-base text-[#141b34] outline-none transition-colors placeholder:text-[#7c86a0] focus:border-[#486fff] dark:border-transparent dark:bg-[#1b2141] dark:text-white dark:placeholder:text-white/28",
         className,
       )}
       {...props}
@@ -142,15 +142,15 @@ export function ContactForm() {
           <motion.div
             key="success"
             {...stepAnimation}
-            className="rounded-[24px] border border-[#5a5f93] bg-[#43407c] px-8 py-14 text-center shadow-[0_24px_70px_rgba(9,13,35,0.28)]"
+            className="rounded-[24px] border border-[#e3e8f5] bg-white px-8 py-14 text-center shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:border-[#5a5f93] dark:bg-[#43407c] dark:shadow-[0_24px_70px_rgba(9,13,35,0.28)]"
           >
-            <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#31458d]">
+            <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#e6edff] dark:bg-[#31458d]">
               <CircleCheckBig className="size-8 text-[#2f6dff]" />
             </div>
-            <h2 className="mt-8 text-4xl font-medium text-white">
+            <h2 className="mt-8 text-4xl font-medium text-[#141b34] dark:text-white">
               You&apos;re in.
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-base leading-8 text-white/64">
+            <p className="mx-auto mt-4 max-w-xl text-base leading-8 text-[#5b6b8c] dark:text-white/64">
               We&apos;ll get back to you within 24 hours. Meanwhile, follow us
               on socials.
             </p>

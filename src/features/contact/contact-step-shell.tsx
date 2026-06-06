@@ -28,9 +28,9 @@ export function ContactStepShell({
   const progress = (step / totalSteps) * 100;
 
   return (
-    <div className="rounded-[24px] border border-[#5a5f93] bg-[#323261] p-7 shadow-[0_24px_70px_rgba(9,13,35,0.28)] sm:p-10">
+    <div className="rounded-[24px] border border-[#e3e8f5] bg-white p-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:border-[#5a5f93] dark:bg-[#323261] dark:shadow-[0_24px_70px_rgba(9,13,35,0.28)] sm:p-10">
       <div className="mb-10">
-        <div className="h-1.5 rounded-full bg-[#1b2141]">
+        <div className="h-1.5 rounded-full bg-[#e6eaf3] dark:bg-[#1b2141]">
           <motion.div
             animate={{ width: `${progress}%` }}
             className="h-full rounded-full bg-[#2f6dff]"
@@ -39,10 +39,10 @@ export function ContactStepShell({
         </div>
       </div>
 
-      <p className="text-sm text-white/60">
+      <p className="text-sm text-[#5b6b8c] dark:text-white/60">
         Step {step} of {totalSteps}
       </p>
-      <h2 className="mt-3 text-3xl leading-tight font-medium text-white sm:text-[3rem]">
+      <h2 className="mt-3 text-3xl leading-tight font-medium text-[#141b34] dark:text-white sm:text-[3rem]">
         {title}
       </h2>
 
@@ -51,7 +51,7 @@ export function ContactStepShell({
       <div className="mt-10 flex items-center justify-between gap-4">
         <button
           className={cn(
-            "inline-flex items-center gap-3 text-base text-white/65 transition-colors hover:text-white",
+            "inline-flex items-center gap-3 text-base text-[#5b6b8c] transition-colors hover:text-[#141b34] dark:text-white/65 dark:hover:text-white",
             step === 1 && "pointer-events-none opacity-40",
           )}
           onClick={onBack}

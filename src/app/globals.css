@@ -84,8 +84,8 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
+  --background: #141b34;
+  --foreground: #ffffff;
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -132,6 +132,91 @@
 }
 
 @layer utilities {
+  /*
+   * The blue palette is the canonical Acad AI theme. Light mode only remaps
+   * neutral surfaces and text; branded blue actions and media stay blue.
+   */
+  .light .site-shell {
+    background: #f5f7ff;
+    color: #141b34;
+  }
+
+  .light .site-shell main :is(h1, h2, h3, p, label, span)[class*="text-white"] {
+    color: #25304f;
+  }
+
+  .light
+    .site-shell
+    main
+    :is(
+      [class*="bg-[#373764]"],
+      [class*="bg-[#363664]"],
+      [class*="bg-[#393967]"],
+      [class*="bg-[#43407c]"]
+    ) {
+    border-color: #d6def1;
+    background-color: #ffffff;
+    box-shadow: 0 16px 38px rgb(46 73 139 / 10%);
+  }
+
+  .light
+    .site-shell
+    main
+    :is([class*="bg-[#171f40]"], [class*="bg-[#141B34]"]) {
+    background-color: #f5f7ff;
+  }
+
+  .light .site-shell main :is(input, textarea, select)[class*="bg-[#111a37]"] {
+    border-color: #cbd5eb;
+    background-color: #ffffff;
+    color: #141b34;
+  }
+
+  .light
+    .site-shell
+    main
+    :is(input, textarea)[class*="placeholder:text-white"]::placeholder {
+    color: #7c86a0;
+  }
+
+  .light .site-shell main [class*="border-[#2f3764]"] {
+    border-color: #d7deee;
+  }
+
+  .light
+    .site-shell
+    main
+    :is(
+      [class*="bg-[#1836b2]"],
+      [class*="bg-[#1836B2]"],
+      [class*="bg-[#1769ed]"],
+      [class*="bg-[#2442c2]"],
+      [class*="bg-[#2852ff]"],
+      [class*="bg-[linear-gradient"]
+    ),
+  .light
+    .site-shell
+    main
+    :is(
+      [class*="bg-[#1836b2]"],
+      [class*="bg-[#1836B2]"],
+      [class*="bg-[#1769ed]"],
+      [class*="bg-[#2442c2]"],
+      [class*="bg-[#2852ff]"],
+      [class*="bg-[linear-gradient"]
+    )
+    :is(h1, h2, h3, p, label, span) {
+    color: #ffffff;
+  }
+
+  .light
+    .site-shell
+    main
+    :is([class*="bg-[#141b34]"], [class*="bg-[#111a37]"])
+    :is(h1, h2, h3, p, label, span) {
+    color: #ffffff;
+  }
+
   .trust-marquee-mask {
     mask-image: linear-gradient(
       to right,

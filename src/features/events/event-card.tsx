@@ -11,7 +11,7 @@ interface EventCardProps {
 
 export function EventCard({ event }: EventCardProps) {
   return (
-    <article className="overflow-hidden rounded-[14px] border border-[#585d93] bg-[#181f40] shadow-[0_18px_36px_rgba(9,13,35,0.18)]">
+    <article className="overflow-hidden rounded-[14px] border border-[#e3e8f5] bg-white shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:border-[#585d93] dark:bg-[#181f40] dark:shadow-[0_18px_36px_rgba(9,13,35,0.18)]">
       <div className="relative aspect-[1.5/1] overflow-hidden">
         <Image
           alt={event.image.alt}
@@ -24,10 +24,10 @@ export function EventCard({ event }: EventCardProps) {
 
       <div className="space-y-5 px-5 py-5 sm:px-6 sm:py-6">
         <div className="space-y-3">
-          <h3 className="text-[1.55rem] leading-[1.3] font-medium text-white">
+          <h3 className="text-[1.55rem] leading-[1.3] font-medium text-[#141b34] dark:text-white">
             {event.title}
           </h3>
-          <p className="text-[0.98rem] leading-8 text-white/62">
+          <p className="text-[0.98rem] leading-8 text-[#5b6b8c] dark:text-white/62">
             {event.description}
           </p>
         </div>

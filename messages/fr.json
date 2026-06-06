@@ -2,7 +2,70 @@
   "Home": {
     "eyebrow": "Une seule plateforme",
     "title": "Chaque besoin en évaluation, comblé.",
-    "description": "Conçu pour les institutions, les éducateurs et les étudiants — chacun avec son propre flux de travail intuitif."
+    "description": "Conçu pour les institutions, les éducateurs et les étudiants — chacun avec son propre flux de travail intuitif.",
+    "audiences": {
+      "institutions": {
+        "title": "Pour les institutions",
+        "description": "Numérisez toutes vos évaluations à 100 %. Des examens blancs aux examens de fin de trimestre, obtenez des résultats prêts à être audités en quelques minutes.",
+        "linkLabel": "Explorer"
+      },
+      "educators": {
+        "title": "Pour les éducateurs",
+        "description": "Gagnez du temps grâce à notre IA qui note vos quiz selon votre barème et transmet des retours à vos étudiants.",
+        "linkLabel": "En savoir plus"
+      },
+      "students": {
+        "title": "Pour les étudiants",
+        "description": "Étudiez comme les meilleurs grâce à notre mode d'étude IA et recevez des retours instantanés pour progresser.",
+        "linkLabel": "Découvrir"
+      }
+    }
+  },
+  "HomeNumbers": {
+    "eyebrow": "Fiable. Éprouvé. En croissance.",
+    "title": "Les chiffres racontent notre histoire.",
+    "description": "Nous existons pour améliorer la vie des éducateurs et des apprenants.",
+    "button": "Voir notre mur d'amour",
+    "imageAlt": "Un éducateur travaillant sur un ordinateur portable",
+    "stats": {
+      "assessments": {
+        "value": "200+",
+        "label": "Évaluations traitées"
+      },
+      "hours": {
+        "value": "5000+",
+        "label": "Heures de correction économisées"
+      },
+      "accuracy": {
+        "value": "100%",
+        "label": "Précision"
+      },
+      "performance": {
+        "value": "89%",
+        "label": "Amélioration des performances étudiantes"
+      }
+    }
+  },
+  "HomeReleases": {
+    "eyebrow": "Dernières nouveautés",
+    "title": "Quoi de neuf dans Acad AI",
+    "description": "Nous améliorons constamment le fonctionnement des évaluations pour tous.",
+    "itemLabel": "Nouveau",
+    "button": "M'inscrire",
+    "items": {
+      "proctoring": {
+        "title": "Surveillance par webcam",
+        "description": "Garantissez l'équité des examens grâce à une surveillance intelligente conçue pour évoluer."
+      },
+      "studyMode": {
+        "title": "Mode Étude",
+        "description": "Transformez vos notes en quiz et fiches en quelques secondes."
+      },
+      "rubrics": {
+        "title": "Barèmes personnalisés",
+        "description": "Faites noter Acad AI exactement comme vous grâce à vos propres barèmes."
+      }
+    }
   },
   "HomeHero": {
     "tagline": "Pionniers de l'IA pour l'éducation en Afrique",
@@ -18,6 +81,241 @@
     "subHeading": "Voilà ce que les étudiants brillants vous cachent. Concentrez-vous. Progressez.",
     "buttonOne": "Commencer ici",
     "buttonTwo": "Rejoindre la communauté"
+  },
+  "InstitutionsHero": {
+    "eyebrow": "Pour les institutions",
+    "title": "Des résultats d'examen prêts en quelques minutes, pas en quelques jours",
+    "description": "Mettez fin à la fraude et au stress grâce à un système d'évaluation qui note instantanément la théorie, les mathématiques et tous les types de questions.",
+    "button": "Demander une démo"
+  },
+  "EducatorsHero": {
+    "eyebrow": "Pour les éducateurs",
+    "title": "Passez moins de temps à noter.\nPlus de temps à enseigner.",
+    "description": "Grâce à un système sécurisé qui note les questions théoriques et fournit des retours riches et personnalisés à tous vos étudiants.",
+    "button": "Commencer maintenant"
+  },
+  "EducatorsPlayground": {
+    "title": "Essayez-le",
+    "description": "Découvrez comment notre IA note les devoirs. Utilisez vos données ou les données d'exemple et voyez Acad AI en action.",
+    "sampleButton": "Utiliser les données d'exemple",
+    "questionLabel": "Question",
+    "questionPlaceholder": "Ex. Quelles sont les causes du changement climatique ?",
+    "questionDescription": "La question d'examen ou de devoir que vous souhaitez noter",
+    "modelLabel": "Réponse modèle",
+    "modelPlaceholder": "Ex. Les principales causes du changement climatique comprennent...",
+    "modelDescription": "Une réponse idéale ou de référence. Facultative, mais elle améliore la notation.",
+    "studentLabel": "Réponse de l'étudiant",
+    "studentPlaceholder": "Ex. Je pense que le changement climatique se produit parce que...",
+    "studentDescription": "La réponse de l'étudiant que Acad AI évaluera.",
+    "gradeButton": "Noter la réponse",
+    "demoResult": "Résultat de démonstration : Bonne réponse. Elle identifie les causes principales et gagnerait à inclure un exemple."
+  },
+  "EducatorsInAction": {
+    "title": "Acad AI en action.",
+    "subtitle": "C'est plus simple que vous ne le pensez · Regardez",
+    "imageAlt": "Démonstration du processus d'évaluation Acad AI pour les éducateurs"
+  },
+  "EducatorsFeatures": {
+    "eyebrow": "Plateforme tout-en-un",
+    "title": "Tout ce dont vous avez besoin pour de meilleurs examens",
+    "description": "Pourquoi utiliser plusieurs plateformes lorsqu'un système fiable comme le nôtre est disponible ?",
+    "button": "Commencer gratuitement",
+    "items": {
+      "questionGenerator": {
+        "title": "Générateur de questions",
+        "description": "Transformez vos cours en questions d'examen prêtes à l'emploi en quelques secondes et adaptez-les selon vos besoins."
+      },
+      "malpracticeControl": {
+        "title": "Contrôle de la fraude",
+        "description": "Les étudiants ne peuvent pas copier, coller ou changer d'onglet pendant leur examen."
+      },
+      "instantFeedback": {
+        "title": "Retour instantané",
+        "description": "Offrez à chaque étudiant un retour automatique clair, utile et personnalisé selon ses réponses."
+      },
+      "examSetup": {
+        "title": "Configuration d'examen standard",
+        "description": "Des examens chronométrés avec sauvegarde automatique dans un environnement contrôlé et sans distraction."
+      },
+      "exportResults": {
+        "title": "Exportation des résultats",
+        "description": "Téléchargez instantanément des résultats organisés, puis vérifiez-les ou ajustez-les avant leur partage."
+      },
+      "automaticGrading": {
+        "title": "Notation automatique",
+        "description": "Des centaines d'examens à choix multiples, théoriques et à trous notés en quelques minutes."
+      }
+    }
+  },
+  "EducatorsWorkflow": {
+    "eyebrow": "Comment ça marche",
+    "title": "Cinq étapes. C'est tout.",
+    "introTitle": "Un parcours d'examen fluide qui vous fait gagner des heures à chaque étape",
+    "description": "Générez des questions, sécurisez vos examens et examinez les résultats produits par l'IA dans un seul flux.",
+    "button": "Récupérer mon temps",
+    "steps": {
+      "create": {
+        "title": "Créer un examen",
+        "description": "Définissez vos questions ou générez-les instantanément à partir de vos cours grâce à l'IA.",
+        "imageAlt": "Tableau de bord de création d'examen Acad AI"
+      },
+      "secure": {
+        "title": "Sécuriser l'examen",
+        "description": "Définissez la durée, les règles d'accès et les contrôles anti-fraude avant le début.",
+        "imageAlt": "Paramètres de sécurité d'examen Acad AI"
+      },
+      "deliver": {
+        "title": "Partager avec les étudiants",
+        "description": "Invitez votre classe et diffusez l'évaluation depuis un espace de travail organisé.",
+        "imageAlt": "Tableau de bord de diffusion d'examen Acad AI"
+      },
+      "grade": {
+        "title": "Noter instantanément",
+        "description": "Laissez Acad AI noter chaque réponse et produire des retours utiles en quelques minutes.",
+        "imageAlt": "Tableau de bord de notation automatique Acad AI"
+      },
+      "review": {
+        "title": "Vérifier et publier",
+        "description": "Vérifiez les résultats, effectuez les derniers ajustements et publiez les retours lorsque vous êtes prêt.",
+        "imageAlt": "Tableau de bord de vérification des résultats Acad AI"
+      }
+    }
+  },
+  "EducatorsTestimonials": {
+    "title": "Ne nous croyez pas sur parole.",
+    "button": "Voir notre mur d'amour",
+    "items": {
+      "sundays": {
+        "quote": "\"Acad AI m'a rendu mes dimanches. La qualité des retours est incroyable.\"",
+        "author": "Dr Adaeze O.",
+        "organization": "Enseignante, UNILAG"
+      },
+      "essays": {
+        "quote": "\"Je redoutais la correction de 200 dissertations. Maintenant, cela prend 15 minutes.\"",
+        "author": "Prof. Tunde A.",
+        "organization": "OAU"
+      },
+      "feedback": {
+        "quote": "\"Mes étudiants reçoivent leurs retours le jour même. Leurs résultats se sont envolés.\"",
+        "author": "Mme Fatima B.",
+        "organization": "Enseignante"
+      },
+      "review": {
+        "quote": "\"Je redoutais la correction de 200 dissertations. Maintenant, cela prend 15 minutes.\"",
+        "author": "Dr Adaeze O.",
+        "organization": "OAU"
+      }
+    }
+  },
+  "EducatorsFaq": {
+    "eyebrow": "FAQ",
+    "title": "Les questions courantes, avec leurs réponses."
+  },
+  "InstitutionsTypes": {
+    "eyebrow": "Conçu pour",
+    "title": "Des institutions de toutes tailles et de toutes formes.",
+    "items": {
+      "secondarySchools": {
+        "title": "Écoles secondaires",
+        "description": "Passez facilement des examens papier à des évaluations 100 % numériques. Les résultats sont prêts en quelques minutes.",
+        "imageAlt": "Plateforme d'évaluation numérique pour les écoles secondaires"
+      },
+      "distanceLearning": {
+        "title": "Enseignement ouvert et à distance",
+        "description": "Proposez des évaluations sécurisées aux apprenants où qu'ils soient, avec une notation instantanée et des analyses claires.",
+        "imageAlt": "Plateforme d'évaluation numérique pour l'enseignement à distance"
+      },
+      "corporateTraining": {
+        "title": "Formation en entreprise",
+        "description": "Mesurez les connaissances et les résultats de formation grâce à des évaluations évolutives et des résultats prêts à être audités.",
+        "imageAlt": "Plateforme d'évaluation numérique pour la formation en entreprise"
+      }
+    }
+  },
+  "InstitutionsGoldStandard": {
+    "title": "La référence absolue pour les évaluations institutionnelles.",
+    "eyebrow": "Tableau de bord administrateur",
+    "description": "De l'inscription aux résultats — chaque indicateur dans une seule vue.",
+    "imageAlt": "Tableau de bord administrateur institutionnel Acad AI",
+    "benefits": {
+      "digitized": "100 % numérisé",
+      "scalable": "Évolutif pour 100 ou 100 000 apprenants",
+      "auditReady": "Entièrement prêt pour l'audit"
+    }
+  },
+  "QuestionTypes": {
+    "eyebrow": "Acad AI vous aide à noter",
+    "title": "Tous les types de questions, instantanément",
+    "items": {
+      "multiChoice": "Choix multiple",
+      "fillGap": "Texte à trous",
+      "theory": "Théorie",
+      "essay": "Dissertation",
+      "mathematics": "Mathématiques",
+      "caseStudy": "Étude de cas",
+      "diagram": "Diagramme"
+    }
+  },
+  "InstitutionsInAction": {
+    "title": "Acad AI en action.",
+    "subtitle": "C'est plus simple que vous ne le pensez · Regardez",
+    "imageAlt": "Démonstration de la plateforme d'évaluation Acad AI"
+  },
+  "InstitutionsPlatformFeatures": {
+    "eyebrow": "Plateforme tout-en-un",
+    "title": "Tout ce dont vous avez besoin pour de meilleurs examens",
+    "description": "Pourquoi utiliser plusieurs plateformes lorsqu'un système fiable comme le nôtre est disponible ?",
+    "items": {
+      "questionGenerator": {
+        "title": "Générateur de questions",
+        "description": "Transformez vos cours en questions d'examen prêtes à l'emploi en quelques secondes."
+      },
+      "malpracticeControl": {
+        "title": "Contrôle de la fraude",
+        "description": "Les étudiants ne peuvent pas copier, coller ou changer d'onglet pendant l'examen."
+      },
+      "instantFeedback": {
+        "title": "Retour instantané",
+        "description": "Offrez à chaque étudiant un retour automatique clair et personnalisé."
+      },
+      "examSetup": {
+        "title": "Configuration d'examen standard",
+        "description": "Des examens chronométrés avec sauvegarde automatique dans un environnement contrôlé."
+      },
+      "exportResults": {
+        "title": "Exportation des résultats",
+        "description": "Téléchargez instantanément des résultats organisés et vérifiez-les avant leur diffusion."
+      },
+      "automaticGrading": {
+        "title": "Notation automatique",
+        "description": "Des centaines d'examens à choix multiples, théoriques et à trous notés en quelques minutes."
+      },
+      "reportCards": {
+        "title": "Génération de bulletins",
+        "description": "Téléchargez des résultats organisés et gardez le contrôle avant leur partage."
+      }
+    }
+  },
+  "InstitutionsSecurity": {
+    "eyebrow": "La sécurité avant tout",
+    "title": "Vos données institutionnelles, protégées.",
+    "description": "La sécurité n'est pas une option ; elle est notre fondation.",
+    "items": {
+      "sovereignty": {
+        "title": "Souveraineté des données",
+        "description": "Vous possédez 100 % de vos données. Nous n'utilisons jamais vos barèmes ou dossiers étudiants pour entraîner des modèles externes."
+      },
+      "standards": {
+        "title": "Normes mondiales",
+        "description": "Entièrement conforme aux lois sur la confidentialité, avec chiffrement de bout en bout des informations."
+      }
+    }
+  },
+  "InstitutionsCTA": {
+    "title": "Faites entrer votre institution\ndans le futur dès aujourd'hui.",
+    "description": "Rejoignez les institutions qui économisent des milliers d'heures et améliorent les résultats d'apprentissage avec Acad AI.",
+    "primaryButton": "Commencer gratuitement",
+    "secondaryButton": "Demander une démo"
   },
   "StudentsFeatures": {
     "leftTitle": "Des examens qui vous apprennent",
@@ -92,5 +390,87 @@
       "description": "Vous ne trouvez pas la réponse que vous cherchez ? Discutez avec notre équipe sympathique.",
       "button": "Nous contacter"
     }
+  },
+  "AboutHero": {
+    "eyebrow": "À propos d'Acad AI",
+    "title": "Révolutionner l'éducation avec l'IA.",
+    "description": "Nous construisons l'infrastructure d'évaluation pour la prochaine génération d'apprenants africains — et les éducateurs qui les guident.",
+    "visionTitle": "Notre Vision",
+    "visionDescription": "La mission d'Acad AI est d'améliorer la qualité de l'éducation pour les éducateurs et les apprenants en utilisant l'IA pour rendre l'évaluation, l'étude et le soutien à l'apprentissage plus faciles, plus équitables et plus accessibles pour tous.",
+    "missionTitle": "Notre Mission",
+    "missionDescription": "Notre vision est d'être un leader de confiance dans l'éducation par l'IA en créant des outils qui aident les éducateurs à mieux enseigner et les apprenants à apprendre avec confiance, créant un système éducatif plus inclusif et efficace.",
+    "whyTitle": "Notre Pourquoi",
+    "whyDescription": "Plus de 200 millions d'apprenants africains comptent sur les évaluations, pourtant les systèmes sont lents, manuels et sujets aux erreurs. Les enseignants sont débordés et les étudiants font face à des résultats injustes, tardifs et peu clairs."
+  },
+  "AboutBackedBy": {
+    "eyebrow": "Soutenu par"
+  },
+  "AboutStory": {
+    "eyebrow": "Notre Histoire",
+    "title": "Rendre l'éducation meilleure pour les enseignants et les étudiants",
+    "paragraph1": "Acad AI a commencé avec une question :",
+    "paragraph1Bold": "pourquoi un enseignant passe-t-il tout son week-end à corriger, quand ses étudiants attendent des jours pour un retour qu'ils ont à peine demandé ?",
+    "paragraph2": "Nous avons commencé comme un outil de notation pour un enseignant universitaire. Aujourd'hui, nous sommes une plateforme d'évaluation complète — pour les institutions, les éducateurs et les étudiants — construite et lancée depuis l'Afrique, pour le monde entier.",
+    "paragraph3": "Notre voyage ne fait que commencer. L'avenir de l'apprentissage est personnel, instantané et équitable. Nous sommes là pour le construire.",
+    "location": "Lagos, NIG"
+  },
+  "AboutWhy": {
+    "title": "Pourquoi nous existons",
+    "description": "Acad AI a été créé pour alléger le fardeau de la création d'examens et de la notation pour les éducateurs, tout en garantissant que les étudiants reçoivent des retours clairs et rapides pour soutenir un apprentissage réel."
+  },
+  "AboutPurposePanels": {
+    "whyImageAlt": "Éducatrice utilisant Acad AI",
+    "educatorsTitle": "Conçu pour les éducateurs",
+    "educatorsDescription": "Nous redonnons aux enseignants le temps nécessaire pour enseigner, accompagner et soutenir chaque apprenant.",
+    "educatorsImageAlt": "Éducateur consultant les résultats d'une évaluation",
+    "learnersTitle": "Pensé pour les apprenants",
+    "learnersDescription": "Nous aidons les étudiants à comprendre leurs progrès grâce à des retours rapides qui transforment chaque évaluation en occasion de progresser.",
+    "learnersImageAlt": "Apprenant recevant un retour utile sur une évaluation"
+  },
+  "AboutValues": {
+    "eyebrow": "Nos Valeurs",
+    "title": "Ce que nous tenons pour sacré.",
+    "customerFirstTitle": "Le client d'abord",
+    "customerFirstDescription": "Les enseignants, les étudiants et les établissements d'enseignement sont notre étoile du nord.",
+    "transparencyTitle": "Transparence",
+    "transparencyDescription": "Nous sommes ouverts sur ce que nous faisons et pourquoi nous le faisons. Vous avez le droit de savoir comment tout cela fonctionne.",
+    "respectTitle": "Respect",
+    "respectDescription": "Le respect consiste à protéger ce qui compte. Vos données sont en sécurité avec nous ; nous valorisons votre confiance et traitons chaque utilisateur avec le soin qu'il mérite.",
+    "ownershipTitle": "Responsabilité",
+    "ownershipDescription": "Vous pouvez compter sur nous pour vous livrer, vous soutenir et rendre votre expérience fluide. Nous défendons chaque fonctionnalité et chaque promesse.",
+    "excellenceTitle": "Excellence",
+    "excellenceDescription": "Nous ne nous contentons pas du « suffisant ». Notre mission exige que nous poussions vers la haute qualité, car l'avenir des étudiants en dépend.",
+    "speedTitle": "Rapidité avec soin",
+    "speedDescription": "Nous savons que la vitesse est importante, tout comme votre confiance en nous. Vous pouvez compter sur nous pour traiter toutes les notes et chaque retour avec soin.",
+    "fairnessTitle": "Équité",
+    "fairnessDescription": "L'équité est au cœur d'Acad AI, de la façon dont les évaluations sont notées à la manière dont les retours sont donnés et les progrès suivis."
+  },
+  "AboutTeam": {
+    "eyebrow": "Notre Équipe",
+    "title": "Rencontrez l'équipe derrière Acad AI",
+    "description": "Nous sommes une équipe d'ingénieurs, de designers et de chercheurs réunissant expérience, compétences et un objectif commun : améliorer l'éducation par l'IA."
+  },
+  "AboutFeatured": {
+    "eyebrow": "En vedette dans",
+    "title": "Ils parlent de nous",
+    "description": "Acad AI a été mis en avant pour redéfinir le fonctionnement de la notation et de l'apprentissage. Voyez qui y prête attention.",
+    "readBlog": "Lire le blog"
+  },
+  "AboutNewsletter": {
+    "title": "Restez informé de l'IA dans l'éducation",
+    "description": "Des insights mensuels de l'équipe Acad AI. Aucun spam, jamais.",
+    "nameLabel": "Votre nom",
+    "namePlaceholder": "Entrez votre nom complet",
+    "roleLabel": "Rôle",
+    "rolePlaceholder": "Sélectionnez un rôle",
+    "roleStudent": "Étudiant",
+    "roleTeacher": "Enseignant",
+    "roleAdmin": "Administrateur d'institution",
+    "roleResearcher": "Chercheur",
+    "roleOther": "Autre",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "Entrez votre adresse e-mail",
+    "submitButton": "M'envoyer les mises à jour",
+    "successMessage": "Vous êtes inscrit. Surveillez votre boîte de réception pour la prochaine mise à jour."
   }
 }
