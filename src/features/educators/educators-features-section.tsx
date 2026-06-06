@@ -9,7 +9,14 @@ import {
 import { getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
-import { ctaButtonVariants, FeatureCard, SectionHeader } from "@/shared";
+import {
+  ctaButtonVariants,
+  FadeIn,
+  FeatureCard,
+  SectionHeader,
+  Stagger,
+  StaggerItem,
+} from "@/shared";
 
 const features = [
   { key: "questionGenerator", icon: FileText },
@@ -28,24 +35,27 @@ export async function EducatorsFeaturesSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_78%,rgba(25,79,204,0.18),transparent_34%)]" />
 
       <div className="relative mx-auto w-full max-w-[1060px]">
-        <SectionHeader
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          description={t("description")}
-          titleClassName="max-w-3xl text-4xl leading-tight sm:text-5xl"
-          descriptionClassName="max-w-2xl text-base leading-7"
-        />
+        <FadeIn>
+          <SectionHeader
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            description={t("description")}
+            titleClassName="max-w-3xl text-4xl leading-tight sm:text-5xl"
+            descriptionClassName="max-w-2xl text-base leading-7"
+          />
+        </FadeIn>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <Stagger className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
-            <FeatureCard
-              description={t(`items.${feature.key}.description`)}
-              icon={feature.icon}
-              key={feature.key}
-              title={t(`items.${feature.key}.title`)}
-            />
+            <StaggerItem key={feature.key}>
+              <FeatureCard
+                description={t(`items.${feature.key}.description`)}
+                icon={feature.icon}
+                title={t(`items.${feature.key}.title`)}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
         <div className="mt-12 flex justify-center">
           <Link

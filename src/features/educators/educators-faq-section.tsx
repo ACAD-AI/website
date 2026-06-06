@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 import { FaqAccordion, type FaqItem } from "@/features/faq";
+import { FadeIn } from "@/shared";
 
 const faqKeys = [
   "whatIsAcadAi",
@@ -29,18 +30,18 @@ export async function EducatorsFaqSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_24%_80%,rgba(25,79,204,0.2),transparent_28%)]" />
 
       <div className="relative mx-auto w-full max-w-[760px]">
-        <div className="text-center">
+        <FadeIn className="text-center">
           <p className="text-xs font-semibold tracking-[0.32em] text-[#1836b2] uppercase sm:text-sm dark:text-[#86c7ed]">
             {t("eyebrow")}
           </p>
           <h2 className="mt-5 text-4xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-5xl dark:text-white">
             {t("title")}
           </h2>
-        </div>
+        </FadeIn>
 
-        <div className="mt-12">
+        <FadeIn className="mt-12">
           <FaqAccordion items={items} />
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

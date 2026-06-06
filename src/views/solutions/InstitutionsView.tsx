@@ -9,7 +9,7 @@ import {
   PlatformFeaturesSection,
   SecuritySection,
 } from "@/features/institutions";
-import { QuestionTypesSection, TrustBar } from "@/shared";
+import { FadeIn, QuestionTypesSection, TrustBar } from "@/shared";
 
 const InstitutionsView = async () => {
   const t = await getTranslations("InstitutionsHero");
@@ -23,13 +23,17 @@ const InstitutionsView = async () => {
         title={t("title")}
       />
       <InstitutionTypesSection />
-      <TrustBar />
+      <FadeIn>
+        <TrustBar />
+      </FadeIn>
       <GoldStandardSection />
       <QuestionTypesSection />
       <InActionSection />
       <PlatformFeaturesSection />
       <SecuritySection />
-      <InstitutionsCTASection />
+      <FadeIn>
+        <InstitutionsCTASection />
+      </FadeIn>
     </div>
   );
 };

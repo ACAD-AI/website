@@ -8,7 +8,7 @@ import {
   AboutTeamSection,
 } from "@/features/about";
 import { NewsletterSection } from "@/features/home";
-import { TrustBar } from "@/shared";
+import { FadeIn, TrustBar } from "@/shared";
 
 const About = async () => {
   const t = await getTranslations("AboutBackedBy");
@@ -17,10 +17,18 @@ const About = async () => {
     <div className="flex flex-col">
       <AboutHeroSection />
       <TrustBar title={t("eyebrow")} />
-      <AboutStorySection />
-      <AboutPurposeValuesSection />
-      <AboutTeamSection />
-      <AboutFeaturedSection />
+      <FadeIn>
+        <AboutStorySection />
+      </FadeIn>
+      <FadeIn>
+        <AboutPurposeValuesSection />
+      </FadeIn>
+      <FadeIn>
+        <AboutTeamSection />
+      </FadeIn>
+      <FadeIn>
+        <AboutFeaturedSection />
+      </FadeIn>
       <NewsletterSection />
     </div>
   );

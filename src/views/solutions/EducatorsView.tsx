@@ -9,7 +9,7 @@ import {
   EducatorsTestimonialsSection,
   EducatorsWorkflowSection,
 } from "@/features/educators";
-import { QuestionTypesSection, TrustBar } from "@/shared";
+import { FadeIn, QuestionTypesSection, TrustBar } from "@/shared";
 
 const EducatorsView = async () => {
   const t = await getTranslations("EducatorsHero");
@@ -23,10 +23,14 @@ const EducatorsView = async () => {
         title={t("title")}
       />
       <EducatorsPlaygroundSection />
-      <TrustBar />
+      <FadeIn>
+        <TrustBar />
+      </FadeIn>
       <EducatorsInActionSection />
       <EducatorsFeaturesSection />
-      <QuestionTypesSection />
+      <FadeIn>
+        <QuestionTypesSection />
+      </FadeIn>
       <EducatorsWorkflowSection />
       <EducatorsTestimonialsSection />
       <EducatorsFaqSection />

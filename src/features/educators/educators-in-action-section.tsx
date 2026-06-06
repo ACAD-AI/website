@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
-import { MediaShowcase } from "@/shared";
+import { FadeIn, MediaShowcase } from "@/shared";
 
 export async function EducatorsInActionSection() {
   const t = await getTranslations("EducatorsInAction");
@@ -10,12 +10,14 @@ export async function EducatorsInActionSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(25,79,204,0.2),transparent_38%)]" />
 
       <div className="relative mx-auto w-full max-w-[1060px]">
-        <MediaShowcase
-          imageAlt={t("imageAlt")}
-          imageSrc="/images/svg/home-hero.svg"
-          subtitle={t("subtitle")}
-          title={t("title")}
-        />
+        <FadeIn>
+          <MediaShowcase
+            imageAlt={t("imageAlt")}
+            imageSrc="/images/svg/home-hero.svg"
+            subtitle={t("subtitle")}
+            title={t("title")}
+          />
+        </FadeIn>
       </div>
     </section>
   );

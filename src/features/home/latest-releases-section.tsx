@@ -2,7 +2,13 @@ import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
-import { ctaButtonVariants, SectionHeader } from "@/shared";
+import {
+  ctaButtonVariants,
+  FadeIn,
+  SectionHeader,
+  Stagger,
+  StaggerItem,
+} from "@/shared";
 
 import { ReleaseCard } from "./release-card";
 
@@ -16,26 +22,29 @@ export function LatestReleasesSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_52%_48%,rgba(25,79,204,0.18),transparent_34%)]" />
 
       <div className="relative mx-auto w-full max-w-[1180px]">
-        <SectionHeader
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          description={t("description")}
-          titleClassName="text-4xl leading-tight sm:text-5xl"
-          descriptionClassName="leading-7 sm:text-base"
-        />
+        <FadeIn>
+          <SectionHeader
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            description={t("description")}
+            titleClassName="text-4xl leading-tight sm:text-5xl"
+            descriptionClassName="leading-7 sm:text-base"
+          />
+        </FadeIn>
 
-        <div className="mt-12 grid gap-6 lg:mt-14 lg:grid-cols-3">
+        <Stagger className="mt-12 grid gap-6 lg:mt-14 lg:grid-cols-3">
           {releases.map((release) => (
-            <ReleaseCard
-              description={t(`items.${release}.description`)}
-              key={release}
-              label={t("itemLabel")}
-              title={t(`items.${release}.title`)}
-            />
+            <StaggerItem key={release}>
+              <ReleaseCard
+                description={t(`items.${release}.description`)}
+                label={t("itemLabel")}
+                title={t(`items.${release}.title`)}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
-        <div className="mt-10 flex justify-center">
+        <FadeIn className="mt-10 flex justify-center">
           <Link
             className={ctaButtonVariants({ variant: "primary" })}
             href="/solutions/students"
@@ -43,7 +52,7 @@ export function LatestReleasesSection() {
             {t("button")}
             <ArrowRight aria-hidden="true" className="size-4" />
           </Link>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

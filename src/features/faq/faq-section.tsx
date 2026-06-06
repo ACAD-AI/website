@@ -3,7 +3,8 @@ import { getTranslations } from "next-intl/server";
 import { FaqAccordion } from "@/features/faq/faq-accordion";
 import { FaqContactCard } from "@/features/faq/faq-contact-card";
 import type { FaqItem } from "@/features/faq/faq-data";
-import { SectionHeader } from "@/shared";
+import { FadeIn, SectionHeader } from "@/shared";
+import { faqJsonLd } from "@/shared/config/seo";
 
 export async function FaqSection() {
   const t = await getTranslations("FAQ");
@@ -58,10 +59,17 @@ export async function FaqSection() {
 
   return (
     <section className="relative overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD structured data is generated from trusted translation content.
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd(items)),
+        }}
+      />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(44,93,255,0.16),transparent_26%),radial-gradient(circle_at_80%_78%,rgba(26,61,173,0.18),transparent_24%)]" />
 
       <div className="relative mx-auto flex w-full max-w-270 flex-col items-center gap-14">
-        <div className="w-full max-w-4xl pt-8 sm:pt-12">
+        <FadeIn className="w-full max-w-4xl pt-8 sm:pt-12">
           <SectionHeader
             align="center"
             className="gap-4"
@@ -71,15 +79,15 @@ export async function FaqSection() {
             title={t("title")}
             titleClassName="max-w-3xl text-[2.95rem] leading-[1.04] sm:text-6xl lg:text-[5rem]"
           />
-        </div>
+        </FadeIn>
 
-        <div className="w-full max-w-185">
+        <FadeIn className="w-full max-w-185">
           <FaqAccordion items={items} />
-        </div>
+        </FadeIn>
 
-        <div className="w-full pt-4">
+        <FadeIn className="w-full pt-4">
           <FaqContactCard />
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

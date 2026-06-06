@@ -3,6 +3,7 @@ import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 
 import { Link } from "@/i18n/navigation";
+import { FadeIn } from "@/shared";
 
 import { BlogPostNavigationCard } from "./blog-post-navigation-card";
 import type { BlogPost, BlogPostNavigation } from "./blog-types";
@@ -40,7 +41,7 @@ export function BlogPostArticle({ post, navigation }: BlogPostArticleProps) {
             All posts
           </Link>
 
-          <div className="space-y-5">
+          <FadeIn className="space-y-5">
             <p className="text-xs font-semibold tracking-[0.42em] text-[#1836b2] uppercase sm:text-sm dark:text-[#86c7ed]">
               {formatBlogDate(post.publishedAt)} • {post.readingTime}
             </p>
@@ -50,7 +51,7 @@ export function BlogPostArticle({ post, navigation }: BlogPostArticleProps) {
             <p className="max-w-3xl text-lg leading-8 text-[#5b6b8c] dark:text-white/62">
               {post.description}
             </p>
-          </div>
+          </FadeIn>
 
           <div className="relative aspect-[1.55/1] overflow-hidden rounded-[16px] border border-[#e6eaf3] dark:border-white/10">
             <Image
@@ -63,7 +64,7 @@ export function BlogPostArticle({ post, navigation }: BlogPostArticleProps) {
             />
           </div>
 
-          <div className="space-y-6">
+          <FadeIn className="space-y-6">
             {hasPortableText ? (
               <PortableText
                 components={portableTextComponents}
@@ -79,7 +80,7 @@ export function BlogPostArticle({ post, navigation }: BlogPostArticleProps) {
                 </p>
               ))
             )}
-          </div>
+          </FadeIn>
 
           <p className="text-base text-[#5b6b8c] dark:text-white/68">
             By {post.author}

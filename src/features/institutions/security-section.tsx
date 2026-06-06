@@ -1,7 +1,13 @@
 import { GlobeLock, ShieldCheck } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-import { FeatureCard, SectionHeader } from "@/shared";
+import {
+  FadeIn,
+  FeatureCard,
+  SectionHeader,
+  Stagger,
+  StaggerItem,
+} from "@/shared";
 
 const securityFeatures = [
   { key: "sovereignty", icon: ShieldCheck },
@@ -16,24 +22,27 @@ export async function SecuritySection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_70%,rgba(25,79,204,0.16),transparent_32%)]" />
 
       <div className="relative mx-auto w-full max-w-[760px]">
-        <SectionHeader
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          description={t("description")}
-          titleClassName="max-w-2xl text-4xl leading-tight"
-          descriptionClassName="max-w-2xl text-sm leading-6"
-        />
+        <FadeIn>
+          <SectionHeader
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            description={t("description")}
+            titleClassName="max-w-2xl text-4xl leading-tight"
+            descriptionClassName="max-w-2xl text-sm leading-6"
+          />
+        </FadeIn>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2">
+        <Stagger className="mt-12 grid gap-4 sm:grid-cols-2">
           {securityFeatures.map((feature) => (
-            <FeatureCard
-              description={t(`items.${feature.key}.description`)}
-              icon={feature.icon}
-              key={feature.key}
-              title={t(`items.${feature.key}.title`)}
-            />
+            <StaggerItem key={feature.key}>
+              <FeatureCard
+                description={t(`items.${feature.key}.description`)}
+                icon={feature.icon}
+                title={t(`items.${feature.key}.title`)}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

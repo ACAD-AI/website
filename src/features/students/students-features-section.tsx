@@ -1,6 +1,6 @@
 import { Brain, Zap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import { PrimaryButton } from "@/shared";
+import { FadeIn, PrimaryButton, Stagger, StaggerItem } from "@/shared";
 
 function FeatureCard({
   title,
@@ -30,19 +30,21 @@ export async function StudentsFeaturesSection() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left column */}
           <div className="flex flex-col justify-between">
-            <div className="flex flex-col gap-6">
-              <div className="flex size-12 items-center justify-center rounded-xl bg-[#1836B2]">
-                <Brain className="size-6 text-white" />
+            <FadeIn>
+              <div className="flex flex-col gap-6">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-[#1836B2]">
+                  <Brain className="size-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold leading-snug text-[#141b34] sm:text-3xl dark:text-white">
+                    {t("leftTitle")}
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-[#5b6b8c] dark:text-white/60">
+                    {t("leftDescription")}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-semibold leading-snug text-[#141b34] sm:text-3xl dark:text-white">
-                  {t("leftTitle")}
-                </h3>
-                <p className="mt-4 text-sm leading-7 text-[#5b6b8c] dark:text-white/60">
-                  {t("leftDescription")}
-                </p>
-              </div>
-            </div>
+            </FadeIn>
             <PrimaryButton showArrow className="self-start">
               {t("leftButton")}
             </PrimaryButton>
@@ -50,22 +52,30 @@ export async function StudentsFeaturesSection() {
 
           {/* Right column */}
           <div className="flex flex-col gap-6">
-            <div className="flex size-12 items-center justify-center rounded-xl bg-[#1836B2]">
-              <Zap className="size-6 text-white" />
-            </div>
-            <h3 className="text-2xl font-semibold leading-snug text-[#141b34] sm:text-3xl dark:text-white">
-              {t("rightTitle")}
-            </h3>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <FeatureCard
-                title={t("flashcardsTitle")}
-                description={t("flashcardsDescription")}
-              />
-              <FeatureCard
-                title={t("quizzesTitle")}
-                description={t("quizzesDescription")}
-              />
-            </div>
+            <FadeIn>
+              <div className="flex size-12 items-center justify-center rounded-xl bg-[#1836B2]">
+                <Zap className="size-6 text-white" />
+              </div>
+            </FadeIn>
+            <FadeIn>
+              <h3 className="text-2xl font-semibold leading-snug text-[#141b34] sm:text-3xl dark:text-white">
+                {t("rightTitle")}
+              </h3>
+            </FadeIn>
+            <Stagger className="grid gap-4 sm:grid-cols-2">
+              <StaggerItem>
+                <FeatureCard
+                  title={t("flashcardsTitle")}
+                  description={t("flashcardsDescription")}
+                />
+              </StaggerItem>
+              <StaggerItem>
+                <FeatureCard
+                  title={t("quizzesTitle")}
+                  description={t("quizzesDescription")}
+                />
+              </StaggerItem>
+            </Stagger>
           </div>
         </div>
       </div>

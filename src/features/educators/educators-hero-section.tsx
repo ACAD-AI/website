@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 
 import { Link } from "@/i18n/navigation";
-import { ctaButtonVariants } from "@/shared";
+import { ctaButtonVariants, FadeIn } from "@/shared";
 
 interface EducatorsHeroSectionProps {
   button: string;
@@ -21,7 +21,7 @@ export function EducatorsHeroSection({
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_92%,rgba(27,72,190,0.25),transparent_40%)]" />
 
       <div className="relative mx-auto flex min-h-[520px] w-full max-w-[1180px] items-center justify-center">
-        <div className="relative z-10 flex max-w-5xl flex-col items-center text-center">
+        <FadeIn className="relative z-10 flex max-w-5xl flex-col items-center text-center">
           <p className="text-sm font-semibold tracking-[0.35em] text-[#1836b2] uppercase sm:text-base dark:text-[#86c7ed]">
             {eyebrow}
           </p>
@@ -41,7 +41,7 @@ export function EducatorsHeroSection({
             {button}
             <ArrowRight aria-hidden="true" className="size-5" />
           </Link>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 
-import { SectionHeader } from "@/shared";
+import { FadeIn, SectionHeader, Stagger, StaggerItem } from "@/shared";
 import { cn } from "@/shared/lib/utils";
 
 import { EventCard } from "./event-card";
@@ -25,7 +25,7 @@ export function EventsSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_24%_24%,rgba(49,91,255,0.2),transparent_20%),radial-gradient(circle_at_78%_84%,rgba(34,69,177,0.22),transparent_24%)]" />
 
       <div className="relative mx-auto flex w-full max-w-[1320px] flex-col items-center gap-12 sm:gap-14">
-        <div className="w-full max-w-5xl pt-8 sm:pt-12">
+        <FadeIn className="w-full max-w-5xl pt-8 sm:pt-12">
           <SectionHeader
             align="center"
             className="gap-4"
@@ -35,7 +35,7 @@ export function EventsSection() {
             title="Where Acad AI shows up."
             titleClassName="max-w-5xl text-[3rem] sm:text-6xl lg:text-[5rem]"
           />
-        </div>
+        </FadeIn>
 
         <div className="inline-flex items-center rounded-2xl border border-[#e3e8f5] bg-white p-1 shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:border-transparent dark:bg-[#45417c] dark:shadow-[0_16px_32px_rgba(8,12,32,0.2)]">
           {tabs.map((tab) => {
@@ -62,11 +62,13 @@ export function EventsSection() {
         <div className="w-full">
           {filteredEvents.length > 0 ? (
             <div className="rounded-[18px] border border-[#e3e8f5] bg-white p-4 shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:border-[#595f93] dark:bg-[#433f7d] dark:shadow-[0_24px_60px_rgba(9,13,35,0.18)] sm:p-5">
-              <div className="grid gap-4 lg:grid-cols-2">
+              <Stagger className="grid gap-4 lg:grid-cols-2">
                 {filteredEvents.map((event) => (
-                  <EventCard event={event} key={event.id} />
+                  <StaggerItem key={event.id}>
+                    <EventCard event={event} />
+                  </StaggerItem>
                 ))}
-              </div>
+              </Stagger>
             </div>
           ) : (
             <EventsEmptyState message="No upcoming events yet. Check back soon — or follow us on Luma to be the first to know." />

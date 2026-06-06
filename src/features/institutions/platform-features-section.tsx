@@ -9,7 +9,13 @@ import {
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-import { FeatureCard, SectionHeader } from "@/shared";
+import {
+  FadeIn,
+  FeatureCard,
+  SectionHeader,
+  Stagger,
+  StaggerItem,
+} from "@/shared";
 
 const features = [
   { key: "questionGenerator", icon: FileText },
@@ -29,17 +35,19 @@ export async function PlatformFeaturesSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(25,79,204,0.17),transparent_34%)]" />
 
       <div className="relative mx-auto w-full max-w-[920px]">
-        <SectionHeader
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          description={t("description")}
-          titleClassName="max-w-2xl text-4xl leading-tight"
-          descriptionClassName="max-w-2xl text-sm leading-6"
-        />
+        <FadeIn>
+          <SectionHeader
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            description={t("description")}
+            titleClassName="max-w-2xl text-4xl leading-tight"
+            descriptionClassName="max-w-2xl text-sm leading-6"
+          />
+        </FadeIn>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+        <Stagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {features.map((feature, index) => (
-            <div
+            <StaggerItem
               className={
                 index === features.length - 1
                   ? "sm:col-span-2 lg:col-span-2 lg:col-start-3"
@@ -52,9 +60,9 @@ export async function PlatformFeaturesSection() {
                 icon={feature.icon}
                 title={t(`items.${feature.key}.title`)}
               />
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

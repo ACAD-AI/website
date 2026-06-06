@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 
 import { ReviewCard, type ReviewItem } from "@/features/reviews";
 import { Link } from "@/i18n/navigation";
-import { ctaButtonVariants } from "@/shared";
+import { ctaButtonVariants, FadeIn, Stagger, StaggerItem } from "@/shared";
 
 const testimonials = ["sundays", "essays", "feedback", "review"] as const;
 
@@ -23,15 +23,19 @@ export async function EducatorsTestimonialsSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_76%_25%,rgba(25,79,204,0.18),transparent_30%)]" />
 
       <div className="relative mx-auto w-full max-w-[760px]">
-        <h2 className="text-center text-4xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-5xl dark:text-white">
-          {t("title")}
-        </h2>
+        <FadeIn>
+          <h2 className="text-center text-4xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-5xl dark:text-white">
+            {t("title")}
+          </h2>
+        </FadeIn>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2">
+        <Stagger className="mt-12 grid gap-5 sm:grid-cols-2">
           {items.map((item) => (
-            <ReviewCard item={item} key={item.id} />
+            <StaggerItem key={item.id}>
+              <ReviewCard item={item} />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
         <div className="mt-12 flex justify-center">
           <Link

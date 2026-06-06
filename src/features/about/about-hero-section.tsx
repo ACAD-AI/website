@@ -1,7 +1,7 @@
 import { Compass, Heart, Rocket } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-import { FeatureCard } from "@/shared";
+import { FadeIn, FeatureCard, Stagger, StaggerItem } from "@/shared";
 
 const cards = [
   {
@@ -26,7 +26,7 @@ export async function AboutHeroSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_72%,rgba(25,79,204,0.2),transparent_36%)]" />
 
       <div className="relative mx-auto w-full max-w-[1180px]">
-        <div className="relative mx-auto flex max-w-4xl flex-col items-center text-center">
+        <FadeIn className="relative mx-auto flex max-w-4xl flex-col items-center text-center">
           <p className="text-sm font-semibold tracking-[0.35em] text-[#1836b2] uppercase sm:text-base dark:text-[#86c7ed]">
             {t("eyebrow")}
           </p>
@@ -36,19 +36,20 @@ export async function AboutHeroSection() {
           <p className="mt-7 max-w-3xl text-base leading-8 text-[#5b6b8c] sm:text-lg dark:text-white/65">
             {t("description")}
           </p>
-        </div>
+        </FadeIn>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+        <Stagger className="mt-16 grid gap-6 lg:grid-cols-3">
           {cards.map((card) => (
-            <FeatureCard
-              description={t(`${card.key}Description`)}
-              icon={card.icon}
-              iconStyle="tile"
-              key={card.key}
-              title={t(`${card.key}Title`)}
-            />
+            <StaggerItem key={card.key}>
+              <FeatureCard
+                description={t(`${card.key}Description`)}
+                icon={card.icon}
+                iconStyle="tile"
+                title={t(`${card.key}Title`)}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

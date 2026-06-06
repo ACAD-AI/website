@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
-import { SectionHeader } from "@/shared";
+import { FadeIn, SectionHeader, Stagger, StaggerItem } from "@/shared";
 
 import { FeaturedArticleCard } from "./featured-article-card";
 import { featuredArticles } from "./featured-article-data";
@@ -13,23 +13,26 @@ export async function AboutFeaturedSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(25,79,204,0.18),transparent_36%)]" />
 
       <div className="relative mx-auto w-full max-w-[1180px]">
-        <SectionHeader
-          eyebrow={t("eyebrow")}
-          title={t("title")}
-          description={t("description")}
-          titleClassName="max-w-3xl text-4xl leading-tight sm:text-5xl"
-          descriptionClassName="max-w-3xl text-base leading-7"
-        />
+        <FadeIn>
+          <SectionHeader
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            description={t("description")}
+            titleClassName="max-w-3xl text-4xl leading-tight sm:text-5xl"
+            descriptionClassName="max-w-3xl text-base leading-7"
+          />
+        </FadeIn>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <Stagger className="mt-14 grid gap-6 lg:grid-cols-3">
           {featuredArticles.map((article) => (
-            <FeaturedArticleCard
-              article={article}
-              key={`${article.publication}-${article.date}`}
-              readLabel={t("readBlog")}
-            />
+            <StaggerItem key={`${article.publication}-${article.date}`}>
+              <FeaturedArticleCard
+                article={article}
+                readLabel={t("readBlog")}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

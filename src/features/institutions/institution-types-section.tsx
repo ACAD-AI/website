@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
+import { FadeIn } from "@/shared";
 import { cn } from "@/shared/lib/utils";
 
 const institutionTypes = [
@@ -25,12 +26,14 @@ export function InstitutionTypesSection() {
 
       <div className="relative mx-auto grid w-full max-w-[1180px] overflow-hidden rounded-xl bg-white lg:grid-cols-2 dark:bg-[#373764]">
         <div className="flex flex-col px-6 py-10 sm:px-10 sm:py-12 lg:px-12 lg:py-14">
-          <p className="text-sm font-semibold tracking-[0.32em] text-[#1836b2] uppercase dark:text-[#86c7ed]">
-            {t("eyebrow")}
-          </p>
-          <h2 className="mt-5 max-w-md text-4xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-5xl dark:text-white">
-            {t("title")}
-          </h2>
+          <FadeIn>
+            <p className="text-sm font-semibold tracking-[0.32em] text-[#1836b2] uppercase dark:text-[#86c7ed]">
+              {t("eyebrow")}
+            </p>
+            <h2 className="mt-5 max-w-md text-4xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-5xl dark:text-white">
+              {t("title")}
+            </h2>
+          </FadeIn>
 
           <div
             aria-label={t("title")}

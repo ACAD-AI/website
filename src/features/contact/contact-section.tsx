@@ -1,4 +1,4 @@
-import { SectionHeader } from "@/shared";
+import { FadeIn, SectionHeader } from "@/shared";
 
 import { ContactForm } from "./contact-form";
 
@@ -8,7 +8,7 @@ export function ContactSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_30%,rgba(40,93,255,0.18),transparent_26%),radial-gradient(circle_at_82%_78%,rgba(33,70,187,0.18),transparent_24%)]" />
 
       <div className="relative mx-auto flex w-full max-w-270 flex-col items-center gap-12 sm:gap-14">
-        <div className="w-full max-w-4xl pt-8 sm:pt-12">
+        <FadeIn className="w-full max-w-4xl pt-8 sm:pt-12">
           <SectionHeader
             align="center"
             className="gap-4"
@@ -18,7 +18,7 @@ export function ContactSection() {
             title="Let's talk."
             titleClassName="max-w-3xl text-[3rem] sm:text-6xl lg:text-[5rem]"
           />
-        </div>
+        </FadeIn>
 
         <ContactForm />
       </div>

@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
+import { FadeIn } from "@/shared";
+
 import { WorldMapVisual } from "./world-map-visual";
 
 export async function AboutStorySection() {
@@ -12,16 +14,16 @@ export async function AboutStorySection() {
       <div className="relative mx-auto w-full max-w-[1180px]">
         <WorldMapVisual location={t("location")} />
 
-        <div className="mx-auto mt-10 max-w-3xl text-center">
+        <FadeIn className="mx-auto mt-10 max-w-3xl text-center">
           <p className="text-sm font-semibold tracking-[0.32em] text-[#1836b2] uppercase dark:text-[#86c7ed]">
             {t("eyebrow")}
           </p>
           <h2 className="mt-5 text-4xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-5xl dark:text-white">
             {t("title")}
           </h2>
-        </div>
+        </FadeIn>
 
-        <div className="mx-auto mt-10 max-w-3xl space-y-5 text-base leading-8 text-[#5b6b8c] dark:text-white/65">
+        <FadeIn className="mx-auto mt-10 max-w-3xl space-y-5 text-base leading-8 text-[#5b6b8c] dark:text-white/65">
           <p>
             {t("paragraph1")}{" "}
             <strong className="font-semibold text-[#141b34] dark:text-white">
@@ -30,7 +32,7 @@ export async function AboutStorySection() {
           </p>
           <p>{t("paragraph2")}</p>
           <p>{t("paragraph3")}</p>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

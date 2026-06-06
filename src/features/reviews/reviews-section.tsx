@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 
-import { SectionHeader } from "@/shared";
+import { FadeIn, SectionHeader } from "@/shared";
 import { cn } from "@/shared/lib/utils";
 
 import { ReviewCard } from "./review-card";
@@ -28,13 +28,15 @@ export function ReviewsSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_22%_80%,rgba(44,93,255,0.24),transparent_22%),radial-gradient(circle_at_78%_35%,rgba(20,48,138,0.24),transparent_20%)]" />
 
       <div className="relative mx-auto flex w-full max-w-285 flex-col items-center gap-10 sm:gap-12">
-        <SectionHeader
-          align="center"
-          className="gap-4 pt-10"
-          description="Real words from the people who use Acad AI every day."
-          eyebrow="Reviews"
-          title="Wall of Love."
-        />
+        <FadeIn>
+          <SectionHeader
+            align="center"
+            className="gap-4 pt-10"
+            description="Real words from the people who use Acad AI every day."
+            eyebrow="Reviews"
+            title="Wall of Love."
+          />
+        </FadeIn>
 
         <div className="inline-flex items-center rounded-2xl bg-white p-1 shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:bg-[#45417c] dark:shadow-[0_16px_32px_rgba(8,12,32,0.2)]">
           {audiences.map((audience) => {
@@ -58,11 +60,11 @@ export function ReviewsSection() {
           })}
         </div>
 
-        <div className="w-full columns-1 gap-5 space-y-5 sm:columns-2 lg:columns-3">
+        <FadeIn className="w-full columns-1 gap-5 space-y-5 sm:columns-2 lg:columns-3">
           {filteredReviews.map((item) => (
             <ReviewCard item={item} key={item.id} />
           ))}
-        </div>
+        </FadeIn>
       </div>
     </section>
   );
