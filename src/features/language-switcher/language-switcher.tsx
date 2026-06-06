@@ -27,13 +27,13 @@ export function LanguageSwitcher({
       <button
         aria-expanded={open}
         className={cn(
-          "inline-flex h-11 items-center gap-2 rounded-xl border border-[#323261]  px-4 text-sm font-medium text-white ",
+          "inline-flex h-11 items-center gap-2 rounded-xl border border-[#cfd5e7] px-4 text-sm font-medium text-[#141b34] dark:border-[#323261] dark:text-white",
           buttonClassName,
         )}
         onClick={() => setOpen((value) => !value)}
         type="button"
       >
-        <Database className="size-4 text-white/75" />
+        <Database className="size-4 text-[#68718b] dark:text-white/75" />
         <span>{locale.toUpperCase()}</span>
         <ChevronDown
           className={cn(

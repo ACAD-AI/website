@@ -46,7 +46,7 @@ export function Footer({ className }: FooterProps) {
   return (
     <footer
       className={cn(
-        "bg-[radial-gradient(circle_at_top_left,rgba(36,93,255,0.22),transparent_28%),linear-gradient(135deg,#1a2246_0%,#111833_48%,#192142_100%)] text-white",
+        "bg-[radial-gradient(circle_at_top_left,rgba(40,82,255,0.08),transparent_30%),linear-gradient(135deg,#f4f6fd_0%,#eef1fb_55%,#f4f6fd_100%)] text-[#141b34] dark:bg-[radial-gradient(circle_at_top_left,rgba(36,93,255,0.22),transparent_28%),linear-gradient(135deg,#1a2246_0%,#111833_48%,#192142_100%)] dark:text-white",
         className,
       )}
     >
@@ -55,15 +55,22 @@ export function Footer({ className }: FooterProps) {
           <div className="max-w-md space-y-8">
             <Link className="inline-flex items-center" href="/">
               <Image
+                src="/images/svg/acad-ai-logo.svg"
+                alt="ACAD AI"
+                width={213}
+                height={48}
+                className="h-12 w-auto dark:hidden"
+              />
+              <Image
                 src="/images/svg/acad-ai-white-logo.svg"
                 alt="ACAD AI"
                 width={213}
                 height={48}
-                className="h-12 w-auto"
+                className="hidden h-12 w-auto dark:block"
               />
             </Link>
 
-            <p className="max-w-sm text-[1.05rem] leading-10 text-white/68">
+            <p className="max-w-sm text-[1.05rem] leading-10 text-[#5b6b8c] dark:text-white/68">
               Pioneering AI for Education in Africa. We exist to improve the
               lives of educators and learners one assessment at a time.
             </p>
@@ -72,7 +79,7 @@ export function Footer({ className }: FooterProps) {
               {socialLinks.map(({ label, href, shortLabel }) => (
                 <a
                   aria-label={label}
-                  className="inline-flex size-12 items-center justify-center rounded-full border border-white/8 bg-[#101733] text-white/88 transition-colors hover:bg-white/10 hover:text-white"
+                  className="inline-flex size-12 items-center justify-center rounded-full border border-[#dce1f0] bg-white text-[#3a4b7c] transition-colors hover:bg-[#eef1fb] hover:text-[#1836b2] dark:border-white/8 dark:bg-[#101733] dark:text-white/88 dark:hover:bg-white/10 dark:hover:text-white"
                   href={href || "#"}
                   key={label}
                 >
@@ -86,13 +93,13 @@ export function Footer({ className }: FooterProps) {
 
           {footerSections.map((section) => (
             <div className="space-y-5" key={section.title}>
-              <h2 className="text-xl font-semibold text-white">
+              <h2 className="text-xl font-semibold text-[#141b34] dark:text-white">
                 {section.title}
               </h2>
               <div className="flex flex-col gap-4">
                 {section.links.map((link) => (
                   <Link
-                    className="text-[1.05rem] text-white/66 transition-colors hover:text-white"
+                    className="text-[1.05rem] text-[#5b6b8c] transition-colors hover:text-[#1836b2] dark:text-white/66 dark:hover:text-white"
                     href={link.href}
                     key={link.href}
                   >
@@ -104,7 +111,7 @@ export function Footer({ className }: FooterProps) {
           ))}
         </div>
 
-        <div className="space-y-6 border-t border-white/18 pt-7 text-sm text-white/58 lg:space-y-0 lg:border-white/16 lg:pt-8">
+        <div className="space-y-6 border-t border-[#dce1f0] pt-7 text-sm text-[#7c86a0] lg:space-y-0 lg:pt-8 dark:border-white/18 dark:text-white/58 dark:lg:border-white/16">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <p>
               &copy; 2026 Acad AI. Built with love in Africa, for the world.

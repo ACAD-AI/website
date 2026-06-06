@@ -9,12 +9,18 @@ const institutions = [
   { name: "School 6", src: "/images/svg/schools/school-6.svg" },
 ] as const;
 
-const TrustBar = () => {
+interface TrustBarProps {
+  title?: string;
+}
+
+const TrustBar = ({
+  title = "Trusted by Educators and Students in Leading Institutions",
+}: TrustBarProps) => {
   return (
-    <section className="bg-[#040b26] py-6 sm:py-8">
+    <section className="bg-[radial-gradient(circle_at_50%_28%,rgba(40,82,255,0.12),transparent_62%)] md:my-20 py-6 sm:py-8 dark:bg-none">
       <div className="mx-auto flex w-full max-w-[1320px] flex-col items-center justify-center gap-5 px-4 sm:gap-6 sm:px-6 lg:px-8">
-        <p className="text-center text-sm font-medium tracking-[0.08em] text-[#86C7ED] uppercase sm:text-base">
-          Trusted by Educators and Students in Leading Institutions
+        <p className="text-center text-sm font-medium tracking-[0.08em] text-[#1836b2] uppercase sm:text-base dark:text-[#86C7ED]">
+          {title}
         </p>
       </div>
 

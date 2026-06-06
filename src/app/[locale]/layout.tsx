@@ -51,7 +51,7 @@ export default async function LocaleLayout({
       <body className={`${inter.variable} min-h-screen font-sans antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <div className="min-h-screen bg-[#141B34] text-white">
+            <div className="site-shell min-h-screen bg-background text-foreground">
               <Navbar />
               {children}
               <Footer />

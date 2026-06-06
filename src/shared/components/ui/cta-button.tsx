@@ -16,7 +16,7 @@ export const PrimaryButton = ({
   <button
     type="button"
     className={cn(
-      "inline-flex items-center gap-3 rounded-xl px-6 py-3 text-sm font-semibold text-white bg-[#1836B2]",
+      "inline-flex items-center gap-3 rounded-xl border border-[#3b6bff]/40 px-6 py-3 text-sm font-semibold text-white bg-[linear-gradient(93.74deg,#0A174C_0%,#1836B2_100%)] shadow-[0_10px_24px_rgba(24,54,178,0.22)] transition-opacity hover:opacity-95",
       className,
     )}
     {...props}
@@ -35,7 +35,7 @@ export const SecondaryButton = ({
   <button
     type="button"
     className={cn(
-      "inline-flex items-center gap-3 rounded-xl bg-white text-[#155EEF] px-6 py-3 text-base font-semibold transition-opacity hover:opacity-90",
+      "inline-flex items-center gap-3 rounded-xl border border-[#dbe4f5] bg-white text-[#155EEF] px-6 py-3 text-base font-semibold transition-colors hover:bg-[#f4f7ff]",
       className,
     )}
     {...props}

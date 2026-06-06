@@ -2,14 +2,19 @@
 
 import { useTranslations } from "next-intl";
 import HeroSection from "@/features/hero/hero-section";
-import { SectionHeader, TrustBar } from "@/shared";
+import {
+  AudienceSection,
+  LatestReleasesSection,
+  NewsletterSection,
+  NumbersStorySection,
+} from "@/features/home";
+import { TrustBar } from "@/shared";
 
 const Home = () => {
   const t = useTranslations("HomeHero");
-  const tHome = useTranslations("Home");
 
   return (
-    <div className="flex flex-col space-y-24">
+    <div className="flex flex-col">
       <HeroSection
         tagline={t("tagline")}
         heading={t("heading")}
@@ -21,11 +26,10 @@ const Home = () => {
         image="/images/svg/home-hero.svg"
       />
       <TrustBar />
-      <SectionHeader
-        eyebrow={tHome("eyebrow")}
-        title={tHome("title")}
-        description={tHome("description")}
-      />
+      <AudienceSection />
+      <NumbersStorySection />
+      <LatestReleasesSection />
+      <NewsletterSection />
     </div>
   );
 };
