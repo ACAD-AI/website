@@ -11,7 +11,7 @@ export async function GoldStandardSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_28%_55%,rgba(25,79,204,0.18),transparent_30%)]" />
 
       <div className="relative mx-auto flex w-full max-w-[1180px] flex-col items-center">
-        <h2 className="max-w-3xl text-center text-4xl leading-tight font-medium tracking-tight text-white sm:text-5xl">
+        <h2 className="max-w-3xl text-center text-4xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-5xl dark:text-white">
           {t("title")}
         </h2>
 

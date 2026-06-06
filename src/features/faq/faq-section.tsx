@@ -66,7 +66,7 @@ export async function FaqSection() {
             align="center"
             className="gap-4"
             description={t("description")}
-            descriptionClassName="max-w-2xl text-white/62"
+            descriptionClassName="max-w-2xl text-[#5b6b8c] dark:text-white/62"
             eyebrow={t("eyebrow")}
             title={t("title")}
             titleClassName="max-w-3xl text-[2.95rem] leading-[1.04] sm:text-6xl lg:text-[5rem]"

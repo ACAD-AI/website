@@ -30,10 +30,10 @@ export async function EducatorsFaqSection() {
 
       <div className="relative mx-auto w-full max-w-[760px]">
         <div className="text-center">
-          <p className="text-xs font-semibold tracking-[0.32em] text-[#86c7ed] uppercase sm:text-sm">
+          <p className="text-xs font-semibold tracking-[0.32em] text-[#1836b2] uppercase sm:text-sm dark:text-[#86c7ed]">
             {t("eyebrow")}
           </p>
-          <h2 className="mt-5 text-4xl leading-tight font-medium tracking-tight text-white sm:text-5xl">
+          <h2 className="mt-5 text-4xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-5xl dark:text-white">
             {t("title")}
           </h2>
         </div>

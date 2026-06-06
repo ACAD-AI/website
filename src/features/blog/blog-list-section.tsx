@@ -16,14 +16,14 @@ export async function BlogListSection() {
             align="center"
             className="gap-4"
             description="Tutorials, product updates, and thoughts on the future of learning in Africa."
-            descriptionClassName="max-w-3xl text-white/60"
+            descriptionClassName="max-w-3xl text-[#5b6b8c] dark:text-white/60"
             eyebrow="Blog"
             title="Notes from the frontier of AI + Education."
             titleClassName="max-w-5xl text-[3rem] sm:text-6xl lg:text-[5rem]"
           />
         </div>
 
-        <div className="rounded-[16px] border border-[#595f93] bg-[#433f7d] p-4 shadow-[0_24px_60px_rgba(9,13,35,0.2)] sm:p-5">
+        <div className="rounded-[16px] border border-[#e3e8f5] bg-white p-4 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-5 dark:border-[#595f93] dark:bg-[#433f7d] dark:shadow-[0_24px_60px_rgba(9,13,35,0.2)]">
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {posts.map((post) => (
               <BlogCard key={post.slug} post={post} />

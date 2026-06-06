@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
-import { SectionHeader } from "@/shared";
+import { ctaButtonVariants, SectionHeader } from "@/shared";
 
 import { StatCard } from "./stat-card";
 
@@ -39,7 +39,10 @@ export function NumbersStorySection() {
             </div>
 
             <Link
-              className="mt-10 inline-flex items-center gap-3 rounded-lg border border-[#3b6bff]/40 bg-[linear-gradient(93.74deg,#0A174C_0%,#1836B2_100%)] px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-95"
+              className={ctaButtonVariants({
+                variant: "primary",
+                className: "mt-10",
+              })}
               href="/company/reviews"
             >
               {t("button")}

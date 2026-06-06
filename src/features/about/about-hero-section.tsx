@@ -27,13 +27,13 @@ export async function AboutHeroSection() {
 
       <div className="relative mx-auto w-full max-w-[1180px]">
         <div className="relative mx-auto flex max-w-4xl flex-col items-center text-center">
-          <p className="text-sm font-semibold tracking-[0.35em] text-[#86c7ed] uppercase sm:text-base">
+          <p className="text-sm font-semibold tracking-[0.35em] text-[#1836b2] uppercase sm:text-base dark:text-[#86c7ed]">
             {t("eyebrow")}
           </p>
-          <h1 className="mt-6 text-5xl leading-[1.08] font-medium tracking-tight text-white sm:text-6xl lg:text-[5rem]">
+          <h1 className="mt-6 text-5xl leading-[1.08] font-medium tracking-tight text-[#141b34] sm:text-6xl lg:text-[5rem] dark:text-white">
             {t("title")}
           </h1>
-          <p className="mt-7 max-w-3xl text-base leading-8 text-white/65 sm:text-lg">
+          <p className="mt-7 max-w-3xl text-base leading-8 text-[#5b6b8c] sm:text-lg dark:text-white/65">
             {t("description")}
           </p>
         </div>

@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 
 import { ReviewCard, type ReviewItem } from "@/features/reviews";
 import { Link } from "@/i18n/navigation";
+import { ctaButtonVariants } from "@/shared";
 
 const testimonials = ["sundays", "essays", "feedback", "review"] as const;
 
@@ -22,7 +23,7 @@ export async function EducatorsTestimonialsSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_76%_25%,rgba(25,79,204,0.18),transparent_30%)]" />
 
       <div className="relative mx-auto w-full max-w-[760px]">
-        <h2 className="text-center text-4xl leading-tight font-medium tracking-tight text-white sm:text-5xl">
+        <h2 className="text-center text-4xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-5xl dark:text-white">
           {t("title")}
         </h2>
 
@@ -34,7 +35,7 @@ export async function EducatorsTestimonialsSection() {
 
         <div className="mt-12 flex justify-center">
           <Link
-            className="inline-flex items-center gap-3 rounded-lg border border-[#3479ff] bg-[#1836b2] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#2350d5]"
+            className={ctaButtonVariants({ variant: "primary" })}
             href="/company/reviews"
           >
             {t("button")}

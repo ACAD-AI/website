@@ -36,7 +36,7 @@ export function ReviewsSection() {
           title="Wall of Love."
         />
 
-        <div className="inline-flex items-center rounded-2xl bg-[#45417c] p-1 shadow-[0_16px_32px_rgba(8,12,32,0.2)]">
+        <div className="inline-flex items-center rounded-2xl bg-white p-1 shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:bg-[#45417c] dark:shadow-[0_16px_32px_rgba(8,12,32,0.2)]">
           {audiences.map((audience) => {
             const isActive = audience === activeAudience;
 
@@ -45,8 +45,8 @@ export function ReviewsSection() {
                 className={cn(
                   "rounded-xl px-4 py-3 text-sm font-medium transition-colors sm:min-w-26 sm:px-6",
                   isActive
-                    ? "bg-white text-[#2f3158]"
-                    : "text-white/72 hover:text-white",
+                    ? "bg-[#f0f3fb] text-[#2f3158] dark:bg-white dark:text-[#2f3158]"
+                    : "text-[#5b6b8c] hover:text-[#141b34] dark:text-white/72 dark:hover:text-white",
                 )}
                 key={audience}
                 onClick={() => setActiveAudience(audience)}

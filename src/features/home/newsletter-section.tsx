@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import type { FormEvent } from "react";
 import { toast } from "sonner";
+import { ctaButtonVariants } from "@/shared";
 
 const roles = ["student", "teacher", "admin", "researcher", "other"] as const;
 
@@ -72,7 +73,10 @@ export function NewsletterSection() {
           </label>
 
           <button
-            className="mt-1 h-12 rounded-lg border border-[#3b6bff]/40 bg-[linear-gradient(93.74deg,#0A174C_0%,#1836B2_100%)] text-sm font-semibold text-white transition-opacity hover:opacity-95"
+            className={ctaButtonVariants({
+              variant: "primary",
+              className: "mt-1 w-full",
+            })}
             type="submit"
           >
             {t("submitButton")}

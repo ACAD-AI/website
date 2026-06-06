@@ -21,7 +21,7 @@ export async function AboutTeamSection() {
           descriptionClassName="max-w-3xl text-base leading-7"
         />
 
-        <div className="mt-14 rounded-xl bg-[#373764] p-3 sm:p-4">
+        <div className="mt-14 rounded-xl bg-white p-3 sm:p-4 dark:bg-[#373764]">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {teamMembers.map((member) => (
               <TeamPhotoTile key={member.name} member={member} />

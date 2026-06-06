@@ -22,7 +22,7 @@ export function InteractivePurposeGallery({
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="rounded-xl bg-[#373764] p-3 sm:p-4">
+    <div className="rounded-xl bg-white p-3 sm:p-4 dark:bg-[#373764]">
       <div className="flex flex-col gap-3 lg:h-[480px] lg:flex-row">
         {panels.map((panel, index) => {
           const isActive = activeIndex === index;

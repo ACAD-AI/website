@@ -10,7 +10,7 @@ interface TeamPhotoTileProps {
 
 export function TeamPhotoTile({ member }: TeamPhotoTileProps) {
   return (
-    <div className="relative aspect-square overflow-hidden rounded-lg bg-[#141b34]">
+    <div className="relative aspect-square overflow-hidden rounded-lg bg-[#f5f7ff] dark:bg-[#141b34]">
       <Image
         alt={member.name}
         className={cn(

@@ -19,13 +19,13 @@ export function InstitutionsHeroSection({
 
       <div className="relative mx-auto flex min-h-[610px] w-full max-w-[1180px] items-center justify-center">
         <div className="relative z-10 flex max-w-5xl flex-col items-center text-center">
-          <p className="text-sm font-semibold tracking-[0.35em] text-[#86c7ed] uppercase sm:text-base">
+          <p className="text-sm font-semibold tracking-[0.35em] text-[#1836b2] uppercase sm:text-base dark:text-[#86c7ed]">
             {eyebrow}
           </p>
-          <h1 className="mt-6 text-5xl leading-[1.08] font-medium tracking-tight text-white sm:text-6xl lg:text-[5.25rem]">
+          <h1 className="mt-6 text-5xl leading-[1.08] font-medium tracking-tight text-[#141b34] sm:text-6xl lg:text-[5.25rem] dark:text-white">
             {title}
           </h1>
-          <p className="mt-8 max-w-3xl text-base leading-8 text-white/65 sm:text-lg">
+          <p className="mt-8 max-w-3xl text-base leading-8 text-[#5b6b8c] sm:text-lg dark:text-white/65">
             {description}
           </p>
           <Link

@@ -36,11 +36,15 @@ const testimonials: TestimonialItem[] = [
 
 function TestimonialCard({ item }: { item: TestimonialItem }) {
   return (
-    <article className="rounded-2xl border border-[#4D4D7C] bg-[#323261] p-5 text-white shadow-[0_0_14px_0_rgba(50,50,97,1)] sm:p-6">
-      <p className="text-base leading-7 text-white/90">{item.quote}</p>
+    <article className="rounded-2xl border border-[#e3e8f5] bg-white p-5 text-[#141b34] shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-6 dark:border-[#4D4D7C] dark:bg-[#323261] dark:text-white dark:shadow-[0_0_14px_0_rgba(50,50,97,1)]">
+      <p className="text-base leading-7 text-[#5b6b8c] dark:text-white/90">
+        {item.quote}
+      </p>
       <div className="mt-6">
-        <h3 className="text-[1.05rem] font-medium text-white">{item.author}</h3>
-        <p className="mt-1 text-sm tracking-wide text-white/54 uppercase">
+        <h3 className="text-[1.05rem] font-medium text-[#141b34] dark:text-white">
+          {item.author}
+        </h3>
+        <p className="mt-1 text-sm tracking-wide text-[#5b6b8c] uppercase dark:text-white/54">
           {item.role}
         </p>
       </div>

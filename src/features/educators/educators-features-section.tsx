@@ -9,7 +9,7 @@ import {
 import { getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
-import { FeatureCard, SectionHeader } from "@/shared";
+import { ctaButtonVariants, FeatureCard, SectionHeader } from "@/shared";
 
 const features = [
   { key: "questionGenerator", icon: FileText },
@@ -49,7 +49,7 @@ export async function EducatorsFeaturesSection() {
 
         <div className="mt-12 flex justify-center">
           <Link
-            className="rounded-lg border border-[#3479ff] bg-[#1836b2] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#2350d5]"
+            className={ctaButtonVariants({ variant: "primary" })}
             href="/signup"
           >
             {t("button")}

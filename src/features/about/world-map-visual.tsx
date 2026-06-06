@@ -7,7 +7,7 @@ export function WorldMapVisual({ location }: WorldMapVisualProps) {
     <div className="relative mx-auto w-full max-w-[920px]">
       <svg
         aria-hidden="true"
-        className="h-auto w-full text-white/80"
+        className="h-auto w-full text-[#5b6b8c]/70 dark:text-white/80"
         viewBox="0 0 1000 500"
       >
         <defs>

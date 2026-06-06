@@ -4,6 +4,8 @@ import { useTranslations } from "next-intl";
 import type { FormEvent } from "react";
 import { useState } from "react";
 
+import { ctaButtonVariants } from "@/shared";
+
 const sampleData = {
   question: "What are the main causes of climate change?",
   modelAnswer:
@@ -28,17 +30,17 @@ function Field({
   value: string;
 }) {
   return (
-    <label className="flex flex-col gap-3 text-sm font-medium text-white">
+    <label className="flex flex-col gap-3 text-sm font-medium text-[#141b34] dark:text-white">
       {label}
       <textarea
-        className="min-h-14 resize-y rounded-lg border border-[#55578f] bg-[#111a37] px-4 py-3 text-base font-normal text-white outline-none placeholder:text-white/38 focus:border-[#3479ff]"
+        className="min-h-14 resize-y rounded-lg border border-[#cbd5eb] bg-white px-4 py-3 text-base font-normal text-[#141b34] outline-none placeholder:text-[#7c86a0] focus:border-[#3479ff] dark:border-[#55578f] dark:bg-[#111a37] dark:text-white dark:placeholder:text-white/38"
         name={name}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
         required
         value={value}
       />
-      <span className="text-xs leading-5 font-normal text-white/50">
+      <span className="text-xs leading-5 font-normal text-[#5b6b8c] dark:text-white/50">
         {description}
       </span>
     </label>
@@ -66,12 +68,12 @@ export function GradingPlayground() {
 
   return (
     <form
-      className="mt-10 rounded-xl border border-[#55578f] bg-[#373764] p-5 sm:p-8 lg:p-10"
+      className="mt-10 rounded-xl border border-[#e3e8f5] bg-white p-5 sm:p-8 lg:p-10 dark:border-[#55578f] dark:bg-[#373764]"
       onSubmit={handleSubmit}
     >
       <div className="flex justify-end">
         <button
-          className="rounded-lg border border-[#3479ff] bg-[#1836b2] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#2350d5]"
+          className={ctaButtonVariants({ variant: "primary" })}
           onClick={fillSampleData}
           type="button"
         >
@@ -111,13 +113,16 @@ export function GradingPlayground() {
 
       <div className="mt-8 flex flex-wrap items-center gap-4">
         <button
-          className="rounded-lg border border-[#3479ff] bg-[#1836b2] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#2350d5]"
+          className={ctaButtonVariants({ variant: "primary" })}
           type="submit"
         >
           {t("gradeButton")}
         </button>
         {showResult ? (
-          <p className="text-sm leading-6 text-[#8ed1f1]" role="status">
+          <p
+            className="text-sm leading-6 text-[#1836b2] dark:text-[#8ed1f1]"
+            role="status"
+          >
             {t("demoResult")}
           </p>
         ) : null}

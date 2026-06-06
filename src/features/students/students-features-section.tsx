@@ -10,9 +10,13 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="rounded-lg bg-[#141B34] p-6">
-      <h4 className="text-lg font-semibold text-white">{title}</h4>
-      <p className="mt-3 text-sm leading-6 text-white/60">{description}</p>
+    <div className="rounded-lg bg-[#f5f7ff] p-6 dark:bg-[#141B34]">
+      <h4 className="text-lg font-semibold text-[#141b34] dark:text-white">
+        {title}
+      </h4>
+      <p className="mt-3 text-sm leading-6 text-[#5b6b8c] dark:text-white/60">
+        {description}
+      </p>
     </div>
   );
 }
@@ -22,7 +26,7 @@ export async function StudentsFeaturesSection() {
 
   return (
     <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-      <div className="mx-auto w-full max-w-5xl bg-[#323261] p-8 sm:p-10 lg:p-12">
+      <div className="mx-auto w-full max-w-5xl bg-white p-8 sm:p-10 lg:p-12 dark:bg-[#323261]">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left column */}
           <div className="flex flex-col justify-between">
@@ -31,10 +35,10 @@ export async function StudentsFeaturesSection() {
                 <Brain className="size-6 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl font-semibold leading-snug text-white sm:text-3xl">
+                <h3 className="text-2xl font-semibold leading-snug text-[#141b34] sm:text-3xl dark:text-white">
                   {t("leftTitle")}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-white/60">
+                <p className="mt-4 text-sm leading-7 text-[#5b6b8c] dark:text-white/60">
                   {t("leftDescription")}
                 </p>
               </div>
@@ -49,7 +53,7 @@ export async function StudentsFeaturesSection() {
             <div className="flex size-12 items-center justify-center rounded-xl bg-[#1836B2]">
               <Zap className="size-6 text-white" />
             </div>
-            <h3 className="text-2xl font-semibold leading-snug text-white sm:text-3xl">
+            <h3 className="text-2xl font-semibold leading-snug text-[#141b34] sm:text-3xl dark:text-white">
               {t("rightTitle")}
             </h3>
             <div className="grid gap-4 sm:grid-cols-2">

@@ -1,4 +1,9 @@
-export { PrimaryButton, SecondaryButton } from "./cta-button";
+export {
+  CtaButton,
+  ctaButtonVariants,
+  PrimaryButton,
+  SecondaryButton,
+} from "./cta-button";
 export { FeatureCard } from "./feature-card";
 export { MediaShowcase } from "./media-showcase";
 export { QuestionTypesSection } from "./question-types-section";

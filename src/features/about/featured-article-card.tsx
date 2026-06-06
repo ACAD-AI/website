@@ -16,8 +16,8 @@ export function FeaturedArticleCard({
   readLabel,
 }: FeaturedArticleCardProps) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-[#55578f] bg-[#373764] shadow-[0_0_22px_rgba(64,142,255,0.15)] transition-transform duration-300 hover:-translate-y-1">
-      <div className="relative aspect-[1.3/1] overflow-hidden bg-[#141b34]">
+    <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-[#e3e8f5] bg-white shadow-[0_16px_38px_rgba(46,73,139,0.08)] transition-transform duration-300 hover:-translate-y-1 dark:border-[#55578f] dark:bg-[#373764] dark:shadow-[0_0_22px_rgba(64,142,255,0.15)]">
+      <div className="relative aspect-[1.3/1] overflow-hidden bg-[#f5f7ff] dark:bg-[#141b34]">
         <Image
           alt={article.title}
           className={cn(
@@ -32,18 +32,18 @@ export function FeaturedArticleCard({
       </div>
 
       <div className="flex flex-1 flex-col p-5 sm:p-6">
-        <p className="text-xl font-semibold text-[#8ed1f1]">
+        <p className="text-xl font-semibold text-[#1836b2] dark:text-[#8ed1f1]">
           {article.publication}
         </p>
-        <p className="mt-4 text-sm text-white/55">
+        <p className="mt-4 text-sm text-[#5b6b8c] dark:text-white/55">
           {article.author} | {article.date}
         </p>
-        <h3 className="mt-5 text-xl leading-8 font-medium text-white">
+        <h3 className="mt-5 text-xl leading-8 font-medium text-[#141b34] dark:text-white">
           {article.title}
         </h3>
 
         <Link
-          className="mt-auto inline-flex items-center justify-end gap-2 pt-8 text-base font-semibold text-white transition-colors hover:text-[#8ed1f1]"
+          className="mt-auto inline-flex items-center justify-end gap-2 pt-8 text-base font-semibold text-[#141b34] transition-colors hover:text-[#1836b2] dark:text-white dark:hover:text-[#8ed1f1]"
           href={article.href}
         >
           {readLabel}

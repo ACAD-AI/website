@@ -30,10 +30,10 @@ export async function QuestionTypesSection() {
 
       <div className="relative mx-auto w-full max-w-[1060px]">
         <div className="text-center">
-          <p className="text-xs font-semibold tracking-[0.3em] text-[#86c7ed] uppercase sm:text-sm">
+          <p className="text-xs font-semibold tracking-[0.3em] text-[#1836b2] uppercase sm:text-sm dark:text-[#86c7ed]">
             {t("eyebrow")}
           </p>
-          <h2 className="mt-4 text-3xl leading-tight font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-4xl lg:text-5xl dark:text-white">
             {t("title")}
           </h2>
         </div>

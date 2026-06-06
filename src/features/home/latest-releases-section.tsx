@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import { Link } from "@/i18n/navigation";
-import { SectionHeader } from "@/shared";
+import { ctaButtonVariants, SectionHeader } from "@/shared";
 
 import { ReleaseCard } from "./release-card";
 
@@ -37,7 +37,7 @@ export function LatestReleasesSection() {
 
         <div className="mt-10 flex justify-center">
           <Link
-            className="inline-flex items-center gap-3 rounded-lg border border-[#3b6bff]/40 bg-[linear-gradient(93.74deg,#0A174C_0%,#1836B2_100%)] px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-95"
+            className={ctaButtonVariants({ variant: "primary" })}
             href="/solutions/students"
           >
             {t("button")}

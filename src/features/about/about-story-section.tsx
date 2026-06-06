@@ -13,18 +13,18 @@ export async function AboutStorySection() {
         <WorldMapVisual location={t("location")} />
 
         <div className="mx-auto mt-10 max-w-3xl text-center">
-          <p className="text-sm font-semibold tracking-[0.32em] text-[#86c7ed] uppercase">
+          <p className="text-sm font-semibold tracking-[0.32em] text-[#1836b2] uppercase dark:text-[#86c7ed]">
             {t("eyebrow")}
           </p>
-          <h2 className="mt-5 text-4xl leading-tight font-medium tracking-tight text-white sm:text-5xl">
+          <h2 className="mt-5 text-4xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-5xl dark:text-white">
             {t("title")}
           </h2>
         </div>
 
-        <div className="mx-auto mt-10 max-w-3xl space-y-5 text-base leading-8 text-white/65">
+        <div className="mx-auto mt-10 max-w-3xl space-y-5 text-base leading-8 text-[#5b6b8c] dark:text-white/65">
           <p>
             {t("paragraph1")}{" "}
-            <strong className="font-semibold text-white">
+            <strong className="font-semibold text-[#141b34] dark:text-white">
               {t("paragraph1Bold")}
             </strong>
           </p>
