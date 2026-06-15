@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Menu, Settings2, X } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { LanguageSwitcher } from "@/features/language-switcher/language-switcher";
@@ -225,39 +225,68 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
               ))}
             </div>
 
-            <div className="space-y-4 rounded-[24px] border border-[#d5dbea] bg-white p-4 shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:border-white/8 dark:bg-white/3 dark:shadow-none">
-              <div className="space-y-1">
-                <p className="text-xs font-medium text-[#141b34] sm:text-sm dark:text-white">
-                  Preferences
-                </p>
-                <p className="text-xs leading-5 text-[#5b6b8c] sm:text-sm sm:leading-6 dark:text-white/48">
-                  Choose your language and access your account.
-                </p>
+            <div className="rounded-[22px] border border-[#d5dbea] bg-white p-3 shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:border-white/8 dark:bg-white/3 dark:shadow-none">
+              <div className="flex items-start gap-3 px-1 pb-3">
+                <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-[#e9efff] text-[#1836b2] dark:bg-[#2852ff]/15 dark:text-[#86c7ed]">
+                  <Settings2 aria-hidden="true" className="size-4" />
+                </span>
+                <div>
+                  <p className="text-xs font-semibold text-[#141b34] sm:text-sm dark:text-white">
+                    Preferences
+                  </p>
+                  <p className="mt-0.5 text-[11px] leading-4 text-[#5b6b8c] sm:text-xs dark:text-white/48">
+                    Personalize your experience.
+                  </p>
+                </div>
               </div>
 
-              <LanguageSwitcher
-                buttonClassName="w-full justify-between"
-                className="w-full"
-                menuClassName="left-0 right-0 min-w-0"
-              />
-              <ThemeToggle className="w-full justify-center" />
+              <div className="space-y-2 border-y border-[#e3e8f5] py-3 dark:border-white/8">
+                <div className="flex items-center justify-between gap-3 rounded-xl bg-[#f5f7ff] px-3 py-2 dark:bg-[#111832]">
+                  <div>
+                    <p className="text-xs font-medium text-[#141b34] dark:text-white">
+                      Language
+                    </p>
+                    <p className="text-[10px] text-[#7c86a0] dark:text-white/40">
+                      Display language
+                    </p>
+                  </div>
+                  <LanguageSwitcher
+                    buttonClassName="h-9 min-w-24 justify-between rounded-lg bg-white px-3 text-xs shadow-sm dark:bg-white/5"
+                    menuClassName="right-0 min-w-32"
+                  />
+                </div>
 
-              <div className="flex flex-col gap-3">
+                <div className="flex items-center justify-between gap-3 rounded-xl bg-[#f5f7ff] px-3 py-2 dark:bg-[#111832]">
+                  <div>
+                    <p className="text-xs font-medium text-[#141b34] dark:text-white">
+                      Appearance
+                    </p>
+                    <p className="text-[10px] text-[#7c86a0] dark:text-white/40">
+                      Light or dark mode
+                    </p>
+                  </div>
+                  <ThemeToggle className="shrink-0" />
+                </div>
+              </div>
+
+              <div className="mt-3 grid grid-cols-2 gap-2">
                 <a
-                  className="inline-flex h-11 items-center justify-center rounded-xl border border-[#cfd5e7] px-4 text-xs font-semibold text-[#141b34] transition-colors hover:bg-[#f4f6fb] sm:h-12 sm:text-sm dark:border-white/10 dark:text-white dark:hover:bg-white/6"
+                  className="inline-flex h-10 items-center justify-center gap-1.5 rounded-xl bg-[#1836b2] px-3 text-xs font-semibold text-white shadow-[0_8px_18px_rgba(24,54,178,0.22)] transition-colors hover:bg-[#244ac6]"
                   href={ONBOARDING_URL}
                   rel="noopener noreferrer"
                   target="_blank"
                   onClick={onClose}
                 >
                   Sign Up
+                  <ArrowUpRight aria-hidden="true" className="size-3.5" />
                 </a>
                 <Button
                   asChild
-                  className="h-11 rounded-xl bg-[#1836B2] px-5 text-xs text-white font-semibold sm:h-12 sm:text-sm"
+                  className="h-10 rounded-xl border border-[#cfd5e7] bg-transparent px-3 text-xs font-semibold text-[#141b34] hover:bg-[#f4f6fb] dark:border-white/10 dark:text-white dark:hover:bg-white/6"
+                  variant="ghost"
                 >
                   <Link href="/request-demo" onClick={onClose}>
-                    Request a Demo
+                    Request Demo
                   </Link>
                 </Button>
               </div>
