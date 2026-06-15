@@ -92,7 +92,7 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
       <button
         aria-hidden={!open}
         className={cn(
-          "absolute inset-0 bg-[#040b26]/82 backdrop-blur-md transition-opacity duration-300",
+          "absolute inset-0 bg-[#141b34]/35 backdrop-blur-md transition-opacity duration-300 dark:bg-[#040b26]/82",
           open ? "opacity-100" : "opacity-0",
         )}
         onClick={onClose}
@@ -103,11 +103,11 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
       <aside
         aria-hidden={!open}
         className={cn(
-          "absolute inset-y-0 right-0 z-50 flex h-full w-full flex-col bg-[linear-gradient(180deg,#151c37_0%,#141b34_100%)] shadow-[-24px_0_80px_rgba(0,0,0,0.5)] transition-transform duration-300 sm:max-w-100 sm:border-l sm:border-[#2a315c]",
+          "absolute inset-y-0 right-0 z-50 flex h-full w-full flex-col bg-[linear-gradient(180deg,#ffffff_0%,#f5f7ff_100%)] shadow-[-24px_0_80px_rgba(46,73,139,0.22)] transition-transform duration-300 sm:max-w-100 sm:border-l sm:border-[#dce1f0] dark:bg-[linear-gradient(180deg,#151c37_0%,#141b34_100%)] dark:shadow-[-24px_0_80px_rgba(0,0,0,0.5)] dark:sm:border-[#2a315c]",
           open ? "translate-x-0" : "translate-x-full",
         )}
       >
-        <div className="relative z-10 flex items-center justify-between border-b border-white/8 px-5 py-5 sm:px-6">
+        <div className="relative z-10 flex items-center justify-between border-b border-[#dce1f0] px-5 py-5 sm:px-6 dark:border-white/8">
           <Link
             className="flex shrink-0 items-center gap-2.5 text-base font-semibold tracking-tight text-[#4166ff]"
             href="/"
@@ -123,7 +123,7 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
 
           <Button
             aria-label="Close navigation menu"
-            className="size-10 rounded-[20px] border border-white/8 bg-white/4 text-white hover:bg-white/8"
+            className="size-10 rounded-[20px] border border-[#d5dbea] bg-[#f4f6fb] text-[#141b34] hover:bg-[#e9edf7] dark:border-white/8 dark:bg-white/4 dark:text-white dark:hover:bg-white/8"
             onClick={onClose}
             size="icon"
             variant="ghost"
@@ -134,23 +134,26 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
 
         <div
           className={cn(
-            "relative z-10 min-h-0 flex-1 overflow-y-auto px-5 py-6 transition-opacity duration-200 sm:px-6",
+            "relative z-10 min-h-0 flex-1 overflow-y-auto px-5 py-5 transition-opacity duration-200 sm:px-6 sm:py-6",
             open ? "opacity-100" : "opacity-0",
           )}
         >
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <div className="space-y-2">
-              <p className="text-[11px] font-semibold tracking-[0.32em] text-[#86c7ed] uppercase">
+              <p className="text-[10px] font-semibold tracking-[0.32em] text-[#1836b2] uppercase sm:text-[11px] dark:text-[#86c7ed]">
                 Explore
               </p>
-              <p className="max-w-sm text-sm leading-6 text-white/56">
+              <p className="max-w-sm text-xs leading-5 text-[#5b6b8c] sm:text-sm sm:leading-6 dark:text-white/56">
                 Navigate products, resources, and company pages.
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {mainNav.map((item) => (
-                <div className="border-b border-white/8 pb-4" key={item.label}>
+                <div
+                  className="border-b border-[#dce1f0] pb-3 sm:pb-4 dark:border-white/8"
+                  key={item.label}
+                >
                   {item.items?.length ? (
                     <>
                       <button
@@ -163,12 +166,12 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
                         }
                         type="button"
                       >
-                        <span className="text-xl font-semibold text-white">
+                        <span className="text-lg font-semibold text-[#141b34] sm:text-xl dark:text-white">
                           {item.label}
                         </span>
                         <ChevronDown
                           className={cn(
-                            "size-5 text-white/60 transition-transform duration-200",
+                            "size-5 text-[#68718b] transition-transform duration-200 dark:text-white/60",
                             activeSection === item.label && "rotate-180",
                           )}
                         />
@@ -187,18 +190,18 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
                             {item.items.map((subItem) => (
                               <Link
                                 className={cn(
-                                  "block rounded-2xl px-4 py-3 transition-colors hover:bg-white/5",
+                                  "block rounded-2xl px-4 py-3 transition-colors hover:bg-[#eef2fb] dark:hover:bg-white/5",
                                 )}
                                 href={subItem.href}
                                 key={subItem.href}
                                 onClick={onClose}
                               >
                                 <div className="space-y-1">
-                                  <div className="text-base font-medium text-white/92">
+                                  <div className="text-sm font-medium text-[#141b34] sm:text-base dark:text-white/92">
                                     {subItem.label}
                                   </div>
                                   {subItem.description ? (
-                                    <p className="text-sm leading-6 text-white/48">
+                                    <p className="text-xs leading-5 text-[#5b6b8c] sm:text-sm sm:leading-6 dark:text-white/48">
                                       {subItem.description}
                                     </p>
                                   ) : null}
@@ -211,7 +214,7 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
                     </>
                   ) : (
                     <Link
-                      className="flex items-center justify-between py-1 text-xl font-semibold text-white"
+                      className="flex items-center justify-between py-1 text-lg font-semibold text-[#141b34] sm:text-xl dark:text-white"
                       href={item.href ?? "/"}
                       onClick={onClose}
                     >
@@ -222,10 +225,12 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
               ))}
             </div>
 
-            <div className="space-y-4 rounded-[24px] border border-white/8 bg-white/3 p-4">
+            <div className="space-y-4 rounded-[24px] border border-[#d5dbea] bg-white p-4 shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:border-white/8 dark:bg-white/3 dark:shadow-none">
               <div className="space-y-1">
-                <p className="text-sm font-medium text-white">Preferences</p>
-                <p className="text-sm leading-6 text-white/48">
+                <p className="text-xs font-medium text-[#141b34] sm:text-sm dark:text-white">
+                  Preferences
+                </p>
+                <p className="text-xs leading-5 text-[#5b6b8c] sm:text-sm sm:leading-6 dark:text-white/48">
                   Choose your language and access your account.
                 </p>
               </div>
@@ -239,7 +244,7 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
 
               <div className="flex flex-col gap-3">
                 <a
-                  className="inline-flex h-12 items-center justify-center rounded-xl border border-white/10 px-4 text-sm font-semibold text-white transition-colors hover:bg-white/6"
+                  className="inline-flex h-11 items-center justify-center rounded-xl border border-[#cfd5e7] px-4 text-xs font-semibold text-[#141b34] transition-colors hover:bg-[#f4f6fb] sm:h-12 sm:text-sm dark:border-white/10 dark:text-white dark:hover:bg-white/6"
                   href={ONBOARDING_URL}
                   rel="noopener noreferrer"
                   target="_blank"
@@ -249,7 +254,7 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
                 </a>
                 <Button
                   asChild
-                  className="h-12 rounded-xl bg-[#1836B2] px-5 text-sm text-white font-semibold"
+                  className="h-11 rounded-xl bg-[#1836B2] px-5 text-xs text-white font-semibold sm:h-12 sm:text-sm"
                 >
                   <Link href="/request-demo" onClick={onClose}>
                     Request a Demo
