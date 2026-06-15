@@ -1,27 +1,19 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import Image from "next/image";
+import { useState } from "react";
 
 import { FadeIn, SectionHeader } from "@/shared";
 import { cn } from "@/shared/lib/utils";
 
-import { ReviewCard } from "./review-card";
-import {
-  type ReviewAudience,
-  reviewAudienceLabels,
-  reviewItems,
-} from "./reviews-data";
+import { ReviewImageMarquee } from "./review-image-marquee";
+import { type ReviewAudience, reviewAudienceLabels } from "./reviews-data";
 
 const audiences = Object.keys(reviewAudienceLabels) as ReviewAudience[];
 
 export function ReviewsSection() {
   const [activeAudience, setActiveAudience] =
     useState<ReviewAudience>("students");
-
-  const filteredReviews = useMemo(
-    () => reviewItems.filter((item) => item.audience === activeAudience),
-    [activeAudience],
-  );
 
   return (
     <section className="relative overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
@@ -60,11 +52,24 @@ export function ReviewsSection() {
           })}
         </div>
 
-        <FadeIn className="w-full columns-1 gap-5 space-y-5 sm:columns-2 lg:columns-3">
-          {filteredReviews.map((item) => (
-            <ReviewCard item={item} key={item.id} />
-          ))}
-        </FadeIn>
+        {activeAudience !== "admins" ? (
+          <FadeIn className="w-screen">
+            <ReviewImageMarquee audience={activeAudience} />
+          </FadeIn>
+        ) : (
+          <FadeIn className="w-full max-w-[900px]">
+            <div className="overflow-hidden rounded-2xl border border-[#e3e8f5] bg-white p-2 shadow-[0_16px_38px_rgba(46,73,139,0.12)] dark:border-[#535090] dark:bg-[#43407c] dark:shadow-[0_16px_36px_rgba(8,12,32,0.24)] sm:p-3">
+              <Image
+                alt="Admin review screenshot"
+                className="h-auto w-full rounded-xl"
+                height={256}
+                sizes="(max-width: 900px) 92vw, 900px"
+                src="/images/reviews/admins/974372d0d37ec60eb48b4f10c4f67106ca8e2d21.png"
+                width={975}
+              />
+            </div>
+          </FadeIn>
+        )}
       </div>
     </section>
   );

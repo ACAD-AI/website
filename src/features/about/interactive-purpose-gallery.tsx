@@ -8,6 +8,7 @@ import { cn } from "@/shared/lib/utils";
 export interface PurposePanel {
   description: string;
   imageAlt: string;
+  imageSrc: string;
   imagePosition: string;
   title: string;
 }
@@ -51,7 +52,7 @@ export function InteractivePurposeGallery({
                 )}
                 fill
                 sizes="(min-width: 1024px) 55vw, 100vw"
-                src="/images/numbers-story-educator.png"
+                src={panel?.imageSrc}
               />
               <span
                 className={cn(

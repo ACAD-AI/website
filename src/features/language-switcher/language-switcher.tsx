@@ -46,7 +46,7 @@ export function LanguageSwitcher({
       {open ? (
         <div
           className={cn(
-            "absolute right-0 top-[calc(100%+0.5rem)] z-40 min-w-35 overflow-hidden rounded-xl border border-white/10 bg-[#040b26] shadow-[0_16px_48px_rgba(0,0,0,0.45)]",
+            "absolute right-0 top-[calc(100%+0.5rem)] z-40 min-w-35 overflow-hidden rounded-xl border border-[#d5dbea] bg-white shadow-[0_16px_48px_rgba(46,73,139,0.18)] dark:border-white/10 dark:bg-[#040b26] dark:shadow-[0_16px_48px_rgba(0,0,0,0.45)]",
             menuClassName,
           )}
         >
@@ -59,7 +59,7 @@ export function LanguageSwitcher({
                   "flex w-full items-center justify-between px-4 py-3 text-left text-sm transition-colors",
                   isActive
                     ? "bg-[#2852ff] text-white"
-                    : "text-white/80 hover:bg-white/6 hover:text-white",
+                    : "text-[#141b34] hover:bg-[#f4f7ff] hover:text-[#1836b2] dark:text-white/80 dark:hover:bg-white/6 dark:hover:text-white",
                 )}
                 key={nextLocale}
                 onClick={() => {

@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 import { Link } from "@/i18n/navigation";
 import { ctaButtonVariants, FadeIn } from "@/shared";
+import { ONBOARDING_URL } from "@/shared/config/site";
 
 interface EducatorsHeroSectionProps {
   button: string;
@@ -36,7 +37,9 @@ export function EducatorsHeroSection({
               variant: "primary",
               className: "mt-10",
             })}
-            href="/signup"
+            href={ONBOARDING_URL}
+            rel="noreferrer"
+            target="_blank"
           >
             {button}
             <ArrowRight aria-hidden="true" className="size-5" />

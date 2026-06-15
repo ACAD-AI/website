@@ -12,7 +12,6 @@ export async function EducatorsTestimonialsSection() {
 
   const items: ReviewItem[] = testimonials.map((testimonial) => ({
     id: testimonial,
-    audience: "educators",
     quote: t(`items.${testimonial}.quote`),
     author: t(`items.${testimonial}.author`),
     organization: t(`items.${testimonial}.organization`),

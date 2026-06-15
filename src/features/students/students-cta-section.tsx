@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { SolutionCTASection } from "@/shared";
+import { ONBOARDING_URL } from "@/shared/config/site";
 
 export async function StudentsCTASection() {
   const t = await getTranslations("StudentsCTA");
@@ -8,7 +9,7 @@ export async function StudentsCTASection() {
     <SolutionCTASection
       actions={[
         {
-          href: "/signup",
+          href: ONBOARDING_URL,
           label: t("button"),
           showArrow: true,
         },

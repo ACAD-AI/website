@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
-import { FadeIn, MediaShowcase } from "@/shared";
+import { FadeIn, YouTubeVideoShowcase } from "@/shared";
 
 export async function InActionSection() {
   const t = await getTranslations("InstitutionsInAction");
@@ -10,11 +10,11 @@ export async function InActionSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(25,79,204,0.2),transparent_38%)]" />
 
       <FadeIn className="relative mx-auto w-full max-w-[920px]">
-        <MediaShowcase
-          imageAlt={t("imageAlt")}
-          imageSrc="/images/svg/home-hero.svg"
+        <YouTubeVideoShowcase
           subtitle={t("subtitle")}
           title={t("title")}
+          videoId="9fgKU0lxM64"
+          videoTitle="Institutions in action video"
         />
       </FadeIn>
     </section>

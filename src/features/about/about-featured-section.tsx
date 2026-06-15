@@ -12,7 +12,7 @@ export async function AboutFeaturedSection() {
     <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(25,79,204,0.18),transparent_36%)]" />
 
-      <div className="relative mx-auto w-full max-w-[1180px]">
+      <div className="relative mx-auto w-full max-w-[1320px]">
         <FadeIn>
           <SectionHeader
             eyebrow={t("eyebrow")}

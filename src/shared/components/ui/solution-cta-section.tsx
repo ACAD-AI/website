@@ -45,6 +45,8 @@ export function SolutionCTASection({
               )}
               href={action.href}
               key={`${action.href}-${action.label}`}
+              rel={action.href.startsWith("http") ? "noreferrer" : undefined}
+              target={action.href.startsWith("http") ? "_blank" : undefined}
             >
               {action.label}
               {action.showArrow ? (
