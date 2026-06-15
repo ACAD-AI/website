@@ -38,7 +38,13 @@ export function PricingPlanCard({ plan }: PricingPlanCardProps) {
       </div>
 
       <PrimaryButton className="mt-8">
-        <Link href={plan.ctaHref}>{plan.ctaLabel}</Link>
+        <Link
+          href={plan.ctaHref}
+          rel={plan.ctaHref.startsWith("http") ? "noreferrer" : undefined}
+          target={plan.ctaHref.startsWith("http") ? "_blank" : undefined}
+        >
+          {plan.ctaLabel}
+        </Link>
       </PrimaryButton>
     </article>
   );

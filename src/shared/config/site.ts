@@ -9,3 +9,5 @@ export const siteConfig = {
     github: "",
   },
 } as const;
+
+export const ONBOARDING_URL = "https://www.acadai.co/onboarding";

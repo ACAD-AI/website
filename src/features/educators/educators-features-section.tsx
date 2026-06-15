@@ -17,6 +17,7 @@ import {
   Stagger,
   StaggerItem,
 } from "@/shared";
+import { ONBOARDING_URL } from "@/shared/config/site";
 
 const features = [
   { key: "questionGenerator", icon: FileText },
@@ -60,7 +61,9 @@ export async function EducatorsFeaturesSection() {
         <div className="mt-12 flex justify-center">
           <Link
             className={ctaButtonVariants({ variant: "primary" })}
-            href="/signup"
+            href={ONBOARDING_URL}
+            rel="noreferrer"
+            target="_blank"
           >
             {t("button")}
           </Link>

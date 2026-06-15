@@ -4,8 +4,40 @@ import { getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 import { ctaButtonVariants, FadeIn, Stagger, StaggerItem } from "@/shared";
+import { ONBOARDING_URL } from "@/shared/config/site";
 
-const steps = ["create", "secure", "deliver", "grade", "review"] as const;
+const steps = [
+  {
+    key: "create",
+    imageSrc: "/images/educators-guide/create-exam.png",
+    imageWidth: 505,
+    imageHeight: 375,
+  },
+  {
+    key: "secure",
+    imageSrc: "/images/educators-guide/create-student-group.png",
+    imageWidth: 505,
+    imageHeight: 376,
+  },
+  {
+    key: "deliver",
+    imageSrc: "/images/educators-guide/publsh-exam.png",
+    imageWidth: 513,
+    imageHeight: 388,
+  },
+  {
+    key: "grade",
+    imageSrc: "/images/educators-guide/review-and-approve.png",
+    imageWidth: 510,
+    imageHeight: 383,
+  },
+  {
+    key: "review",
+    imageSrc: "/images/educators-guide/export-and-share.png",
+    imageWidth: 515,
+    imageHeight: 429,
+  },
+] as const;
 
 export async function EducatorsWorkflowSection() {
   const t = await getTranslations("EducatorsWorkflow");
@@ -37,7 +69,9 @@ export async function EducatorsWorkflowSection() {
                 variant: "primary",
                 className: "mt-10",
               })}
-              href="/signup"
+              href={ONBOARDING_URL}
+              rel="noreferrer"
+              target="_blank"
             >
               {t("button")}
             </Link>
@@ -47,7 +81,7 @@ export async function EducatorsWorkflowSection() {
             {steps.map((step, index) => (
               <StaggerItem
                 className="w-[88%] shrink-0 snap-center overflow-hidden rounded-sm border border-[#e3e8f5] bg-white p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:w-[76%] sm:p-8 lg:w-[92%] lg:p-10 dark:border-[#57588d] dark:bg-[#393967] dark:shadow-[0_24px_65px_rgba(7,15,51,0.32)]"
-                key={step}
+                key={step.key}
               >
                 <div className="-rotate-3 rounded-xl bg-[#f5f7ff] p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]">
                   <div className="flex items-start justify-between gap-5">
@@ -62,19 +96,20 @@ export async function EducatorsWorkflowSection() {
                   </div>
 
                   <h3 className="mt-6 text-2xl font-medium text-[#141b34] sm:text-3xl dark:text-white">
-                    {t(`steps.${step}.title`)}
+                    {t(`steps.${step.key}.title`)}
                   </h3>
                   <p className="mt-3 text-base leading-7 text-[#5b6b8c] dark:text-white/65">
-                    {t(`steps.${step}.description`)}
+                    {t(`steps.${step.key}.description`)}
                   </p>
 
                   <div className="mt-8 overflow-hidden rounded-lg border-2 border-[#1836b2] bg-white dark:border-[#86c7ed]">
                     <Image
-                      alt={t(`steps.${step}.imageAlt`)}
-                      className="aspect-[16/10] w-full object-cover object-top"
-                      height={728}
-                      src="/images/svg/home-hero.svg"
-                      width={1200}
+                      alt={t(`steps.${step.key}.imageAlt`)}
+                      className="aspect-[4/3] w-full object-contain"
+                      height={step.imageHeight}
+                      sizes="(max-width: 640px) 75vw, (max-width: 1024px) 60vw, 650px"
+                      src={step.imageSrc}
+                      width={step.imageWidth}
                     />
                   </div>
                 </div>

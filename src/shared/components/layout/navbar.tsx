@@ -8,6 +8,7 @@ import { ThemeToggle } from "@/features/theme-toggle/theme-toggle";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/shared/components/ui/button";
 import { mainNav } from "@/shared/config/nav";
+import { ONBOARDING_URL } from "@/shared/config/site";
 import { cn } from "@/shared/lib/utils";
 
 function DesktopNav() {
@@ -239,7 +240,7 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
               <div className="flex flex-col gap-3">
                 <a
                   className="inline-flex h-12 items-center justify-center rounded-xl border border-white/10 px-4 text-sm font-semibold text-white transition-colors hover:bg-white/6"
-                  href="https://www.acadai.co/onboarding"
+                  href={ONBOARDING_URL}
                   rel="noopener noreferrer"
                   target="_blank"
                   onClick={onClose}
@@ -323,7 +324,9 @@ function Navbar() {
             <LanguageSwitcher />
             <Link
               className="inline-flex h-11 items-center rounded-md px-4 text-sm font-semibold text-[#141b34] transition-colors hover:text-[#1836b2] dark:text-white dark:hover:text-white/80"
-              href="/signup"
+              href={ONBOARDING_URL}
+              rel="noopener noreferrer"
+              target="_blank"
             >
               Sign Up
             </Link>

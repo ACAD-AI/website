@@ -76,7 +76,7 @@ export function InstitutionTypesSection() {
               className="w-full rounded-lg object-cover"
               height={728}
               priority={false}
-              src="/images/svg/home-hero.svg"
+              src="/images/built-for.png"
               width={1200}
             />
           </div>

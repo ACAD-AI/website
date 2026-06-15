@@ -237,9 +237,35 @@
     will-change: transform;
   }
 
+  .reviews-marquee-mask {
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0,
+      black 7%,
+      black 93%,
+      transparent 100%
+    );
+  }
+
+  .reviews-marquee-column {
+    animation: reviews-marquee-up 58s linear infinite;
+    will-change: transform;
+  }
+
+  .reviews-marquee-column-2 {
+    animation-duration: 66s;
+    animation-delay: -24s;
+  }
+
+  .reviews-marquee-column-3 {
+    animation-duration: 61s;
+    animation-delay: -41s;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .trust-marquee,
-    .trust-marquee-track {
+    .trust-marquee-track,
+    .reviews-marquee-column {
       animation: none;
     }
   }
@@ -252,5 +278,15 @@
 
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes reviews-marquee-up {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
   }
 }

@@ -42,18 +42,21 @@ export async function AboutPurposeValuesSection() {
       title: tWhy("title"),
       description: tWhy("description"),
       imageAlt: tPanels("whyImageAlt"),
+      imageSrc: "/images/our-story/why-we-exist.png",
       imagePosition: "object-center",
     },
     {
       title: tPanels("educatorsTitle"),
       description: tPanels("educatorsDescription"),
       imageAlt: tPanels("educatorsImageAlt"),
+      imageSrc: "/images/our-story/second-story.png",
       imagePosition: "object-left",
     },
     {
       title: tPanels("learnersTitle"),
       description: tPanels("learnersDescription"),
       imageAlt: tPanels("learnersImageAlt"),
+      imageSrc: "/images/our-story/third-story.png",
       imagePosition: "object-right",
     },
   ];

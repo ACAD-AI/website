@@ -88,6 +88,12 @@ export function PricingSection() {
                   className: "mt-10 h-12 min-w-54",
                 })}
                 href={content.ctaHref}
+                rel={
+                  content.ctaHref.startsWith("http") ? "noreferrer" : undefined
+                }
+                target={
+                  content.ctaHref.startsWith("http") ? "_blank" : undefined
+                }
               >
                 {content.ctaLabel}
               </Link>
@@ -102,6 +108,7 @@ export function PricingSection() {
                       ? "mx-auto max-w-107.5"
                       : "md:grid-cols-2",
                   )}
+                  key={activeAudience}
                 >
                   {content.plans?.map((plan) => (
                     <StaggerItem key={plan.id}>
@@ -147,7 +154,17 @@ export function PricingSection() {
                 ) : null}
 
                 <PrimaryButton className="mt-8">
-                  <Link href={content.ctaHref}>
+                  <Link
+                    href={content.ctaHref}
+                    rel={
+                      content.ctaHref.startsWith("http")
+                        ? "noreferrer"
+                        : undefined
+                    }
+                    target={
+                      content.ctaHref.startsWith("http") ? "_blank" : undefined
+                    }
+                  >
                     {content.ctaLabel}
                     <ArrowUpRight className="size-4" />
                   </Link>

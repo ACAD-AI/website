@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
-import { FadeIn, MediaShowcase } from "@/shared";
+import { FadeIn, YouTubeVideoShowcase } from "@/shared";
 
 export async function EducatorsInActionSection() {
   const t = await getTranslations("EducatorsInAction");
@@ -11,11 +11,11 @@ export async function EducatorsInActionSection() {
 
       <div className="relative mx-auto w-full max-w-[1060px]">
         <FadeIn>
-          <MediaShowcase
-            imageAlt={t("imageAlt")}
-            imageSrc="/images/svg/home-hero.svg"
+          <YouTubeVideoShowcase
             subtitle={t("subtitle")}
             title={t("title")}
+            videoId="PgmSLjCOwIg"
+            videoTitle="Educators in action video"
           />
         </FadeIn>
       </div>

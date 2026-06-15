@@ -1,3 +1,5 @@
+import { ONBOARDING_URL } from "@/shared/config/site";
+
 import type { PricingAudience, PricingAudienceContent } from "./pricing-types";
 
 export const pricingTabLabels: Record<PricingAudience, string> = {
@@ -19,7 +21,7 @@ export const pricingContent: Record<PricingAudience, PricingAudienceContent> = {
       "Generate up to 100 questions instantly from your lesson notes.",
       "Administer an exam to a student.",
     ],
-    ctaHref: "/signup",
+    ctaHref: ONBOARDING_URL,
     ctaLabel: "Get Free Credits on Signup. No Card Needed",
     description:
       "We use a credit system to make it easier and more cost-effective for teachers to generate and grade exams using AI.",
@@ -30,7 +32,7 @@ export const pricingContent: Record<PricingAudience, PricingAudienceContent> = {
       {
         badge: "Basic",
         credits: "50 Credits",
-        ctaHref: "/signup",
+        ctaHref: ONBOARDING_URL,
         ctaLabel: "Get started",
         description: "Perfect for new lecturers",
         id: "educators-basic",
@@ -40,7 +42,7 @@ export const pricingContent: Record<PricingAudience, PricingAudienceContent> = {
       {
         badge: "Plus",
         credits: "250 Credits",
-        ctaHref: "/signup",
+        ctaHref: ONBOARDING_URL,
         ctaLabel: "Get started",
         description: "Standard choice for active lecturers",
         id: "educators-plus",
@@ -50,7 +52,7 @@ export const pricingContent: Record<PricingAudience, PricingAudienceContent> = {
       {
         badge: "Pro",
         credits: "1000 Credits",
-        ctaHref: "/signup",
+        ctaHref: ONBOARDING_URL,
         ctaLabel: "Get started",
         description: "For lectures with multiple courses",
         id: "educators-pro",
@@ -75,7 +77,7 @@ export const pricingContent: Record<PricingAudience, PricingAudienceContent> = {
       "Generate up to 100 questions in a practice quiz from one material or text.",
       "Grade and review your practice quiz",
     ],
-    ctaHref: "/signup",
+    ctaHref: ONBOARDING_URL,
     ctaLabel: "Get Free Credits on Signup. No Card Needed",
     description:
       "We use a credit system to make it easier and more cost-effective for teachers to generate and grade exams using AI.",
@@ -85,7 +87,7 @@ export const pricingContent: Record<PricingAudience, PricingAudienceContent> = {
     plans: [
       {
         credits: "5 Credits",
-        ctaHref: "/signup",
+        ctaHref: ONBOARDING_URL,
         ctaLabel: "Get started",
         description: "Get as much credit as you require",
         id: "students-credits",
