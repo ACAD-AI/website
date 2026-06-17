@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
+import { routing } from "@/i18n/routing";
 import { localizedPath, PAGE_SEO } from "@/shared/config/seo";
 
 // Per-route crawl hints. Default to monthly / 0.7 for anything unlisted.
@@ -39,11 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: hint.changeFrequency,
       priority: hint.priority,
       alternates: {
-        languages: {
-          en: localizedPath(page.path, "en"),
-          fr: localizedPath(page.path, "fr"),
-          ar: localizedPath(page.path, "ar"),
-        },
+        languages: Object.fromEntries(
+          routing.locales.map((locale) => [
+            locale,
+            localizedPath(page.path, locale),
+          ]),
+        ),
       },
     };
   });

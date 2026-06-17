@@ -15,7 +15,11 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? siteConfig.url)
 /** Open Graph locale codes keyed by our app locales. */
 const OG_LOCALE: Record<string, string> = {
   en: "en_US",
+  "en-GB": "en_GB",
   fr: "fr_FR",
+  es: "es_ES",
+  de: "de_DE",
+  pt: "pt_PT",
   ar: "ar_AR",
 };
 
