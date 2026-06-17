@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/features/theme-toggle/theme-toggle";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/shared/components/ui/button";
 import { mainNav } from "@/shared/config/nav";
-import { ONBOARDING_URL } from "@/shared/config/site";
+import { CALENDAR_URL, ONBOARDING_URL } from "@/shared/config/site";
 import { cn } from "@/shared/lib/utils";
 
 function DesktopNav() {
@@ -273,8 +273,6 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
                 <a
                   className="inline-flex h-10 items-center justify-center gap-1.5 rounded-xl bg-[#1836b2] px-3 text-xs font-semibold text-white shadow-[0_8px_18px_rgba(24,54,178,0.22)] transition-colors hover:bg-[#244ac6]"
                   href={ONBOARDING_URL}
-                  rel="noopener noreferrer"
-                  target="_blank"
                   onClick={onClose}
                 >
                   Sign Up
@@ -285,9 +283,9 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
                   className="h-10 rounded-xl border border-[#cfd5e7] bg-transparent px-3 text-xs font-semibold text-[#141b34] hover:bg-[#f4f6fb] dark:border-white/10 dark:text-white dark:hover:bg-white/6"
                   variant="ghost"
                 >
-                  <Link href="/request-demo" onClick={onClose}>
+                  <a href={CALENDAR_URL} onClick={onClose}>
                     Request Demo
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </div>
@@ -349,7 +347,7 @@ function Navbar() {
               asChild
               className="hidden h-11 rounded-xl bg-[#2852ff] px-4 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(40,82,255,0.3)] hover:bg-[#3c63ff] md:inline-flex"
             >
-              <Link href="/request-demo">Request Demo</Link>
+              <a href={CALENDAR_URL}>Request Demo</a>
             </Button>
           </div>
 
@@ -359,8 +357,6 @@ function Navbar() {
             <Link
               className="inline-flex h-11 items-center rounded-md px-4 text-sm font-semibold text-[#141b34] transition-colors hover:text-[#1836b2] dark:text-white dark:hover:text-white/80"
               href={ONBOARDING_URL}
-              rel="noopener noreferrer"
-              target="_blank"
             >
               Sign Up
             </Link>
@@ -368,7 +364,7 @@ function Navbar() {
               asChild
               className="h-12 rounded-xl bg-[#1836B2] px-6 text-sm font-semibold text-white"
             >
-              <Link href="/request-demo">Request a Demo</Link>
+              <a href={CALENDAR_URL}>Request a Demo</a>
             </Button>
           </div>
 

@@ -15,6 +15,7 @@ const HINTS: Record<
   "/solutions/educators": { changeFrequency: "monthly", priority: 0.9 },
   "/solutions/students": { changeFrequency: "monthly", priority: 0.9 },
   "/pricing": { changeFrequency: "monthly", priority: 0.8 },
+  "/terms": { changeFrequency: "yearly", priority: 0.4 },
   "/resources/blog": { changeFrequency: "weekly", priority: 0.7 },
   "/resources/events": { changeFrequency: "weekly", priority: 0.6 },
   "/resources/faq": { changeFrequency: "monthly", priority: 0.6 },

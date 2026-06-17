@@ -70,8 +70,6 @@ export async function EducatorsWorkflowSection() {
                 className: "mt-10",
               })}
               href={ONBOARDING_URL}
-              rel="noreferrer"
-              target="_blank"
             >
               {t("button")}
             </Link>

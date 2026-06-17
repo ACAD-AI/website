@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import type { FormEvent } from "react";
+import { useState } from "react";
 import { toast } from "sonner";
 import { ctaButtonVariants, FadeIn } from "@/shared";
 
@@ -9,11 +10,46 @@ const roles = ["student", "teacher", "admin", "researcher", "other"] as const;
 
 export function NewsletterSection() {
   const t = useTranslations("AboutNewsletter");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    event.currentTarget.reset();
-    toast.success(t("successMessage"));
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: formData.get("email"),
+          name: formData.get("name"),
+          role: formData.get("role"),
+        }),
+      });
+
+      const contentType = response.headers.get("content-type") ?? "";
+      const result = contentType.includes("application/json")
+        ? await response.json()
+        : null;
+
+      if (!response.ok) {
+        throw new Error(result?.error || "Unable to subscribe right now.");
+      }
+
+      form.reset();
+      toast.success(result?.message || t("successMessage"));
+    } catch (error) {
+      toast.error(
+        error instanceof Error ? error.message : "Something went wrong.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -75,9 +111,10 @@ export function NewsletterSection() {
                 variant: "primary",
                 className: "mt-1 w-full",
               })}
+              disabled={isSubmitting}
               type="submit"
             >
-              {t("submitButton")}
+              {isSubmitting ? "Sending..." : t("submitButton")}
             </button>
           </form>
         </FadeIn>

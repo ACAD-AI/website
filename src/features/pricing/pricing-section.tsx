@@ -7,7 +7,6 @@ import { Link } from "@/i18n/navigation";
 import {
   ctaButtonVariants,
   FadeIn,
-  PrimaryButton,
   SectionHeader,
   Stagger,
   StaggerItem,
@@ -46,7 +45,7 @@ export function PricingSection() {
             description="No setup fees. No hidden costs. Cancel anytime."
             descriptionClassName="max-w-3xl text-[#5b6b8c] dark:text-white/60"
             eyebrow="Pricing"
-            title="Simple. Honest. Built for Africa."
+            title="Simple. Honest. Affordable."
             titleClassName="max-w-6xl text-[3rem] sm:text-6xl lg:text-[5rem]"
           />
         </FadeIn>
@@ -153,22 +152,16 @@ export function PricingSection() {
                   </div>
                 ) : null}
 
-                <PrimaryButton className="mt-8">
-                  <Link
-                    href={content.ctaHref}
-                    rel={
-                      content.ctaHref.startsWith("http")
-                        ? "noreferrer"
-                        : undefined
-                    }
-                    target={
-                      content.ctaHref.startsWith("http") ? "_blank" : undefined
-                    }
-                  >
-                    {content.ctaLabel}
-                    <ArrowUpRight className="size-4" />
-                  </Link>
-                </PrimaryButton>
+                <Link
+                  className={ctaButtonVariants({
+                    variant: "primary",
+                    className: "mt-8",
+                  })}
+                  href={content.ctaHref}
+                >
+                  {content.ctaLabel}
+                  <ArrowUpRight className="size-4" />
+                </Link>
               </div>
             </div>
           )}

@@ -38,8 +38,6 @@ export function EducatorsHeroSection({
               className: "mt-10",
             })}
             href={ONBOARDING_URL}
-            rel="noreferrer"
-            target="_blank"
           >
             {button}
             <ArrowRight aria-hidden="true" className="size-5" />

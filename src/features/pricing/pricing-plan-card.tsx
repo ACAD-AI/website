@@ -1,5 +1,5 @@
 import { Link } from "@/i18n/navigation";
-import { PrimaryButton } from "@/shared";
+import { ctaButtonVariants } from "@/shared";
 import type { PricingPlan } from "./pricing-types";
 
 interface PricingPlanCardProps {
@@ -37,15 +37,15 @@ export function PricingPlanCard({ plan }: PricingPlanCardProps) {
         ) : null}
       </div>
 
-      <PrimaryButton className="mt-8">
-        <Link
-          href={plan.ctaHref}
-          rel={plan.ctaHref.startsWith("http") ? "noreferrer" : undefined}
-          target={plan.ctaHref.startsWith("http") ? "_blank" : undefined}
-        >
-          {plan.ctaLabel}
-        </Link>
-      </PrimaryButton>
+      <Link
+        className={ctaButtonVariants({
+          variant: "primary",
+          className: "mt-8 w-full",
+        })}
+        href={plan.ctaHref}
+      >
+        {plan.ctaLabel}
+      </Link>
     </article>
   );
 }

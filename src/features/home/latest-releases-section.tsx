@@ -9,6 +9,7 @@ import {
   Stagger,
   StaggerItem,
 } from "@/shared";
+import { ONBOARDING_URL } from "@/shared/config/site";
 
 import { ReleaseCard } from "./release-card";
 
@@ -47,7 +48,7 @@ export function LatestReleasesSection() {
         <FadeIn className="mt-10 flex justify-center">
           <Link
             className={ctaButtonVariants({ variant: "primary" })}
-            href="/solutions/students"
+            href={ONBOARDING_URL}
           >
             {t("button")}
             <ArrowRight aria-hidden="true" className="size-4" />

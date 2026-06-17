@@ -9,6 +9,7 @@ import {
   NumbersStorySection,
 } from "@/features/home";
 import { TrustBar } from "@/shared";
+import { CALENDAR_URL, ONBOARDING_URL } from "@/shared/config/site";
 
 const Home = () => {
   const t = useTranslations("HomeHero");
@@ -22,7 +23,9 @@ const Home = () => {
         subHeading={t("subHeading")}
         buttonOne={t("buttonOne")}
         buttonOneArrow
+        buttonOneHref={ONBOARDING_URL}
         buttonTwo={t("buttonTwo")}
+        buttonTwoHref={CALENDAR_URL}
         image="/images/svg/home-hero.svg"
       />
       <TrustBar />

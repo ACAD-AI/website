@@ -62,8 +62,6 @@ export async function EducatorsFeaturesSection() {
           <Link
             className={ctaButtonVariants({ variant: "primary" })}
             href={ONBOARDING_URL}
-            rel="noreferrer"
-            target="_blank"
           >
             {t("button")}
           </Link>

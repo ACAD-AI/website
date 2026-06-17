@@ -242,6 +242,13 @@ export const PAGE_SEO = {
       "assessment platform pricing",
     ],
   },
+  terms: {
+    path: "/terms",
+    title: "Terms and Pricing Policy — Acad AI",
+    description:
+      "Read Acad AI's pricing policy, acceptable use terms, contact details, and service conditions.",
+    keywords: ["Acad AI terms", "Acad AI pricing policy", "terms of service"],
+  },
 } satisfies Record<string, PageSeo>;
 
 /** Composes a full Next Metadata object for a page + locale. */

@@ -1,6 +1,8 @@
 import { Brain, Zap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import { FadeIn, PrimaryButton, Stagger, StaggerItem } from "@/shared";
+import { Link } from "@/i18n/navigation";
+import { ctaButtonVariants, FadeIn, Stagger, StaggerItem } from "@/shared";
+import { ONBOARDING_URL } from "@/shared/config/site";
 
 function FeatureCard({
   title,
@@ -45,9 +47,16 @@ export async function StudentsFeaturesSection() {
                 </div>
               </div>
             </FadeIn>
-            <PrimaryButton showArrow className="self-start">
+            <Link
+              className={ctaButtonVariants({
+                variant: "primary",
+                className: "self-start",
+              })}
+              href={ONBOARDING_URL}
+            >
               {t("leftButton")}
-            </PrimaryButton>
+              <span aria-hidden="true">→</span>
+            </Link>
           </div>
 
           {/* Right column */}

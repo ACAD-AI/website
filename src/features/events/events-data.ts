@@ -8,28 +8,28 @@ export const eventTabLabels: Record<EventStatus, string> = {
 export const eventItems: EventItem[] = [
   {
     description:
-      "A one-day gathering of educators reimagining assessments with AI. Featuring keynotes from leading educators across West Africa.",
-    id: "lagos-summit-2024",
+      "A conversation on how AI is reshaping education and assessment across Africa.",
+    id: "redefining-education-africa-ai",
     image: {
-      alt: "Audience seated at a summit listening to a speaker",
+      alt: "Acad AI event recording cover",
       src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80",
     },
-    lumaUrl: "https://lu.ma/acad-ai-lagos-summit",
+    lumaUrl: "https://luma.com/user/acadai",
     status: "past",
-    title: "AI in African Classrooms — Lagos Summit 2024",
-    watchUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    title: "Redefining Education in Africa with AI",
+    watchUrl: "https://youtu.be/28kHVhLhG6U?si=KmeUDp5V5jzkG_yX",
   },
   {
     description:
-      "Hands-on session with university lecturers on building marking guides for AI grading.",
-    id: "abuja-workshop",
+      "A practical session for lecturers exploring AI skills and better assessment workflows.",
+    id: "ai-skills-lecturers-vol-2",
     image: {
       alt: "Workshop audience in a lecture hall",
       src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1600&q=80",
     },
-    lumaUrl: "https://lu.ma/acad-ai-abuja-workshop",
+    lumaUrl: "https://luma.com/user/acadai",
     status: "past",
-    title: "Edu-Innovators Workshop — Abuja",
-    watchUrl: "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+    title: "AI Skills for Lecturers Vol 2",
+    watchUrl: "https://youtu.be/AIeFKVjW8qs",
   },
 ];

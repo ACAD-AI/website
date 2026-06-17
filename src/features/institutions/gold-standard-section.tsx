@@ -22,7 +22,7 @@ export async function GoldStandardSection() {
         <Stagger className="mt-8 flex flex-wrap justify-center gap-3">
           {benefits.map((benefit) => (
             <StaggerItem
-              className="rounded-full bg-[#10004d] px-6 py-3 text-sm text-white/72 sm:text-base"
+              className="rounded-full border border-[#a9cdfd] bg-[#eef6ff] px-4 py-1.5 text-xs font-medium text-[#285f9f] shadow-sm sm:text-sm dark:border-[#86c7ed]/35 dark:bg-[#14224d] dark:text-[#b8ddff]"
               key={benefit}
             >
               {t(`benefits.${benefit}`)}
