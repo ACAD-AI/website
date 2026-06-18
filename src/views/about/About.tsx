@@ -44,7 +44,7 @@ const About = async () => {
   return (
     <div className="flex flex-col">
       <AboutHeroSection />
-      <TrustBar logos={backedByLogos} title={t("eyebrow")} />
+      <TrustBar logos={backedByLogos} size="lg" title={t("eyebrow")} />
       <FadeIn>
         <AboutStorySection />
       </FadeIn>

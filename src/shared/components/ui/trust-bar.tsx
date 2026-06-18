@@ -1,9 +1,16 @@
 import Image from "next/image";
 
+import { cn } from "@/shared/lib/utils";
+
 export interface TrustBarLogo {
   name: string;
   src: string;
 }
+
+const sizeStyles = {
+  default: { tile: "h-18 w-34 sm:h-22 sm:w-42", logo: "h-10 sm:h-12" },
+  lg: { tile: "h-24 w-46 sm:h-28 sm:w-56", logo: "h-14 sm:h-18" },
+} as const;
 
 const defaultInstitutionLogos: TrustBarLogo[] = [
   {
@@ -26,12 +33,16 @@ const defaultInstitutionLogos: TrustBarLogo[] = [
 interface TrustBarProps {
   logos?: readonly TrustBarLogo[];
   title?: string;
+  size?: keyof typeof sizeStyles;
 }
 
 const TrustBar = ({
   logos = defaultInstitutionLogos,
   title = "Trusted by Educators in Leading Institutions",
+  size = "default",
 }: TrustBarProps) => {
+  const styles = sizeStyles[size];
+
   return (
     <section className="bg-[radial-gradient(circle_at_50%_28%,rgba(40,82,255,0.12),transparent_62%)] md:my-20 py-6 sm:py-8 dark:bg-none">
       <div className="mx-auto flex w-full max-w-[1320px] flex-col items-center justify-center gap-5 px-4 sm:gap-6 sm:px-6 lg:px-8">
@@ -51,15 +62,18 @@ const TrustBar = ({
               >
                 {logos.map((institution) => (
                   <div
-                    className="flex h-18 w-34 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 shadow-sm sm:h-22 sm:w-42 sm:px-6"
+                    className={cn(
+                      "flex shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 shadow-sm sm:px-6",
+                      styles.tile,
+                    )}
                     key={`${institution.name}-group-${group}`}
                   >
                     <Image
                       src={institution.src}
                       alt={institution.name}
-                      width={112}
-                      height={56}
-                      className="h-10 w-auto object-contain sm:h-12"
+                      width={160}
+                      height={80}
+                      className={cn("w-auto object-contain", styles.logo)}
                     />
                   </div>
                 ))}

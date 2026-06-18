@@ -23,12 +23,22 @@ function PublicationLogo({
     );
   }
 
+  if (publication === "EduTimes Africa") {
+    return (
+      <p className="font-serif text-3xl leading-none font-black tracking-[-0.08em] text-[#ff1515]">
+        EduTimes
+        <span className="ml-1 align-top font-sans text-[7px] tracking-[0.35em]">
+          AFRICA
+        </span>
+      </p>
+    );
+  }
+
+  // TODO(design): swap these text wordmarks for the real publication logos
+  // from Figma once available.
   return (
-    <p className="font-serif text-3xl leading-none font-black tracking-[-0.08em] text-[#ff1515]">
-      EduTimes
-      <span className="ml-1 align-top font-sans text-[7px] tracking-[0.35em]">
-        AFRICA
-      </span>
+    <p className="text-2xl font-bold tracking-tight text-[#141b34] dark:text-white">
+      {publication}
     </p>
   );
 }
@@ -63,6 +73,11 @@ export function FeaturedArticleCard({
       <h3 className="mt-7 text-xl leading-[1.5] font-normal text-[#141b34] dark:text-white">
         {article.title}
       </h3>
+      {article.description ? (
+        <p className="mt-4 line-clamp-5 text-sm leading-7 text-[#5b6b8c] dark:text-white/60">
+          {article.description}
+        </p>
+      ) : null}
     </>
   );
 
