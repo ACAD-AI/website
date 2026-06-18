@@ -51,7 +51,12 @@ const HeroSection = ({
     }
 
     return href.startsWith("http") ? (
-      <a className={ctaButtonVariants({ variant })} href={href}>
+      <a
+        className={ctaButtonVariants({ variant })}
+        href={href}
+        rel="noreferrer"
+        target="_blank"
+      >
         {content}
       </a>
     ) : (

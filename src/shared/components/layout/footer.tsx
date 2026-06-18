@@ -33,10 +33,26 @@ const footerSections = [
 ] as const;
 
 const socialLinks = [
-  { label: "LinkedIn", href: SOCIAL_LINKS.linkedin, shortLabel: "in" },
-  { label: "YouTube", href: SOCIAL_LINKS.youtube, shortLabel: "yt" },
-  { label: "TikTok", href: SOCIAL_LINKS.tiktok, shortLabel: "tt" },
-  { label: "WhatsApp", href: SOCIAL_LINKS.whatsapp, shortLabel: "wa" },
+  {
+    label: "LinkedIn",
+    href: SOCIAL_LINKS.linkedin,
+    iconSrc: "/icons/social/linkedin.svg",
+  },
+  {
+    label: "YouTube",
+    href: SOCIAL_LINKS.youtube,
+    iconSrc: "/icons/social/youtube.svg",
+  },
+  {
+    label: "TikTok",
+    href: SOCIAL_LINKS.tiktok,
+    iconSrc: "/icons/social/tiktok.svg",
+  },
+  {
+    label: "WhatsApp",
+    href: SOCIAL_LINKS.whatsapp,
+    iconSrc: "/icons/social/whatsapp.svg",
+  },
 ] as const;
 
 interface FooterProps {
@@ -91,7 +107,7 @@ export function Footer({ className }: FooterProps) {
             </div>
 
             <div className="flex flex-wrap items-center gap-3">
-              {socialLinks.map(({ label, href, shortLabel }) => (
+              {socialLinks.map(({ label, href, iconSrc }) => (
                 <a
                   aria-label={label}
                   className="inline-flex size-12 items-center justify-center rounded-full border border-[#dce1f0] bg-white text-[#3a4b7c] transition-colors hover:bg-[#eef1fb] hover:text-[#1836b2] dark:border-white/8 dark:bg-[#101733] dark:text-white/88 dark:hover:bg-white/10 dark:hover:text-white"
@@ -100,9 +116,15 @@ export function Footer({ className }: FooterProps) {
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <span className="text-base font-medium uppercase tracking-wide">
-                    {shortLabel}
-                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="size-5 bg-current"
+                    style={{
+                      WebkitMask: `url(${iconSrc}) center / contain no-repeat`,
+                      mask: `url(${iconSrc}) center / contain no-repeat`,
+                    }}
+                  />
+                  <span className="sr-only">{label}</span>
                 </a>
               ))}
             </div>

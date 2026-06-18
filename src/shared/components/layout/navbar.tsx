@@ -118,6 +118,14 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
               alt="Acadai Logo"
               width={100}
               height={100}
+              className="dark:hidden"
+            />
+            <Image
+              src="/images/svg/acad-ai-white-logo.svg"
+              alt="Acadai Logo"
+              width={100}
+              height={100}
+              className="hidden dark:block"
             />
           </Link>
 
@@ -283,7 +291,12 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
                   className="h-10 rounded-xl border border-[#cfd5e7] bg-transparent px-3 text-xs font-semibold text-[#141b34] hover:bg-[#f4f6fb] dark:border-white/10 dark:text-white dark:hover:bg-white/6"
                   variant="ghost"
                 >
-                  <a href={CALENDAR_URL} onClick={onClose}>
+                  <a
+                    href={CALENDAR_URL}
+                    onClick={onClose}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     Request Demo
                   </a>
                 </Button>
@@ -333,6 +346,14 @@ function Navbar() {
               alt="Acadai Logo"
               width={100}
               height={100}
+              className="dark:hidden"
+            />
+            <Image
+              src="/images/svg/acad-ai-white-logo.svg"
+              alt="Acadai Logo"
+              width={100}
+              height={100}
+              className="hidden dark:block"
             />
           </Link>
 
@@ -347,7 +368,9 @@ function Navbar() {
               asChild
               className="hidden h-11 rounded-xl bg-[#2852ff] px-4 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(40,82,255,0.3)] hover:bg-[#3c63ff] md:inline-flex"
             >
-              <a href={CALENDAR_URL}>Request Demo</a>
+              <a href={CALENDAR_URL} rel="noreferrer" target="_blank">
+                Request Demo
+              </a>
             </Button>
           </div>
 
@@ -364,7 +387,9 @@ function Navbar() {
               asChild
               className="h-12 rounded-xl bg-[#1836B2] px-6 text-sm font-semibold text-white"
             >
-              <a href={CALENDAR_URL}>Request a Demo</a>
+              <a href={CALENDAR_URL} rel="noreferrer" target="_blank">
+                Request a Demo
+              </a>
             </Button>
           </div>
 

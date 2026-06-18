@@ -26,7 +26,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Ogo'inja Samuel Tamaraemi",
     position: "QA Engineer",
-    linkedinUrl: "#",
+    linkedinUrl: "https://www.linkedin.com/in/samuel-ogoinja-146366292/",
     imageSrc: "/images/staff/samuel.png",
     imagePosition: "object-right",
     treatment: "grayscale",

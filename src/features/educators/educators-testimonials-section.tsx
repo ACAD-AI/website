@@ -1,50 +1,30 @@
 import { ArrowRight } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-import { ReviewCard, type ReviewItem } from "@/features/reviews";
+import { ReviewImageMarquee } from "@/features/reviews/review-image-marquee";
 import { Link } from "@/i18n/navigation";
-import { ctaButtonVariants, FadeIn, Stagger, StaggerItem } from "@/shared";
-
-const testimonials = ["sundays", "essays", "feedback", "review"] as const;
+import { ctaButtonVariants, FadeIn, SectionHeader } from "@/shared";
 
 export async function EducatorsTestimonialsSection() {
   const t = await getTranslations("EducatorsTestimonials");
 
-  const items: ReviewItem[] = testimonials.map((testimonial) => ({
-    id: testimonial,
-    quote: t(`items.${testimonial}.quote`),
-    author: t(`items.${testimonial}.author`),
-    organization: t(`items.${testimonial}.organization`),
-  }));
-
   return (
-    <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_76%_25%,rgba(25,79,204,0.18),transparent_30%)]" />
-
-      <div className="relative mx-auto w-full max-w-[760px]">
+    <section className="relative overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_22%_80%,rgba(44,93,255,0.2),transparent_22%),radial-gradient(circle_at_78%_35%,rgba(20,48,138,0.22),transparent_20%)]" />
+      <div className="relative mx-auto flex w-full max-w-[1320px] flex-col items-center gap-10">
         <FadeIn>
-          <h2 className="text-center text-4xl leading-tight font-medium tracking-tight text-[#141b34] sm:text-5xl dark:text-white">
-            {t("title")}
-          </h2>
+          <SectionHeader align="center" title={t("title")} />
         </FadeIn>
-
-        <Stagger className="mt-12 grid gap-5 sm:grid-cols-2">
-          {items.map((item) => (
-            <StaggerItem key={item.id}>
-              <ReviewCard item={item} />
-            </StaggerItem>
-          ))}
-        </Stagger>
-
-        <div className="mt-12 flex justify-center">
-          <Link
-            className={ctaButtonVariants({ variant: "primary" })}
-            href="/company/reviews"
-          >
-            {t("button")}
-            <ArrowRight aria-hidden="true" className="size-4" />
-          </Link>
-        </div>
+        <FadeIn className="w-screen">
+          <ReviewImageMarquee audience="educators" />
+        </FadeIn>
+        <Link
+          className={ctaButtonVariants({ variant: "primary" })}
+          href="/company/reviews"
+        >
+          {t("button")}
+          <ArrowRight aria-hidden="true" className="size-4" />
+        </Link>
       </div>
     </section>
   );

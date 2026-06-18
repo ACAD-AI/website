@@ -382,7 +382,7 @@
       },
       "lmsSupport": {
         "question": "Can I use Acad AI with my school's LMS?",
-        "answer": "Yes. Acad AI lets you download student scores and feedback into a clean, organised CSV file. This allows you to keep a portable record of your results and easily update your external gradebooks in tools like Google Classroom or Canvas."
+        "answer": "Yes. Acad AI lets you download student scores and feedback into a clean, organized CSV file. This allows you to keep a portable record of your results and easily update your external gradebooks in tools like Google Classroom or Canvas. We also have a dedicated moodle and canvas integration and API in the works."
       }
     },
     "contact": {

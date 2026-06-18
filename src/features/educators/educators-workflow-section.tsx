@@ -43,7 +43,7 @@ export async function EducatorsWorkflowSection() {
   const t = await getTranslations("EducatorsWorkflow");
 
   return (
-    <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+    <section className="relative px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_48%,rgba(25,79,204,0.2),transparent_32%)]" />
 
       <div className="relative mx-auto w-full max-w-[1280px]">
@@ -56,8 +56,8 @@ export async function EducatorsWorkflowSection() {
           </h2>
         </FadeIn>
 
-        <div className="mt-16 grid items-center gap-12 lg:mt-24 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <FadeIn className="max-w-xl">
+        <div className="mt-16 grid items-start gap-12 lg:mt-24 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <FadeIn className="max-w-xl lg:sticky lg:top-32">
             <h3 className="whitespace-pre-line text-4xl leading-[1.16] font-medium tracking-tight text-[#141b34] sm:text-5xl lg:text-[3.5rem] dark:text-white">
               {t("introTitle")}
             </h3>
@@ -75,13 +75,13 @@ export async function EducatorsWorkflowSection() {
             </Link>
           </FadeIn>
 
-          <Stagger className="-mx-4 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-5 sm:mx-0 sm:px-0">
+          <Stagger className="flex flex-col gap-8 lg:gap-10">
             {steps.map((step, index) => (
               <StaggerItem
-                className="w-[88%] shrink-0 snap-center overflow-hidden rounded-sm border border-[#e3e8f5] bg-white p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:w-[76%] sm:p-8 lg:w-[92%] lg:p-10 dark:border-[#57588d] dark:bg-[#393967] dark:shadow-[0_24px_65px_rgba(7,15,51,0.32)]"
+                className="overflow-hidden rounded-sm border border-[#e3e8f5] bg-white p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-8 lg:p-10 dark:border-[#57588d] dark:bg-[#393967] dark:shadow-[0_24px_65px_rgba(7,15,51,0.32)]"
                 key={step.key}
               >
-                <div className="-rotate-3 rounded-xl bg-[#f5f7ff] p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]">
+                <div className="-rotate-2 overflow-hidden rounded-xl bg-[#f5f7ff] p-5 pb-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 sm:pb-9 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]">
                   <div className="flex items-start justify-between gap-5">
                     <BookOpenText
                       aria-hidden="true"
@@ -100,10 +100,10 @@ export async function EducatorsWorkflowSection() {
                     {t(`steps.${step.key}.description`)}
                   </p>
 
-                  <div className="mt-8 overflow-hidden rounded-lg border-2 border-[#1836b2] bg-white dark:border-[#86c7ed]">
+                  <div className="mt-8 overflow-hidden rounded-xl border-2 border-[#1836b2] bg-white p-2 shadow-[0_18px_36px_rgba(24,54,178,0.12)] sm:p-3 dark:border-[#86c7ed] dark:shadow-[0_20px_40px_rgba(134,199,237,0.1)]">
                     <Image
                       alt={t(`steps.${step.key}.imageAlt`)}
-                      className="aspect-[4/3] w-full object-contain"
+                      className="aspect-[4/3] w-full rounded-lg object-contain"
                       height={step.imageHeight}
                       sizes="(max-width: 640px) 75vw, (max-width: 1024px) 60vw, 650px"
                       src={step.imageSrc}
