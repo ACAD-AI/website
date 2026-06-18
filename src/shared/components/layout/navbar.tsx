@@ -385,7 +385,7 @@ function Navbar() {
             </Link>
             <Button
               asChild
-              className="h-12 rounded-xl bg-[#1836B2] px-6 text-sm font-semibold text-white"
+              className="h-12 rounded-xl bg-[#1836B2] px-6 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(24,54,178,0.3)] transition-colors hover:bg-[#2852ff] active:bg-[#3c63ff]"
             >
               <a href={CALENDAR_URL} rel="noreferrer" target="_blank">
                 Request a Demo
