@@ -1,9 +1,12 @@
+"use client";
+
 import { BookOpenText } from "lucide-react";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
+import { useEffect, useRef, useState } from "react";
 
 import { Link } from "@/i18n/navigation";
-import { ctaButtonVariants, FadeIn, Stagger, StaggerItem } from "@/shared";
+import { ctaButtonVariants, FadeIn } from "@/shared";
 import { ONBOARDING_URL } from "@/shared/config/site";
 
 const steps = [
@@ -39,8 +42,43 @@ const steps = [
   },
 ] as const;
 
-export async function EducatorsWorkflowSection() {
-  const t = await getTranslations("EducatorsWorkflow");
+const cardFrameClass =
+  "overflow-hidden rounded-sm border border-[#e3e8f5] bg-white p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-8 lg:p-10 dark:border-[#57588d] dark:bg-[#393967] dark:shadow-[0_24px_65px_rgba(7,15,51,0.32)]";
+
+const rotatedFrameClass =
+  "-rotate-2 overflow-hidden rounded-xl bg-[#f5f7ff] p-5 pb-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 sm:pb-9 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]";
+
+const imageFrameClass =
+  "mt-6 overflow-hidden rounded-xl border-2 border-[#1836b2] bg-white p-2 shadow-[0_18px_36px_rgba(24,54,178,0.12)] sm:p-3 dark:border-[#86c7ed] dark:shadow-[0_20px_40px_rgba(134,199,237,0.1)]";
+
+// Height of the pinned viewing window (and of each step that scrolls through it).
+const slideHeightClass = "h-[26rem] sm:h-[32rem] xl:h-[38rem]";
+
+export function EducatorsWorkflowSection() {
+  const t = useTranslations("EducatorsWorkflow");
+  const [activeIndex, setActiveIndex] = useState(0);
+  const segmentRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const index = Number((entry.target as HTMLElement).dataset.index);
+          if (!Number.isNaN(index)) setActiveIndex(index);
+        });
+      },
+      // Fire when a scroll segment crosses the vertical centre of the viewport.
+      { rootMargin: "-50% 0px -50% 0px", threshold: 0 },
+    );
+
+    const nodes = segmentRefs.current.filter(Boolean) as HTMLElement[];
+    nodes.forEach((node) => {
+      observer.observe(node);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="relative px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
@@ -57,7 +95,7 @@ export async function EducatorsWorkflowSection() {
         </FadeIn>
 
         <div className="mt-16 grid items-start gap-12 lg:mt-24 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <FadeIn className="max-w-xl lg:sticky lg:top-32">
+          <FadeIn className="lg:sticky lg:top-32 lg:self-start">
             <h3 className="whitespace-pre-line text-4xl leading-[1.16] font-medium tracking-tight text-[#141b34] sm:text-5xl lg:text-[3.5rem] dark:text-white">
               {t("introTitle")}
             </h3>
@@ -75,45 +113,80 @@ export async function EducatorsWorkflowSection() {
             </Link>
           </FadeIn>
 
-          <Stagger className="flex flex-col gap-8 lg:gap-10">
-            {steps.map((step, index) => (
-              <StaggerItem
-                className="overflow-hidden rounded-sm border border-[#e3e8f5] bg-white p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-8 lg:p-10 dark:border-[#57588d] dark:bg-[#393967] dark:shadow-[0_24px_65px_rgba(7,15,51,0.32)]"
-                key={step.key}
-              >
-                <div className="-rotate-2 overflow-hidden rounded-xl bg-[#f5f7ff] p-5 pb-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 sm:pb-9 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]">
-                  <div className="flex items-start justify-between gap-5">
-                    <BookOpenText
-                      aria-hidden="true"
-                      className="size-8 text-[#1836b2] dark:text-[#86c7ed]"
-                      strokeWidth={1.7}
-                    />
-                    <span className="text-7xl leading-none font-medium text-[#c2cbe4] sm:text-8xl dark:text-[#55568d]">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                  </div>
+          {/* One pinned frame; the cards scroll vertically through it on scroll. */}
+          <div className="relative min-h-[460vh]">
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 -z-10 flex flex-col"
+            >
+              {steps.map((step, index) => (
+                <div
+                  className="flex-1"
+                  data-index={index}
+                  key={step.key}
+                  ref={(node) => {
+                    segmentRefs.current[index] = node;
+                  }}
+                />
+              ))}
+            </div>
 
-                  <h3 className="mt-6 text-2xl font-medium text-[#141b34] sm:text-3xl dark:text-white">
-                    {t(`steps.${step.key}.title`)}
-                  </h3>
-                  <p className="mt-3 text-base leading-7 text-[#5b6b8c] dark:text-white/65">
-                    {t(`steps.${step.key}.description`)}
-                  </p>
+            <div className="sticky top-24">
+              <div className={cardFrameClass}>
+                <div className={rotatedFrameClass}>
+                  <div
+                    className={`relative overflow-hidden ${slideHeightClass}`}
+                  >
+                    <div
+                      className="flex flex-col transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+                      style={{
+                        transform: `translateY(-${
+                          activeIndex * (100 / steps.length)
+                        }%)`,
+                      }}
+                    >
+                      {steps.map((step, index) => (
+                        <div
+                          className={`flex shrink-0 flex-col ${slideHeightClass}`}
+                          key={step.key}
+                        >
+                          <div className="flex items-start justify-between gap-5">
+                            <BookOpenText
+                              aria-hidden="true"
+                              className="size-8 text-[#1836b2] dark:text-[#86c7ed]"
+                              strokeWidth={1.7}
+                            />
+                            <span className="text-7xl leading-none font-medium text-[#c2cbe4] sm:text-8xl dark:text-[#55568d]">
+                              {String(index + 1).padStart(2, "0")}
+                            </span>
+                          </div>
 
-                  <div className="mt-8 overflow-hidden rounded-xl border-2 border-[#1836b2] bg-white p-2 shadow-[0_18px_36px_rgba(24,54,178,0.12)] sm:p-3 dark:border-[#86c7ed] dark:shadow-[0_20px_40px_rgba(134,199,237,0.1)]">
-                    <Image
-                      alt={t(`steps.${step.key}.imageAlt`)}
-                      className="aspect-[4/3] w-full rounded-lg object-contain"
-                      height={step.imageHeight}
-                      sizes="(max-width: 640px) 75vw, (max-width: 1024px) 60vw, 650px"
-                      src={step.imageSrc}
-                      width={step.imageWidth}
-                    />
+                          <h3 className="mt-6 text-2xl font-medium text-[#141b34] sm:text-3xl dark:text-white">
+                            {t(`steps.${step.key}.title`)}
+                          </h3>
+                          <p className="mt-3 text-base leading-7 text-[#5b6b8c] dark:text-white/65">
+                            {t(`steps.${step.key}.description`)}
+                          </p>
+
+                          <div className={`${imageFrameClass} min-h-0 flex-1`}>
+                            <div className="relative h-full w-full">
+                              <Image
+                                alt={t(`steps.${step.key}.imageAlt`)}
+                                className="rounded-lg object-contain"
+                                fill
+                                sizes="650px"
+                                src={step.imageSrc}
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </StaggerItem>
-            ))}
-          </Stagger>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
