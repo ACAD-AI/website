@@ -108,15 +108,18 @@ export function ContactForm() {
           body: JSON.stringify(payload),
         });
 
-        const result = await response.json();
+        const contentType = response.headers.get("content-type") ?? "";
+        const result = contentType.includes("application/json")
+          ? await response.json()
+          : null;
 
         if (!response.ok) {
           throw new Error(
-            result.error || "Unable to send your message right now.",
+            result?.error || "Unable to send your message right now.",
           );
         }
 
-        toast.success("Message sent successfully.");
+        toast.success("Message sent. Please check your email for a response.");
         setIsSubmitted(true);
       } catch (error) {
         toast.error(
@@ -152,8 +155,8 @@ export function ContactForm() {
               You&apos;re in.
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base leading-8 text-[#5b6b8c] dark:text-white/64">
-              We&apos;ll get back to you within 24 hours. Meanwhile, follow us
-              on socials.
+              Please check your email for confirmation. A member of our team
+              will be in touch shortly.
             </p>
           </motion.div>
         ) : (

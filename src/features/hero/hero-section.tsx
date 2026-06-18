@@ -1,11 +1,7 @@
 import { Sparkles } from "lucide-react";
 
-import {
-  FadeIn,
-  PrimaryButton,
-  SecondaryButton,
-  TextGenerateEffect,
-} from "@/shared";
+import { Link } from "@/i18n/navigation";
+import { ctaButtonVariants, FadeIn, TextGenerateEffect } from "@/shared";
 
 interface HeroSectionProps {
   tagline: string;
@@ -14,8 +10,10 @@ interface HeroSectionProps {
   subHeading: string;
   buttonOne?: string;
   buttonOneArrow?: boolean;
+  buttonOneHref?: string;
   buttonTwo?: string;
   buttonTwoArrow?: boolean;
+  buttonTwoHref?: string;
   image?: string;
 }
 
@@ -26,9 +24,48 @@ const HeroSection = ({
   subHeading,
   buttonOne,
   buttonOneArrow,
+  buttonOneHref,
   buttonTwo,
   buttonTwoArrow,
+  buttonTwoHref,
 }: HeroSectionProps) => {
+  const renderAction = (
+    label: string,
+    href: string | undefined,
+    variant: "primary" | "secondary",
+    showArrow?: boolean,
+  ) => {
+    const content = (
+      <>
+        {label}
+        {showArrow ? <span aria-hidden="true">→</span> : null}
+      </>
+    );
+
+    if (!href) {
+      return (
+        <button className={ctaButtonVariants({ variant })} type="button">
+          {content}
+        </button>
+      );
+    }
+
+    return href.startsWith("http") ? (
+      <a
+        className={ctaButtonVariants({ variant })}
+        href={href}
+        rel="noreferrer"
+        target="_blank"
+      >
+        {content}
+      </a>
+    ) : (
+      <Link className={ctaButtonVariants({ variant })} href={href}>
+        {content}
+      </Link>
+    );
+  };
+
   return (
     <section className="flex flex-col items-center gap-8 px-6 pt-20 text-center">
       <FadeIn delay={0.05}>
@@ -51,16 +88,15 @@ const HeroSection = ({
       {(buttonOne || buttonTwo) && (
         <FadeIn delay={0.35}>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            {buttonOne && (
-              <PrimaryButton showArrow={buttonOneArrow}>
-                {buttonOne}
-              </PrimaryButton>
-            )}
-            {buttonTwo && (
-              <SecondaryButton showArrow={buttonTwoArrow}>
-                {buttonTwo}
-              </SecondaryButton>
-            )}
+            {buttonOne &&
+              renderAction(buttonOne, buttonOneHref, "primary", buttonOneArrow)}
+            {buttonTwo &&
+              renderAction(
+                buttonTwo,
+                buttonTwoHref,
+                "secondary",
+                buttonTwoArrow,
+              )}
           </div>
         </FadeIn>
       )}

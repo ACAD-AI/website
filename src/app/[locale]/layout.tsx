@@ -40,8 +40,8 @@ export async function generateMetadata(): Promise<Metadata> {
     formatDetection: { telephone: true, email: true },
     manifest: "/manifest.webmanifest",
     icons: {
-      icon: "/favicon.ico",
-      shortcut: "/favicon.ico",
+      icon: "/images/svg/acad-ai-logo.svg",
+      shortcut: "/images/svg/acad-ai-logo.svg",
       apple: "/images/svg/acad-ai-logo.svg",
     },
     robots: {

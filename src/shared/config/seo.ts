@@ -15,7 +15,11 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? siteConfig.url)
 /** Open Graph locale codes keyed by our app locales. */
 const OG_LOCALE: Record<string, string> = {
   en: "en_US",
+  "en-GB": "en_GB",
   fr: "fr_FR",
+  es: "es_ES",
+  de: "de_DE",
+  pt: "pt_PT",
   ar: "ar_AR",
 };
 
@@ -124,14 +128,13 @@ export interface PageSeo {
 export const PAGE_SEO = {
   home: {
     path: "/",
-    title:
-      "Acad AI — AI Assessment & Exam Grading Platform for Education in Africa",
+    title: "Acad AI — Transform Assessments with AI",
     description:
       "Acad AI is the AI assessment platform that helps institutions digitize exams, lets educators grade quizzes and exams automatically with instant feedback, and helps students study smarter. Assessments reimagined, end to end.",
   },
   institutions: {
     path: "/solutions/institutions",
-    title: "For Institutions — Digitized, Audit-Ready AI Assessments",
+    title: "AI CBT Solution for Institutions - Acad AI",
     description:
       "The gold standard for institutional assessments. 100% digitized, fully audit-ready, and scalable for 100 or 100,000 learners. Move from manual marking to AI-powered precision in minutes.",
     keywords: [
@@ -148,7 +151,7 @@ export const PAGE_SEO = {
   },
   educators: {
     path: "/solutions/educators",
-    title: "For Educators — AI Grading for Your Quizzes & Exams",
+    title: "Reduce Grading Workload with AI | Acad AI",
     description:
       "Save hours every week. Acad AI grades your quizzes and exams from your own marking guide and returns personalized feedback to your students. Trusted by 300+ lecturers.",
     keywords: [
@@ -164,7 +167,7 @@ export const PAGE_SEO = {
   },
   students: {
     path: "/solutions/students",
-    title: "For Students — Study Like the Top 1% with AI",
+    title: "Acad AI — Study Smarter with AI",
     description:
       "Join the top 1% of students. Get personalized feedback on every exam, turn your notes into flashcards and practice quizzes, and study smarter with Acad AI's AI study mode.",
     keywords: [
@@ -241,6 +244,13 @@ export const PAGE_SEO = {
       "AI grading pricing",
       "assessment platform pricing",
     ],
+  },
+  terms: {
+    path: "/terms",
+    title: "Terms and Pricing Policy — Acad AI",
+    description:
+      "Read Acad AI's pricing policy, acceptable use terms, contact details, and service conditions.",
+    keywords: ["Acad AI terms", "Acad AI pricing policy", "terms of service"],
   },
 } satisfies Record<string, PageSeo>;
 

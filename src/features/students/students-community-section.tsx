@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
-import { FadeIn, SecondaryButton, SectionHeader } from "@/shared";
+import { ctaButtonVariants, FadeIn, SectionHeader } from "@/shared";
+import { STUDENT_COMMUNITY_URL } from "@/shared/config/site";
 
 export async function StudentsCommunitySection() {
   const t = await getTranslations("StudentsCommunity");
@@ -16,9 +17,17 @@ export async function StudentsCommunitySection() {
             description={t("description")}
           />
         </FadeIn>
-        <SecondaryButton className="bg-[white] text-[#155EEF]">
+        <a
+          className={ctaButtonVariants({
+            variant: "secondary",
+            className: "bg-white text-[#155EEF]",
+          })}
+          href={STUDENT_COMMUNITY_URL}
+          rel="noreferrer"
+          target="_blank"
+        >
           {t("button")}
-        </SecondaryButton>
+        </a>
       </div>
     </section>
   );

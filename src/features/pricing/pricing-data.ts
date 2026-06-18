@@ -80,7 +80,7 @@ export const pricingContent: Record<PricingAudience, PricingAudienceContent> = {
     ctaHref: ONBOARDING_URL,
     ctaLabel: "Get Free Credits on Signup. No Card Needed",
     description:
-      "We use a credit system to make it easier and more cost-effective for teachers to generate and grade exams using AI.",
+      "We use a credit system to make it easier and more cost-effective for students to generate flashcards and practice quizzes with AI.",
     infoDescription:
       "Each credit is a flexible unit that can be used for any of these actions:",
     infoTitle: "What is one credit?",

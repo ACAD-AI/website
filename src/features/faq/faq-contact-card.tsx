@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
-import { PrimaryButton } from "@/shared";
+import { Link } from "@/i18n/navigation";
+import { ctaButtonVariants } from "@/shared";
 
 export async function FaqContactCard() {
   const t = await getTranslations("FAQ.contact");
@@ -29,7 +30,12 @@ export async function FaqContactCard() {
       </p>
 
       <div className="mt-8 flex justify-center">
-        <PrimaryButton>{t("button")}</PrimaryButton>
+        <Link
+          className={ctaButtonVariants({ variant: "primary" })}
+          href="/company/contact"
+        >
+          {t("button")}
+        </Link>
       </div>
     </div>
   );

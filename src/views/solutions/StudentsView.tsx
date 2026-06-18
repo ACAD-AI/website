@@ -4,9 +4,11 @@ import {
   StudentsCommunitySection,
   StudentsCTASection,
   StudentsFeaturesSection,
+  StudentsFlashcardSlideshow,
   StudentsWallOfLoveSection,
 } from "@/features/students";
 import { FadeIn } from "@/shared";
+import { ONBOARDING_URL, STUDENT_COMMUNITY_URL } from "@/shared/config/site";
 
 const StudentsView = async () => {
   const t = await getTranslations("StudentsHero");
@@ -19,16 +21,21 @@ const StudentsView = async () => {
         subHeading={t("subHeading")}
         buttonOne={t("buttonOne")}
         buttonOneArrow
+        buttonOneHref={ONBOARDING_URL}
         buttonTwo={t("buttonTwo")}
+        buttonTwoHref={STUDENT_COMMUNITY_URL}
       />
       <FadeIn>
         <StudentsFeaturesSection />
       </FadeIn>
       <FadeIn>
-        <StudentsCommunitySection />
+        <StudentsFlashcardSlideshow />
       </FadeIn>
       <FadeIn>
         <StudentsWallOfLoveSection />
+      </FadeIn>
+      <FadeIn>
+        <StudentsCommunitySection />
       </FadeIn>
       <FadeIn>
         <StudentsCTASection />

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Link } from "@/i18n/navigation";
+import { CONTACT, SOCIAL_LINKS } from "@/shared/config/seo";
 import { cn } from "@/shared/lib/utils";
 
 const footerSections = [
@@ -32,10 +33,26 @@ const footerSections = [
 ] as const;
 
 const socialLinks = [
-  { label: "X", href: "", shortLabel: "X" },
-  { label: "LinkedIn", href: "", shortLabel: "in" },
-  { label: "Instagram", href: "", shortLabel: "ig" },
-  { label: "GitHub", href: "", shortLabel: "gh" },
+  {
+    label: "LinkedIn",
+    href: SOCIAL_LINKS.linkedin,
+    iconSrc: "/icons/social/linkedin.svg",
+  },
+  {
+    label: "YouTube",
+    href: SOCIAL_LINKS.youtube,
+    iconSrc: "/icons/social/youtube.svg",
+  },
+  {
+    label: "TikTok",
+    href: SOCIAL_LINKS.tiktok,
+    iconSrc: "/icons/social/tiktok.svg",
+  },
+  {
+    label: "WhatsApp",
+    href: SOCIAL_LINKS.whatsapp,
+    iconSrc: "/icons/social/whatsapp.svg",
+  },
 ] as const;
 
 interface FooterProps {
@@ -71,21 +88,43 @@ export function Footer({ className }: FooterProps) {
             </Link>
 
             <p className="max-w-sm text-[1.05rem] leading-10 text-[#5b6b8c] dark:text-white/68">
-              Pioneering AI for Education in Africa. We exist to improve the
-              lives of educators and learners one assessment at a time.
+              Pioneering AI for Education in Africa.
             </p>
 
+            <div className="space-y-2 text-sm leading-6 text-[#5b6b8c] dark:text-white/68">
+              <a
+                className="block transition-colors hover:text-[#1836b2] dark:hover:text-white"
+                href={`mailto:${CONTACT.email}`}
+              >
+                {CONTACT.email}
+              </a>
+              <a
+                className="block transition-colors hover:text-[#1836b2] dark:hover:text-white"
+                href={`tel:${CONTACT.phoneE164}`}
+              >
+                {CONTACT.phone}
+              </a>
+            </div>
+
             <div className="flex flex-wrap items-center gap-3">
-              {socialLinks.map(({ label, href, shortLabel }) => (
+              {socialLinks.map(({ label, href, iconSrc }) => (
                 <a
                   aria-label={label}
                   className="inline-flex size-12 items-center justify-center rounded-full border border-[#dce1f0] bg-white text-[#3a4b7c] transition-colors hover:bg-[#eef1fb] hover:text-[#1836b2] dark:border-white/8 dark:bg-[#101733] dark:text-white/88 dark:hover:bg-white/10 dark:hover:text-white"
-                  href={href || "#"}
+                  href={href}
                   key={label}
+                  rel="noreferrer"
+                  target="_blank"
                 >
-                  <span className="text-base font-medium uppercase tracking-wide">
-                    {shortLabel}
-                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="size-5 bg-current"
+                    style={{
+                      WebkitMask: `url(${iconSrc}) center / contain no-repeat`,
+                      mask: `url(${iconSrc}) center / contain no-repeat`,
+                    }}
+                  />
+                  <span className="sr-only">{label}</span>
                 </a>
               ))}
             </div>
@@ -117,7 +156,11 @@ export function Footer({ className }: FooterProps) {
               &copy; 2026 Acad AI. Built with love in Africa, for the world.
             </p>
             <p className="lg:text-right">
-              Where every assessment becomes a moment of learning.
+              <Link href="/terms#pricing-policy">Pricing Policy</Link>
+              {" · "}
+              <Link href="/terms#terms-and-conditions">
+                Terms and Conditions
+              </Link>
             </p>
           </div>
         </div>

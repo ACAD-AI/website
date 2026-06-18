@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { FadeIn } from "@/shared";
 import { cn } from "@/shared/lib/utils";
@@ -19,6 +19,19 @@ export function InstitutionTypesSection() {
   const t = useTranslations("InstitutionsTypes");
   const [activeType, setActiveType] =
     useState<InstitutionType>("secondarySchools");
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveType((currentType) => {
+        const currentIndex = institutionTypes.indexOf(currentType);
+        const nextIndex = (currentIndex + 1) % institutionTypes.length;
+
+        return institutionTypes[nextIndex];
+      });
+    }, 3000);
+
+    return () => window.clearInterval(timer);
+  }, []);
 
   return (
     <section className="relative overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">

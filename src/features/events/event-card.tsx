@@ -1,5 +1,8 @@
+"use client";
+
 import { ExternalLink, PlayCircle } from "lucide-react";
 import Image from "next/image";
+import { toast } from "sonner";
 
 import { Button } from "@/shared/components/ui/button";
 
@@ -9,7 +12,14 @@ interface EventCardProps {
   event: EventItem;
 }
 
+const watchButtonClass =
+  "h-10 rounded-xl bg-white px-4 text-sm font-medium text-[#2d3566] hover:bg-white/90";
+const lumaButtonClass =
+  "h-10 rounded-xl bg-[#2a57ff] px-4 text-sm font-medium text-white hover:bg-[#3a65ff]";
+
 export function EventCard({ event }: EventCardProps) {
+  const isUpcoming = event.status === "upcoming";
+
   return (
     <article className="overflow-hidden rounded-[14px] border border-[#e3e8f5] bg-white shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:border-[#585d93] dark:bg-[#181f40] dark:shadow-[0_18px_36px_rgba(9,13,35,0.18)]">
       <div className="relative aspect-[1.5/1] overflow-hidden">
@@ -33,29 +43,67 @@ export function EventCard({ event }: EventCardProps) {
         </div>
 
         <div className="flex flex-wrap gap-3">
-          {event.watchUrl ? (
-            <Button
-              asChild
-              className="h-10 rounded-xl bg-white px-4 text-sm font-medium text-[#2d3566] hover:bg-white/90"
-            >
-              <a href={event.watchUrl} rel="noreferrer" target="_blank">
-                Watch
-                <PlayCircle className="size-4" />
-              </a>
-            </Button>
-          ) : null}
+          {isUpcoming ? (
+            <>
+              {event.lumaEventId ? (
+                // Raw anchor with Luma's data attributes so the checkout embed
+                // (loaded in events-section) opens registration in a modal.
+                // Styled ourselves — the `luma-checkout--button` class is omitted.
+                <a
+                  className={`inline-flex items-center justify-center gap-2 ${lumaButtonClass}`}
+                  data-luma-action="checkout"
+                  data-luma-event-id={event.lumaEventId}
+                  href={`https://luma.com/event/${event.lumaEventId}`}
+                >
+                  Register for Event
+                  <ExternalLink className="size-4" />
+                </a>
+              ) : null}
 
-          {event.lumaUrl ? (
-            <Button
-              asChild
-              className="h-10 rounded-xl bg-[#2a57ff] px-4 text-sm font-medium text-white hover:bg-[#3a65ff]"
-            >
-              <a href={event.lumaUrl} rel="noreferrer" target="_blank">
-                View on Luma
-                <ExternalLink className="size-4" />
-              </a>
-            </Button>
-          ) : null}
+              {event.learnMoreUrl ? (
+                <Button asChild className={watchButtonClass}>
+                  <a href={event.learnMoreUrl} rel="noreferrer" target="_blank">
+                    Learn more
+                    <ExternalLink className="size-4" />
+                  </a>
+                </Button>
+              ) : null}
+            </>
+          ) : (
+            <>
+              {event.watchUrl ? (
+                <Button asChild className={watchButtonClass}>
+                  <a href={event.watchUrl} rel="noreferrer" target="_blank">
+                    Watch
+                    <PlayCircle className="size-4" />
+                  </a>
+                </Button>
+              ) : (
+                <Button
+                  className={watchButtonClass}
+                  onClick={() =>
+                    toast("Recording not available yet", {
+                      description:
+                        "We'll add the recording here once it's published.",
+                    })
+                  }
+                  type="button"
+                >
+                  Watch
+                  <PlayCircle className="size-4" />
+                </Button>
+              )}
+
+              {event.lumaUrl ? (
+                <Button asChild className={lumaButtonClass}>
+                  <a href={event.lumaUrl} rel="noreferrer" target="_blank">
+                    View on Luma
+                    <ExternalLink className="size-4" />
+                  </a>
+                </Button>
+              ) : null}
+            </>
+          )}
         </div>
       </div>
     </article>

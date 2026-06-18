@@ -11,8 +11,19 @@ interface ContactPayload {
   submittedAt?: string;
 }
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export async function POST(request: Request) {
-  const payload = (await request.json()) as ContactPayload;
+  let payload: ContactPayload;
+
+  try {
+    payload = (await request.json()) as ContactPayload;
+  } catch {
+    return NextResponse.json(
+      { error: "Please submit a valid contact request." },
+      { status: 400 },
+    );
+  }
 
   if (!payload.name?.trim()) {
     return NextResponse.json(
@@ -28,7 +39,11 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!payload.email?.trim() || !payload.phoneNumber?.trim()) {
+  if (
+    !payload.email?.trim() ||
+    !EMAIL_PATTERN.test(payload.email.trim()) ||
+    !payload.phoneNumber?.trim()
+  ) {
     return NextResponse.json(
       { error: "Please provide a valid email and phone number." },
       { status: 400 },
@@ -43,7 +58,8 @@ export async function POST(request: Request) {
   }
 
   return NextResponse.json({
-    message: "Contact request received successfully.",
+    message:
+      "We have received your email and a member of our team will be in touch shortly.",
     payload: {
       ...payload,
       receivedAt: new Date().toISOString(),

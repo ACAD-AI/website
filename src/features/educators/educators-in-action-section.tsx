@@ -14,7 +14,7 @@ export async function EducatorsInActionSection() {
           <YouTubeVideoShowcase
             subtitle={t("subtitle")}
             title={t("title")}
-            videoId="PgmSLjCOwIg"
+            videoId="BS-pj9OmYKg"
             videoTitle="Educators in action video"
           />
         </FadeIn>

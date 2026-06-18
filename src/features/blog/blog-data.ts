@@ -1,7 +1,8 @@
 import { fetchSanity, isSanityConfigured } from "@/shared/lib/sanity/client";
 
 import { fallbackBlogPosts } from "./blog-mock-data";
-import { blogPostBySlugQuery, blogPostSummariesQuery } from "./blog-queries";
+import { blogPostBySlugQuery } from "./blog-queries";
+import { fetchSubstackPosts } from "./blog-substack";
 import type {
   BlogPost,
   BlogPostNavigation,
@@ -21,6 +22,7 @@ function normalizeSummary(
     },
     description: post.description ?? post.excerpt ?? "",
     excerpt: post.excerpt ?? "",
+    externalUrl: post.externalUrl,
     id: post.id,
     publishedAt: post.publishedAt ?? new Date().toISOString(),
     readingTime: post.readingTime ?? "5 min read",
@@ -43,22 +45,19 @@ function normalizePost(
 }
 
 export async function getBlogPosts(): Promise<BlogPostSummary[]> {
-  if (!isSanityConfigured()) {
-    return fallbackBlogPosts;
+  // Substack RSS is the source of truth for the blog list. Cards link out to
+  // each post (see BlogCard). Falls back to mock posts only if the feed fails.
+  try {
+    const posts = await fetchSubstackPosts();
+
+    if (posts.length) {
+      return posts.map((post) => normalizeSummary(post));
+    }
+  } catch (error) {
+    console.error("Failed to load Substack blog feed:", error);
   }
 
-  const posts = await fetchSanity<BlogPostSummary[]>(blogPostSummariesQuery);
-
-  if (!posts?.length) {
-    return fallbackBlogPosts;
-  }
-
-  return posts.map((post) =>
-    normalizeSummary({
-      ...post,
-      id: post.id,
-    }),
-  );
+  return fallbackBlogPosts;
 }
 
 export async function getBlogPostBySlug(

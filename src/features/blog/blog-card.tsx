@@ -1,5 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import type { ReactNode } from "react";
 
 import { Link } from "@/i18n/navigation";
 
@@ -10,10 +11,40 @@ interface BlogCardProps {
   post: BlogPostSummary;
 }
 
+/** Links out to Substack when `externalUrl` is set, otherwise to the local page. */
+function CardLink({
+  className,
+  href,
+  external,
+  children,
+}: {
+  className?: string;
+  href: string;
+  external: boolean;
+  children: ReactNode;
+}) {
+  if (external) {
+    return (
+      <a className={className} href={href} rel="noreferrer" target="_blank">
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <Link className={className} href={href}>
+      {children}
+    </Link>
+  );
+}
+
 export function BlogCard({ post }: BlogCardProps) {
+  const external = Boolean(post.externalUrl);
+  const href = post.externalUrl ?? `/resources/blog/${post.slug}`;
+
   return (
     <article className="group overflow-hidden rounded-[14px] border border-[#e3e8f5] bg-white shadow-[0_16px_38px_rgba(46,73,139,0.08)] transition-transform duration-200 hover:-translate-y-1 dark:border-[#585d93] dark:bg-[#181f40] dark:shadow-[0_18px_36px_rgba(9,13,35,0.2)]">
-      <Link className="block" href={`/resources/blog/${post.slug}`}>
+      <CardLink className="block" external={external} href={href}>
         <div className="relative aspect-[1.3/1] overflow-hidden">
           <Image
             alt={post.coverImage.alt}
@@ -23,7 +54,7 @@ export function BlogCard({ post }: BlogCardProps) {
             src={post.coverImage.src}
           />
         </div>
-      </Link>
+      </CardLink>
 
       <div className="space-y-5 px-5 py-5 sm:px-6 sm:py-6">
         <p className="text-[11px] font-medium tracking-[0.18em] text-[#5b6b8c] uppercase dark:text-white/52">
@@ -31,23 +62,24 @@ export function BlogCard({ post }: BlogCardProps) {
         </p>
 
         <div className="space-y-3">
-          <Link href={`/resources/blog/${post.slug}`}>
+          <CardLink external={external} href={href}>
             <h3 className="text-[1.85rem] leading-[1.2] font-medium text-[#141b34] transition-colors group-hover:text-[#1836b2] dark:text-white dark:group-hover:text-[#b8ccff]">
               {post.title}
             </h3>
-          </Link>
+          </CardLink>
           <p className="text-[1.02rem] leading-8 text-[#5b6b8c] dark:text-white/62">
             {post.excerpt}
           </p>
         </div>
 
-        <Link
+        <CardLink
           className="inline-flex items-center gap-2 text-sm font-medium text-[#141b34] transition-colors hover:text-[#1836b2] dark:text-white dark:hover:text-[#a8bbff]"
-          href={`/resources/blog/${post.slug}`}
+          external={external}
+          href={href}
         >
-          Read blog
-          <ArrowRight className="size-4" />
-        </Link>
+          Read article
+          <ArrowUpRight className="size-4" />
+        </CardLink>
       </div>
     </article>
   );

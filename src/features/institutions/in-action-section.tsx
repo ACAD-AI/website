@@ -13,7 +13,7 @@ export async function InActionSection() {
         <YouTubeVideoShowcase
           subtitle={t("subtitle")}
           title={t("title")}
-          videoId="9fgKU0lxM64"
+          videoId="6X-Y_Xp4MxE"
           videoTitle="Institutions in action video"
         />
       </FadeIn>
