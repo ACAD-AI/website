@@ -4,6 +4,7 @@ import {
   StudentsCommunitySection,
   StudentsCTASection,
   StudentsFeaturesSection,
+  StudentsFlashcardSlideshow,
   StudentsWallOfLoveSection,
 } from "@/features/students";
 import { FadeIn } from "@/shared";
@@ -26,6 +27,9 @@ const StudentsView = async () => {
       />
       <FadeIn>
         <StudentsFeaturesSection />
+      </FadeIn>
+      <FadeIn>
+        <StudentsFlashcardSlideshow />
       </FadeIn>
       <FadeIn>
         <StudentsWallOfLoveSection />

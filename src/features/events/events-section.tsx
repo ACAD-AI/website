@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script";
 import { useMemo, useState } from "react";
 
 import { FadeIn, SectionHeader, Stagger, StaggerItem } from "@/shared";
@@ -12,6 +13,11 @@ import type { EventStatus } from "./events-types";
 
 const tabs: EventStatus[] = ["upcoming", "past"];
 
+// Only load Luma's checkout embed when an upcoming event uses the Register button.
+const needsLumaCheckout = eventItems.some(
+  (event) => event.status === "upcoming" && event.lumaEventId,
+);
+
 export function EventsSection() {
   const [activeTab, setActiveTab] = useState<EventStatus>("upcoming");
 
@@ -22,6 +28,13 @@ export function EventsSection() {
 
   return (
     <section className="relative overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+      {needsLumaCheckout ? (
+        <Script
+          id="luma-checkout"
+          src="https://embed.lu.ma/checkout-button.js"
+          strategy="lazyOnload"
+        />
+      ) : null}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_24%_24%,rgba(49,91,255,0.2),transparent_20%),radial-gradient(circle_at_78%_84%,rgba(34,69,177,0.22),transparent_24%)]" />
 
       <div className="relative mx-auto flex w-full max-w-[1320px] flex-col items-center gap-12 sm:gap-14">

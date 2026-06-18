@@ -46,7 +46,7 @@ const cardFrameClass =
   "overflow-hidden rounded-sm border border-[#e3e8f5] bg-white p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-8 lg:p-10 dark:border-[#57588d] dark:bg-[#393967] dark:shadow-[0_24px_65px_rgba(7,15,51,0.32)]";
 
 const rotatedFrameClass =
-  "-rotate-2 overflow-hidden rounded-xl bg-[#f5f7ff] p-5 pb-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 sm:pb-9 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]";
+  "overflow-hidden rounded-xl bg-[#f5f7ff] p-5 pb-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:p-7 sm:pb-9 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]";
 
 const imageFrameClass =
   "mt-6 overflow-hidden rounded-xl border-2 border-[#1836b2] bg-white p-2 shadow-[0_18px_36px_rgba(24,54,178,0.12)] sm:p-3 dark:border-[#86c7ed] dark:shadow-[0_20px_40px_rgba(134,199,237,0.1)]";
@@ -133,7 +133,11 @@ export function EducatorsWorkflowSection() {
 
             <div className="sticky top-24">
               <div className={cardFrameClass}>
-                <div className={rotatedFrameClass}>
+                <div
+                  className={`${rotatedFrameClass} ${
+                    activeIndex % 2 === 0 ? "-rotate-2" : "rotate-2"
+                  }`}
+                >
                   <div
                     className={`relative overflow-hidden ${slideHeightClass}`}
                   >

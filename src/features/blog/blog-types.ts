@@ -14,6 +14,8 @@ export interface BlogPostSummary {
   publishedAt: string;
   readingTime: string;
   coverImage: BlogImage;
+  /** External canonical URL (e.g. the Substack post). When set, cards link out. */
+  externalUrl?: string;
 }
 
 export interface BlogPost extends BlogPostSummary {

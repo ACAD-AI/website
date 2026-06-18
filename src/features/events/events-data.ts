@@ -5,6 +5,22 @@ export const eventTabLabels: Record<EventStatus, string> = {
   upcoming: "Upcoming Event",
 };
 
+// To add an upcoming event, prepend an entry like this (the Register button and
+// Luma checkout embed turn on automatically when `lumaEventId` is present):
+//
+//   {
+//     id: "next-event-slug",
+//     status: "upcoming",
+//     title: "Event title",
+//     description: "Short description.",
+//     image: { src: "/images/events/next-event.png", alt: "Event cover" },
+//     lumaEventId: "evt-kceQtmuyiIejNNa", // from the event's Luma "Register" embed
+//     learnMoreUrl: "https://luma.com/<event-page>", // "Learn more"
+//   },
+//
+// TODO(content): replace the placeholder Unsplash images/descriptions below, and
+// point each `lumaUrl` at the event's specific Luma page (grab from
+// https://luma.com/user/acadai) instead of the generic profile.
 export const eventItems: EventItem[] = [
   {
     description:
