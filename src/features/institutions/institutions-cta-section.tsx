@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 import { SolutionCTASection } from "@/shared";
-import { ONBOARDING_URL } from "@/shared/config/site";
+import { CALENDAR_URL, CONTACT_URL } from "@/shared/config/site";
 
 export async function InstitutionsCTASection() {
   const t = await getTranslations("InstitutionsCTA");
@@ -10,11 +10,11 @@ export async function InstitutionsCTASection() {
     <SolutionCTASection
       actions={[
         {
-          href: ONBOARDING_URL,
+          href: CONTACT_URL,
           label: t("primaryButton"),
         },
         {
-          href: "/company/contact",
+          href: CALENDAR_URL,
           label: t("secondaryButton"),
           variant: "secondary",
         },

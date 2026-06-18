@@ -14,3 +14,4 @@ export const ONBOARDING_URL = "https://www.acadai.co/onboarding";
 export const CALENDAR_URL = "https://calendar.app.google/MkkGLysHBcHBFp8TA";
 export const STUDENT_COMMUNITY_URL =
   "https://chat.whatsapp.com/J8nwVNVkZK3Jw1521hhAjs";
+export const CONTACT_URL = "/company/contact";
