@@ -1,3 +1,4 @@
+import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 
 import { Link } from "@/i18n/navigation";
@@ -91,39 +92,54 @@ export function Footer({ className }: FooterProps) {
               Pioneering AI for Education in Africa.
             </p>
 
-            <div className="space-y-2 text-sm leading-6 text-[#5b6b8c] dark:text-white/68">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-base text-[#5b6b8c] dark:text-white/68">
               <a
-                className="block transition-colors hover:text-[#1836b2] dark:hover:text-white"
+                className="inline-flex items-center gap-2 transition-colors hover:text-[#1836b2] dark:hover:text-white"
                 href={`mailto:${CONTACT.email}`}
               >
-                {CONTACT.email}
+                <Mail aria-hidden="true" className="size-4 shrink-0" />
+                <span className="hover:underline hover:underline-offset-4">
+                  {CONTACT.email}
+                </span>
               </a>
               <a
-                className="block transition-colors hover:text-[#1836b2] dark:hover:text-white"
+                className="inline-flex items-center gap-2 transition-colors hover:text-[#1836b2] dark:hover:text-white"
                 href={`tel:${CONTACT.phoneE164}`}
               >
+                <Phone aria-hidden="true" className="size-4 shrink-0" />
                 {CONTACT.phone}
               </a>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-4">
               {socialLinks.map(({ label, href, iconSrc }) => (
                 <a
                   aria-label={label}
-                  className="inline-flex size-12 items-center justify-center rounded-full border border-[#dce1f0] bg-white text-[#3a4b7c] transition-colors hover:bg-[#eef1fb] hover:text-[#1836b2] dark:border-white/8 dark:bg-[#101733] dark:text-white/88 dark:hover:bg-white/10 dark:hover:text-white"
+                  className="inline-flex size-10 items-center justify-center rounded-full bg-[#173dbf] text-white transition-transform hover:-translate-y-0.5 dark:bg-[#0a112a]"
                   href={href}
                   key={label}
                   rel="noreferrer"
                   target="_blank"
                 >
-                  <span
-                    aria-hidden="true"
-                    className="size-5 bg-current"
-                    style={{
-                      WebkitMask: `url(${iconSrc}) center / contain no-repeat`,
-                      mask: `url(${iconSrc}) center / contain no-repeat`,
-                    }}
-                  />
+                  {label === "LinkedIn" ? (
+                    <span
+                      aria-hidden="true"
+                      className="size-5 bg-current"
+                      style={{
+                        WebkitMask: `url(${iconSrc}) center / contain no-repeat`,
+                        mask: `url(${iconSrc}) center / contain no-repeat`,
+                      }}
+                    />
+                  ) : (
+                    <Image
+                      aria-hidden="true"
+                      alt=""
+                      className="size-10 mix-blend-screen dark:mix-blend-normal"
+                      height={40}
+                      src={iconSrc}
+                      width={40}
+                    />
+                  )}
                   <span className="sr-only">{label}</span>
                 </a>
               ))}

@@ -21,6 +21,9 @@
       }
     }
   },
+  "TrustBar": {
+    "title": "Trusted by Forward-Thinking Institutions"
+  },
   "HomeNumbers": {
     "eyebrow": "Trusted. Proven. Growing.",
     "title": "Numbers tell our story.",
@@ -185,25 +188,25 @@
     "title": "Don't just take our word for it.",
     "button": "See our Wall of Love",
     "items": {
-      "sundays": {
-        "quote": "\"Acad AI gave me back my Sundays. The feedback quality is incredible.\"",
-        "author": "Dr. Adaeze O.",
-        "organization": "Lecturer, UNILAG"
+      "ukandu": {
+        "quote": "I was particularly pleased with Acad AI's ability to generate questions from my lesson notes. The platform generally significantly enhances productivity and streamlines several academic processes, making it a valuable asset for both instructors and institutions.",
+        "author": "Mr. Obumneme Ukandu",
+        "organization": "Lecturer, Computer Science, Babcock University"
       },
-      "essays": {
-        "quote": "\"I used to dread marking 200 essays. Now it's a 15-minute review.\"",
-        "author": "Prof. Tunde A.",
-        "organization": "OAU"
+      "awoniyi": {
+        "quote": "Acad AI is built on a deep understanding of the challenges in grading. It offers students a clear breakdown of their grades and also provides actionable insights to help them improve their responses, while maintaining the essential role of educators in the assessment process.",
+        "author": "Mr. Amos Awoniyi",
+        "organization": "Lecturer, Software Engineering, Babcock University"
       },
-      "feedback": {
-        "quote": "\"My students get feedback the same day. Their performance has soared.\"",
-        "author": "Mrs. Fatima B.",
-        "organization": "Mrs. Fatima B."
+      "eti": {
+        "quote": "Acad AI is a very smart tool that simplifies tasks for lecturers. From setting of questions to grading, Acad AI is your to-go tool. Ever since I interacted with the tool, my academic tasks have become much easier. I recommend Acad AI to both lecturers and students because it really simplifies tasks.",
+        "author": "Dr. Chinedu Eti",
+        "organization": "Political Science and Public Administration, Babcock University"
       },
-      "review": {
-        "quote": "\"I used to dread marking 200 essays. Now it's a 15-minute review.\"",
-        "author": "Dr. Adaeze O.",
-        "organization": "OAU"
+      "ajibade": {
+        "quote": "I used Acad AI to conduct an examination last weekend, and I can say I was truly impressed. I chose the 'not strict' option for the assessment, and indeed the theory grading was just fine. I will test the 'strict' grading option next and compare the grading, but from my experience in the last exam, it was really nice.",
+        "author": "Dr. Ayodeji Ajibade",
+        "organization": "Senior Lecturer, Finance, Babcock University"
       }
     }
   },

@@ -21,6 +21,9 @@
       }
     }
   },
+  "TrustBar": {
+    "title": "La confiance des institutions avant-gardistes"
+  },
   "HomeNumbers": {
     "eyebrow": "Fiable. Éprouvé. En croissance.",
     "title": "Les chiffres racontent notre histoire.",
@@ -185,25 +188,25 @@
     "title": "Ne nous croyez pas sur parole.",
     "button": "Voir notre mur d'amour",
     "items": {
-      "sundays": {
-        "quote": "\"Acad AI m'a rendu mes dimanches. La qualité des retours est incroyable.\"",
-        "author": "Dr Adaeze O.",
-        "organization": "Enseignante, UNILAG"
+      "ukandu": {
+        "quote": "J'ai été particulièrement satisfait de la capacité d'Acad AI à générer des questions à partir de mes notes de cours. La plateforme améliore considérablement la productivité et simplifie plusieurs processus académiques, ce qui en fait un atout précieux pour les enseignants comme pour les établissements.",
+        "author": "M. Obumneme Ukandu",
+        "organization": "Enseignant en informatique, Babcock University"
       },
-      "essays": {
-        "quote": "\"Je redoutais la correction de 200 dissertations. Maintenant, cela prend 15 minutes.\"",
-        "author": "Prof. Tunde A.",
-        "organization": "OAU"
+      "awoniyi": {
+        "quote": "Acad AI repose sur une compréhension approfondie des défis liés à la notation. La plateforme offre aux étudiants une présentation claire de leurs notes ainsi que des pistes concrètes pour améliorer leurs réponses, tout en préservant le rôle essentiel des enseignants dans le processus d'évaluation.",
+        "author": "M. Amos Awoniyi",
+        "organization": "Enseignant en génie logiciel, Babcock University"
       },
-      "feedback": {
-        "quote": "\"Mes étudiants reçoivent leurs retours le jour même. Leurs résultats se sont envolés.\"",
-        "author": "Mme Fatima B.",
-        "organization": "Enseignante"
+      "eti": {
+        "quote": "Acad AI est un outil très intelligent qui simplifie les tâches des enseignants. De la création des questions à la notation, Acad AI est l'outil qu'il vous faut. Depuis que je l'utilise, mes tâches académiques sont devenues beaucoup plus faciles. Je recommande Acad AI aux enseignants comme aux étudiants, car il simplifie réellement leur travail.",
+        "author": "Dr Chinedu Eti",
+        "organization": "Sciences politiques et administration publique, Babcock University"
       },
-      "review": {
-        "quote": "\"Je redoutais la correction de 200 dissertations. Maintenant, cela prend 15 minutes.\"",
-        "author": "Dr Adaeze O.",
-        "organization": "OAU"
+      "ajibade": {
+        "quote": "J'ai utilisé Acad AI pour organiser un examen le week-end dernier et j'ai été vraiment impressionné. J'avais choisi l'option « non stricte » et la notation des questions théoriques était tout à fait satisfaisante. Je testerai ensuite l'option « stricte » pour comparer, mais mon expérience lors du dernier examen a été excellente.",
+        "author": "Dr Ayodeji Ajibade",
+        "organization": "Maître de conférences en finance, Babcock University"
       }
     }
   },

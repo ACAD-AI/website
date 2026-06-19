@@ -21,6 +21,9 @@
       }
     }
   },
+  "TrustBar": {
+    "title": "Das Vertrauen zukunftsorientierter Institutionen"
+  },
   "HomeNumbers": {
     "eyebrow": "Vertraut. Bewährt. Wachsend.",
     "title": "Zahlen erzählen unsere Geschichte.",
@@ -185,25 +188,25 @@
     "title": "Verlassen Sie sich nicht nur auf unser Wort.",
     "button": "Unsere Wall of Love ansehen",
     "items": {
-      "sundays": {
-        "quote": "\"Acad AI hat mir meine Sonntage zurückgegeben. Die Qualität des Feedbacks ist unglaublich.\"",
-        "author": "Dr. Adaeze O.",
-        "organization": "Dozentin, UNILAG"
+      "ukandu": {
+        "quote": "Besonders beeindruckt hat mich die Fähigkeit von Acad AI, aus meinen Unterrichtsnotizen Fragen zu erstellen. Die Plattform steigert die Produktivität erheblich und optimiert verschiedene akademische Abläufe, wodurch sie für Lehrkräfte und Institutionen gleichermaßen wertvoll ist.",
+        "author": "Herr Obumneme Ukandu",
+        "organization": "Dozent für Informatik, Babcock University"
       },
-      "essays": {
-        "quote": "\"Früher graute mir vor 200 Aufsätzen. Jetzt ist es eine 15-minütige Durchsicht.\"",
-        "author": "Prof. Tunde A.",
-        "organization": "OAU"
+      "awoniyi": {
+        "quote": "Acad AI basiert auf einem tiefen Verständnis der Herausforderungen bei der Benotung. Studierende erhalten eine klare Aufschlüsselung ihrer Noten sowie konkrete Hinweise zur Verbesserung ihrer Antworten, während die wesentliche Rolle der Lehrkräfte im Bewertungsprozess gewahrt bleibt.",
+        "author": "Herr Amos Awoniyi",
+        "organization": "Dozent für Softwaretechnik, Babcock University"
       },
-      "feedback": {
-        "quote": "\"Meine Studierenden erhalten Feedback am selben Tag. Ihre Leistung ist stark gestiegen.\"",
-        "author": "Frau Fatima B.",
-        "organization": "Frau Fatima B."
+      "eti": {
+        "quote": "Acad AI ist ein sehr intelligentes Werkzeug, das die Aufgaben von Lehrkräften vereinfacht. Von der Fragenerstellung bis zur Benotung ist Acad AI das ideale Werkzeug. Seit ich es nutze, sind meine akademischen Aufgaben wesentlich leichter geworden. Ich empfehle Acad AI sowohl Lehrkräften als auch Studierenden, weil es ihre Arbeit wirklich vereinfacht.",
+        "author": "Dr. Chinedu Eti",
+        "organization": "Politikwissenschaft und öffentliche Verwaltung, Babcock University"
       },
-      "review": {
-        "quote": "\"Früher graute mir vor 200 Aufsätzen. Jetzt ist es eine 15-minütige Durchsicht.\"",
-        "author": "Dr. Adaeze O.",
-        "organization": "OAU"
+      "ajibade": {
+        "quote": "Ich habe am vergangenen Wochenende mit Acad AI eine Prüfung durchgeführt und war wirklich beeindruckt. Ich wählte für die Bewertung die Option „nicht streng“, und die Benotung der Theoriefragen war sehr gut. Als Nächstes werde ich die Option „streng“ testen und die Ergebnisse vergleichen, aber meine Erfahrung bei der letzten Prüfung war wirklich positiv.",
+        "author": "Dr. Ayodeji Ajibade",
+        "organization": "Senior Lecturer für Finanzen, Babcock University"
       }
     }
   },

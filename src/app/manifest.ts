@@ -13,14 +13,9 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#1836b2",
     icons: [
       {
-        src: "/favicon.ico",
-        sizes: "48x48",
-        type: "image/x-icon",
-      },
-      {
-        src: "/images/svg/acad-ai-logo.svg",
+        src: "/icons/acad-icon.png",
         sizes: "any",
-        type: "image/svg+xml",
+        type: "image/png",
       },
     ],
   };

@@ -21,6 +21,9 @@
       }
     }
   },
+  "TrustBar": {
+    "title": "A confiança de instituições visionárias"
+  },
   "HomeNumbers": {
     "eyebrow": "De confiança. Comprovado. A crescer.",
     "title": "Os números contam a nossa história.",
@@ -185,25 +188,25 @@
     "title": "Não acredite apenas na nossa palavra.",
     "button": "Ver o nosso Mural de Amor",
     "items": {
-      "sundays": {
-        "quote": "\"A Acad AI devolveu-me os domingos. A qualidade do feedback é incrível.\"",
-        "author": "Dr. Adaeze O.",
-        "organization": "Docente, UNILAG"
+      "ukandu": {
+        "quote": "Fiquei particularmente satisfeito com a capacidade da Acad AI de gerar perguntas a partir das minhas notas de aula. De modo geral, a plataforma aumenta significativamente a produtividade e simplifica vários processos académicos, tornando-se um recurso valioso tanto para docentes como para instituições.",
+        "author": "Sr. Obumneme Ukandu",
+        "organization": "Docente de Ciência da Computação, Babcock University"
       },
-      "essays": {
-        "quote": "\"Antes temia corrigir 200 ensaios. Agora é uma revisão de 15 minutos.\"",
-        "author": "Prof. Tunde A.",
-        "organization": "OAU"
+      "awoniyi": {
+        "quote": "A Acad AI foi criada com uma compreensão profunda dos desafios da avaliação. Oferece aos estudantes uma discriminação clara das suas notas e também orientações práticas para melhorar as respostas, mantendo o papel essencial dos docentes no processo de avaliação.",
+        "author": "Sr. Amos Awoniyi",
+        "organization": "Docente de Engenharia de Software, Babcock University"
       },
-      "feedback": {
-        "quote": "\"Os meus estudantes recebem feedback no mesmo dia. O desempenho deles disparou.\"",
-        "author": "Sra. Fatima B.",
-        "organization": "Sra. Fatima B."
+      "eti": {
+        "quote": "A Acad AI é uma ferramenta muito inteligente que simplifica as tarefas dos docentes. Desde a criação de perguntas até à avaliação, a Acad AI é a ferramenta ideal. Desde que comecei a utilizá-la, as minhas tarefas académicas tornaram-se muito mais fáceis. Recomendo a Acad AI tanto a docentes como a estudantes porque simplifica realmente o trabalho.",
+        "author": "Dr. Chinedu Eti",
+        "organization": "Ciência Política e Administração Pública, Babcock University"
       },
-      "review": {
-        "quote": "\"Antes temia corrigir 200 ensaios. Agora é uma revisão de 15 minutos.\"",
-        "author": "Dr. Adaeze O.",
-        "organization": "OAU"
+      "ajibade": {
+        "quote": "Utilizei a Acad AI para realizar um exame no fim de semana passado e posso dizer que fiquei verdadeiramente impressionado. Escolhi a opção «não rigorosa» para a avaliação e a classificação das perguntas teóricas foi muito boa. A seguir, testarei a opção «rigorosa» e compararei os resultados, mas a minha experiência no último exame foi realmente positiva.",
+        "author": "Dr. Ayodeji Ajibade",
+        "organization": "Docente sénior de Finanças, Babcock University"
       }
     }
   },

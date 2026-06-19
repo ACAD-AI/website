@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import { cn } from "@/shared/lib/utils";
 
@@ -22,7 +25,17 @@ const defaultInstitutionLogos: TrustBarLogo[] = [
     name: "Covenant University",
     src: "/images/svg/schools/covenant-university-logo-desktop.png",
   },
+  {
+    name: "Franklin Comprehensive School",
+    src: "/images/svg/schools/franklin.png",
+  },
   { name: "Kayron", src: "/images/svg/schools/kayron-logo.png" },
+  {
+    name: "Nigerian Society of Engineers, Benin Branch",
+    src: "/images/svg/schools/nse-benin.png",
+  },
+  { name: "NTIC", src: "/images/svg/schools/ntic.png" },
+  { name: "Oak CyberShield", src: "/images/svg/schools/oak.png" },
   {
     name: "Pan-Atlantic University",
     src: "/images/svg/schools/pau-logo-1.png",
@@ -38,16 +51,17 @@ interface TrustBarProps {
 
 const TrustBar = ({
   logos = defaultInstitutionLogos,
-  title = "Trusted by Educators in Leading Institutions",
+  title,
   size = "default",
 }: TrustBarProps) => {
+  const t = useTranslations("TrustBar");
   const styles = sizeStyles[size];
 
   return (
     <section className="bg-[radial-gradient(circle_at_50%_28%,rgba(40,82,255,0.12),transparent_62%)] md:my-20 py-6 sm:py-8 dark:bg-none">
       <div className="mx-auto flex w-full max-w-[1320px] flex-col items-center justify-center gap-5 px-4 sm:gap-6 sm:px-6 lg:px-8">
         <p className="text-center text-sm font-medium tracking-[0.08em] text-[#1836b2] uppercase sm:text-base dark:text-[#86C7ED]">
-          {title}
+          {title ?? t("title")}
         </p>
       </div>
 
@@ -68,13 +82,15 @@ const TrustBar = ({
                     )}
                     key={`${institution.name}-group-${group}`}
                   >
-                    <Image
-                      src={institution.src}
-                      alt={institution.name}
-                      width={160}
-                      height={80}
-                      className={cn("w-auto object-contain", styles.logo)}
-                    />
+                    <div className={cn("relative w-full", styles.logo)}>
+                      <Image
+                        src={institution.src}
+                        alt={institution.name}
+                        fill
+                        sizes={size === "lg" ? "176px" : "120px"}
+                        className="object-contain"
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
