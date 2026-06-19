@@ -1,8 +1,10 @@
 "use client";
 
+import { motion, useScroll, useTransform } from "framer-motion";
 import { BookOpenText } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useRef } from "react";
 
 import { Link } from "@/i18n/navigation";
 import { ctaButtonVariants, FadeIn } from "@/shared";
@@ -31,17 +33,29 @@ const steps = [
   },
 ] as const;
 
-const cardFrameClass =
-  "overflow-hidden rounded-sm border border-[#e3e8f5] bg-white p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-8 lg:p-10 dark:border-[#57588d] dark:bg-[#393967] dark:shadow-[0_24px_65px_rgba(7,15,51,0.32)]";
+const sharedFrameClass =
+  "overflow-hidden rounded-md border border-[#57588d] bg-[#393967] p-3 shadow-[0_24px_65px_rgba(7,15,51,0.32)] sm:p-4";
 
-const rotatedFrameClass =
-  "overflow-hidden rounded-xl bg-[#f5f7ff] p-5 pb-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:p-7 sm:pb-9 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]";
+const stepCardClass =
+  "flex h-full flex-col overflow-hidden rounded-xl bg-[#f5f7ff] p-5 pb-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 sm:pb-9 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]";
 
 const imageFrameClass =
   "mt-6 overflow-hidden rounded-xl border-2 border-[#1836b2] bg-white p-2 shadow-[0_18px_36px_rgba(24,54,178,0.12)] sm:p-3 dark:border-[#86c7ed] dark:shadow-[0_20px_40px_rgba(134,199,237,0.1)]";
 
+const slideHeightClass = "h-[clamp(24rem,calc(100svh-16rem),38rem)]";
+
 export function EducatorsWorkflowSection() {
   const t = useTranslations("EducatorsWorkflow");
+  const workflowRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: workflowRef,
+    offset: ["start start", "end end"],
+  });
+  const trackY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", `-${((steps.length - 1) / steps.length) * 100}%`],
+  );
 
   return (
     <section className="relative px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
@@ -76,46 +90,57 @@ export function EducatorsWorkflowSection() {
             </Link>
           </FadeIn>
 
-          <div className="flex flex-col gap-10 sm:gap-14">
-            {steps.map((step, index) => (
-              <article className={cardFrameClass} key={step.key}>
-                <div
-                  className={`${rotatedFrameClass} ${
-                    index % 2 === 0 ? "-rotate-2" : "rotate-2"
-                  }`}
-                >
-                  <div className="flex items-start justify-between gap-5">
-                    <BookOpenText
-                      aria-hidden="true"
-                      className="size-8 text-[#1836b2] dark:text-[#86c7ed]"
-                      strokeWidth={1.7}
-                    />
-                    <span className="text-7xl leading-none font-medium text-[#c2cbe4] sm:text-8xl dark:text-[#55568d]">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                  </div>
+          <div className="relative h-[500svh]" ref={workflowRef}>
+            <div className="sticky top-20 sm:top-24">
+              <div className={sharedFrameClass}>
+                <div className={`overflow-hidden ${slideHeightClass}`}>
+                  <motion.div className="flex flex-col" style={{ y: trackY }}>
+                    {steps.map((step, index) => (
+                      <article
+                        className={`shrink-0 py-3 sm:py-4 ${slideHeightClass}`}
+                        key={step.key}
+                      >
+                        <div
+                          className={`${stepCardClass} ${
+                            index % 2 === 0 ? "-rotate-1" : "rotate-1"
+                          }`}
+                        >
+                          <div className="flex items-start justify-between gap-5">
+                            <BookOpenText
+                              aria-hidden="true"
+                              className="size-8 text-[#1836b2] dark:text-[#86c7ed]"
+                              strokeWidth={1.7}
+                            />
+                            <span className="text-7xl leading-none font-medium text-[#c2cbe4] sm:text-8xl dark:text-[#55568d]">
+                              {String(index + 1).padStart(2, "0")}
+                            </span>
+                          </div>
 
-                  <h3 className="mt-6 text-2xl font-medium text-[#141b34] sm:text-3xl dark:text-white">
-                    {t(`steps.${step.key}.title`)}
-                  </h3>
-                  <p className="mt-3 text-base leading-7 text-[#5b6b8c] dark:text-white/65">
-                    {t(`steps.${step.key}.description`)}
-                  </p>
+                          <h3 className="mt-6 text-2xl font-medium text-[#141b34] sm:text-3xl dark:text-white">
+                            {t(`steps.${step.key}.title`)}
+                          </h3>
+                          <p className="mt-3 text-base leading-7 text-[#5b6b8c] dark:text-white/65">
+                            {t(`steps.${step.key}.description`)}
+                          </p>
 
-                  <div className={imageFrameClass}>
-                    <div className="relative aspect-[4/3] w-full">
-                      <Image
-                        alt={t(`steps.${step.key}.imageAlt`)}
-                        className="rounded-lg object-contain"
-                        fill
-                        sizes="(max-width: 1023px) 100vw, 650px"
-                        src={step.imageSrc}
-                      />
-                    </div>
-                  </div>
+                          <div className={`${imageFrameClass} min-h-0 flex-1`}>
+                            <div className="relative h-full w-full">
+                              <Image
+                                alt={t(`steps.${step.key}.imageAlt`)}
+                                className="rounded-lg object-contain"
+                                fill
+                                sizes="(max-width: 1023px) 100vw, 650px"
+                                src={step.imageSrc}
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </article>
+                    ))}
+                  </motion.div>
                 </div>
-              </article>
-            ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

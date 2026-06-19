@@ -339,7 +339,34 @@
   "StudentsWallOfLove": {
     "eyebrow": "Wall of Love",
     "title": "What your peers are saying",
-    "button": "See our Wall of Love"
+    "button": "See our Wall of Love",
+    "items": {
+      "cis": {
+        "course": "CIS Student",
+        "school": "Babcock University",
+        "review": "Acad AI is a system I hope will be adopted in our current education system so that as a student I can see how I was graded. In terms of user experience, the application was easy to use and simple enough to understand."
+      },
+      "scoreReview": {
+        "course": "Finance Student",
+        "school": "Babcock University",
+        "review": "I love the fact that I can later see my score and review the correction on the system. That was superb."
+      },
+      "seamless": {
+        "course": "Finance Student",
+        "school": "Babcock University",
+        "review": "The system is seamless from registration to the conduct of the exam, ability to navigate back to previous question, and timing clock enables me monitor my time."
+      },
+      "easy": {
+        "course": "Finance Student",
+        "school": "Babcock University",
+        "review": "Acad AI was easy to use, being a first time user, it was easy to understand without any hassle!"
+      },
+      "autosave": {
+        "course": "Finance Student",
+        "school": "Babcock University",
+        "review": "The good thing I appreciate about Acad AI is that it autosaves my answers, allows me to go back to previous questions in order to be sure I answered them well or go back to answer them if they were not answered earlier."
+      }
+    }
   },
   "StudentsCTA": {
     "line1": "You're out of excuses.",
@@ -352,12 +379,12 @@
     "description": "Everything you need to know about Acad AI.",
     "items": {
       "whatIsAcadAi": {
-        "question": "What is ACAD AI?",
-        "answer": "Acad AI is a assessment and learning platform that automates the entire exam process. We help schools and teachers generate, deliver, and grade assessments in minutes. Recently, we launched a Study Mode (beta) for students to help them master their subjects faster."
+        "question": "What is Acad AI?",
+        "answer": "Acad AI is an assessment and learning platform that automates the entire exam process. We help schools and teachers generate, deliver, and grade assessments in minutes. Recently, we launched a Study Mode (beta) for students to help them master their subjects faster."
       },
       "questionTypes": {
-        "question": "What question types does Acad AI support?",
-        "answer": "Currently, Acad AI supports Theory, Multiple Choice (MCQ), and Fill-in-the-Blanks. Whether you need to test deep understanding through open-ended answers or quick recall through objective questions, our AI is optimized to generate and grade these formats accurately."
+        "question": "What Question Types does Acad AI support?",
+        "answer": "Currently, Acad AI supports Theory, Multiple Choice (MCQ), Math, Programming, Essay, and Fill-in-the-Blanks. Whether you need to test deep understanding through open-ended answers or quick recall through objective questions, our AI is optimized to generate and grade these formats accurately."
       },
       "finalGrades": {
         "question": "Who is responsible for final grades on Acad AI?",
@@ -373,7 +400,7 @@
       },
       "examMalpractice": {
         "question": "How does Acad AI prevent exam malpractice?",
-        "answer": "We use active Web Proctoring to keep exams fair. If a student leaves the exam tab to open another app or website, they receive an immediate warning. If they attempt to leave the tab a second time, the system automatically submits their exam. This prevents students from searching for answers or using external tools. We also disable copy-pasting to ensure all work is original and completed within the secure testing window."
+        "answer": "We use Web Proctoring to keep exams fair. If a student leaves the exam tab to open another app or website, they receive an immediate warning. If they attempt to leave the tab a second time, the system automatically submits their exam. This prevents students from searching for answers or using external tools. If enabled, camera proctoring also allows teachers to monitor students through their device camera, microphone, and screen share. We disable copy-pasting to ensure all work is original and completed within the secure testing window. Question randomization and MCQ option randomization are additional measures we use to minimize peer-to-peer malpractice."
       },
       "gradingReliability": {
         "question": "How reliable is Acad AI grading?",
@@ -385,7 +412,7 @@
       },
       "lmsSupport": {
         "question": "Can I use Acad AI with my school's LMS?",
-        "answer": "Yes. Acad AI lets you download student scores and feedback into a clean, organized CSV file. This allows you to keep a portable record of your results and easily update your external gradebooks in tools like Google Classroom or Canvas."
+        "answer": "Yes. Acad AI lets you download student scores and feedback into a clean, organized CSV file. This allows you to keep a portable record of your results and easily update your external gradebooks in tools like Google Classroom or Canvas. We also have dedicated Moodle and Canvas integrations and an API in the works."
       }
     },
     "contact": {

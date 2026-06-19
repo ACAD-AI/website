@@ -13,33 +13,18 @@ interface FeaturedArticleCardProps {
 
 function PublicationLogo({
   publication,
-}: Pick<FeaturedArticle, "publication">) {
-  if (publication === "EDUSIGHT") {
-    return (
-      <p className="text-lg font-black tracking-[-0.12em] text-[#0087c9]">
-        EDU<span className="text-[#3957b7]">GIST</span>
-        <sup className="ml-1 text-[7px] tracking-normal">®</sup>
-      </p>
-    );
-  }
-
-  if (publication === "EduTimes Africa") {
-    return (
-      <p className="font-serif text-3xl leading-none font-black tracking-[-0.08em] text-[#ff1515]">
-        EduTimes
-        <span className="ml-1 align-top font-sans text-[7px] tracking-[0.35em]">
-          AFRICA
-        </span>
-      </p>
-    );
-  }
-
-  // TODO(design): swap these text wordmarks for the real publication logos
-  // from Figma once available.
+  publicationLogoSrc,
+}: Pick<FeaturedArticle, "publication" | "publicationLogoSrc">) {
   return (
-    <p className="text-2xl font-bold tracking-tight text-[#141b34] dark:text-white">
-      {publication}
-    </p>
+    <div className="relative h-12 w-44 rounded-sm bg-white px-2">
+      <Image
+        alt={`${publication} logo`}
+        className="object-contain object-left p-1"
+        fill
+        sizes="176px"
+        src={publicationLogoSrc}
+      />
+    </div>
   );
 }
 
@@ -65,7 +50,10 @@ export function FeaturedArticleCard({
 
   const details = (
     <>
-      <PublicationLogo publication={article.publication} />
+      <PublicationLogo
+        publication={article.publication}
+        publicationLogoSrc={article.publicationLogoSrc}
+      />
       <p className="mt-7 text-sm text-[#5b6b8c] dark:text-white/65">
         <span className="mr-2 text-xs">by</span>
         {article.author} | {article.date}
@@ -83,18 +71,13 @@ export function FeaturedArticleCard({
 
   return (
     <article className="group flex h-full min-h-[650px] flex-col overflow-hidden rounded-xl border border-[#e3e8f5] bg-white shadow-[0_16px_38px_rgba(46,73,139,0.08)] transition-transform duration-300 hover:-translate-y-1 dark:border-[#55578f] dark:bg-[#373764] dark:shadow-[0_0_22px_rgba(64,142,255,0.15)]">
-      {article.imagePlacement !== "middle" && image}
+      {article.imagePlacement === "top" && image}
 
-      <div
-        className={cn(
-          "flex flex-col px-5 pt-8 sm:px-6",
-          article.imagePlacement === "middle" ? "pb-5" : "flex-1",
-        )}
-      >
+      <div className="flex flex-1 flex-col px-5 pt-8 pb-5 sm:px-6">
         {details}
       </div>
 
-      {article.imagePlacement === "middle" && image}
+      {article.imagePlacement === "bottom" && image}
 
       <div className="mt-auto px-5 pb-6 sm:px-6">
         <Link

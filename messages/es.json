@@ -339,7 +339,34 @@
   "StudentsWallOfLove": {
     "eyebrow": "Muro de Amor",
     "title": "Lo que dicen tus compañeros",
-    "button": "Ver nuestro Muro de Amor"
+    "button": "Ver nuestro Muro de Amor",
+    "items": {
+      "cis": {
+        "course": "Estudiante de CIS",
+        "school": "Babcock University",
+        "review": "Espero que Acad AI se adopte en nuestro sistema educativo actual para que, como estudiante, pueda ver cómo se me ha calificado. En cuanto a la experiencia de usuario, la aplicación fue fácil de usar y lo bastante sencilla de entender."
+      },
+      "scoreReview": {
+        "course": "Estudiante de Finanzas",
+        "school": "Babcock University",
+        "review": "Me encanta poder ver mi puntuación más adelante y revisar la corrección en el sistema. Fue excelente."
+      },
+      "seamless": {
+        "course": "Estudiante de Finanzas",
+        "school": "Babcock University",
+        "review": "El sistema funciona de forma fluida desde el registro hasta la realización del examen. Poder volver a preguntas anteriores y disponer de un reloj me permite controlar mi tiempo."
+      },
+      "easy": {
+        "course": "Estudiante de Finanzas",
+        "school": "Babcock University",
+        "review": "Acad AI fue fácil de usar. Aunque era la primera vez que lo utilizaba, pude entenderlo sin ninguna dificultad."
+      },
+      "autosave": {
+        "course": "Estudiante de Finanzas",
+        "school": "Babcock University",
+        "review": "Lo que más valoro de Acad AI es que guarda automáticamente mis respuestas y me permite volver a preguntas anteriores para comprobar que las respondí bien o contestar las que había dejado sin responder."
+      }
+    }
   },
   "StudentsCTA": {
     "line1": "Ya no tienes excusas.",
@@ -352,12 +379,12 @@
     "description": "Todo lo que necesitas saber sobre Acad AI.",
     "items": {
       "whatIsAcadAi": {
-        "question": "¿Qué es ACAD AI?",
+        "question": "¿Qué es Acad AI?",
         "answer": "Acad AI es una plataforma de evaluación y aprendizaje que automatiza todo el proceso de exámenes. Ayudamos a escuelas y profesores a generar, entregar y calificar evaluaciones en minutos. Recientemente lanzamos un Modo de estudio (beta) para ayudar a los estudiantes a dominar sus materias más rápido."
       },
       "questionTypes": {
         "question": "¿Qué tipos de preguntas admite Acad AI?",
-        "answer": "Actualmente, Acad AI admite teoría, opción múltiple (MCQ) y rellenar huecos. Ya necesites evaluar comprensión profunda mediante respuestas abiertas o memoria rápida con preguntas objetivas, nuestra IA está optimizada para generar y calificar estos formatos con precisión."
+        "answer": "Actualmente, Acad AI admite preguntas teóricas, de opción múltiple (MCQ), matemáticas, programación, ensayo y rellenar huecos. Tanto si necesitas evaluar una comprensión profunda mediante respuestas abiertas como la memoria rápida con preguntas objetivas, nuestra IA está optimizada para generar y calificar estos formatos con precisión."
       },
       "finalGrades": {
         "question": "¿Quién es responsable de las calificaciones finales en Acad AI?",
@@ -373,7 +400,7 @@
       },
       "examMalpractice": {
         "question": "¿Cómo evita Acad AI las malas prácticas en exámenes?",
-        "answer": "Usamos supervisión web activa para mantener la integridad de los exámenes. Si un estudiante sale de la pestaña del examen para abrir otra aplicación o sitio web, recibe una advertencia inmediata. Si intenta salir una segunda vez, el sistema envía automáticamente su examen. Esto evita que los estudiantes busquen respuestas o usen herramientas externas. También desactivamos copiar y pegar para asegurar que todo el trabajo sea original y se complete dentro de la ventana segura de evaluación."
+        "answer": "Usamos supervisión web para mantener la integridad de los exámenes. Si un estudiante sale de la pestaña del examen para abrir otra aplicación o sitio web, recibe una advertencia inmediata. Si intenta salir por segunda vez, el sistema envía automáticamente su examen. Esto evita que busque respuestas o utilice herramientas externas. Si se activa, la supervisión por cámara también permite al profesorado observar a los estudiantes mediante la cámara, el micrófono y la pantalla compartida de sus dispositivos. Desactivamos la función de copiar y pegar para garantizar que todo el trabajo sea original y se complete dentro de la ventana segura de evaluación. La aleatorización de preguntas y de las opciones de respuesta de las MCQ también ayuda a reducir las malas prácticas entre estudiantes."
       },
       "gradingReliability": {
         "question": "¿Qué tan fiable es la calificación de Acad AI?",
@@ -385,7 +412,7 @@
       },
       "lmsSupport": {
         "question": "¿Puedo usar Acad AI con el LMS de mi escuela?",
-        "answer": "Sí. Acad AI te permite descargar calificaciones y comentarios de estudiantes en un archivo CSV limpio y organizado. Esto te permite conservar un registro portátil de tus resultados y actualizar fácilmente tus libros de calificaciones externos en herramientas como Google Classroom o Canvas."
+        "answer": "Sí. Acad AI te permite descargar las calificaciones y los comentarios de los estudiantes en un archivo CSV limpio y organizado. Así puedes conservar un registro portátil de tus resultados y actualizar fácilmente tus libros de calificaciones externos en herramientas como Google Classroom o Canvas. También estamos desarrollando integraciones específicas para Moodle y Canvas, además de una API."
       }
     },
     "contact": {
