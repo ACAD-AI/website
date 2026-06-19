@@ -75,14 +75,14 @@ export function Footer({ className }: FooterProps) {
               <Image
                 src="/images/svg/acad-ai-logo.svg"
                 alt="ACAD AI"
-                width={213}
+                width={200}
                 height={48}
                 className="h-12 w-auto dark:hidden"
               />
               <Image
                 src="/images/svg/acad-ai-white-logo.svg"
                 alt="ACAD AI"
-                width={213}
+                width={200}
                 height={48}
                 className="hidden h-12 w-auto dark:block"
               />

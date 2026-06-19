@@ -1,51 +1,66 @@
 import type { EventItem, EventStatus } from "./events-types";
 
 export const eventTabLabels: Record<EventStatus, string> = {
-  past: "Past Event",
-  upcoming: "Upcoming Event",
+  past: "Past Events",
+  upcoming: "Upcoming Events",
 };
 
-// To add an upcoming event, prepend an entry like this (the Register button and
-// Luma checkout embed turn on automatically when `lumaEventId` is present):
-//
-//   {
-//     id: "next-event-slug",
-//     status: "upcoming",
-//     title: "Event title",
-//     description: "Short description.",
-//     image: { src: "/images/events/next-event.png", alt: "Event cover" },
-//     lumaEventId: "evt-kceQtmuyiIejNNa", // from the event's Luma "Register" embed
-//     learnMoreUrl: "https://luma.com/<event-page>", // "Learn more"
-//   },
-//
-// TODO(content): replace the placeholder Unsplash images/descriptions below, and
-// point each `lumaUrl` at the event's specific Luma page (grab from
-// https://luma.com/user/acadai) instead of the generic profile.
 export const eventItems: EventItem[] = [
   {
-    description:
-      "A conversation on how AI is reshaping education and assessment across Africa.",
-    id: "redefining-education-africa-ai",
+    description: "Online event held on February 24, 2026.",
+    id: "ai-skills-for-lecturers-vol-2",
     image: {
-      alt: "Acad AI event recording cover",
-      src: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80",
+      alt: "AI Skills for Lecturers: Vol 2 event cover",
+      src: "https://images.lumacdn.com/event-covers/8s/d054d258-93b1-4bd4-be7a-e81f6981384e.png",
     },
-    lumaUrl: "https://luma.com/user/acadai",
+    lumaUrl: "https://luma.com/vacxk5k7",
+    status: "past",
+    title: "AI Skills for Lecturers: Vol 2",
+    watchUrl: "https://youtu.be/AIeFKVjW8qs",
+  },
+  {
+    description: "Online event held on January 23, 2026.",
+    id: "ai-skills-for-lecturers-vol-1",
+    image: {
+      alt: "AI Skills for Lecturers: Vol 1 event cover",
+      src: "https://images.lumacdn.com/event-covers/1b/ae21faad-1223-4569-a1b9-c57aa16ff535.png",
+    },
+    lumaUrl: "https://luma.com/ph96jsd1",
+    status: "past",
+    title: "AI Skills for Lecturers: Vol 1",
+  },
+  {
+    description: "Online event held on November 29, 2025.",
+    id: "redefining-education-in-africa-with-ai",
+    image: {
+      alt: "Redefining Education in Africa with AI event cover",
+      src: "https://images.lumacdn.com/event-covers/93/c5724e3a-318c-4eb9-b5b5-33bddeb2a3d7.png",
+    },
+    lumaUrl: "https://luma.com/zt3y864f",
     status: "past",
     title: "Redefining Education in Africa with AI",
     watchUrl: "https://youtu.be/28kHVhLhG6U?si=KmeUDp5V5jzkG_yX",
   },
   {
-    description:
-      "A practical session for lecturers exploring AI skills and better assessment workflows.",
-    id: "ai-skills-lecturers-vol-2",
+    description: "Online event held on October 30, 2025.",
+    id: "make-twice-the-impact-with-half-the-effort",
     image: {
-      alt: "Workshop audience in a lecture hall",
-      src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1600&q=80",
+      alt: "Make Twice the Impact with Half the Effort with AI event cover",
+      src: "https://images.lumacdn.com/event-covers/s7/624336b2-b75c-4a58-a424-82757226c42b.png",
     },
-    lumaUrl: "https://luma.com/user/acadai",
+    lumaUrl: "https://luma.com/1p2nobi4",
     status: "past",
-    title: "AI Skills for Lecturers Vol 2",
-    watchUrl: "https://youtu.be/AIeFKVjW8qs",
+    title: "Make Twice the Impact with Half the Effort (with AI)",
+  },
+  {
+    description: "Online event held on September 30, 2025.",
+    id: "do-more-in-less-time-with-ai",
+    image: {
+      alt: "Do More in Less Time with AI event cover",
+      src: "https://images.lumacdn.com/event-covers/74/8673e982-8150-4f2c-b9b0-b43c6d07e832.png",
+    },
+    lumaUrl: "https://luma.com/cdyenkcx",
+    status: "past",
+    title: "Do More in Less Time with AI",
   },
 ];

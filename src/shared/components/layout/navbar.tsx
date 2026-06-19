@@ -116,16 +116,18 @@ function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
             <Image
               src="/images/svg/acad-ai-logo.svg"
               alt="Acadai Logo"
-              width={100}
-              height={100}
-              className="dark:hidden"
+              width={200}
+              height={48}
+              className="h-6 w-auto dark:hidden"
+              loading="eager"
             />
             <Image
               src="/images/svg/acad-ai-white-logo.svg"
               alt="Acadai Logo"
-              width={100}
-              height={100}
-              className="hidden dark:block"
+              width={200}
+              height={48}
+              className="hidden h-6 w-auto dark:block"
+              loading="eager"
             />
           </Link>
 
@@ -344,16 +346,18 @@ function Navbar() {
             <Image
               src="/images/svg/acad-ai-logo.svg"
               alt="Acadai Logo"
-              width={100}
-              height={100}
-              className="dark:hidden"
+              width={200}
+              height={48}
+              className="h-6 w-auto dark:hidden"
+              loading="eager"
             />
             <Image
               src="/images/svg/acad-ai-white-logo.svg"
               alt="Acadai Logo"
-              width={100}
-              height={100}
-              className="hidden dark:block"
+              width={200}
+              height={48}
+              className="hidden h-6 w-auto dark:block"
+              loading="eager"
             />
           </Link>
 
