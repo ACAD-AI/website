@@ -21,6 +21,9 @@
       }
     }
   },
+  "TrustBar": {
+    "title": "Das Vertrauen zukunftsorientierter Institutionen"
+  },
   "HomeNumbers": {
     "eyebrow": "Vertraut. Bewährt. Wachsend.",
     "title": "Zahlen erzählen unsere Geschichte.",
@@ -185,25 +188,25 @@
     "title": "Verlassen Sie sich nicht nur auf unser Wort.",
     "button": "Unsere Wall of Love ansehen",
     "items": {
-      "sundays": {
-        "quote": "\"Acad AI hat mir meine Sonntage zurückgegeben. Die Qualität des Feedbacks ist unglaublich.\"",
-        "author": "Dr. Adaeze O.",
-        "organization": "Dozentin, UNILAG"
+      "ukandu": {
+        "quote": "Besonders beeindruckt hat mich die Fähigkeit von Acad AI, aus meinen Unterrichtsnotizen Fragen zu erstellen. Die Plattform steigert die Produktivität erheblich und optimiert verschiedene akademische Abläufe, wodurch sie für Lehrkräfte und Institutionen gleichermaßen wertvoll ist.",
+        "author": "Herr Obumneme Ukandu",
+        "organization": "Dozent für Informatik, Babcock University"
       },
-      "essays": {
-        "quote": "\"Früher graute mir vor 200 Aufsätzen. Jetzt ist es eine 15-minütige Durchsicht.\"",
-        "author": "Prof. Tunde A.",
-        "organization": "OAU"
+      "awoniyi": {
+        "quote": "Acad AI basiert auf einem tiefen Verständnis der Herausforderungen bei der Benotung. Studierende erhalten eine klare Aufschlüsselung ihrer Noten sowie konkrete Hinweise zur Verbesserung ihrer Antworten, während die wesentliche Rolle der Lehrkräfte im Bewertungsprozess gewahrt bleibt.",
+        "author": "Herr Amos Awoniyi",
+        "organization": "Dozent für Softwaretechnik, Babcock University"
       },
-      "feedback": {
-        "quote": "\"Meine Studierenden erhalten Feedback am selben Tag. Ihre Leistung ist stark gestiegen.\"",
-        "author": "Frau Fatima B.",
-        "organization": "Frau Fatima B."
+      "eti": {
+        "quote": "Acad AI ist ein sehr intelligentes Werkzeug, das die Aufgaben von Lehrkräften vereinfacht. Von der Fragenerstellung bis zur Benotung ist Acad AI das ideale Werkzeug. Seit ich es nutze, sind meine akademischen Aufgaben wesentlich leichter geworden. Ich empfehle Acad AI sowohl Lehrkräften als auch Studierenden, weil es ihre Arbeit wirklich vereinfacht.",
+        "author": "Dr. Chinedu Eti",
+        "organization": "Politikwissenschaft und öffentliche Verwaltung, Babcock University"
       },
-      "review": {
-        "quote": "\"Früher graute mir vor 200 Aufsätzen. Jetzt ist es eine 15-minütige Durchsicht.\"",
-        "author": "Dr. Adaeze O.",
-        "organization": "OAU"
+      "ajibade": {
+        "quote": "Ich habe am vergangenen Wochenende mit Acad AI eine Prüfung durchgeführt und war wirklich beeindruckt. Ich wählte für die Bewertung die Option „nicht streng“, und die Benotung der Theoriefragen war sehr gut. Als Nächstes werde ich die Option „streng“ testen und die Ergebnisse vergleichen, aber meine Erfahrung bei der letzten Prüfung war wirklich positiv.",
+        "author": "Dr. Ayodeji Ajibade",
+        "organization": "Senior Lecturer für Finanzen, Babcock University"
       }
     }
   },
@@ -336,7 +339,34 @@
   "StudentsWallOfLove": {
     "eyebrow": "Wall of Love",
     "title": "Was deine Kommilitonen sagen",
-    "button": "Unsere Wall of Love ansehen"
+    "button": "Unsere Wall of Love ansehen",
+    "items": {
+      "cis": {
+        "course": "CIS-Student",
+        "school": "Babcock University",
+        "review": "Ich hoffe, dass Acad AI in unserem heutigen Bildungssystem eingesetzt wird, damit ich als Student nachvollziehen kann, wie ich bewertet wurde. Die Anwendung war benutzerfreundlich, leicht zu bedienen und einfach zu verstehen."
+      },
+      "scoreReview": {
+        "course": "Finanzstudent",
+        "school": "Babcock University",
+        "review": "Mir gefällt besonders, dass ich später meine Punktzahl sehen und die Korrektur im System überprüfen kann. Das war hervorragend."
+      },
+      "seamless": {
+        "course": "Finanzstudent",
+        "school": "Babcock University",
+        "review": "Das System funktioniert von der Registrierung bis zur Durchführung der Prüfung reibungslos. Ich kann zu früheren Fragen zurückkehren und mit der Zeitanzeige meine Zeit gut im Blick behalten."
+      },
+      "easy": {
+        "course": "Finanzstudent",
+        "school": "Babcock University",
+        "review": "Acad AI war einfach zu bedienen. Obwohl ich es zum ersten Mal verwendet habe, konnte ich alles ohne Schwierigkeiten verstehen."
+      },
+      "autosave": {
+        "course": "Finanzstudent",
+        "school": "Babcock University",
+        "review": "Besonders gut finde ich, dass Acad AI meine Antworten automatisch speichert und mir erlaubt, zu früheren Fragen zurückzukehren, um meine Antworten zu überprüfen oder noch nicht beantwortete Fragen nachzuholen."
+      }
+    }
   },
   "StudentsCTA": {
     "line1": "Du hast keine Ausreden mehr.",
@@ -349,12 +379,12 @@
     "description": "Alles, was Sie über Acad AI wissen müssen.",
     "items": {
       "whatIsAcadAi": {
-        "question": "Was ist ACAD AI?",
+        "question": "Was ist Acad AI?",
         "answer": "Acad AI ist eine Bewertungs- und Lernplattform, die den gesamten Prüfungsprozess automatisiert. Wir helfen Schulen und Lehrkräften, Bewertungen in Minuten zu erstellen, bereitzustellen und zu benoten. Kürzlich haben wir einen Lernmodus (Beta) für Studierende eingeführt, damit sie ihre Fächer schneller meistern."
       },
       "questionTypes": {
         "question": "Welche Fragetypen unterstützt Acad AI?",
-        "answer": "Derzeit unterstützt Acad AI Theorie, Multiple Choice (MCQ) und Lückentexte. Ob Sie tiefes Verständnis durch offene Antworten oder schnelles Abrufen durch objektive Fragen prüfen möchten, unsere KI ist darauf optimiert, diese Formate präzise zu generieren und zu bewerten."
+        "answer": "Derzeit unterstützt Acad AI Theoriefragen, Multiple Choice (MCQ), Mathematik, Programmierung, Aufsätze und Lückentexte. Ob Sie tiefes Verständnis durch offene Antworten oder schnelles Erinnern durch objektive Fragen prüfen möchten, unsere KI ist darauf optimiert, diese Formate präzise zu erstellen und zu bewerten."
       },
       "finalGrades": {
         "question": "Wer ist für die Endnoten auf Acad AI verantwortlich?",
@@ -370,7 +400,7 @@
       },
       "examMalpractice": {
         "question": "Wie verhindert Acad AI Prüfungsbetrug?",
-        "answer": "Wir nutzen aktive Web-Aufsicht, um Prüfungen fair zu halten. Wenn ein Studierender die Prüfungstab verlässt, um eine andere App oder Website zu öffnen, erhält er sofort eine Warnung. Beim zweiten Versuch, die Tab zu verlassen, wird die Prüfung automatisch abgegeben. So wird verhindert, dass Studierende nach Antworten suchen oder externe Tools verwenden. Außerdem deaktivieren wir Kopieren und Einfügen, damit alle Arbeiten original sind und innerhalb des sicheren Prüfungsfensters abgeschlossen werden."
+        "answer": "Wir nutzen Web-Proctoring, um Prüfungen fair zu halten. Verlässt ein Studierender den Prüfungs-Tab, um eine andere App oder Website zu öffnen, erhält er sofort eine Warnung. Beim zweiten Versuch wird die Prüfung automatisch abgegeben. So wird verhindert, dass Studierende nach Antworten suchen oder externe Hilfsmittel verwenden. Wenn aktiviert, können Lehrkräfte die Studierenden außerdem per Kamera-Proctoring über Gerätekamera, Mikrofon und Bildschirmfreigabe beaufsichtigen. Kopieren und Einfügen ist deaktiviert, damit alle Arbeiten eigenständig und innerhalb des sicheren Prüfungszeitraums erstellt werden. Zufällige Fragenreihenfolgen und zufällig angeordnete MCQ-Antwortoptionen reduzieren zusätzlich Betrug unter Studierenden."
       },
       "gradingReliability": {
         "question": "Wie zuverlässig ist die Bewertung von Acad AI?",
@@ -382,7 +412,7 @@
       },
       "lmsSupport": {
         "question": "Kann ich Acad AI mit dem LMS meiner Schule nutzen?",
-        "answer": "Ja. Mit Acad AI können Sie Studierendenbewertungen und Feedback in eine saubere, organisierte CSV-Datei herunterladen. So behalten Sie einen portablen Nachweis Ihrer Ergebnisse und können externe Notenbücher in Tools wie Google Classroom oder Canvas einfach aktualisieren."
+        "answer": "Ja. Mit Acad AI können Sie Noten und Feedback der Studierenden als übersichtliche CSV-Datei herunterladen. So behalten Sie einen portablen Nachweis Ihrer Ergebnisse und können externe Notenbücher in Tools wie Google Classroom oder Canvas einfach aktualisieren. Eigene Integrationen für Moodle und Canvas sowie eine API befinden sich ebenfalls in Entwicklung."
       }
     },
     "contact": {

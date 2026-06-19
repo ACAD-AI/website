@@ -1,9 +1,10 @@
 "use client";
 
+import { motion, useScroll, useTransform } from "framer-motion";
 import { BookOpenText } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 import { Link } from "@/i18n/navigation";
 import { ctaButtonVariants, FadeIn } from "@/shared";
@@ -13,72 +14,48 @@ const steps = [
   {
     key: "create",
     imageSrc: "/images/educators-guide/create-exam.png",
-    imageWidth: 505,
-    imageHeight: 375,
   },
   {
     key: "secure",
     imageSrc: "/images/educators-guide/create-student-group.png",
-    imageWidth: 505,
-    imageHeight: 376,
   },
   {
     key: "deliver",
     imageSrc: "/images/educators-guide/publsh-exam.png",
-    imageWidth: 513,
-    imageHeight: 388,
   },
   {
     key: "grade",
     imageSrc: "/images/educators-guide/review-and-approve.png",
-    imageWidth: 510,
-    imageHeight: 383,
   },
   {
     key: "review",
     imageSrc: "/images/educators-guide/export-and-share.png",
-    imageWidth: 515,
-    imageHeight: 429,
   },
 ] as const;
 
-const cardFrameClass =
-  "overflow-hidden rounded-sm border border-[#e3e8f5] bg-white p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-8 lg:p-10 dark:border-[#57588d] dark:bg-[#393967] dark:shadow-[0_24px_65px_rgba(7,15,51,0.32)]";
+const sharedFrameClass =
+  "overflow-hidden rounded-md border border-[#57588d] bg-[#393967] p-3 shadow-[0_24px_65px_rgba(7,15,51,0.32)] sm:p-4";
 
-const rotatedFrameClass =
-  "overflow-hidden rounded-xl bg-[#f5f7ff] p-5 pb-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:p-7 sm:pb-9 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]";
+const stepCardClass =
+  "flex h-full flex-col overflow-hidden rounded-xl bg-[#f5f7ff] p-5 pb-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 sm:pb-9 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]";
 
 const imageFrameClass =
   "mt-6 overflow-hidden rounded-xl border-2 border-[#1836b2] bg-white p-2 shadow-[0_18px_36px_rgba(24,54,178,0.12)] sm:p-3 dark:border-[#86c7ed] dark:shadow-[0_20px_40px_rgba(134,199,237,0.1)]";
 
-// Height of the pinned viewing window (and of each step that scrolls through it).
-const slideHeightClass = "h-[26rem] sm:h-[32rem] xl:h-[38rem]";
+const slideHeightClass = "h-[clamp(24rem,calc(100svh-16rem),38rem)]";
 
 export function EducatorsWorkflowSection() {
   const t = useTranslations("EducatorsWorkflow");
-  const [activeIndex, setActiveIndex] = useState(0);
-  const segmentRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const index = Number((entry.target as HTMLElement).dataset.index);
-          if (!Number.isNaN(index)) setActiveIndex(index);
-        });
-      },
-      // Fire when a scroll segment crosses the vertical centre of the viewport.
-      { rootMargin: "-50% 0px -50% 0px", threshold: 0 },
-    );
-
-    const nodes = segmentRefs.current.filter(Boolean) as HTMLElement[];
-    nodes.forEach((node) => {
-      observer.observe(node);
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const workflowRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: workflowRef,
+    offset: ["start start", "end end"],
+  });
+  const trackY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", `-${((steps.length - 1) / steps.length) * 100}%`],
+  );
 
   return (
     <section className="relative px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
@@ -113,46 +90,20 @@ export function EducatorsWorkflowSection() {
             </Link>
           </FadeIn>
 
-          {/* One pinned frame; the cards scroll vertically through it on scroll. */}
-          <div className="relative min-h-[460vh]">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 -z-10 flex flex-col"
-            >
-              {steps.map((step, index) => (
-                <div
-                  className="flex-1"
-                  data-index={index}
-                  key={step.key}
-                  ref={(node) => {
-                    segmentRefs.current[index] = node;
-                  }}
-                />
-              ))}
-            </div>
-
-            <div className="sticky top-24">
-              <div className={cardFrameClass}>
-                <div
-                  className={`${rotatedFrameClass} ${
-                    activeIndex % 2 === 0 ? "-rotate-2" : "rotate-2"
-                  }`}
-                >
-                  <div
-                    className={`relative overflow-hidden ${slideHeightClass}`}
-                  >
-                    <div
-                      className="flex flex-col transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
-                      style={{
-                        transform: `translateY(-${
-                          activeIndex * (100 / steps.length)
-                        }%)`,
-                      }}
-                    >
-                      {steps.map((step, index) => (
+          <div className="relative h-[500svh]" ref={workflowRef}>
+            <div className="sticky top-20 sm:top-24">
+              <div className={sharedFrameClass}>
+                <div className={`overflow-hidden ${slideHeightClass}`}>
+                  <motion.div className="flex flex-col" style={{ y: trackY }}>
+                    {steps.map((step, index) => (
+                      <article
+                        className={`shrink-0 py-3 sm:py-4 ${slideHeightClass}`}
+                        key={step.key}
+                      >
                         <div
-                          className={`flex shrink-0 flex-col ${slideHeightClass}`}
-                          key={step.key}
+                          className={`${stepCardClass} ${
+                            index % 2 === 0 ? "-rotate-1" : "rotate-1"
+                          }`}
                         >
                           <div className="flex items-start justify-between gap-5">
                             <BookOpenText
@@ -178,15 +129,15 @@ export function EducatorsWorkflowSection() {
                                 alt={t(`steps.${step.key}.imageAlt`)}
                                 className="rounded-lg object-contain"
                                 fill
-                                sizes="650px"
+                                sizes="(max-width: 1023px) 100vw, 650px"
                                 src={step.imageSrc}
                               />
                             </div>
                           </div>
                         </div>
-                      ))}
-                    </div>
-                  </div>
+                      </article>
+                    ))}
+                  </motion.div>
                 </div>
               </div>
             </div>

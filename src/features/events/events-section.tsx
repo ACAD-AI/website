@@ -1,7 +1,7 @@
 "use client";
 
 import Script from "next/script";
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { FadeIn, SectionHeader, Stagger, StaggerItem } from "@/shared";
 import { cn } from "@/shared/lib/utils";
@@ -9,22 +9,50 @@ import { cn } from "@/shared/lib/utils";
 import { EventCard } from "./event-card";
 import { eventItems, eventTabLabels } from "./events-data";
 import { EventsEmptyState } from "./events-empty-state";
-import type { EventStatus } from "./events-types";
+import type { EventItem, EventStatus } from "./events-types";
 
 const tabs: EventStatus[] = ["upcoming", "past"];
 
-// Only load Luma's checkout embed when an upcoming event uses the Register button.
-const needsLumaCheckout = eventItems.some(
-  (event) => event.status === "upcoming" && event.lumaEventId,
-);
+interface EventsResponse {
+  events?: EventItem[];
+}
 
 export function EventsSection() {
   const [activeTab, setActiveTab] = useState<EventStatus>("upcoming");
+  const [isLoadingUpcoming, setIsLoadingUpcoming] = useState(true);
+  const [upcomingEvents, setUpcomingEvents] = useState<EventItem[]>([]);
 
-  const filteredEvents = useMemo(
-    () => eventItems.filter((event) => event.status === activeTab),
-    [activeTab],
-  );
+  useEffect(() => {
+    const controller = new AbortController();
+
+    async function loadUpcomingEvents() {
+      try {
+        const response = await fetch("/api/events", {
+          signal: controller.signal,
+        });
+
+        if (!response.ok) {
+          throw new Error(`Upcoming events request failed: ${response.status}`);
+        }
+
+        const data = (await response.json()) as EventsResponse;
+        setUpcomingEvents(data.events ?? []);
+      } catch (error) {
+        if (!(error instanceof DOMException && error.name === "AbortError")) {
+          console.error("Unable to load upcoming events", error);
+        }
+      } finally {
+        if (!controller.signal.aborted) setIsLoadingUpcoming(false);
+      }
+    }
+
+    void loadUpcomingEvents();
+
+    return () => controller.abort();
+  }, []);
+
+  const filteredEvents = activeTab === "upcoming" ? upcomingEvents : eventItems;
+  const needsLumaCheckout = upcomingEvents.some((event) => event.lumaEventId);
 
   return (
     <section className="relative overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
@@ -83,6 +111,8 @@ export function EventsSection() {
                 ))}
               </Stagger>
             </div>
+          ) : isLoadingUpcoming && activeTab === "upcoming" ? (
+            <EventsEmptyState message="Loading upcoming events…" />
           ) : (
             <EventsEmptyState message="No upcoming events yet. Check back soon — or follow us on Luma to be the first to know." />
           )}

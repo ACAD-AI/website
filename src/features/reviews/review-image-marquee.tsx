@@ -11,54 +11,94 @@ interface ReviewImage {
 const reviewImages = {
   students: [
     {
-      src: "/images/reviews/students/089feb45723611a585d1138668fc5a576493dec0.png",
-      width: 564,
-      height: 152,
-    },
-    {
-      src: "/images/reviews/students/3efb2d30b89978424396a742cea8601a9d04b940.png",
+      src: "/images/reviews/students/student-2.png",
       width: 480,
       height: 483,
     },
     {
-      src: "/images/reviews/students/4b40cbb7b1259e0e4452661bac86b1e909694244.png",
+      src: "/images/reviews/students/student-3.png",
       width: 273,
       height: 91,
     },
     {
-      src: "/images/reviews/students/4ebf310b9df81628d96736103d960ba1438184d5.png",
+      src: "/images/reviews/students/student-4.png",
       width: 975,
       height: 369,
     },
     {
-      src: "/images/reviews/students/65512abf13e0122694f185fd5f805febe950a20b.png",
-      width: 975,
-      height: 250,
-    },
-    {
-      src: "/images/reviews/students/6a406f0ad46e6bef6e72c532581bf46e5b695795.png",
+      src: "/images/reviews/students/student-5.png",
       width: 827,
       height: 391,
     },
     {
-      src: "/images/reviews/students/7930086349b83c9e7430ad8dada01ede990ba42b.png",
-      width: 694,
-      height: 306,
-    },
-    {
-      src: "/images/reviews/students/8e2fd0ce999e1541ae41d0d4bec040067ce1ec3d.png",
+      src: "/images/reviews/students/student-6.png",
       width: 975,
       height: 285,
     },
     {
-      src: "/images/reviews/students/9198830c0d75a82259f6dfc50136d652855e5033.png",
+      src: "/images/reviews/students/student-7.png",
+      width: 564,
+      height: 152,
+    },
+    {
+      src: "/images/reviews/students/student-8.png",
+      width: 975,
+      height: 250,
+    },
+    {
+      src: "/images/reviews/students/student-9.png",
       width: 975,
       height: 260,
     },
     {
-      src: "/images/reviews/students/a593f2a5b56e4bb251a40c8b5885f4ee919dc91d.png",
-      width: 405,
-      height: 91,
+      src: "/images/reviews/students/student-10.png",
+      width: 694,
+      height: 306,
+    },
+    {
+      src: "/images/reviews/students/student-11.png",
+      width: 564,
+      height: 152,
+    },
+    {
+      src: "/images/reviews/students/student-12.png",
+      width: 694,
+      height: 306,
+    },
+    {
+      src: "/images/reviews/students/student-13.png",
+      width: 975,
+      height: 250,
+    },
+    {
+      src: "/images/reviews/students/student-14.png",
+      width: 502,
+      height: 194,
+    },
+    {
+      src: "/images/reviews/students/student-15.png",
+      width: 975,
+      height: 285,
+    },
+    {
+      src: "/images/reviews/students/student-16.png",
+      width: 827,
+      height: 391,
+    },
+    {
+      src: "/images/reviews/students/student-17.png",
+      width: 975,
+      height: 260,
+    },
+    {
+      src: "/images/reviews/students/student-18.png",
+      width: 975,
+      height: 535,
+    },
+    {
+      src: "/images/reviews/students/student-19.png",
+      width: 480,
+      height: 483,
     },
   ],
   educators: [
@@ -107,6 +147,76 @@ const reviewImages = {
       width: 975,
       height: 467,
     },
+    {
+      src: "/images/reviews/educators/educators-1.png",
+      width: 975,
+      height: 267,
+    },
+    {
+      src: "/images/reviews/educators/educators-2.png",
+      width: 975,
+      height: 238,
+    },
+    {
+      src: "/images/reviews/educators/educators-3.png",
+      width: 975,
+      height: 238,
+    },
+    {
+      src: "/images/reviews/educators/educators-4.png",
+      width: 975,
+      height: 273,
+    },
+    {
+      src: "/images/reviews/educators/educators-5.png",
+      width: 703,
+      height: 353,
+    },
+    {
+      src: "/images/reviews/educators/educators-6.png",
+      width: 975,
+      height: 300,
+    },
+    {
+      src: "/images/reviews/educators/educators-7.png",
+      width: 822,
+      height: 302,
+    },
+    {
+      src: "/images/reviews/educators/educators-8.png",
+      width: 975,
+      height: 369,
+    },
+    {
+      src: "/images/reviews/educators/educators-9.png",
+      width: 975,
+      height: 329,
+    },
+    {
+      src: "/images/reviews/educators/educators-10.png",
+      width: 975,
+      height: 248,
+    },
+    {
+      src: "/images/reviews/educators/educators-11.png",
+      width: 975,
+      height: 254,
+    },
+    {
+      src: "/images/reviews/educators/educators-12.png",
+      width: 975,
+      height: 338,
+    },
+    {
+      src: "/images/reviews/educators/educators-13.png",
+      width: 975,
+      height: 467,
+    },
+    {
+      src: "/images/reviews/educators/educators-14.png",
+      width: 975,
+      height: 273,
+    },
   ],
 } satisfies Record<"educators" | "students", ReviewImage[]>;
 
@@ -116,6 +226,7 @@ const columns = [
     animationClass: "reviews-marquee-column-1",
     imageOffset: 0,
     rotationOffset: 0,
+    durationMultiplier: 1,
     visibilityClass: "block",
   },
   {
@@ -123,6 +234,7 @@ const columns = [
     animationClass: "reviews-marquee-column-2",
     imageOffset: 5,
     rotationOffset: 2,
+    durationMultiplier: 1.14,
     visibilityClass: "hidden sm:block",
   },
   {
@@ -130,6 +242,7 @@ const columns = [
     animationClass: "reviews-marquee-column-3",
     imageOffset: 7,
     rotationOffset: 4,
+    durationMultiplier: 1.05,
     visibilityClass: "hidden lg:block",
   },
 ] as const;
@@ -173,6 +286,9 @@ export function ReviewImageMarquee({ audience }: ReviewImageMarqueeProps) {
                 "reviews-marquee-column flex flex-col",
                 column.animationClass,
               )}
+              style={{
+                animationDuration: `${images.length * 6.4 * column.durationMultiplier}s`,
+              }}
             >
               {marqueeGroups.map((group) => (
                 <div

@@ -237,6 +237,11 @@
     will-change: transform;
   }
 
+  .trust-marquee-group {
+    min-width: 100vw;
+    justify-content: space-around;
+  }
+
   .reviews-marquee-mask {
     mask-image: linear-gradient(
       to bottom,
