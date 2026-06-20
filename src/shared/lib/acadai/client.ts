@@ -15,8 +15,18 @@ const API_URL =
   "https://acada-ai-landing-page-238741267770.europe-west1.run.app";
 const API_KEY = process.env.LANDING_PAGE_API_KEY;
 
+// The grading service lives on a separate host with its own API key.
+const GRADING_API_URL =
+  process.env.GRADING_API_URL ??
+  "https://ai-v6-protected-238741267770.europe-west1.run.app";
+const GRADING_API_KEY = process.env.GRADING_API_KEY;
+
 export function isAcadAiConfigured(): boolean {
   return Boolean(API_KEY);
+}
+
+export function isGradingConfigured(): boolean {
+  return Boolean(GRADING_API_KEY);
 }
 
 export interface BackendResult {
@@ -101,4 +111,94 @@ export function submitContactInquiry(params: {
     role: params.role,
     additional_info: params.message,
   });
+}
+
+export interface DemoQuestion {
+  question: string;
+  modelAnswer: string;
+  studentAnswer: string;
+  strict: boolean;
+}
+
+/**
+ * Fetches a random sample question for the "Test it Out" playground. The live
+ * backend returns a richer object (`correct_answer`, `level_of_correctness`,
+ * etc.); we normalise it to the four fields the playground needs.
+ */
+export async function getRandomDemoQuestion(): Promise<DemoQuestion> {
+  if (!API_KEY) {
+    throw new Error("LANDING_PAGE_API_KEY is not configured.");
+  }
+
+  const response = await fetch(`${API_URL}/api/demo/random-question`, {
+    headers: { "ACAD-AI-API-KEY": API_KEY },
+  });
+
+  if (!response.ok) {
+    throw new Error(`random-question failed with status ${response.status}`);
+  }
+
+  const data = (await response.json()) as {
+    question?: string;
+    student_answer?: string;
+    model_answer?: string;
+    correct_answer?: string;
+    strict?: boolean;
+  };
+
+  return {
+    question: data.question ?? "",
+    studentAnswer: data.student_answer ?? "",
+    modelAnswer: data.model_answer ?? data.correct_answer ?? "",
+    // The endpoint doesn't always return `strict`; default to strict grading.
+    strict: typeof data.strict === "boolean" ? data.strict : true,
+  };
+}
+
+export interface GradeResult {
+  score: number;
+  maxScore: number;
+  feedback: string;
+}
+
+/** Grades a student answer via the ai-v6 test-grade endpoint. */
+export async function gradeDemoAnswer(params: {
+  question: string;
+  studentAnswer: string;
+  modelAnswer?: string;
+  strict: boolean;
+}): Promise<GradeResult> {
+  if (!GRADING_API_KEY) {
+    throw new Error("GRADING_API_KEY is not configured.");
+  }
+
+  const response = await fetch(`${GRADING_API_URL}/api/test-grade`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "ACAD-AI-API-KEY": GRADING_API_KEY,
+    },
+    body: JSON.stringify({
+      question: params.question,
+      student_answer: params.studentAnswer,
+      model_answer: params.modelAnswer || null,
+      strict: params.strict,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`test-grade failed with status ${response.status}`);
+  }
+
+  const data = (await response.json()) as {
+    score?: number;
+    max_score?: number;
+    feedback?: string;
+  };
+
+  return {
+    score: typeof data.score === "number" ? data.score : 0,
+    maxScore: typeof data.max_score === "number" ? data.max_score : 0,
+    feedback: data.feedback ?? "",
+  };
 }

@@ -22,7 +22,7 @@
     }
   },
   "TrustBar": {
-    "title": "La confiance des institutions avant-gardistes"
+    "title": "La confiance des enseignants et des étudiants d'établissements de premier plan"
   },
   "HomeNumbers": {
     "eyebrow": "Fiable. Éprouvé. En croissance.",
@@ -111,7 +111,31 @@
     "studentPlaceholder": "Ex. Je pense que le changement climatique se produit parce que...",
     "studentDescription": "La réponse de l'étudiant que Acad AI évaluera.",
     "gradeButton": "Noter la réponse",
-    "demoResult": "Résultat de démonstration : Bonne réponse. Elle identifie les causes principales et gagnerait à inclure un exemple."
+    "demoResult": "Résultat de démonstration : Bonne réponse. Elle identifie les causes principales et gagnerait à inclure un exemple.",
+    "gradingStyleLabel": "Style de notation",
+    "strict": "Strict",
+    "notStrict": "Non strict",
+    "totalMark": "La note totale pour la question est de 5.",
+    "grading": "Notation de la réponse",
+    "loadingAnalyzing": "Analyse de la réponse de l'élève...",
+    "loadingComparing": "Comparaison avec la réponse modèle...",
+    "loadingCompiling": "Compilation des retours...",
+    "loadingRubric": "Préparation du détail du barème...",
+    "loadingSmallStuff": "On peaufine les détails...",
+    "resultTitle": "Votre réponse a été notée !",
+    "resultSubtitle": "Voici comment Acad AI a évalué la réponse — avec la note, les retours et le détail du barème",
+    "totalScoreLabel": "Note totale :",
+    "rubricBreakdown": "Détail du barème",
+    "generalFeedbackLabel": "Retour général :",
+    "tableIndex": "Index",
+    "tableCriteria": "Critère",
+    "tableScore": "Note",
+    "tableMaxScore": "Note maximale",
+    "gradeAnother": "Noter une autre",
+    "sampleLoading": "Chargement de l'exemple...",
+    "parseError": "Impossible de traiter la réponse du système de notation. Veuillez vérifier manuellement.",
+    "errorSample": "Impossible de charger les données d'exemple. Réessayez.",
+    "errorGrade": "Impossible de noter la réponse. Réessayez."
   },
   "EducatorsInAction": {
     "title": "Acad AI en action.",

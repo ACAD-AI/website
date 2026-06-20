@@ -22,7 +22,7 @@
     }
   },
   "TrustBar": {
-    "title": "Trusted by Forward-Thinking Institutions"
+    "title": "Trusted by Educators and Students in Leading Institutions"
   },
   "HomeNumbers": {
     "eyebrow": "Trusted. Proven. Growing.",
@@ -111,7 +111,31 @@
     "studentPlaceholder": "e.g I think climate change happens because of...",
     "studentDescription": "The student's response to the question. This is what Acad AI will grade.",
     "gradeButton": "Grade answer",
-    "demoResult": "Demo result: Strong answer. It identifies the core causes and would benefit from one supporting example."
+    "demoResult": "Demo result: Strong answer. It identifies the core causes and would benefit from one supporting example.",
+    "gradingStyleLabel": "Grading Style",
+    "strict": "Strict",
+    "notStrict": "Not Strict",
+    "totalMark": "Total mark for the question is 5.",
+    "grading": "Grading answer",
+    "loadingAnalyzing": "Analyzing student response...",
+    "loadingComparing": "Comparing with model answer...",
+    "loadingCompiling": "Compiling feedback...",
+    "loadingRubric": "Preparing rubric breakdown...",
+    "loadingSmallStuff": "Sweating the small stuff...",
+    "resultTitle": "Your Answer Has Been Graded!",
+    "resultSubtitle": "Here's how Acad AI evaluated the response — including score, feedback, and rubric insight",
+    "totalScoreLabel": "Total Score:",
+    "rubricBreakdown": "Rubric Breakdown",
+    "generalFeedbackLabel": "General Feedback:",
+    "tableIndex": "Index",
+    "tableCriteria": "Criteria",
+    "tableScore": "Score",
+    "tableMaxScore": "Max Score for Rubric",
+    "gradeAnother": "Grade another",
+    "sampleLoading": "Loading sample...",
+    "parseError": "Unable to process response from grading system. Please review manually.",
+    "errorSample": "Couldn't load sample data. Please try again.",
+    "errorGrade": "Couldn't grade the answer. Please try again."
   },
   "EducatorsInAction": {
     "title": "Acad AI in Action.",
