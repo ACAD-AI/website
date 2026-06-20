@@ -22,7 +22,7 @@
     }
   },
   "TrustBar": {
-    "title": "Das Vertrauen zukunftsorientierter Institutionen"
+    "title": "Vertraut von Lehrenden und Studierenden an führenden Institutionen"
   },
   "HomeNumbers": {
     "eyebrow": "Vertraut. Bewährt. Wachsend.",
@@ -111,7 +111,31 @@
     "studentPlaceholder": "z. B. Ich denke, Klimawandel passiert, weil...",
     "studentDescription": "Die Antwort des Studierenden auf die Frage. Das wird Acad AI bewerten.",
     "gradeButton": "Antwort bewerten",
-    "demoResult": "Demo-Ergebnis: starke Antwort. Sie erkennt die Kernursachen und würde von einem unterstützenden Beispiel profitieren."
+    "demoResult": "Demo-Ergebnis: starke Antwort. Sie erkennt die Kernursachen und würde von einem unterstützenden Beispiel profitieren.",
+    "gradingStyleLabel": "Bewertungsstil",
+    "strict": "Streng",
+    "notStrict": "Nicht streng",
+    "totalMark": "Die Gesamtpunktzahl für die Frage beträgt 5.",
+    "grading": "Antwort wird bewertet",
+    "loadingAnalyzing": "Schülerantwort wird analysiert ...",
+    "loadingComparing": "Vergleich mit der Musterantwort ...",
+    "loadingCompiling": "Feedback wird zusammengestellt ...",
+    "loadingRubric": "Bewertungsraster wird vorbereitet ...",
+    "loadingSmallStuff": "Wir achten auf die Details ...",
+    "resultTitle": "Deine Antwort wurde bewertet!",
+    "resultSubtitle": "So hat Acad AI die Antwort bewertet – einschließlich Punktzahl, Feedback und Bewertungsraster-Einblick",
+    "totalScoreLabel": "Gesamtpunktzahl:",
+    "rubricBreakdown": "Bewertungsraster",
+    "generalFeedbackLabel": "Allgemeines Feedback:",
+    "tableIndex": "Nr.",
+    "tableCriteria": "Kriterium",
+    "tableScore": "Punktzahl",
+    "tableMaxScore": "Maximalpunktzahl",
+    "gradeAnother": "Weitere bewerten",
+    "sampleLoading": "Beispiel wird geladen ...",
+    "parseError": "Antwort des Bewertungssystems konnte nicht verarbeitet werden. Bitte manuell prüfen.",
+    "errorSample": "Beispieldaten konnten nicht geladen werden. Bitte erneut versuchen.",
+    "errorGrade": "Antwort konnte nicht bewertet werden. Bitte erneut versuchen."
   },
   "EducatorsInAction": {
     "title": "Acad AI in Aktion.",

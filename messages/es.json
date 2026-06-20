@@ -22,7 +22,7 @@
     }
   },
   "TrustBar": {
-    "title": "La confianza de instituciones con visión de futuro"
+    "title": "La confianza de educadores y estudiantes en instituciones líderes"
   },
   "HomeNumbers": {
     "eyebrow": "Con confianza. Probado. En crecimiento.",
@@ -111,7 +111,31 @@
     "studentPlaceholder": "p. ej., Creo que el cambio climático ocurre porque...",
     "studentDescription": "La respuesta del estudiante a la pregunta. Esto es lo que Acad AI calificará.",
     "gradeButton": "Calificar respuesta",
-    "demoResult": "Resultado de demo: respuesta sólida. Identifica las causas principales y mejoraría con un ejemplo de apoyo."
+    "demoResult": "Resultado de demo: respuesta sólida. Identifica las causas principales y mejoraría con un ejemplo de apoyo.",
+    "gradingStyleLabel": "Estilo de calificación",
+    "strict": "Estricto",
+    "notStrict": "No estricto",
+    "totalMark": "La puntuación total de la pregunta es 5.",
+    "grading": "Calificando la respuesta",
+    "loadingAnalyzing": "Analizando la respuesta del estudiante...",
+    "loadingComparing": "Comparando con la respuesta modelo...",
+    "loadingCompiling": "Compilando los comentarios...",
+    "loadingRubric": "Preparando el desglose de la rúbrica...",
+    "loadingSmallStuff": "Cuidando los pequeños detalles...",
+    "resultTitle": "¡Tu respuesta ha sido calificada!",
+    "resultSubtitle": "Así evaluó Acad AI la respuesta: incluye puntuación, comentarios e información de la rúbrica",
+    "totalScoreLabel": "Puntuación total:",
+    "rubricBreakdown": "Desglose de la rúbrica",
+    "generalFeedbackLabel": "Comentarios generales:",
+    "tableIndex": "Índice",
+    "tableCriteria": "Criterio",
+    "tableScore": "Puntuación",
+    "tableMaxScore": "Puntuación máxima",
+    "gradeAnother": "Calificar otra",
+    "sampleLoading": "Cargando ejemplo...",
+    "parseError": "No se pudo procesar la respuesta del sistema de calificación. Revísalo manualmente.",
+    "errorSample": "No se pudieron cargar los datos de ejemplo. Inténtalo de nuevo.",
+    "errorGrade": "No se pudo calificar la respuesta. Inténtalo de nuevo."
   },
   "EducatorsInAction": {
     "title": "Acad AI en acción.",

@@ -53,7 +53,7 @@ export const featuredArticles: FeaturedArticle[] = [
       "Nsikak-Abasi Ebong, the best graduating student of Babcock University’s School of Computing, tells TEMITOPE ADETUNJI how curiosity and an unyielding pursuit of excellence propelled him to the top of his class.",
     href: "https://punchng.com/developing-ai-assessment-tool-my-greatest-achievement-babcock-first-class-graduate/",
     imagePlacement: "top",
-    imageSrc: "/images/featured-in/edu-times-2.png",
+    imageSrc: "/images/featured-in/nsi.png",
     imagePosition: "object-center",
     publicationLogoSrc: "/images/media-features/punch.png",
   },

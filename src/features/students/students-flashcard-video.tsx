@@ -1,49 +1,50 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-import { cn } from "@/shared/lib/utils";
-
 /**
- * Slides for the students study-mode showcase.
+ * Students study-mode showcase.
  *
- * TODO(content): drop the real app screenshots into
- * `public/images/students-guide/` and tweak the copy below. The first slide
- * mirrors the provided design; the rest are placeholders to extend.
+ * The screenshots slide horizontally (with the next one peeking in), while the
+ * caption is a separate overlay that crossfades — it is not attached to the
+ * sliding track. Drop the real screenshots into `public/images/study-mode/`
+ * using the filenames below.
  */
 const slides = [
   {
     key: "flashcards",
     eyebrow: "Study Mode",
     title: "Generate Flashcards from your Slides in Seconds.",
-    imageSrc: "/images/students-guide/study-mode-flashcards.png",
+    imageSrc: "/images/study-mode/study-mode-1.png",
     imageAlt: "Acad AI study mode flashcard creation screen",
   },
   {
-    key: "quiz",
-    eyebrow: "Practice Quiz",
-    title: "Test yourself with AI-generated practice questions.",
-    imageSrc: "/images/students-guide/practice-quiz.png",
-    imageAlt: "Acad AI practice quiz screen",
+    key: "recall",
+    eyebrow: "Study Mode",
+    title: "Active Recall Everywhere & Anywhere with Flashcards.",
+    imageSrc: "/images/study-mode/study-mode-2.png",
+    imageAlt: "Acad AI flashcard active recall screen",
   },
   {
-    key: "study-set",
+    key: "predict",
     eyebrow: "Study Mode",
-    title: "Turn any PDF or slide deck into an interactive study set.",
-    imageSrc: "/images/students-guide/study-set.png",
-    imageAlt: "Acad AI interactive study set screen",
+    title: "Predict & Practice Questions Your Teacher will likely Ask.",
+    imageSrc: "/images/study-mode/study-mode-3.png",
+    imageAlt: "Acad AI practice questions screen",
   },
 ] as const;
 
 // Each slide is this percent of the container width; the remainder lets the
-// next slide peek in. The track fills the container, so advancing one slide
-// translates the track by exactly this percentage.
+// next slide peek in. Advancing one slide translates the track by this amount.
 const SLIDE_PERCENT = 88;
 
 export function StudentsFlashcardSlideshow() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const isFirst = activeIndex === 0;
+  const isLast = activeIndex === slides.length - 1;
 
   const goTo = (index: number) => {
     setActiveIndex(Math.max(0, Math.min(index, slides.length - 1)));
@@ -54,17 +55,18 @@ export function StudentsFlashcardSlideshow() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,rgba(25,79,204,0.2),transparent_38%)]" />
 
       <div className="relative mx-auto w-full max-w-[1180px]">
-        <div className="overflow-hidden">
-          <div
-            className="flex transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
-            style={{
-              transform: `translateX(-${activeIndex * SLIDE_PERCENT}%)`,
-            }}
-          >
-            {slides.map((slide) => (
-              <div className="w-[88%] shrink-0 pr-4 sm:pr-6" key={slide.key}>
-                <div className="relative overflow-hidden rounded-3xl bg-[linear-gradient(160deg,#0c1430_0%,#16205a_100%)] p-5 shadow-[0_30px_70px_rgba(7,15,51,0.45)] sm:p-8 lg:p-10">
-                  <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl shadow-[0_18px_40px_rgba(0,0,0,0.35)]">
+        <div className="relative overflow-hidden rounded-3xl bg-[linear-gradient(160deg,#0c1430_0%,#16205a_100%)] p-3 shadow-[0_30px_70px_rgba(7,15,51,0.45)] sm:p-4">
+          {/* Sliding screenshots — "just there", with the next one peeking. */}
+          <div className="overflow-hidden rounded-2xl">
+            <div
+              className="flex transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
+              style={{
+                transform: `translateX(-${activeIndex * SLIDE_PERCENT}%)`,
+              }}
+            >
+              {slides.map((slide) => (
+                <div className="w-[88%] shrink-0 pr-3 sm:pr-4" key={slide.key}>
+                  <div className="relative aspect-[872/627] w-full overflow-hidden rounded-xl">
                     <Image
                       alt={slide.imageAlt}
                       className="object-cover object-top"
@@ -73,58 +75,56 @@ export function StudentsFlashcardSlideshow() {
                       src={slide.imageSrc}
                     />
                   </div>
-
-                  <div className="mt-6 sm:mt-8">
-                    <p className="text-xs font-semibold tracking-[0.32em] text-[#86c7ed] uppercase">
-                      {slide.eyebrow}
-                    </p>
-                    <h3 className="mt-2 max-w-2xl text-2xl leading-tight font-medium text-white sm:text-3xl lg:text-4xl">
-                      {slide.title}
-                    </h3>
-                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="mt-8 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            {slides.map((slide, index) => (
+          {/* Scrim keeps the caption legible over any screenshot. */}
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 rounded-b-3xl bg-[linear-gradient(to_top,rgba(7,12,32,0.92)_0%,rgba(7,12,32,0.4)_45%,transparent_100%)]" />
+
+          {/* Caption — fades in/out, independent of the sliding track. */}
+          <div className="absolute right-6 bottom-6 left-6 sm:right-12 sm:bottom-10 sm:left-10">
+            <AnimatePresence mode="wait">
+              <motion.div
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                initial={{ opacity: 0, y: 10 }}
+                key={activeIndex}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+              >
+                <p className="text-xs font-semibold tracking-[0.32em] text-[#86c7ed] uppercase">
+                  {slides[activeIndex].eyebrow}
+                </p>
+                <h3 className="mt-2 max-w-2xl text-2xl leading-tight font-medium text-white sm:text-3xl lg:text-4xl">
+                  {slides[activeIndex].title}
+                </h3>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Navigation arrows — hidden at the bounds. */}
+          <div className="absolute right-6 bottom-6 flex items-center gap-3 sm:right-10 sm:bottom-10">
+            {!isFirst ? (
               <button
-                aria-label={`Go to slide ${index + 1}`}
-                className={cn(
-                  "h-1.5 rounded-full transition-all duration-500",
-                  index === activeIndex
-                    ? "w-8 bg-[#1836b2] dark:bg-[#86c7ed]"
-                    : "w-1.5 bg-[#c2cbe4] dark:bg-[#55568d]",
-                )}
-                key={slide.key}
-                onClick={() => goTo(index)}
+                aria-label="Previous slide"
+                className="flex size-11 items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:bg-white hover:text-[#141b34] sm:size-12"
+                onClick={() => goTo(activeIndex - 1)}
                 type="button"
-              />
-            ))}
-          </div>
-
-          <div className="flex items-center gap-3">
-            <button
-              aria-label="Previous slide"
-              className="flex size-11 items-center justify-center rounded-full border border-[#c2cbe4] text-[#141b34] transition-colors hover:bg-[#1836b2] hover:text-white disabled:cursor-not-allowed disabled:opacity-40 dark:border-white/25 dark:text-white dark:hover:bg-white dark:hover:text-[#141b34]"
-              disabled={activeIndex === 0}
-              onClick={() => goTo(activeIndex - 1)}
-              type="button"
-            >
-              <ArrowLeft aria-hidden="true" className="size-5" />
-            </button>
-            <button
-              aria-label="Next slide"
-              className="flex size-11 items-center justify-center rounded-full border border-[#c2cbe4] text-[#141b34] transition-colors hover:bg-[#1836b2] hover:text-white disabled:cursor-not-allowed disabled:opacity-40 dark:border-white/25 dark:text-white dark:hover:bg-white dark:hover:text-[#141b34]"
-              disabled={activeIndex === slides.length - 1}
-              onClick={() => goTo(activeIndex + 1)}
-              type="button"
-            >
-              <ArrowRight aria-hidden="true" className="size-5" />
-            </button>
+              >
+                <ArrowLeft aria-hidden="true" className="size-5" />
+              </button>
+            ) : null}
+            {!isLast ? (
+              <button
+                aria-label="Next slide"
+                className="flex size-11 items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:bg-white hover:text-[#141b34] sm:size-12"
+                onClick={() => goTo(activeIndex + 1)}
+                type="button"
+              >
+                <ArrowRight aria-hidden="true" className="size-5" />
+              </button>
+            ) : null}
           </div>
         </div>
       </div>

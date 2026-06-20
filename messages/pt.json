@@ -22,7 +22,7 @@
     }
   },
   "TrustBar": {
-    "title": "A confiança de instituições visionárias"
+    "title": "A confiança de educadores e estudantes em instituições líderes"
   },
   "HomeNumbers": {
     "eyebrow": "De confiança. Comprovado. A crescer.",
@@ -111,7 +111,31 @@
     "studentPlaceholder": "ex.: Acho que as alterações climáticas acontecem porque...",
     "studentDescription": "A resposta do estudante à pergunta. É isto que a Acad AI vai classificar.",
     "gradeButton": "Classificar resposta",
-    "demoResult": "Resultado de demo: resposta forte. Identifica as causas principais e beneficiaria de um exemplo de apoio."
+    "demoResult": "Resultado de demo: resposta forte. Identifica as causas principais e beneficiaria de um exemplo de apoio.",
+    "gradingStyleLabel": "Estilo de correção",
+    "strict": "Rigoroso",
+    "notStrict": "Flexível",
+    "totalMark": "A pontuação total da questão é 5.",
+    "grading": "Avaliando a resposta",
+    "loadingAnalyzing": "Analisando a resposta do aluno...",
+    "loadingComparing": "Comparando com a resposta modelo...",
+    "loadingCompiling": "Compilando o feedback...",
+    "loadingRubric": "Preparando o detalhamento da rubrica...",
+    "loadingSmallStuff": "Cuidando dos detalhes...",
+    "resultTitle": "Sua resposta foi avaliada!",
+    "resultSubtitle": "Veja como a Acad AI avaliou a resposta — incluindo pontuação, feedback e detalhes da rubrica",
+    "totalScoreLabel": "Pontuação total:",
+    "rubricBreakdown": "Detalhamento da rubrica",
+    "generalFeedbackLabel": "Feedback geral:",
+    "tableIndex": "Índice",
+    "tableCriteria": "Critério",
+    "tableScore": "Pontuação",
+    "tableMaxScore": "Pontuação máxima",
+    "gradeAnother": "Avaliar outra",
+    "sampleLoading": "Carregando exemplo...",
+    "parseError": "Não foi possível processar a resposta do sistema de avaliação. Revise manualmente.",
+    "errorSample": "Não foi possível carregar os dados de exemplo. Tente novamente.",
+    "errorGrade": "Não foi possível avaliar a resposta. Tente novamente."
   },
   "EducatorsInAction": {
     "title": "Acad AI em ação.",

@@ -33,14 +33,24 @@ const steps = [
   },
 ] as const;
 
+// Blue backdrop on mobile; the muted device frame returns on desktop.
 const sharedFrameClass =
-  "overflow-hidden rounded-md border border-[#57588d] bg-[#393967] p-3 shadow-[0_24px_65px_rgba(7,15,51,0.32)] sm:p-4";
+  "overflow-hidden rounded-md border border-[#2740c9] bg-[#2433c9] p-3 shadow-[0_24px_65px_rgba(7,15,51,0.32)] sm:p-4 lg:border-[#57588d] lg:bg-[#393967]";
 
 const stepCardClass =
   "flex h-full flex-col overflow-hidden rounded-xl bg-[#f5f7ff] p-5 pb-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 sm:pb-9 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]";
 
 const imageFrameClass =
-  "mt-6 overflow-hidden rounded-xl border-2 border-[#1836b2] bg-white p-2 shadow-[0_18px_36px_rgba(24,54,178,0.12)] sm:p-3 dark:border-[#86c7ed] dark:shadow-[0_20px_40px_rgba(134,199,237,0.1)]";
+  "mx-auto mt-8 aspect-[872/627] w-[88%] overflow-hidden rounded-xl shadow-[0_18px_36px_rgba(0,0,0,0.25)]";
+
+// The whole card tilts a different way per step for a hand-placed feel.
+const cardRotations = [
+  "-rotate-[3deg]",
+  "rotate-[2.5deg]",
+  "-rotate-[2deg]",
+  "rotate-[3deg]",
+  "-rotate-[1.5deg]",
+];
 
 const slideHeightClass = "h-[clamp(24rem,calc(100svh-16rem),38rem)]";
 
@@ -97,12 +107,12 @@ export function EducatorsWorkflowSection() {
                   <motion.div className="flex flex-col" style={{ y: trackY }}>
                     {steps.map((step, index) => (
                       <article
-                        className={`shrink-0 py-3 sm:py-4 ${slideHeightClass}`}
+                        className={`shrink-0 px-3 py-5 sm:px-5 sm:py-7 ${slideHeightClass}`}
                         key={step.key}
                       >
                         <div
                           className={`${stepCardClass} ${
-                            index % 2 === 0 ? "-rotate-1" : "rotate-1"
+                            cardRotations[index % cardRotations.length]
                           }`}
                         >
                           <div className="flex items-start justify-between gap-5">
@@ -123,11 +133,11 @@ export function EducatorsWorkflowSection() {
                             {t(`steps.${step.key}.description`)}
                           </p>
 
-                          <div className={`${imageFrameClass} min-h-0 flex-1`}>
+                          <div className={imageFrameClass}>
                             <div className="relative h-full w-full">
                               <Image
                                 alt={t(`steps.${step.key}.imageAlt`)}
-                                className="rounded-lg object-contain"
+                                className="object-cover object-top"
                                 fill
                                 sizes="(max-width: 1023px) 100vw, 650px"
                                 src={step.imageSrc}

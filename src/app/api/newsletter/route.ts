@@ -1,14 +1,10 @@
 import { NextResponse } from "next/server";
 
 import {
-  addSubscriber,
-  isSendPulseConfigured,
-  isSubscribed,
-} from "@/shared/lib/sendpulse/client";
-import {
-  isZeptoMailConfigured,
-  sendWelcomeEmail,
-} from "@/shared/lib/zeptomail/client";
+  type BackendResult,
+  isAcadAiConfigured,
+  subscribeToNewsletter,
+} from "@/shared/lib/acadai/client";
 
 interface NewsletterPayload {
   email?: unknown;
@@ -52,7 +48,7 @@ export async function POST(request: Request) {
     );
   }
 
-  // Validate the email before we ever store it or send a confirmation.
+  // Validate the email before we ever hand it off to the backend.
   if (!EMAIL_PATTERN.test(email)) {
     return NextResponse.json(
       { error: "Please provide a valid email address." },
@@ -60,9 +56,9 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!isSendPulseConfigured()) {
+  if (!isAcadAiConfigured()) {
     console.error(
-      "Newsletter signup is missing SendPulse env vars (SENDPULSE_CLIENT_ID, SENDPULSE_CLIENT_SECRET, SENDPULSE_ADDRESSBOOK_ID).",
+      "Newsletter signup is missing the LANDING_PAGE_API_KEY env var.",
     );
     return NextResponse.json(
       { error: "Newsletter signup is temporarily unavailable." },
@@ -70,17 +66,10 @@ export async function POST(request: Request) {
     );
   }
 
+  let result: BackendResult;
   try {
-    // Reject duplicates so we don't add the same person twice.
-    if (await isSubscribed(email)) {
-      return NextResponse.json(
-        { error: "You're already signed up." },
-        { status: 409 },
-      );
-    }
-
-    // SendPulse address book is the system of record for the newsletter list.
-    await addSubscriber({ email, name, role });
+    // The ACAD AI backend is the system of record for the newsletter list.
+    result = await subscribeToNewsletter({ email, name, role });
   } catch (error) {
     console.error("Newsletter signup failed:", error);
     return NextResponse.json(
@@ -89,22 +78,41 @@ export async function POST(request: Request) {
     );
   }
 
-  // Send the welcome email via ZeptoMail. A failure here shouldn't undo the
-  // signup — the contact is already saved — so we log and continue.
-  if (isZeptoMailConfigured()) {
-    try {
-      await sendWelcomeEmail({ email, name });
-    } catch (error) {
-      console.error("Welcome email failed for", email, error);
-    }
-  } else {
-    console.warn(
-      "ZeptoMail env vars missing (ZEPTOMAIL_TOKEN, ZEPTOMAIL_FROM_ADDRESS); welcome email skipped.",
+  if (result.ok) {
+    return NextResponse.json({
+      message:
+        result.message ||
+        "You're subscribed. Please check your email to get started.",
+      success: true,
+    });
+  }
+
+  // A 403 means our API key is missing/invalid — a server config problem, not
+  // something the visitor can fix, so don't leak it to them.
+  if (result.status === 403) {
+    console.error(
+      "ACAD AI rejected the newsletter API key (403). Check LANDING_PAGE_API_KEY.",
+    );
+    return NextResponse.json(
+      { error: "Newsletter signup is temporarily unavailable." },
+      { status: 503 },
     );
   }
 
-  return NextResponse.json({
-    message: "You're subscribed. Please check your email to get started.",
-    success: true,
-  });
+  // The backend rejected the input (e.g. already subscribed). Surface its
+  // message so the visitor knows what happened.
+  if (result.status === 400 || result.status === 409 || result.status === 422) {
+    return NextResponse.json(
+      { error: result.message || "Unable to subscribe with those details." },
+      { status: 409 },
+    );
+  }
+
+  console.error(
+    `ACAD AI newsletter subscribe returned unexpected status ${result.status}.`,
+  );
+  return NextResponse.json(
+    { error: "Unable to subscribe right now. Please try again." },
+    { status: 502 },
+  );
 }

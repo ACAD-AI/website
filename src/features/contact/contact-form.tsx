@@ -76,7 +76,8 @@ export function ContactForm() {
       case 4:
         return (
           formData.email.trim().length > 3 &&
-          formData.phoneNumber.trim().length > 5
+          formData.phoneNumber.trim().length > 5 &&
+          formData.institutionName.trim().length > 1
         );
       case 5:
         return formData.message.trim().length > 8;
@@ -279,7 +280,7 @@ export function ContactForm() {
                         institutionName: event.target.value,
                       }))
                     }
-                    placeholder="Institution name (optional)"
+                    placeholder="Institution name"
                     value={formData.institutionName}
                   />
                 </div>
