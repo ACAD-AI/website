@@ -11,8 +11,8 @@ export interface TrustBarLogo {
 }
 
 const sizeStyles = {
-  default: { tile: "h-18 w-34 sm:h-22 sm:w-42", logo: "h-10 sm:h-12" },
-  lg: { tile: "h-24 w-46 sm:h-28 sm:w-56", logo: "h-14 sm:h-18" },
+  default: { tile: "h-18 w-34 sm:h-22 sm:w-42", logo: "h-12 sm:h-16" },
+  lg: { tile: "h-24 w-46 sm:h-28 sm:w-56", logo: "h-18 sm:h-22" },
 } as const;
 
 const defaultInstitutionLogos: TrustBarLogo[] = [
@@ -77,7 +77,7 @@ const TrustBar = ({
                 {logos.map((institution) => (
                   <div
                     className={cn(
-                      "flex shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 shadow-sm sm:px-6",
+                      "flex shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white px-4 shadow-sm sm:px-5",
                       styles.tile,
                     )}
                     key={`${institution.name}-group-${group}`}
@@ -87,7 +87,7 @@ const TrustBar = ({
                         src={institution.src}
                         alt={institution.name}
                         fill
-                        sizes={size === "lg" ? "176px" : "120px"}
+                        sizes={size === "lg" ? "224px" : "168px"}
                         className="object-contain"
                       />
                     </div>
