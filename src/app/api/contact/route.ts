@@ -77,6 +77,13 @@ export async function POST(request: Request) {
     );
   }
 
+  if (institutionName.length < 2) {
+    return NextResponse.json(
+      { error: "Please provide your institution name." },
+      { status: 400 },
+    );
+  }
+
   if (!message) {
     return NextResponse.json(
       { error: "Please tell us a bit more about your request." },
@@ -98,9 +105,7 @@ export async function POST(request: Request) {
       name,
       email,
       phoneNumber,
-      // The backend requires an institution name (min 2 chars); the form treats
-      // it as optional, so fall back to a placeholder when it's left blank.
-      institutionName: institutionName || "Not specified",
+      institutionName,
       inquiryType,
       role,
       message,

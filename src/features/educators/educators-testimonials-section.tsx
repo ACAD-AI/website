@@ -19,17 +19,17 @@ export async function EducatorsTestimonialsSection() {
         <FadeIn className="grid w-full gap-5 md:grid-cols-2">
           {testimonialKeys.map((key) => (
             <blockquote
-              className="flex h-full flex-col rounded-md border border-[#57588d] bg-[#393967] p-6 text-white shadow-[0_14px_36px_rgba(7,15,51,0.22)] sm:p-7"
+              className="flex h-full flex-col rounded-2xl border border-[#e3e8f5] bg-white p-6 text-[#141b34] shadow-[0_14px_36px_rgba(46,73,139,0.08)] sm:p-7 dark:border-[#57588d] dark:bg-[#393967] dark:text-white dark:shadow-[0_14px_36px_rgba(7,15,51,0.22)]"
               key={key}
             >
               <p className="text-sm leading-6 sm:text-base sm:leading-7">
                 &ldquo;{t(`items.${key}.quote`)}&rdquo;
               </p>
               <footer className="mt-auto pt-7">
-                <cite className="text-sm font-medium not-italic sm:text-base">
+                <cite className="text-sm font-medium text-[#1836b2] not-italic sm:text-base dark:text-[#86c7ed]">
                   {t(`items.${key}.author`)}
                 </cite>
-                <p className="mt-1 text-xs leading-5 text-white/65 sm:text-sm">
+                <p className="mt-1 text-xs leading-5 text-[#5b6b8c] sm:text-sm dark:text-white/65">
                   {t(`items.${key}.organization`)}
                 </p>
               </footer>
