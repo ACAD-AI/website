@@ -8,6 +8,13 @@ import { cn } from "@/shared/lib/utils";
 export interface TrustBarLogo {
   name: string;
   src: string;
+  /**
+   * Per-logo height override (e.g. "h-24 sm:h-28"). Some source images carry a
+   * lot of baked-in whitespace, so their mark renders small under the shared
+   * `object-contain` box — bump those here so every logo reads with the same
+   * visual weight. Wins over the size preset via tailwind-merge.
+   */
+  className?: string;
 }
 
 const sizeStyles = {
@@ -82,7 +89,13 @@ const TrustBar = ({
                     )}
                     key={`${institution.name}-group-${group}`}
                   >
-                    <div className={cn("relative w-full", styles.logo)}>
+                    <div
+                      className={cn(
+                        "relative w-full",
+                        styles.logo,
+                        institution.className,
+                      )}
+                    >
                       <Image
                         src={institution.src}
                         alt={institution.name}
