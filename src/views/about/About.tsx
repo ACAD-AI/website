@@ -10,32 +10,47 @@ import {
 import { NewsletterSection } from "@/features/home";
 import { FadeIn, TrustBar } from "@/shared";
 
+// `className` bumps logos whose source art carries heavy whitespace (mostly the
+// square 1:1 files) so their mark reads with the same weight as the tight, wide
+// logos (Paystack, Shecluded, Babcock EDC).
 const backedByLogos = [
-  { name: "BEDC", src: "/images/backed-by/BEDC.jpg" },
-  { name: "Founderpass", src: "/images/backed-by/Founderpass.jpg" },
   {
-    name: "Perplexity AI",
-    src: "/images/backed-by/Perplexity_AI-Logo.wine.png",
+    name: "Babcock Entrepreneurship Development Centre",
+    src: "/images/backed-by/babcock-EDC.png",
   },
   {
-    name: "CodeSpark Africa",
-    src: "/images/backed-by/codespark_africa_logo.jpg",
+    name: "INSEAD AI Venture Lab",
+    src: "/images/backed-by/ai-vent.jpg",
   },
-  {
-    name: "Ibom Innovation",
-    src: "/images/backed-by/ibom%20innovation.jpg",
-  },
+  { name: "Shecluded", src: "/images/backed-by/shecluded-2.png" },
   {
     name: "Google Developer Groups on Campus, Babcock University",
-    src: "/images/backed-by/jepO6J8R_400x400.jpg",
+    src: "/images/backed-by/gdg.png",
+    className: "h-24 sm:h-28",
   },
-  { name: "Opolo Global", src: "/images/backed-by/opolo.png" },
+  { name: "Paystack", src: "/images/backed-by/paystack.png" },
   {
-    name: "SendPulse",
-    src: "/images/backed-by/sendpulse-logo-png_seeklogo-347023.png",
+    name: "CodeSpark",
+    src: "/images/backed-by/codespark.jpg",
+    className: "h-24 sm:h-28",
   },
-  { name: "Shecluded", src: "/images/backed-by/shecluded.png" },
-  { name: "Spendbase", src: "/images/backed-by/spendbase.png" },
+  {
+    name: "Spendbase",
+    src: "/images/backed-by/sendbase.png",
+    className: "h-24 sm:h-28",
+  },
+  { name: "SendPulse", src: "/images/backed-by/sendpulse.png" },
+  { name: "AWS Startups", src: "/images/backed-by/aws-startup.png" },
+  { name: "CloudPlexo", src: "/images/backed-by/cloudplexo.png" },
+  { name: "Ibom Air", src: "/images/backed-by/ibom-air.png" },
+  { name: "Founderpass", src: "/images/backed-by/founder-pass.png" },
+  { name: "Perplexity AI", src: "/images/backed-by/perplexity.png" },
+  { name: "iDICE Startup Bridge", src: "/images/backed-by/idice.png" },
+  {
+    name: "Google for Startups",
+    src: "/images/backed-by/google-f-s.png",
+    className: "h-24 sm:h-28",
+  },
 ] as const;
 
 const About = async () => {
