@@ -40,7 +40,7 @@ export async function POST(request: Request) {
   }
 
   if (!isGradingConfigured()) {
-    console.error("Grading is missing the GRADING_API_KEY env var.");
+    console.error("Grading requires GRADING_API_URL and GRADING_API_KEY.");
     return NextResponse.json(
       { error: "Grading is temporarily unavailable." },
       { status: 503 },

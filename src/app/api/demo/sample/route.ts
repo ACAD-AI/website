@@ -7,7 +7,9 @@ import {
 
 export async function GET() {
   if (!isAcadAiConfigured()) {
-    console.error("Demo sample is missing the LANDING_PAGE_API_KEY env var.");
+    console.error(
+      "Demo sample requires LANDING_PAGE_API_URL and LANDING_PAGE_API_KEY.",
+    );
     return NextResponse.json(
       { error: "Sample data is temporarily unavailable." },
       { status: 503 },

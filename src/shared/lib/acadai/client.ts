@@ -7,26 +7,22 @@
  *
  * Required environment variables:
  * - LANDING_PAGE_API_KEY  ACAD AI API key (sent as the `ACAD-AI-API-KEY` header)
- * - LANDING_PAGE_API_URL  Optional base URL (defaults to the production backend)
+ * - LANDING_PAGE_API_URL  Base URL for the landing-page backend
  */
 
-const API_URL =
-  process.env.LANDING_PAGE_API_URL ??
-  "https://acada-ai-landing-page-238741267770.europe-west1.run.app";
+const API_URL = process.env.LANDING_PAGE_API_URL;
 const API_KEY = process.env.LANDING_PAGE_API_KEY;
 
 // The grading service lives on a separate host with its own API key.
-const GRADING_API_URL =
-  process.env.GRADING_API_URL ??
-  "https://ai-v6-protected-238741267770.europe-west1.run.app";
+const GRADING_API_URL = process.env.GRADING_API_URL;
 const GRADING_API_KEY = process.env.GRADING_API_KEY;
 
 export function isAcadAiConfigured(): boolean {
-  return Boolean(API_KEY);
+  return Boolean(API_URL && API_KEY);
 }
 
 export function isGradingConfigured(): boolean {
-  return Boolean(GRADING_API_KEY);
+  return Boolean(GRADING_API_URL && GRADING_API_KEY);
 }
 
 export interface BackendResult {
@@ -50,8 +46,10 @@ export type AcadUserRole = "student" | "teacher" | "institutional_admin";
  * Throws only on network/transport errors or a missing API key.
  */
 async function post(path: string, body: unknown): Promise<BackendResult> {
-  if (!API_KEY) {
-    throw new Error("LANDING_PAGE_API_KEY is not configured.");
+  if (!API_URL || !API_KEY) {
+    throw new Error(
+      "LANDING_PAGE_API_URL and LANDING_PAGE_API_KEY must be configured.",
+    );
   }
 
   const response = await fetch(`${API_URL}${path}`, {
@@ -126,8 +124,10 @@ export interface DemoQuestion {
  * etc.); we normalise it to the four fields the playground needs.
  */
 export async function getRandomDemoQuestion(): Promise<DemoQuestion> {
-  if (!API_KEY) {
-    throw new Error("LANDING_PAGE_API_KEY is not configured.");
+  if (!API_URL || !API_KEY) {
+    throw new Error(
+      "LANDING_PAGE_API_URL and LANDING_PAGE_API_KEY must be configured.",
+    );
   }
 
   const response = await fetch(`${API_URL}/api/demo/random-question`, {
@@ -168,8 +168,8 @@ export async function gradeDemoAnswer(params: {
   modelAnswer?: string;
   strict: boolean;
 }): Promise<GradeResult> {
-  if (!GRADING_API_KEY) {
-    throw new Error("GRADING_API_KEY is not configured.");
+  if (!GRADING_API_URL || !GRADING_API_KEY) {
+    throw new Error("GRADING_API_URL and GRADING_API_KEY must be configured.");
   }
 
   const response = await fetch(`${GRADING_API_URL}/api/test-grade`, {
