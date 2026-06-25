@@ -45,7 +45,7 @@ export const teamMembers: TeamMember[] = [
     linkedinUrl: "https://www.linkedin.com/in/philip-edward-gmcpn-199973360/",
     imageSrc: "/images/staff/phillip.png",
     imagePosition: "object-left",
-    treatment: "scale-125",
+    treatment: "grayscale scale-125",
   },
   {
     name: "Fanimokun Oyindamola Dorcas",
