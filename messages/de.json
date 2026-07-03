@@ -6,1711 +6,532 @@
     "homeCta": "Zurück zur Startseite",
     "secondaryCta": "Preise ansehen"
   },
-  "Home": [
-    [
-      "eyebrow",
-      "Eine Plattform"
-    ],
-    [
-      "title",
-      "Jeder Bewertungsbedarf, abgedeckt."
-    ],
-    [
-      "description",
-      "Entwickelt für Institutionen, Lehrkräfte und Studierende, jeweils mit einem eigenen intuitiven Arbeitsablauf."
-    ],
-    [
-      "audiences",
-      [
-        [
-          "institutions",
-          [
-            [
-              "title",
-              "Für Institutionen"
-            ],
-            [
-              "description",
-              "Digitalisieren Sie 100% Ihrer Prüfungen. Von Probetests bis zu Abschlussprüfungen erhalten Sie prüfungssichere Ergebnisse in Minuten statt Wochen."
-            ],
-            [
-              "linkLabel",
-              "Entdecken"
-            ]
-          ]
-        ],
-        [
-          "educators",
-          [
-            [
-              "title",
-              "Für Lehrkräfte"
-            ],
-            [
-              "description",
-              "Sparen Sie Zeit mit unserer KI, die Ihre Tests anhand Ihres Bewertungsschemas benotet und Feedback an Ihre Studierenden zurückgibt."
-            ],
-            [
-              "linkLabel",
-              "Mehr erfahren"
-            ]
-          ]
-        ],
-        [
-          "students",
-          [
-            [
-              "title",
-              "Für Studierende"
-            ],
-            [
-              "description",
-              "Lerne wie die besten 1% mit unserem KI-Lernmodus und erhalte sofortiges Feedback zu deinen Prüfungen, das dir beim Verbessern hilft."
-            ],
-            [
-              "linkLabel",
-              "So funktioniert es"
-            ]
-          ]
-        ]
-      ]
-    ]
-  ],
-  "TrustBar": [
-    [
-      "title",
-      "Vertraut von Lehrenden und Studierenden an führenden Institutionen"
-    ]
-  ],
-  "HomeNumbers": [
-    [
-      "eyebrow",
-      "Vertraut. Bewährt. Wachsend."
-    ],
-    [
-      "title",
-      "Zahlen erzählen unsere Geschichte."
-    ],
-    [
-      "description",
-      "Wir existieren, um das Leben von Lehrenden und Lernenden zu verbessern."
-    ],
-    [
-      "button",
-      "Unsere Wall of Love ansehen"
-    ],
-    [
-      "imageAlt",
-      "Lehrkraft arbeitet an einem Laptop"
-    ],
-    [
-      "stats",
-      [
-        [
-          "assessments",
-          [
-            [
-              "value",
-              "200+"
-            ],
-            [
-              "label",
-              "Verarbeitete Bewertungen"
-            ]
-          ]
-        ],
-        [
-          "hours",
-          [
-            [
-              "value",
-              "5000+"
-            ],
-            [
-              "label",
-              "Gesparte Korrekturstunden"
-            ]
-          ]
-        ],
-        [
-          "accuracy",
-          [
-            [
-              "value",
-              "100%"
-            ],
-            [
-              "label",
-              "Genauigkeit"
-            ]
-          ]
-        ],
-        [
-          "performance",
-          [
-            [
-              "value",
-              "85%"
-            ],
-            [
-              "label",
-              "Verbesserte Leistung der Studierenden"
-            ]
-          ]
-        ]
-      ]
-    ]
-  ],
-  "HomeReleases": [
-    [
-      "eyebrow",
-      "Neueste Veröffentlichungen"
-    ],
-    [
-      "title",
-      "Was neu ist bei Acad AI"
-    ],
-    [
-      "description",
-      "Wir verbessern ständig, wie Bewertungen für alle funktionieren."
-    ],
-    [
-      "itemLabel",
-      "Neu"
-    ],
-    [
-      "button",
-      "Ich möchte mich anmelden"
-    ],
-    [
-      "items",
-      [
-        [
-          "proctoring",
-          [
-            [
-              "title",
-              "Webcam-Aufsicht"
-            ],
-            [
-              "description",
-              "Halten Sie Prüfungen fair mit intelligenter Überwachung, die für Skalierung gebaut ist."
-            ]
-          ]
-        ],
-        [
-          "studyMode",
-          [
-            [
-              "title",
-              "Lernmodus"
-            ],
-            [
-              "description",
-              "Verwandle Notizen in Sekundenschnelle in Quizfragen und Karteikarten."
-            ]
-          ]
-        ],
-        [
-          "rubrics",
-          [
-            [
-              "title",
-              "Eigene Rubriken"
-            ],
-            [
-              "description",
-              "Lassen Sie Acad AI genau wie Sie bewerten, mit Ihren eigenen Rubriken."
-            ]
-          ]
-        ]
-      ]
-    ]
-  ],
-  "HomeHero": [
-    [
-      "tagline",
-      "Lernen mit KI transformieren"
-    ],
-    [
-      "heading",
-      "Bewertungen von Anfang bis Ende neu gedacht"
-    ],
-    [
-      "headingAccent",
-      "Neu gedacht"
-    ],
-    [
-      "subHeading",
-      "Beschleunigen Sie studentisches Lernen mit der intuitivsten KI-Bewertungsplattform der Welt"
-    ],
-    [
-      "buttonOne",
-      "Jetzt loslegen"
-    ],
-    [
-      "buttonTwo",
-      "Demo anfragen"
-    ]
-  ],
-  "StudentsHero": [
-    [
-      "tagline",
-      "Schließe dich über 3.000 Studierenden an, die ihren Notendurchschnitt verbessern"
-    ],
-    [
-      "heading",
-      "Gehöre zu den besten 1% der Studierenden."
-    ],
-    [
-      "subHeading",
-      "Das ist es, was Einser-Studierende vor dir geheim gehalten haben. Fokus an. Level up."
-    ],
-    [
-      "buttonOne",
-      "Hier starten"
-    ],
-    [
-      "buttonTwo",
-      "Community beitreten"
-    ]
-  ],
-  "InstitutionsHero": [
-    [
-      "eyebrow",
-      "Für Institutionen"
-    ],
-    [
-      "title",
-      "Prüfungsergebnisse in Minuten, nicht in Tagen"
-    ],
-    [
-      "description",
-      "Beenden Sie Prüfungsbetrug und Stress mit einem Bewertungssystem, das Theorie, Mathematik und jeden Fragetyp sofort benotet."
-    ],
-    [
-      "button",
-      "Demo anfragen"
-    ]
-  ],
-  "EducatorsHero": [
-    [
-      "eyebrow",
-      "Für Lehrkräfte"
-    ],
-    [
-      "title",
-      "Weniger Zeit fürs Korrigieren.\nMehr Zeit fürs Unterrichten."
-    ],
-    [
-      "description",
-      "Mit einem sicheren System, das Theorie-Tests bewertet und reichhaltiges, personalisiertes Feedback für alle Studierenden liefert."
-    ],
-    [
-      "button",
-      "Jetzt loslegen"
-    ]
-  ],
-  "EducatorsPlayground": [
-    [
-      "title",
-      "Ausprobieren"
-    ],
-    [
-      "description",
-      "Neugierig, wie unsere KI Aufgaben bewertet? Nutzen Sie eigene Daten oder Beispieldaten und erleben Sie Acad AI in Aktion: schnell, präzise und für Lehrkräfte gebaut, die ihre Zeit schätzen."
-    ],
-    [
-      "sampleButton",
-      "Beispieldaten verwenden"
-    ],
-    [
-      "questionLabel",
-      "Frage"
-    ],
-    [
-      "questionPlaceholder",
-      "z. B. Was sind die Ursachen des Klimawandels?"
-    ],
-    [
-      "questionDescription",
-      "Die Prüfungs- oder Aufgabenfrage, die Sie bewerten möchten"
-    ],
-    [
-      "modelLabel",
-      "Musterantwort"
-    ],
-    [
-      "modelPlaceholder",
-      "z. B. Die Hauptursachen des Klimawandels sind..."
-    ],
-    [
-      "modelDescription",
-      "Eine ideale Antwort oder Referenzantwort zum Vergleich. Optional, verbessert aber die Bewertung."
-    ],
-    [
-      "studentLabel",
-      "Antwort des Studierenden"
-    ],
-    [
-      "studentPlaceholder",
-      "z. B. Ich denke, Klimawandel passiert, weil..."
-    ],
-    [
-      "studentDescription",
-      "Die Antwort des Studierenden auf die Frage. Das wird Acad AI bewerten."
-    ],
-    [
-      "gradeButton",
-      "Antwort bewerten"
-    ],
-    [
-      "demoResult",
-      "Demo-Ergebnis: starke Antwort. Sie erkennt die Kernursachen und würde von einem unterstützenden Beispiel profitieren."
-    ],
-    [
-      "gradingStyleLabel",
-      "Bewertungsstil"
-    ],
-    [
-      "strict",
-      "Streng"
-    ],
-    [
-      "notStrict",
-      "Nicht streng"
-    ],
-    [
-      "totalMark",
-      "Die Gesamtpunktzahl für die Frage beträgt 5."
-    ],
-    [
-      "grading",
-      "Antwort wird bewertet"
-    ],
-    [
-      "loadingAnalyzing",
-      "Schülerantwort wird analysiert ..."
-    ],
-    [
-      "loadingComparing",
-      "Vergleich mit der Musterantwort ..."
-    ],
-    [
-      "loadingCompiling",
-      "Feedback wird zusammengestellt ..."
-    ],
-    [
-      "loadingRubric",
-      "Bewertungsraster wird vorbereitet ..."
-    ],
-    [
-      "loadingSmallStuff",
-      "Wir achten auf die Details ..."
-    ],
-    [
-      "resultTitle",
-      "Deine Antwort wurde bewertet!"
-    ],
-    [
-      "resultSubtitle",
-      "So hat Acad AI die Antwort bewertet – einschließlich Punktzahl, Feedback und Bewertungsraster-Einblick"
-    ],
-    [
-      "totalScoreLabel",
-      "Gesamtpunktzahl:"
-    ],
-    [
-      "rubricBreakdown",
-      "Bewertungsraster"
-    ],
-    [
-      "generalFeedbackLabel",
-      "Allgemeines Feedback:"
-    ],
-    [
-      "tableIndex",
-      "Nr."
-    ],
-    [
-      "tableCriteria",
-      "Kriterium"
-    ],
-    [
-      "tableScore",
-      "Punktzahl"
-    ],
-    [
-      "tableMaxScore",
-      "Maximalpunktzahl"
-    ],
-    [
-      "gradeAnother",
-      "Weitere bewerten"
-    ],
-    [
-      "sampleLoading",
-      "Beispiel wird geladen ..."
-    ],
-    [
-      "parseError",
-      "Antwort des Bewertungssystems konnte nicht verarbeitet werden. Bitte manuell prüfen."
-    ],
-    [
-      "errorSample",
-      "Beispieldaten konnten nicht geladen werden. Bitte erneut versuchen."
-    ],
-    [
-      "errorGrade",
-      "Antwort konnte nicht bewertet werden. Bitte erneut versuchen."
-    ]
-  ],
-  "EducatorsInAction": [
-    [
-      "title",
-      "Acad AI in Aktion."
-    ],
-    [
-      "subtitle",
-      "Es ist einfacher, als Sie denken · Jetzt ansehen"
-    ],
-    [
-      "imageAlt",
-      "Demonstration des Bewertungsablaufs für Lehrkräfte in Acad AI"
-    ]
-  ],
-  "EducatorsFeatures": [
-    [
-      "eyebrow",
-      "All-in-One-Plattform"
-    ],
-    [
-      "title",
-      "Alles, was Sie für bessere Prüfungen brauchen"
-    ],
-    [
-      "description",
-      "Warum getrennte Plattformen nutzen, wenn ein System wie unseres verfügbar und zuverlässig ist?"
-    ],
-    [
-      "button",
-      "Kostenlos starten"
-    ],
-    [
-      "items",
-      [
-        [
-          "questionGenerator",
-          [
-            [
-              "title",
-              "Fragengenerator"
-            ],
-            [
-              "description",
-              "Verwandeln Sie Ihre Unterrichtsstunde in Sekundenschnelle in fertige Prüfungsfragen. Bei Bedarf bearbeiten oder anpassen."
-            ]
-          ]
-        ],
-        [
-          "malpracticeControl",
-          [
-            [
-              "title",
-              "Betrugskontrolle"
-            ],
-            [
-              "description",
-              "Studierende können während der Prüfung nicht kopieren, einfügen oder Tabs wechseln."
-            ]
-          ]
-        ],
-        [
-          "instantFeedback",
-          [
-            [
-              "title",
-              "Sofortiges Feedback"
-            ],
-            [
-              "description",
-              "Geben Sie jedem Studierenden klares, hilfreiches automatisches Feedback, personalisiert auf die Antworten."
-            ]
-          ]
-        ],
-        [
-          "examSetup",
-          [
-            [
-              "title",
-              "Standard-Prüfungseinrichtung"
-            ],
-            [
-              "description",
-              "Zeitgesteuerte, automatisch speichernde Prüfungen in einer kontrollierten Umgebung ohne Ablenkungen."
-            ]
-          ]
-        ],
-        [
-          "exportResults",
-          [
-            [
-              "title",
-              "Ergebnisse exportieren"
-            ],
-            [
-              "description",
-              "Laden Sie organisierte Ergebnisse sofort herunter. Sie behalten die Kontrolle und können vor dem Teilen prüfen oder anpassen."
-            ]
-          ]
-        ],
-        [
-          "automaticGrading",
-          [
-            [
-              "title",
-              "Automatische Bewertung"
-            ],
-            [
-              "description",
-              "Hunderte Prüfungen mit Multiple Choice, Theorie und Lückentextfragen in Minuten bewertet."
-            ]
-          ]
-        ]
-      ]
-    ]
-  ],
-  "EducatorsWorkflow": [
-    [
-      "eyebrow",
-      "So funktioniert es"
-    ],
-    [
-      "title",
-      "Fünf Schritte. Das war's."
-    ],
-    [
-      "introTitle",
-      "Ein durchscrollbarer Prüfungsablauf, der Ihnen in jeder Phase Stunden spart"
-    ],
-    [
-      "description",
-      "Generieren Sie Fragen, sichern Sie Prüfungen und prüfen Sie KI-generierte Ergebnisse in einem nahtlosen Ablauf."
-    ],
-    [
-      "button",
-      "Meine Zeit zurückholen"
-    ],
-    [
-      "steps",
-      [
-        [
-          "create",
-          [
-            [
-              "title",
-              "Eine Prüfung erstellen"
-            ],
-            [
-              "description",
-              "Legen Sie Fragen fest oder generieren Sie sie sofort aus Ihren Unterrichtsnotizen mit KI."
-            ],
-            [
-              "imageAlt",
-              "Dashboard zur Prüfungserstellung in Acad AI"
-            ]
-          ]
-        ],
-        [
-          "secure",
-          [
-            [
-              "title",
-              "Prüfung sichern"
-            ],
-            [
-              "description",
-              "Legen Sie Zeitvorgaben, Zugriffsregeln und Betrugskontrollen fest, bevor Studierende beginnen."
-            ],
-            [
-              "imageAlt",
-              "Sicherheitseinstellungen für Prüfungen in Acad AI"
-            ]
-          ]
-        ],
-        [
-          "deliver",
-          [
-            [
-              "title",
-              "Mit Studierenden teilen"
-            ],
-            [
-              "description",
-              "Laden Sie Ihre Klasse ein und stellen Sie die Bewertung aus einem organisierten Arbeitsbereich bereit."
-            ],
-            [
-              "imageAlt",
-              "Dashboard zur Prüfungsbereitstellung für Studierende in Acad AI"
-            ]
-          ]
-        ],
-        [
-          "grade",
-          [
-            [
-              "title",
-              "Sofort bewerten"
-            ],
-            [
-              "description",
-              "Lassen Sie Acad AI jede Antwort bewerten und in Minuten klares, nützliches Feedback erstellen."
-            ],
-            [
-              "imageAlt",
-              "Dashboard für automatische Bewertung in Acad AI"
-            ]
-          ]
-        ],
-        [
-          "review",
-          [
-            [
-              "title",
-              "Prüfen und veröffentlichen"
-            ],
-            [
-              "description",
-              "Überprüfen Sie Ergebnisse, nehmen Sie letzte Anpassungen vor und geben Sie Feedback frei, wenn Sie bereit sind."
-            ],
-            [
-              "imageAlt",
-              "Dashboard zur Ergebnisprüfung in Acad AI"
-            ]
-          ]
-        ]
-      ]
-    ]
-  ],
-  "EducatorsTestimonials": [
-    [
-      "title",
-      "Verlassen Sie sich nicht nur auf unser Wort."
-    ],
-    [
-      "button",
-      "Unsere Wall of Love ansehen"
-    ],
-    [
-      "items",
-      [
-        [
-          "ukandu",
-          [
-            [
-              "quote",
-              "Besonders beeindruckt hat mich die Fähigkeit von Acad AI, aus meinen Unterrichtsnotizen Fragen zu erstellen. Die Plattform steigert die Produktivität erheblich und optimiert verschiedene akademische Abläufe, wodurch sie für Lehrkräfte und Institutionen gleichermaßen wertvoll ist."
-            ],
-            [
-              "author",
-              "Herr Obumneme Ukandu"
-            ],
-            [
-              "organization",
-              "Dozent für Informatik, Babcock University"
-            ]
-          ]
-        ],
-        [
-          "awoniyi",
-          [
-            [
-              "quote",
-              "Acad AI basiert auf einem tiefen Verständnis der Herausforderungen bei der Benotung. Studierende erhalten eine klare Aufschlüsselung ihrer Noten sowie konkrete Hinweise zur Verbesserung ihrer Antworten, während die wesentliche Rolle der Lehrkräfte im Bewertungsprozess gewahrt bleibt."
-            ],
-            [
-              "author",
-              "Herr Amos Awoniyi"
-            ],
-            [
-              "organization",
-              "Dozent für Softwaretechnik, Babcock University"
-            ]
-          ]
-        ],
-        [
-          "eti",
-          [
-            [
-              "quote",
-              "Acad AI ist ein sehr intelligentes Werkzeug, das die Aufgaben von Lehrkräften vereinfacht. Von der Fragenerstellung bis zur Benotung ist Acad AI das ideale Werkzeug. Seit ich es nutze, sind meine akademischen Aufgaben wesentlich leichter geworden. Ich empfehle Acad AI sowohl Lehrkräften als auch Studierenden, weil es ihre Arbeit wirklich vereinfacht."
-            ],
-            [
-              "author",
-              "Dr. Chinedu Eti"
-            ],
-            [
-              "organization",
-              "Politikwissenschaft und öffentliche Verwaltung, Babcock University"
-            ]
-          ]
-        ],
-        [
-          "ajibade",
-          [
-            [
-              "quote",
-              "Ich habe am vergangenen Wochenende mit Acad AI eine Prüfung durchgeführt und war wirklich beeindruckt. Ich wählte für die Bewertung die Option „nicht streng“, und die Benotung der Theoriefragen war sehr gut. Als Nächstes werde ich die Option „streng“ testen und die Ergebnisse vergleichen, aber meine Erfahrung bei der letzten Prüfung war wirklich positiv."
-            ],
-            [
-              "author",
-              "Dr. Ayodeji Ajibade"
-            ],
-            [
-              "organization",
-              "Senior Lecturer für Finanzen, Babcock University"
-            ]
-          ]
-        ]
-      ]
-    ]
-  ],
-  "EducatorsFaq": [
-    [
-      "eyebrow",
-      "FAQs"
-    ],
-    [
-      "title",
-      "Häufige Fragen, beantwortet."
-    ]
-  ],
-  "InstitutionsTypes": [
-    [
-      "eyebrow",
-      "Gebaut für"
-    ],
-    [
-      "title",
-      "Institutionen jeder Größe und Form."
-    ],
-    [
-      "items",
-      [
-        [
-          "secondarySchools",
-          [
-            [
-              "title",
-              "Sekundarschulen"
-            ],
-            [
-              "description",
-              "Wechseln Sie nahtlos von papierbasierten Prüfungen zu 100% digitalen Bewertungen. Ergebnisse sind in Minuten bereit, nicht in Tagen."
-            ],
-            [
-              "imageAlt",
-              "Digitale Bewertungsplattform für Sekundarschulen"
-            ]
-          ]
-        ],
-        [
-          "distanceLearning",
-          [
-            [
-              "title",
-              "Offenes Fernstudium und E-Learning"
-            ],
-            [
-              "description",
-              "Stellen Sie sichere Bewertungen für Lernende bereit, wo immer sie sind, mit sofortiger Bewertung und klaren Leistungsanalysen."
-            ],
-            [
-              "imageAlt",
-              "Digitale Bewertungsplattform für Fernlernen"
-            ]
-          ]
-        ],
-        [
-          "corporateTraining",
-          [
-            [
-              "title",
-              "Corporate Training"
-            ],
-            [
-              "description",
-              "Messen Sie Wissen und Trainingsergebnisse von Mitarbeitenden mit skalierbaren Bewertungen und prüfungssicheren Ergebnissen."
-            ],
-            [
-              "imageAlt",
-              "Digitale Bewertungsplattform für Corporate Training"
-            ]
-          ]
-        ]
-      ]
-    ]
-  ],
-  "InstitutionsGoldStandard": [
-    [
-      "title",
-      "Der Goldstandard für institutionelle Bewertungen."
-    ],
-    [
-      "eyebrow",
-      "Admin-Dashboard"
-    ],
-    [
-      "description",
-      "Von der Einschreibung bis zu den Ergebnissen: jedes Signal in einer Ansicht."
-    ],
-    [
-      "imageAlt",
-      "Institutionelles Admin-Dashboard von Acad AI"
-    ],
-    [
-      "benefits",
-      [
-        [
-          "digitized",
-          "100% digitalisiert"
-        ],
-        [
-          "scalable",
-          "Skalierbar für 100 oder 100.000 Lernende"
-        ],
-        [
-          "auditReady",
-          "Vollständig prüfbereit"
-        ]
-      ]
-    ]
-  ],
-  "QuestionTypes": [
-    [
-      "eyebrow",
-      "Acad AI hilft Ihnen beim Bewerten"
-    ],
-    [
-      "title",
-      "Alle Fragetypen, sofort"
-    ],
-    [
-      "items",
-      [
-        [
-          "multiChoice",
-          "Multiple Choice"
-        ],
-        [
-          "fillGap",
-          "Lückentext"
-        ],
-        [
-          "theory",
-          "Theorie"
-        ],
-        [
-          "essay",
-          "Aufsatz"
-        ],
-        [
-          "mathematics",
-          "Mathematik"
-        ],
-        [
-          "caseStudy",
-          "Fallstudie"
-        ],
-        [
-          "diagram",
-          "Diagramm"
-        ]
-      ]
-    ]
-  ],
-  "InstitutionsInAction": [
-    [
-      "title",
-      "Acad AI in Aktion."
-    ],
-    [
-      "subtitle",
-      "Es ist einfacher, als Sie denken · Jetzt ansehen"
-    ],
-    [
-      "imageAlt",
-      "Demonstration der Bewertungsplattform Acad AI"
-    ]
-  ],
-  "InstitutionsPlatformFeatures": [
-    [
-      "eyebrow",
-      "All-in-One-Plattform"
-    ],
-    [
-      "title",
-      "Alles, was Sie für bessere Prüfungen brauchen"
-    ],
-    [
-      "description",
-      "Warum getrennte Plattformen nutzen, wenn ein System wie unseres verfügbar und zuverlässig ist?"
-    ],
-    [
-      "items",
-      [
-        [
-          "questionGenerator",
-          [
-            [
-              "title",
-              "Fragengenerator"
-            ],
-            [
-              "description",
-              "Verwandeln Sie Ihre Unterrichtsstunde in Sekundenschnelle in fertige Prüfungsfragen. Bei Bedarf bearbeiten oder anpassen."
-            ]
-          ]
-        ],
-        [
-          "malpracticeControl",
-          [
-            [
-              "title",
-              "Betrugskontrolle"
-            ],
-            [
-              "description",
-              "Studierende können während der Prüfung nicht kopieren, einfügen oder Tabs wechseln."
-            ]
-          ]
-        ],
-        [
-          "instantFeedback",
-          [
-            [
-              "title",
-              "Sofortiges Feedback"
-            ],
-            [
-              "description",
-              "Geben Sie jedem Studierenden klares, hilfreiches automatisches Feedback, personalisiert auf die Antworten."
-            ]
-          ]
-        ],
-        [
-          "examSetup",
-          [
-            [
-              "title",
-              "Standard-Prüfungseinrichtung"
-            ],
-            [
-              "description",
-              "Zeitgesteuerte, automatisch speichernde Prüfungen in einer kontrollierten Umgebung ohne Ablenkungen."
-            ]
-          ]
-        ],
-        [
-          "exportResults",
-          [
-            [
-              "title",
-              "Ergebnisse exportieren"
-            ],
-            [
-              "description",
-              "Laden Sie organisierte Ergebnisse sofort herunter. Sie behalten die Kontrolle und können vor dem Teilen prüfen oder anpassen."
-            ]
-          ]
-        ],
-        [
-          "automaticGrading",
-          [
-            [
-              "title",
-              "Automatische Bewertung"
-            ],
-            [
-              "description",
-              "Hunderte Prüfungen mit Multiple Choice, Theorie und Lückentextfragen in Minuten bewertet."
-            ]
-          ]
-        ],
-        [
-          "reportCards",
-          [
-            [
-              "title",
-              "Zeugnisse erstellen"
-            ],
-            [
-              "description",
-              "Laden Sie organisierte Ergebnisse sofort herunter. Sie behalten die Kontrolle und können vor dem Teilen prüfen oder anpassen."
-            ]
-          ]
-        ]
-      ]
-    ]
-  ],
-  "InstitutionsSecurity": [
-    [
-      "eyebrow",
-      "Sicherheit zuerst"
-    ],
-    [
-      "title",
-      "Ihre institutionellen Daten, geschützt."
-    ],
-    [
-      "description",
-      "Sicherheit ist kein Zusatz; sie ist unser Fundament."
-    ],
-    [
-      "items",
-      [
-        [
-          "sovereignty",
-          [
-            [
-              "title",
-              "Datensouveränität"
-            ],
-            [
-              "description",
-              "Sie besitzen 100% Ihrer Daten. Wir verwenden Ihre proprietären Bewertungsschemata oder Studierendendaten niemals zum Trainieren externer Modelle."
-            ]
-          ]
-        ],
-        [
-          "standards",
-          [
-            [
-              "title",
-              "Globale Standards"
-            ],
-            [
-              "description",
-              "Vollständig konform mit Datenschutzgesetzen, einschließlich Ende-zu-Ende-Verschlüsselung für alle Lernenden- und Institutionsinformationen."
-            ]
-          ]
-        ]
-      ]
-    ]
-  ],
-  "InstitutionsCTA": [
-    [
-      "title",
-      "Führen Sie Ihre Institution\nschon heute in die Zukunft."
-    ],
-    [
-      "description",
-      "Schließen Sie sich Institutionen an, die tausende Stunden sparen und mit Acad AI bessere Lernergebnisse erzielen."
-    ],
-    [
-      "primaryButton",
-      "Kostenlos starten"
-    ],
-    [
-      "secondaryButton",
-      "Demo anfragen"
-    ]
-  ],
-  "StudentsFeatures": [
-    [
-      "leftTitle",
-      "Prüfungen, die dich weiterbringen"
-    ],
-    [
-      "leftDescription",
-      "Für jede Prüfung, die deine Lehrkraft dir auf Acad AI gibt, erhältst du dein Ergebnis mit persönlichem Feedback, das genau zeigt, wo du stark warst und wo du bei jeder Frage etwas verpasst hast."
-    ],
-    [
-      "leftButton",
-      "Jetzt fokussieren"
-    ],
-    [
-      "rightTitle",
-      "Teste dich selbst, bevor deine Lehrkraft es tut"
-    ],
-    [
-      "flashcardsTitle",
-      "Karteikarten"
-    ],
-    [
-      "flashcardsDescription",
-      "Verwandle umfangreiche PDFs und Folien in Karteikarten, die dir helfen, Themen schneller und langfristig zu verstehen."
-    ],
-    [
-      "quizzesTitle",
-      "Übungsquiz"
-    ],
-    [
-      "quizzesDescription",
-      "Löse Standard-Prüfungsfragen mit Timer, damit du mit Vertrauen in die echte Prüfung gehst."
-    ]
-  ],
-  "StudentsCommunity": [
-    [
-      "eyebrow",
-      "Community"
-    ],
-    [
-      "title",
-      "Du musst es nicht allein schaffen."
-    ],
-    [
-      "description",
-      "Wir möchten dich auf jedem Schritt deiner akademischen Erfolgsreise begleiten, mit neuen Lerntricks, Antworten auf deine Fragen und weiterer Unterstützung."
-    ],
-    [
-      "button",
-      "Ja, bitte"
-    ]
-  ],
-  "StudentsWallOfLove": [
-    [
-      "eyebrow",
-      "Wall of Love"
-    ],
-    [
-      "title",
-      "Was deine Kommilitonen sagen"
-    ],
-    [
-      "button",
-      "Unsere Wall of Love ansehen"
-    ],
-    [
-      "items",
-      [
-        [
-          "cis",
-          [
-            [
-              "course",
-              "CIS-Student"
-            ],
-            [
-              "school",
-              "Babcock University"
-            ],
-            [
-              "review",
-              "Ich hoffe, dass Acad AI in unserem heutigen Bildungssystem eingesetzt wird, damit ich als Student nachvollziehen kann, wie ich bewertet wurde. Die Anwendung war benutzerfreundlich, leicht zu bedienen und einfach zu verstehen."
-            ]
-          ]
-        ],
-        [
-          "scoreReview",
-          [
-            [
-              "course",
-              "Finanzstudent"
-            ],
-            [
-              "school",
-              "Babcock University"
-            ],
-            [
-              "review",
-              "Mir gefällt besonders, dass ich später meine Punktzahl sehen und die Korrektur im System überprüfen kann. Das war hervorragend."
-            ]
-          ]
-        ],
-        [
-          "seamless",
-          [
-            [
-              "course",
-              "Finanzstudent"
-            ],
-            [
-              "school",
-              "Babcock University"
-            ],
-            [
-              "review",
-              "Das System funktioniert von der Registrierung bis zur Durchführung der Prüfung reibungslos. Ich kann zu früheren Fragen zurückkehren und mit der Zeitanzeige meine Zeit gut im Blick behalten."
-            ]
-          ]
-        ],
-        [
-          "easy",
-          [
-            [
-              "course",
-              "Finanzstudent"
-            ],
-            [
-              "school",
-              "Babcock University"
-            ],
-            [
-              "review",
-              "Acad AI war einfach zu bedienen. Obwohl ich es zum ersten Mal verwendet habe, konnte ich alles ohne Schwierigkeiten verstehen."
-            ]
-          ]
-        ],
-        [
-          "autosave",
-          [
-            [
-              "course",
-              "Finanzstudent"
-            ],
-            [
-              "school",
-              "Babcock University"
-            ],
-            [
-              "review",
-              "Besonders gut finde ich, dass Acad AI meine Antworten automatisch speichert und mir erlaubt, zu früheren Fragen zurückzukehren, um meine Antworten zu überprüfen oder noch nicht beantwortete Fragen nachzuholen."
-            ]
-          ]
-        ]
-      ]
-    ]
-  ],
-  "StudentsCTA": [
-    [
-      "line1",
-      "Du hast keine Ausreden mehr."
-    ],
-    [
-      "line2",
-      "Hol dir die Eins."
-    ],
-    [
-      "button",
-      "Ich möchte mich anmelden"
-    ]
-  ],
-  "FAQ": [
-    [
-      "eyebrow",
-      "FAQs"
-    ],
-    [
-      "title",
-      "Häufig gestellte Fragen"
-    ],
-    [
-      "description",
-      "Alles, was Sie über Acad AI wissen müssen."
-    ],
-    [
-      "items",
-      [
-        [
-          "whatIsAcadAi",
-          [
-            [
-              "question",
-              "Was ist Acad AI?"
-            ],
-            [
-              "answer",
-              "Acad AI ist eine Bewertungs- und Lernplattform, die den gesamten Prüfungsprozess automatisiert. Wir helfen Schulen und Lehrkräften, Bewertungen in Minuten zu erstellen, bereitzustellen und zu benoten. Kürzlich haben wir einen Lernmodus (Beta) für Studierende eingeführt, damit sie ihre Fächer schneller meistern."
-            ]
-          ]
-        ],
-        [
-          "questionTypes",
-          [
-            [
-              "question",
-              "Welche Fragetypen unterstützt Acad AI?"
-            ],
-            [
-              "answer",
-              "Derzeit unterstützt Acad AI Theoriefragen, Multiple Choice (MCQ), Mathematik, Programmierung, Aufsätze und Lückentexte. Ob Sie tiefes Verständnis durch offene Antworten oder schnelles Erinnern durch objektive Fragen prüfen möchten, unsere KI ist darauf optimiert, diese Formate präzise zu erstellen und zu bewerten."
-            ]
-          ]
-        ],
-        [
-          "finalGrades",
-          [
-            [
-              "question",
-              "Wer ist für die Endnoten auf Acad AI verantwortlich?"
-            ],
-            [
-              "answer",
-              "Die Lehrkraft hat immer das letzte Wort. Unsere KI liefert Bewertungsvorschläge im ersten Durchlauf, detailliertes Feedback und Rubrikaufschlüsselungen, um Zeit zu sparen. Jede Punktzahl kann jedoch von einer Lehrkraft überprüft, bearbeitet und freigegeben werden, bevor Ergebnisse an Studierende veröffentlicht werden."
-            ]
-          ]
-        ],
-        [
-          "sharedInformation",
-          [
-            [
-              "question",
-              "Welche Informationen werden mit den KI-Modellen geteilt?"
-            ],
-            [
-              "answer",
-              "Wir teilen nur anonymisierte Bewertungsdaten, wie Prüfungsfragen und Antworten von Studierenden, die erforderlich sind, damit die KI bewerten oder Lernmaterialien erstellen kann. Personenbezogene Daten (PII) wie Namen oder E-Mail-Adressen teilen wir niemals mit Sprachmodellen."
-            ]
-          ]
-        ],
-        [
-          "trainingData",
-          [
-            [
-              "question",
-              "Trainieren Sie Modelle mit Studierendendaten?"
-            ],
-            [
-              "answer",
-              "Nein. Wir respektieren geistiges Eigentum und Privatsphäre. Einreichungen von Studierenden und Schuldaten werden niemals verwendet, um KI-Modelle Dritter zu trainieren oder zu verbessern. Ihre Daten bleiben Ihre eigenen."
-            ]
-          ]
-        ],
-        [
-          "examMalpractice",
-          [
-            [
-              "question",
-              "Wie verhindert Acad AI Prüfungsbetrug?"
-            ],
-            [
-              "answer",
-              "Wir nutzen Web-Proctoring, um Prüfungen fair zu halten. Verlässt ein Studierender den Prüfungs-Tab, um eine andere App oder Website zu öffnen, erhält er sofort eine Warnung. Beim zweiten Versuch wird die Prüfung automatisch abgegeben. So wird verhindert, dass Studierende nach Antworten suchen oder externe Hilfsmittel verwenden. Wenn aktiviert, können Lehrkräfte die Studierenden außerdem per Kamera-Proctoring über Gerätekamera, Mikrofon und Bildschirmfreigabe beaufsichtigen. Kopieren und Einfügen ist deaktiviert, damit alle Arbeiten eigenständig und innerhalb des sicheren Prüfungszeitraums erstellt werden. Zufällige Fragenreihenfolgen und zufällig angeordnete MCQ-Antwortoptionen reduzieren zusätzlich Betrug unter Studierenden."
-            ]
-          ]
-        ],
-        [
-          "gradingReliability",
-          [
-            [
-              "question",
-              "Wie zuverlässig ist die Bewertung von Acad AI?"
-            ],
-            [
-              "answer",
-              "Acad AI ist sehr genau und darauf ausgelegt, bestimmten Rubriken oder Bewertungsschemata zu folgen. Obwohl unsere KI-Notenvorschläge konsistent und objektiv sein sollen, betrachten wir sie als hochwertigen Entwurf, den Lehrkräfte verfeinern können, damit das menschliche Element der Bewertung nie verloren geht."
-            ]
-          ]
-        ],
-        [
-          "freePlan",
-          [
-            [
-              "question",
-              "Kann ich Acad AI kostenlos nutzen?"
-            ],
-            [
-              "answer",
-              "Ja. Lehrkräfte und Studierende erhalten bei der Anmeldung kostenlose Credits. Außerdem führen wir regelmäßig Aktionen und Empfehlungsprogramme durch, damit Sie die Plattform weiterhin kostenlos nutzen können. Für Schulen und Institutionen bieten wir ein eigenes Pilotprogramm an, um unsere gesamte Funktionspalette kostenlos zu testen."
-            ]
-          ]
-        ],
-        [
-          "lmsSupport",
-          [
-            [
-              "question",
-              "Kann ich Acad AI mit dem LMS meiner Schule nutzen?"
-            ],
-            [
-              "answer",
-              "Ja. Mit Acad AI können Sie Noten und Feedback der Studierenden als übersichtliche CSV-Datei herunterladen. So behalten Sie einen portablen Nachweis Ihrer Ergebnisse und können externe Notenbücher in Tools wie Google Classroom oder Canvas einfach aktualisieren. Eigene Integrationen für Moodle und Canvas sowie eine API befinden sich ebenfalls in Entwicklung."
-            ]
-          ]
-        ]
-      ]
-    ],
-    [
-      "contact",
-      [
-        [
-          "title",
-          "Noch Fragen?"
-        ],
-        [
-          "description",
-          "Sie finden die gesuchte Antwort nicht? Schreiben Sie bitte unserem freundlichen Team."
-        ],
-        [
-          "button",
-          "Kontakt aufnehmen"
-        ]
-      ]
-    ]
-  ],
-  "AboutHero": [
-    [
-      "eyebrow",
-      "Über Acad AI"
-    ],
-    [
-      "title",
-      "Bildung mit KI revolutionieren."
-    ],
-    [
-      "description",
-      "Wir bauen die Bewertungsinfrastruktur für die nächste Generation afrikanischer Lernender und für die Lehrkräfte, die sie prägen."
-    ],
-    [
-      "visionTitle",
-      "Unsere Vision"
-    ],
-    [
-      "visionDescription",
-      "Unsere Vision ist es, ein vertrauenswürdiger Marktführer in KI-gestützter Bildung zu sein, indem wir Werkzeuge bauen, die Lehrkräften helfen, besser zu unterrichten, und Lernenden, selbstbewusst zu lernen, um ein inklusiveres und wirksameres Bildungssystem für alle zu schaffen."
-    ],
-    [
-      "missionTitle",
-      "Unsere Mission"
-    ],
-    [
-      "missionDescription",
-      "Die Mission von Acad AI ist es, die Qualität der Bildung für Lehrkräfte und Lernende zu verbessern, indem KI Bewertung, Lernen und Lernunterstützung einfacher, fairer und zugänglicher für alle macht."
-    ],
-    [
-      "whyTitle",
-      "Unser Warum"
-    ],
-    [
-      "whyDescription",
-      "Bildung sollte stärken, nicht überfordern. Wir existieren, um jedem Studierenden eine faire Chance auf eine helle Zukunft zu geben, indem wir verändern, wie sie lernen und wie Lehrkräfte bewerten."
-    ]
-  ],
-  "AboutBackedBy": [
-    [
-      "eyebrow",
-      "Unterstützt von"
-    ]
-  ],
-  "AboutStory": [
-    [
-      "eyebrow",
-      "Unsere Geschichte"
-    ],
-    [
-      "title",
-      "Bildung für Lehrkräfte und Studierende besser machen"
-    ],
-    [
-      "paragraph1",
-      "Acad AI begann mit einer Frage:"
-    ],
-    [
-      "paragraph1Bold",
-      "Warum verbringt eine Lehrkraft ihr ganzes Wochenende mit Korrigieren, während Studierende tagelang auf Feedback warten, an das sie sich kaum noch erinnern?"
-    ],
-    [
-      "paragraph2",
-      "Wir begannen als Bewertungstool für einen Universitätsdozenten. Heute sind wir eine vollständige Bewertungsplattform für Institutionen, Lehrkräfte und Studierende, gebaut und veröffentlicht aus Afrika für die Welt."
-    ],
-    [
-      "paragraph3",
-      "Unsere Reise beginnt gerade erst. Die Zukunft des Lernens ist persönlich, sofort und fair. Wir sind hier, um sie zu bauen."
-    ],
-    [
-      "location",
-      "Lagos, NIG"
-    ]
-  ],
-  "AboutWhy": [
-    [
-      "title",
-      "Warum es uns gibt"
-    ],
-    [
-      "description",
-      "Acad AI wurde geschaffen, um Lehrkräften die Belastung durch Prüfungserstellung und Bewertung zu erleichtern und gleichzeitig sicherzustellen, dass Studierende klares, zeitnahes Feedback erhalten, das echtes Lernen unterstützt."
-    ]
-  ],
-  "AboutPurposePanels": [
-    [
-      "whyImageAlt",
-      "Lehrkraft nutzt Acad AI"
-    ],
-    [
-      "educatorsTitle",
-      "Für Lehrkräfte gebaut"
-    ],
-    [
-      "educatorsDescription",
-      "Wir geben Lehrkräften die Zeit zurück, die sie brauchen, um zu unterrichten, zu begleiten und jeden Lernenden mit Vertrauen zu unterstützen."
-    ],
-    [
-      "educatorsImageAlt",
-      "Lehrkraft prüft Bewertungsergebnisse"
-    ],
-    [
-      "learnersTitle",
-      "Für Lernende gemacht"
-    ],
-    [
-      "learnersDescription",
-      "Wir helfen Studierenden, ihren Fortschritt mit zeitnahem Feedback zu verstehen, das jede Bewertung in eine Chance zur Verbesserung verwandelt."
-    ],
-    [
-      "learnersImageAlt",
-      "Lernender erhält hilfreiches Bewertungsfeedback"
-    ]
-  ],
-  "AboutValues": [
-    [
-      "eyebrow",
-      "Unsere Werte"
-    ],
-    [
-      "title",
-      "Was uns heilig ist."
-    ],
-    [
-      "customerFirstTitle",
-      "Kunde zuerst"
-    ],
-    [
-      "customerFirstDescription",
-      "Lehrkräfte, Studierende und Bildungsinstitutionen sind unser Nordstern."
-    ],
-    [
-      "transparencyTitle",
-      "Transparenz"
-    ],
-    [
-      "transparencyDescription",
-      "Wir sind offen darüber, was wir tun und warum wir es tun. Sie haben das Recht zu wissen, wie alles funktioniert."
-    ],
-    [
-      "respectTitle",
-      "Respekt"
-    ],
-    [
-      "respectDescription",
-      "Respekt bedeutet, das zu schützen, was zählt. Ihre Daten sind bei uns sicher; wir schätzen Ihr Vertrauen und behandeln jeden Nutzer mit der Sorgfalt, die er verdient."
-    ],
-    [
-      "ownershipTitle",
-      "Verantwortung"
-    ],
-    [
-      "ownershipDescription",
-      "Sie können sich darauf verlassen, dass wir liefern, Sie unterstützen und Ihre Erfahrung reibungslos machen. Wir stehen hinter jeder Funktion und jedem Versprechen."
-    ],
-    [
-      "excellenceTitle",
-      "Exzellenz"
-    ],
-    [
-      "excellenceDescription",
-      "Wir geben uns nicht mit \"gut genug\" zufrieden. Unsere Mission verlangt, dass wir hohe Qualität anstreben, denn die Zukunft der Studierenden hängt davon ab."
-    ],
-    [
-      "speedTitle",
-      "Geschwindigkeit mit Sorgfalt"
-    ],
-    [
-      "speedDescription",
-      "Wir wissen, dass Geschwindigkeit wichtig ist, und Ihr Vertrauen in uns ist es ebenfalls. Sie können darauf zählen, dass wir alle Noten und jedes Feedback sorgfältig behandeln."
-    ],
-    [
-      "fairnessTitle",
-      "Fairness"
-    ],
-    [
-      "fairnessDescription",
-      "Fairness steht im Zentrum von Acad AI, von der Art, wie Bewertungen benotet werden, bis dazu, wie Feedback gegeben und Fortschritt verfolgt wird."
-    ]
-  ],
-  "AboutTeam": [
-    [
-      "eyebrow",
-      "Unser Team"
-    ],
-    [
-      "title",
-      "Lernen Sie das Team hinter Acad AI kennen"
-    ],
-    [
-      "description",
-      "Wir sind ein Team aus Ingenieuren, Designern und Forschern, das Erfahrung, Fähigkeiten und ein gemeinsames Ziel verbindet: Bildung durch KI zu verbessern."
-    ]
-  ],
-  "AboutFeatured": [
-    [
-      "eyebrow",
-      "Erwähnt in"
-    ],
-    [
-      "title",
-      "Man spricht über uns"
-    ],
-    [
-      "description",
-      "Acad AI wurde dafür vorgestellt, wie Bewertung und Lernen neu definiert werden. Sehen Sie, wer aufmerksam ist."
-    ],
-    [
-      "readBlog",
-      "Blog lesen"
-    ]
-  ],
-  "AboutNewsletter": [
-    [
-      "title",
-      "Bleiben Sie bei KI in der Bildung auf dem Laufenden"
-    ],
-    [
-      "description",
-      "Monatliche Einblicke vom Acad AI-Team. Kein Spam, niemals."
-    ],
-    [
-      "nameLabel",
-      "Ihr Name"
-    ],
-    [
-      "namePlaceholder",
-      "Vollständigen Namen eingeben"
-    ],
-    [
-      "roleLabel",
-      "Rolle"
-    ],
-    [
-      "rolePlaceholder",
-      "Rolle auswählen"
-    ],
-    [
-      "roleStudent",
-      "Student"
-    ],
-    [
-      "roleTeacher",
-      "Lehrkraft"
-    ],
-    [
-      "roleAdmin",
-      "Institutionsadministrator"
-    ],
-    [
-      "roleResearcher",
-      "Forscher"
-    ],
-    [
-      "roleOther",
-      "Andere"
-    ],
-    [
-      "emailLabel",
-      "E-Mail-Adresse"
-    ],
-    [
-      "emailPlaceholder",
-      "E-Mail-Adresse eingeben"
-    ],
-    [
-      "submitButton",
-      "Updates senden"
-    ],
-    [
-      "successMessage",
-      "Sie sind angemeldet. Achten Sie auf die nächste Aktualisierung in Ihrem Posteingang."
-    ]
-  ]
+  "Home": {
+    "eyebrow": "Eine Plattform",
+    "title": "Jeder Bewertungsbedarf, abgedeckt.",
+    "description": "Entwickelt für Institutionen, Lehrkräfte und Studierende, jeweils mit einem eigenen intuitiven Arbeitsablauf.",
+    "audiences": {
+      "institutions": {
+        "title": "Für Institutionen",
+        "description": "Digitalisieren Sie 100% Ihrer Prüfungen. Von Probetests bis zu Abschlussprüfungen erhalten Sie prüfungssichere Ergebnisse in Minuten statt Wochen.",
+        "linkLabel": "Entdecken"
+      },
+      "educators": {
+        "title": "Für Lehrkräfte",
+        "description": "Sparen Sie Zeit mit unserer KI, die Ihre Tests anhand Ihres Bewertungsschemas benotet und Feedback an Ihre Studierenden zurückgibt.",
+        "linkLabel": "Mehr erfahren"
+      },
+      "students": {
+        "title": "Für Studierende",
+        "description": "Lerne wie die besten 1% mit unserem KI-Lernmodus und erhalte sofortiges Feedback zu deinen Prüfungen, das dir beim Verbessern hilft.",
+        "linkLabel": "So funktioniert es"
+      }
+    }
+  },
+  "TrustBar": {
+    "title": "Vertraut von Lehrenden und Studierenden an führenden Institutionen"
+  },
+  "HomeNumbers": {
+    "eyebrow": "Vertraut. Bewährt. Wachsend.",
+    "title": "Zahlen erzählen unsere Geschichte.",
+    "description": "Wir existieren, um das Leben von Lehrenden und Lernenden zu verbessern.",
+    "button": "Unsere Wall of Love ansehen",
+    "imageAlt": "Lehrkraft arbeitet an einem Laptop",
+    "stats": {
+      "assessments": {
+        "value": "200+",
+        "label": "Verarbeitete Bewertungen"
+      },
+      "hours": {
+        "value": "5000+",
+        "label": "Gesparte Korrekturstunden"
+      },
+      "accuracy": {
+        "value": "100%",
+        "label": "Genauigkeit"
+      },
+      "performance": {
+        "value": "85%",
+        "label": "Verbesserte Leistung der Studierenden"
+      }
+    }
+  },
+  "HomeReleases": {
+    "eyebrow": "Neueste Veröffentlichungen",
+    "title": "Was neu ist bei Acad AI",
+    "description": "Wir verbessern ständig, wie Bewertungen für alle funktionieren.",
+    "itemLabel": "Neu",
+    "button": "Ich möchte mich anmelden",
+    "items": {
+      "proctoring": {
+        "title": "Webcam-Aufsicht",
+        "description": "Halten Sie Prüfungen fair mit intelligenter Überwachung, die für Skalierung gebaut ist."
+      },
+      "studyMode": {
+        "title": "Lernmodus",
+        "description": "Verwandle Notizen in Sekundenschnelle in Quizfragen und Karteikarten."
+      },
+      "rubrics": {
+        "title": "Eigene Rubriken",
+        "description": "Lassen Sie Acad AI genau wie Sie bewerten, mit Ihren eigenen Rubriken."
+      }
+    }
+  },
+  "HomeHero": {
+    "tagline": "Lernen mit KI transformieren",
+    "heading": "Bewertungen von Anfang bis Ende neu gedacht",
+    "headingAccent": "Neu gedacht",
+    "subHeading": "Beschleunigen Sie studentisches Lernen mit der intuitivsten KI-Bewertungsplattform der Welt",
+    "buttonOne": "Jetzt loslegen",
+    "buttonTwo": "Demo anfragen"
+  },
+  "StudentsHero": {
+    "tagline": "Schließe dich über 3.000 Studierenden an, die ihren Notendurchschnitt verbessern",
+    "heading": "Gehöre zu den besten 1% der Studierenden.",
+    "subHeading": "Das ist es, was Einser-Studierende vor dir geheim gehalten haben. Fokus an. Level up.",
+    "buttonOne": "Hier starten",
+    "buttonTwo": "Community beitreten"
+  },
+  "InstitutionsHero": {
+    "eyebrow": "Für Institutionen",
+    "title": "Prüfungsergebnisse in Minuten, nicht in Tagen",
+    "description": "Beenden Sie Prüfungsbetrug und Stress mit einem Bewertungssystem, das Theorie, Mathematik und jeden Fragetyp sofort benotet.",
+    "button": "Demo anfragen"
+  },
+  "EducatorsHero": {
+    "eyebrow": "Für Lehrkräfte",
+    "title": "Weniger Zeit fürs Korrigieren.\nMehr Zeit fürs Unterrichten.",
+    "description": "Mit einem sicheren System, das Theorie-Tests bewertet und reichhaltiges, personalisiertes Feedback für alle Studierenden liefert.",
+    "button": "Jetzt loslegen"
+  },
+  "EducatorsPlayground": {
+    "title": "Ausprobieren",
+    "description": "Neugierig, wie unsere KI Aufgaben bewertet? Nutzen Sie eigene Daten oder Beispieldaten und erleben Sie Acad AI in Aktion: schnell, präzise und für Lehrkräfte gebaut, die ihre Zeit schätzen.",
+    "sampleButton": "Beispieldaten verwenden",
+    "questionLabel": "Frage",
+    "questionPlaceholder": "z. B. Was sind die Ursachen des Klimawandels?",
+    "questionDescription": "Die Prüfungs- oder Aufgabenfrage, die Sie bewerten möchten",
+    "modelLabel": "Musterantwort",
+    "modelPlaceholder": "z. B. Die Hauptursachen des Klimawandels sind...",
+    "modelDescription": "Eine ideale Antwort oder Referenzantwort zum Vergleich. Optional, verbessert aber die Bewertung.",
+    "studentLabel": "Antwort des Studierenden",
+    "studentPlaceholder": "z. B. Ich denke, Klimawandel passiert, weil...",
+    "studentDescription": "Die Antwort des Studierenden auf die Frage. Das wird Acad AI bewerten.",
+    "gradeButton": "Antwort bewerten",
+    "demoResult": "Demo-Ergebnis: starke Antwort. Sie erkennt die Kernursachen und würde von einem unterstützenden Beispiel profitieren.",
+    "gradingStyleLabel": "Bewertungsstil",
+    "strict": "Streng",
+    "notStrict": "Nicht streng",
+    "totalMark": "Die Gesamtpunktzahl für die Frage beträgt 5.",
+    "grading": "Antwort wird bewertet",
+    "loadingAnalyzing": "Schülerantwort wird analysiert ...",
+    "loadingComparing": "Vergleich mit der Musterantwort ...",
+    "loadingCompiling": "Feedback wird zusammengestellt ...",
+    "loadingRubric": "Bewertungsraster wird vorbereitet ...",
+    "loadingSmallStuff": "Wir achten auf die Details ...",
+    "resultTitle": "Deine Antwort wurde bewertet!",
+    "resultSubtitle": "So hat Acad AI die Antwort bewertet – einschließlich Punktzahl, Feedback und Bewertungsraster-Einblick",
+    "totalScoreLabel": "Gesamtpunktzahl:",
+    "rubricBreakdown": "Bewertungsraster",
+    "generalFeedbackLabel": "Allgemeines Feedback:",
+    "tableIndex": "Nr.",
+    "tableCriteria": "Kriterium",
+    "tableScore": "Punktzahl",
+    "tableMaxScore": "Maximalpunktzahl",
+    "gradeAnother": "Weitere bewerten",
+    "sampleLoading": "Beispiel wird geladen ...",
+    "parseError": "Antwort des Bewertungssystems konnte nicht verarbeitet werden. Bitte manuell prüfen.",
+    "errorSample": "Beispieldaten konnten nicht geladen werden. Bitte erneut versuchen.",
+    "errorGrade": "Antwort konnte nicht bewertet werden. Bitte erneut versuchen."
+  },
+  "EducatorsInAction": {
+    "title": "Acad AI in Aktion.",
+    "subtitle": "Es ist einfacher, als Sie denken · Jetzt ansehen",
+    "imageAlt": "Demonstration des Bewertungsablaufs für Lehrkräfte in Acad AI"
+  },
+  "EducatorsFeatures": {
+    "eyebrow": "All-in-One-Plattform",
+    "title": "Alles, was Sie für bessere Prüfungen brauchen",
+    "description": "Warum getrennte Plattformen nutzen, wenn ein System wie unseres verfügbar und zuverlässig ist?",
+    "button": "Kostenlos starten",
+    "items": {
+      "questionGenerator": {
+        "title": "Fragengenerator",
+        "description": "Verwandeln Sie Ihre Unterrichtsstunde in Sekundenschnelle in fertige Prüfungsfragen. Bei Bedarf bearbeiten oder anpassen."
+      },
+      "malpracticeControl": {
+        "title": "Betrugskontrolle",
+        "description": "Studierende können während der Prüfung nicht kopieren, einfügen oder Tabs wechseln."
+      },
+      "instantFeedback": {
+        "title": "Sofortiges Feedback",
+        "description": "Geben Sie jedem Studierenden klares, hilfreiches automatisches Feedback, personalisiert auf die Antworten."
+      },
+      "examSetup": {
+        "title": "Standard-Prüfungseinrichtung",
+        "description": "Zeitgesteuerte, automatisch speichernde Prüfungen in einer kontrollierten Umgebung ohne Ablenkungen."
+      },
+      "exportResults": {
+        "title": "Ergebnisse exportieren",
+        "description": "Laden Sie organisierte Ergebnisse sofort herunter. Sie behalten die Kontrolle und können vor dem Teilen prüfen oder anpassen."
+      },
+      "automaticGrading": {
+        "title": "Automatische Bewertung",
+        "description": "Hunderte Prüfungen mit Multiple Choice, Theorie und Lückentextfragen in Minuten bewertet."
+      }
+    }
+  },
+  "EducatorsWorkflow": {
+    "eyebrow": "So funktioniert es",
+    "title": "Fünf Schritte. Das war's.",
+    "introTitle": "Ein durchscrollbarer Prüfungsablauf, der Ihnen in jeder Phase Stunden spart",
+    "description": "Generieren Sie Fragen, sichern Sie Prüfungen und prüfen Sie KI-generierte Ergebnisse in einem nahtlosen Ablauf.",
+    "button": "Meine Zeit zurückholen",
+    "steps": {
+      "create": {
+        "title": "Eine Prüfung erstellen",
+        "description": "Legen Sie Fragen fest oder generieren Sie sie sofort aus Ihren Unterrichtsnotizen mit KI.",
+        "imageAlt": "Dashboard zur Prüfungserstellung in Acad AI"
+      },
+      "secure": {
+        "title": "Prüfung sichern",
+        "description": "Legen Sie Zeitvorgaben, Zugriffsregeln und Betrugskontrollen fest, bevor Studierende beginnen.",
+        "imageAlt": "Sicherheitseinstellungen für Prüfungen in Acad AI"
+      },
+      "deliver": {
+        "title": "Mit Studierenden teilen",
+        "description": "Laden Sie Ihre Klasse ein und stellen Sie die Bewertung aus einem organisierten Arbeitsbereich bereit.",
+        "imageAlt": "Dashboard zur Prüfungsbereitstellung für Studierende in Acad AI"
+      },
+      "grade": {
+        "title": "Sofort bewerten",
+        "description": "Lassen Sie Acad AI jede Antwort bewerten und in Minuten klares, nützliches Feedback erstellen.",
+        "imageAlt": "Dashboard für automatische Bewertung in Acad AI"
+      },
+      "review": {
+        "title": "Prüfen und veröffentlichen",
+        "description": "Überprüfen Sie Ergebnisse, nehmen Sie letzte Anpassungen vor und geben Sie Feedback frei, wenn Sie bereit sind.",
+        "imageAlt": "Dashboard zur Ergebnisprüfung in Acad AI"
+      }
+    }
+  },
+  "EducatorsTestimonials": {
+    "title": "Verlassen Sie sich nicht nur auf unser Wort.",
+    "button": "Unsere Wall of Love ansehen",
+    "items": {
+      "ukandu": {
+        "quote": "Besonders beeindruckt hat mich die Fähigkeit von Acad AI, aus meinen Unterrichtsnotizen Fragen zu erstellen. Die Plattform steigert die Produktivität erheblich und optimiert verschiedene akademische Abläufe, wodurch sie für Lehrkräfte und Institutionen gleichermaßen wertvoll ist.",
+        "author": "Herr Obumneme Ukandu",
+        "organization": "Dozent für Informatik, Babcock University"
+      },
+      "awoniyi": {
+        "quote": "Acad AI basiert auf einem tiefen Verständnis der Herausforderungen bei der Benotung. Studierende erhalten eine klare Aufschlüsselung ihrer Noten sowie konkrete Hinweise zur Verbesserung ihrer Antworten, während die wesentliche Rolle der Lehrkräfte im Bewertungsprozess gewahrt bleibt.",
+        "author": "Herr Amos Awoniyi",
+        "organization": "Dozent für Softwaretechnik, Babcock University"
+      },
+      "eti": {
+        "quote": "Acad AI ist ein sehr intelligentes Werkzeug, das die Aufgaben von Lehrkräften vereinfacht. Von der Fragenerstellung bis zur Benotung ist Acad AI das ideale Werkzeug. Seit ich es nutze, sind meine akademischen Aufgaben wesentlich leichter geworden. Ich empfehle Acad AI sowohl Lehrkräften als auch Studierenden, weil es ihre Arbeit wirklich vereinfacht.",
+        "author": "Dr. Chinedu Eti",
+        "organization": "Politikwissenschaft und öffentliche Verwaltung, Babcock University"
+      },
+      "ajibade": {
+        "quote": "Ich habe am vergangenen Wochenende mit Acad AI eine Prüfung durchgeführt und war wirklich beeindruckt. Ich wählte für die Bewertung die Option „nicht streng“, und die Benotung der Theoriefragen war sehr gut. Als Nächstes werde ich die Option „streng“ testen und die Ergebnisse vergleichen, aber meine Erfahrung bei der letzten Prüfung war wirklich positiv.",
+        "author": "Dr. Ayodeji Ajibade",
+        "organization": "Senior Lecturer für Finanzen, Babcock University"
+      }
+    }
+  },
+  "EducatorsFaq": {
+    "eyebrow": "FAQs",
+    "title": "Häufige Fragen, beantwortet."
+  },
+  "InstitutionsTypes": {
+    "eyebrow": "Gebaut für",
+    "title": "Institutionen jeder Größe und Form.",
+    "items": {
+      "secondarySchools": {
+        "title": "Sekundarschulen",
+        "description": "Wechseln Sie nahtlos von papierbasierten Prüfungen zu 100% digitalen Bewertungen. Ergebnisse sind in Minuten bereit, nicht in Tagen.",
+        "imageAlt": "Digitale Bewertungsplattform für Sekundarschulen"
+      },
+      "distanceLearning": {
+        "title": "Offenes Fernstudium und E-Learning",
+        "description": "Stellen Sie sichere Bewertungen für Lernende bereit, wo immer sie sind, mit sofortiger Bewertung und klaren Leistungsanalysen.",
+        "imageAlt": "Digitale Bewertungsplattform für Fernlernen"
+      },
+      "corporateTraining": {
+        "title": "Corporate Training",
+        "description": "Messen Sie Wissen und Trainingsergebnisse von Mitarbeitenden mit skalierbaren Bewertungen und prüfungssicheren Ergebnissen.",
+        "imageAlt": "Digitale Bewertungsplattform für Corporate Training"
+      }
+    }
+  },
+  "InstitutionsGoldStandard": {
+    "title": "Der Goldstandard für institutionelle Bewertungen.",
+    "eyebrow": "Admin-Dashboard",
+    "description": "Von der Einschreibung bis zu den Ergebnissen: jedes Signal in einer Ansicht.",
+    "imageAlt": "Institutionelles Admin-Dashboard von Acad AI",
+    "benefits": {
+      "digitized": "100% digitalisiert",
+      "scalable": "Skalierbar für 100 oder 100.000 Lernende",
+      "auditReady": "Vollständig prüfbereit"
+    }
+  },
+  "QuestionTypes": {
+    "eyebrow": "Acad AI hilft Ihnen beim Bewerten",
+    "title": "Alle Fragetypen, sofort",
+    "items": {
+      "multiChoice": "Multiple Choice",
+      "fillGap": "Lückentext",
+      "theory": "Theorie",
+      "essay": "Aufsatz",
+      "mathematics": "Mathematik",
+      "caseStudy": "Fallstudie",
+      "diagram": "Diagramm"
+    }
+  },
+  "InstitutionsInAction": {
+    "title": "Acad AI in Aktion.",
+    "subtitle": "Es ist einfacher, als Sie denken · Jetzt ansehen",
+    "imageAlt": "Demonstration der Bewertungsplattform Acad AI"
+  },
+  "InstitutionsPlatformFeatures": {
+    "eyebrow": "All-in-One-Plattform",
+    "title": "Alles, was Sie für bessere Prüfungen brauchen",
+    "description": "Warum getrennte Plattformen nutzen, wenn ein System wie unseres verfügbar und zuverlässig ist?",
+    "items": {
+      "questionGenerator": {
+        "title": "Fragengenerator",
+        "description": "Verwandeln Sie Ihre Unterrichtsstunde in Sekundenschnelle in fertige Prüfungsfragen. Bei Bedarf bearbeiten oder anpassen."
+      },
+      "malpracticeControl": {
+        "title": "Betrugskontrolle",
+        "description": "Studierende können während der Prüfung nicht kopieren, einfügen oder Tabs wechseln."
+      },
+      "instantFeedback": {
+        "title": "Sofortiges Feedback",
+        "description": "Geben Sie jedem Studierenden klares, hilfreiches automatisches Feedback, personalisiert auf die Antworten."
+      },
+      "examSetup": {
+        "title": "Standard-Prüfungseinrichtung",
+        "description": "Zeitgesteuerte, automatisch speichernde Prüfungen in einer kontrollierten Umgebung ohne Ablenkungen."
+      },
+      "exportResults": {
+        "title": "Ergebnisse exportieren",
+        "description": "Laden Sie organisierte Ergebnisse sofort herunter. Sie behalten die Kontrolle und können vor dem Teilen prüfen oder anpassen."
+      },
+      "automaticGrading": {
+        "title": "Automatische Bewertung",
+        "description": "Hunderte Prüfungen mit Multiple Choice, Theorie und Lückentextfragen in Minuten bewertet."
+      },
+      "reportCards": {
+        "title": "Zeugnisse erstellen",
+        "description": "Laden Sie organisierte Ergebnisse sofort herunter. Sie behalten die Kontrolle und können vor dem Teilen prüfen oder anpassen."
+      }
+    }
+  },
+  "InstitutionsSecurity": {
+    "eyebrow": "Sicherheit zuerst",
+    "title": "Ihre institutionellen Daten, geschützt.",
+    "description": "Sicherheit ist kein Zusatz; sie ist unser Fundament.",
+    "items": {
+      "sovereignty": {
+        "title": "Datensouveränität",
+        "description": "Sie besitzen 100% Ihrer Daten. Wir verwenden Ihre proprietären Bewertungsschemata oder Studierendendaten niemals zum Trainieren externer Modelle."
+      },
+      "standards": {
+        "title": "Globale Standards",
+        "description": "Vollständig konform mit Datenschutzgesetzen, einschließlich Ende-zu-Ende-Verschlüsselung für alle Lernenden- und Institutionsinformationen."
+      }
+    }
+  },
+  "InstitutionsCTA": {
+    "title": "Führen Sie Ihre Institution\nschon heute in die Zukunft.",
+    "description": "Schließen Sie sich Institutionen an, die tausende Stunden sparen und mit Acad AI bessere Lernergebnisse erzielen.",
+    "primaryButton": "Kostenlos starten",
+    "secondaryButton": "Demo anfragen"
+  },
+  "StudentsFeatures": {
+    "leftTitle": "Prüfungen, die dich weiterbringen",
+    "leftDescription": "Für jede Prüfung, die deine Lehrkraft dir auf Acad AI gibt, erhältst du dein Ergebnis mit persönlichem Feedback, das genau zeigt, wo du stark warst und wo du bei jeder Frage etwas verpasst hast.",
+    "leftButton": "Jetzt fokussieren",
+    "rightTitle": "Teste dich selbst, bevor deine Lehrkraft es tut",
+    "flashcardsTitle": "Karteikarten",
+    "flashcardsDescription": "Verwandle umfangreiche PDFs und Folien in Karteikarten, die dir helfen, Themen schneller und langfristig zu verstehen.",
+    "quizzesTitle": "Übungsquiz",
+    "quizzesDescription": "Löse Standard-Prüfungsfragen mit Timer, damit du mit Vertrauen in die echte Prüfung gehst."
+  },
+  "StudentsCommunity": {
+    "eyebrow": "Community",
+    "title": "Du musst es nicht allein schaffen.",
+    "description": "Wir möchten dich auf jedem Schritt deiner akademischen Erfolgsreise begleiten, mit neuen Lerntricks, Antworten auf deine Fragen und weiterer Unterstützung.",
+    "button": "Ja, bitte"
+  },
+  "StudentsWallOfLove": {
+    "eyebrow": "Wall of Love",
+    "title": "Was deine Kommilitonen sagen",
+    "button": "Unsere Wall of Love ansehen",
+    "items": {
+      "cis": {
+        "course": "CIS-Student",
+        "school": "Babcock University",
+        "review": "Ich hoffe, dass Acad AI in unserem heutigen Bildungssystem eingesetzt wird, damit ich als Student nachvollziehen kann, wie ich bewertet wurde. Die Anwendung war benutzerfreundlich, leicht zu bedienen und einfach zu verstehen."
+      },
+      "scoreReview": {
+        "course": "Finanzstudent",
+        "school": "Babcock University",
+        "review": "Mir gefällt besonders, dass ich später meine Punktzahl sehen und die Korrektur im System überprüfen kann. Das war hervorragend."
+      },
+      "seamless": {
+        "course": "Finanzstudent",
+        "school": "Babcock University",
+        "review": "Das System funktioniert von der Registrierung bis zur Durchführung der Prüfung reibungslos. Ich kann zu früheren Fragen zurückkehren und mit der Zeitanzeige meine Zeit gut im Blick behalten."
+      },
+      "easy": {
+        "course": "Finanzstudent",
+        "school": "Babcock University",
+        "review": "Acad AI war einfach zu bedienen. Obwohl ich es zum ersten Mal verwendet habe, konnte ich alles ohne Schwierigkeiten verstehen."
+      },
+      "autosave": {
+        "course": "Finanzstudent",
+        "school": "Babcock University",
+        "review": "Besonders gut finde ich, dass Acad AI meine Antworten automatisch speichert und mir erlaubt, zu früheren Fragen zurückzukehren, um meine Antworten zu überprüfen oder noch nicht beantwortete Fragen nachzuholen."
+      }
+    }
+  },
+  "StudentsCTA": {
+    "line1": "Du hast keine Ausreden mehr.",
+    "line2": "Hol dir die Eins.",
+    "button": "Ich möchte mich anmelden"
+  },
+  "FAQ": {
+    "eyebrow": "FAQs",
+    "title": "Häufig gestellte Fragen",
+    "description": "Alles, was Sie über Acad AI wissen müssen.",
+    "items": {
+      "whatIsAcadAi": {
+        "question": "Was ist Acad AI?",
+        "answer": "Acad AI ist eine Bewertungs- und Lernplattform, die den gesamten Prüfungsprozess automatisiert. Wir helfen Schulen und Lehrkräften, Bewertungen in Minuten zu erstellen, bereitzustellen und zu benoten. Kürzlich haben wir einen Lernmodus (Beta) für Studierende eingeführt, damit sie ihre Fächer schneller meistern."
+      },
+      "questionTypes": {
+        "question": "Welche Fragetypen unterstützt Acad AI?",
+        "answer": "Derzeit unterstützt Acad AI Theoriefragen, Multiple Choice (MCQ), Mathematik, Programmierung, Aufsätze und Lückentexte. Ob Sie tiefes Verständnis durch offene Antworten oder schnelles Erinnern durch objektive Fragen prüfen möchten, unsere KI ist darauf optimiert, diese Formate präzise zu erstellen und zu bewerten."
+      },
+      "finalGrades": {
+        "question": "Wer ist für die Endnoten auf Acad AI verantwortlich?",
+        "answer": "Die Lehrkraft hat immer das letzte Wort. Unsere KI liefert Bewertungsvorschläge im ersten Durchlauf, detailliertes Feedback und Rubrikaufschlüsselungen, um Zeit zu sparen. Jede Punktzahl kann jedoch von einer Lehrkraft überprüft, bearbeitet und freigegeben werden, bevor Ergebnisse an Studierende veröffentlicht werden."
+      },
+      "sharedInformation": {
+        "question": "Welche Informationen werden mit den KI-Modellen geteilt?",
+        "answer": "Wir teilen nur anonymisierte Bewertungsdaten, wie Prüfungsfragen und Antworten von Studierenden, die erforderlich sind, damit die KI bewerten oder Lernmaterialien erstellen kann. Personenbezogene Daten (PII) wie Namen oder E-Mail-Adressen teilen wir niemals mit Sprachmodellen."
+      },
+      "trainingData": {
+        "question": "Trainieren Sie Modelle mit Studierendendaten?",
+        "answer": "Nein. Wir respektieren geistiges Eigentum und Privatsphäre. Einreichungen von Studierenden und Schuldaten werden niemals verwendet, um KI-Modelle Dritter zu trainieren oder zu verbessern. Ihre Daten bleiben Ihre eigenen."
+      },
+      "examMalpractice": {
+        "question": "Wie verhindert Acad AI Prüfungsbetrug?",
+        "answer": "Wir nutzen Web-Proctoring, um Prüfungen fair zu halten. Verlässt ein Studierender den Prüfungs-Tab, um eine andere App oder Website zu öffnen, erhält er sofort eine Warnung. Beim zweiten Versuch wird die Prüfung automatisch abgegeben. So wird verhindert, dass Studierende nach Antworten suchen oder externe Hilfsmittel verwenden. Wenn aktiviert, können Lehrkräfte die Studierenden außerdem per Kamera-Proctoring über Gerätekamera, Mikrofon und Bildschirmfreigabe beaufsichtigen. Kopieren und Einfügen ist deaktiviert, damit alle Arbeiten eigenständig und innerhalb des sicheren Prüfungszeitraums erstellt werden. Zufällige Fragenreihenfolgen und zufällig angeordnete MCQ-Antwortoptionen reduzieren zusätzlich Betrug unter Studierenden."
+      },
+      "gradingReliability": {
+        "question": "Wie zuverlässig ist die Bewertung von Acad AI?",
+        "answer": "Acad AI ist sehr genau und darauf ausgelegt, bestimmten Rubriken oder Bewertungsschemata zu folgen. Obwohl unsere KI-Notenvorschläge konsistent und objektiv sein sollen, betrachten wir sie als hochwertigen Entwurf, den Lehrkräfte verfeinern können, damit das menschliche Element der Bewertung nie verloren geht."
+      },
+      "freePlan": {
+        "question": "Kann ich Acad AI kostenlos nutzen?",
+        "answer": "Ja. Lehrkräfte und Studierende erhalten bei der Anmeldung kostenlose Credits. Außerdem führen wir regelmäßig Aktionen und Empfehlungsprogramme durch, damit Sie die Plattform weiterhin kostenlos nutzen können. Für Schulen und Institutionen bieten wir ein eigenes Pilotprogramm an, um unsere gesamte Funktionspalette kostenlos zu testen."
+      },
+      "lmsSupport": {
+        "question": "Kann ich Acad AI mit dem LMS meiner Schule nutzen?",
+        "answer": "Ja. Mit Acad AI können Sie Noten und Feedback der Studierenden als übersichtliche CSV-Datei herunterladen. So behalten Sie einen portablen Nachweis Ihrer Ergebnisse und können externe Notenbücher in Tools wie Google Classroom oder Canvas einfach aktualisieren. Eigene Integrationen für Moodle und Canvas sowie eine API befinden sich ebenfalls in Entwicklung."
+      }
+    },
+    "contact": {
+      "title": "Noch Fragen?",
+      "description": "Sie finden die gesuchte Antwort nicht? Schreiben Sie bitte unserem freundlichen Team.",
+      "button": "Kontakt aufnehmen"
+    }
+  },
+  "AboutHero": {
+    "eyebrow": "Über Acad AI",
+    "title": "Bildung mit KI revolutionieren.",
+    "description": "Wir bauen die Bewertungsinfrastruktur für die nächste Generation afrikanischer Lernender und für die Lehrkräfte, die sie prägen.",
+    "visionTitle": "Unsere Vision",
+    "visionDescription": "Unsere Vision ist es, ein vertrauenswürdiger Marktführer in KI-gestützter Bildung zu sein, indem wir Werkzeuge bauen, die Lehrkräften helfen, besser zu unterrichten, und Lernenden, selbstbewusst zu lernen, um ein inklusiveres und wirksameres Bildungssystem für alle zu schaffen.",
+    "missionTitle": "Unsere Mission",
+    "missionDescription": "Die Mission von Acad AI ist es, die Qualität der Bildung für Lehrkräfte und Lernende zu verbessern, indem KI Bewertung, Lernen und Lernunterstützung einfacher, fairer und zugänglicher für alle macht.",
+    "whyTitle": "Unser Warum",
+    "whyDescription": "Bildung sollte stärken, nicht überfordern. Wir existieren, um jedem Studierenden eine faire Chance auf eine helle Zukunft zu geben, indem wir verändern, wie sie lernen und wie Lehrkräfte bewerten."
+  },
+  "AboutBackedBy": {
+    "eyebrow": "Unterstützt von"
+  },
+  "AboutStory": {
+    "eyebrow": "Unsere Geschichte",
+    "title": "Bildung für Lehrkräfte und Studierende besser machen",
+    "paragraph1": "Acad AI begann mit einer Frage:",
+    "paragraph1Bold": "Warum verbringt eine Lehrkraft ihr ganzes Wochenende mit Korrigieren, während Studierende tagelang auf Feedback warten, an das sie sich kaum noch erinnern?",
+    "paragraph2": "Wir begannen als Bewertungstool für einen Universitätsdozenten. Heute sind wir eine vollständige Bewertungsplattform für Institutionen, Lehrkräfte und Studierende, gebaut und veröffentlicht aus Afrika für die Welt.",
+    "paragraph3": "Unsere Reise beginnt gerade erst. Die Zukunft des Lernens ist persönlich, sofort und fair. Wir sind hier, um sie zu bauen.",
+    "location": "Lagos, NIG"
+  },
+  "AboutWhy": {
+    "title": "Warum es uns gibt",
+    "description": "Acad AI wurde geschaffen, um Lehrkräften die Belastung durch Prüfungserstellung und Bewertung zu erleichtern und gleichzeitig sicherzustellen, dass Studierende klares, zeitnahes Feedback erhalten, das echtes Lernen unterstützt."
+  },
+  "AboutPurposePanels": {
+    "whyImageAlt": "Lehrkraft nutzt Acad AI",
+    "educatorsTitle": "Für Lehrkräfte gebaut",
+    "educatorsDescription": "Wir geben Lehrkräften die Zeit zurück, die sie brauchen, um zu unterrichten, zu begleiten und jeden Lernenden mit Vertrauen zu unterstützen.",
+    "educatorsImageAlt": "Lehrkraft prüft Bewertungsergebnisse",
+    "learnersTitle": "Für Lernende gemacht",
+    "learnersDescription": "Wir helfen Studierenden, ihren Fortschritt mit zeitnahem Feedback zu verstehen, das jede Bewertung in eine Chance zur Verbesserung verwandelt.",
+    "learnersImageAlt": "Lernender erhält hilfreiches Bewertungsfeedback"
+  },
+  "AboutValues": {
+    "eyebrow": "Unsere Werte",
+    "title": "Was uns heilig ist.",
+    "customerFirstTitle": "Kunde zuerst",
+    "customerFirstDescription": "Lehrkräfte, Studierende und Bildungsinstitutionen sind unser Nordstern.",
+    "transparencyTitle": "Transparenz",
+    "transparencyDescription": "Wir sind offen darüber, was wir tun und warum wir es tun. Sie haben das Recht zu wissen, wie alles funktioniert.",
+    "respectTitle": "Respekt",
+    "respectDescription": "Respekt bedeutet, das zu schützen, was zählt. Ihre Daten sind bei uns sicher; wir schätzen Ihr Vertrauen und behandeln jeden Nutzer mit der Sorgfalt, die er verdient.",
+    "ownershipTitle": "Verantwortung",
+    "ownershipDescription": "Sie können sich darauf verlassen, dass wir liefern, Sie unterstützen und Ihre Erfahrung reibungslos machen. Wir stehen hinter jeder Funktion und jedem Versprechen.",
+    "excellenceTitle": "Exzellenz",
+    "excellenceDescription": "Wir geben uns nicht mit \"gut genug\" zufrieden. Unsere Mission verlangt, dass wir hohe Qualität anstreben, denn die Zukunft der Studierenden hängt davon ab.",
+    "speedTitle": "Geschwindigkeit mit Sorgfalt",
+    "speedDescription": "Wir wissen, dass Geschwindigkeit wichtig ist, und Ihr Vertrauen in uns ist es ebenfalls. Sie können darauf zählen, dass wir alle Noten und jedes Feedback sorgfältig behandeln.",
+    "fairnessTitle": "Fairness",
+    "fairnessDescription": "Fairness steht im Zentrum von Acad AI, von der Art, wie Bewertungen benotet werden, bis dazu, wie Feedback gegeben und Fortschritt verfolgt wird."
+  },
+  "AboutTeam": {
+    "eyebrow": "Unser Team",
+    "title": "Lernen Sie das Team hinter Acad AI kennen",
+    "description": "Wir sind ein Team aus Ingenieuren, Designern und Forschern, das Erfahrung, Fähigkeiten und ein gemeinsames Ziel verbindet: Bildung durch KI zu verbessern."
+  },
+  "AboutFeatured": {
+    "eyebrow": "Erwähnt in",
+    "title": "Man spricht über uns",
+    "description": "Acad AI wurde dafür vorgestellt, wie Bewertung und Lernen neu definiert werden. Sehen Sie, wer aufmerksam ist.",
+    "readBlog": "Blog lesen"
+  },
+  "AboutNewsletter": {
+    "title": "Bleiben Sie bei KI in der Bildung auf dem Laufenden",
+    "description": "Monatliche Einblicke vom Acad AI-Team. Kein Spam, niemals.",
+    "nameLabel": "Ihr Name",
+    "namePlaceholder": "Vollständigen Namen eingeben",
+    "roleLabel": "Rolle",
+    "rolePlaceholder": "Rolle auswählen",
+    "roleStudent": "Student",
+    "roleTeacher": "Lehrkraft",
+    "roleAdmin": "Institutionsadministrator",
+    "roleResearcher": "Forscher",
+    "roleOther": "Andere",
+    "emailLabel": "E-Mail-Adresse",
+    "emailPlaceholder": "E-Mail-Adresse eingeben",
+    "submitButton": "Updates senden",
+    "successMessage": "Sie sind angemeldet. Achten Sie auf die nächste Aktualisierung in Ihrem Posteingang."
+  }
 }
