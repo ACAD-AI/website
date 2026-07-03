@@ -31,7 +31,7 @@ const slides = [
   {
     key: "predict",
     eyebrow: "Study Mode",
-    title: "Predict & Practice Questions Your Teacher will likely Ask.",
+    title: "Study exactly what you’ll be tested on.",
     imageSrc: "/images/study-mode/study-mode-3.png",
     imageAlt: "Acad AI practice questions screen",
   },
