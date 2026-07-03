@@ -5,6 +5,7 @@ export * from "./contact";
 export * from "./events";
 export * from "./faq";
 export * from "./home";
+export * from "./not-found";
 export * from "./pricing";
 export * from "./reviews";
 export * from "./solutions";
