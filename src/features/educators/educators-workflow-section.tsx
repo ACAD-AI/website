@@ -1,7 +1,13 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FilePlus2, ListChecks, Send, Share2, UsersRound } from "lucide-react";
+import {
+  BookOpenText,
+  ListChecks,
+  Send,
+  Share2,
+  UsersRound,
+} from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
@@ -13,50 +19,67 @@ import { ONBOARDING_URL } from "@/shared/config/site";
 const steps = [
   {
     key: "create",
-    icon: FilePlus2,
+    icon: BookOpenText,
+    imageHeight: 375,
     imageSrc: "/images/educators-guide/create-exam.png",
+    imageWidth: 505,
   },
   {
     key: "secure",
     icon: UsersRound,
+    imageHeight: 376,
     imageSrc: "/images/educators-guide/create-student-group.png",
+    imageWidth: 505,
   },
   {
     key: "deliver",
     icon: Send,
+    imageHeight: 388,
     imageSrc: "/images/educators-guide/publsh-exam.png",
+    imageWidth: 513,
   },
   {
     key: "grade",
     icon: ListChecks,
+    imageHeight: 383,
     imageSrc: "/images/educators-guide/review-and-approve.png",
+    imageWidth: 510,
   },
   {
     key: "review",
     icon: Share2,
+    imageHeight: 429,
     imageSrc: "/images/educators-guide/export-and-share.png",
+    imageWidth: 515,
   },
 ] as const;
 
-// Blue backdrop on mobile; the muted device frame returns on desktop.
 const sharedFrameClass =
-  "overflow-hidden rounded-md border border-[#2740c9] bg-[#2433c9] p-3 shadow-[0_24px_65px_rgba(7,15,51,0.32)] sm:p-4 lg:border-[#57588d] lg:bg-[#393967]";
+  "overflow-hidden rounded-md border border-[#2740c9] bg-[#2433c9] p-3 shadow-[0_24px_65px_rgba(7,15,51,0.32)] sm:p-4 dark:border-[#57588d] dark:bg-[#393967]";
 
 const stepCardClass =
   "relative flex h-full flex-col overflow-hidden rounded-xl bg-[#f5f7ff] p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]";
 
-const imageFrameClass = "relative mt-5 min-h-0 w-full flex-1 sm:mt-7";
-
 // The whole card tilts a different way per step for a hand-placed feel.
 const cardRotations = [
-  "-rotate-[3deg]",
-  "rotate-[3deg]",
-  "-rotate-[2.5deg]",
-  "rotate-[3deg]",
-  "-rotate-[2.5deg]",
+  "-rotate-[4deg]",
+  "rotate-[4deg]",
+  "-rotate-[3.5deg]",
+  "rotate-[4deg]",
+  "-rotate-[3.5deg]",
 ];
 
-const slideHeightClass = "h-[clamp(24rem,calc(100svh-16rem),38rem)]";
+// The source PNGs are already angled. Neutralize that baked-in angle so the
+// screenshot edges run parallel to the card that contains them.
+const imageCounterRotations = [
+  "rotate-[4deg]",
+  "-rotate-[4deg]",
+  "rotate-[3.5deg]",
+  "-rotate-[4deg]",
+  "rotate-[3.5deg]",
+];
+
+const slideHeightClass = "h-[clamp(26rem,calc(100svh-10rem),46rem)]";
 
 export function EducatorsWorkflowSection() {
   const t = useTranslations("EducatorsWorkflow");
@@ -111,7 +134,7 @@ export function EducatorsWorkflowSection() {
                   <motion.div className="flex flex-col" style={{ y: trackY }}>
                     {steps.map((step, index) => (
                       <article
-                        className={`shrink-0 px-1.5 py-5 sm:px-2.5 sm:py-7 ${slideHeightClass}`}
+                        className={`shrink-0 px-[8%] py-5 sm:py-7 ${slideHeightClass}`}
                         key={step.key}
                       >
                         <div
@@ -141,15 +164,18 @@ export function EducatorsWorkflowSection() {
                             {t(`steps.${step.key}.description`)}
                           </p>
 
-                          <div className={imageFrameClass}>
-                            <Image
-                              alt={t(`steps.${step.key}.imageAlt`)}
-                              className="object-contain object-center drop-shadow-[0_18px_25px_rgba(0,0,0,0.28)]"
-                              fill
-                              sizes="(max-width: 1023px) 90vw, 650px"
-                              src={step.imageSrc}
-                            />
-                          </div>
+                          <Image
+                            alt={t(`steps.${step.key}.imageAlt`)}
+                            className={`mt-5 h-auto w-full drop-shadow-[0_18px_25px_rgba(0,0,0,0.28)] sm:mt-7 ${
+                              imageCounterRotations[
+                                index % imageCounterRotations.length
+                              ]
+                            }`}
+                            height={step.imageHeight}
+                            sizes="(max-width: 1023px) 76vw, 560px"
+                            src={step.imageSrc}
+                            width={step.imageWidth}
+                          />
                         </div>
                       </article>
                     ))}
