@@ -6,7 +6,6 @@ import { useMemo, useState } from "react";
 import { toast } from "sonner";
 
 import { Stagger, StaggerItem } from "@/shared";
-import { Button } from "@/shared/components/ui/button";
 import { cn } from "@/shared/lib/utils";
 
 import {
@@ -141,23 +140,28 @@ export function ContactForm() {
   };
 
   return (
-    <div className="w-full max-w-[760px]">
+    <div
+      className={cn(
+        "w-full transition-[max-width] duration-300",
+        isSubmitted ? "max-w-[1488px]" : "max-w-[760px]",
+      )}
+    >
       <AnimatePresence mode="wait">
         {isSubmitted ? (
           <motion.div
             key="success"
             {...stepAnimation}
-            className="rounded-[24px] border border-[#e3e8f5] bg-white px-8 py-14 text-center shadow-[0_16px_38px_rgba(46,73,139,0.08)] dark:border-[#5a5f93] dark:bg-[#43407c] dark:shadow-[0_24px_70px_rgba(9,13,35,0.28)]"
+            className="flex min-h-[420px] flex-col items-center justify-center rounded-[20px] border border-[#e3e8f5] bg-white px-6 py-14 text-center shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:min-h-[520px] sm:px-10 dark:border-[#5a5f93] dark:bg-[#323261] dark:shadow-[0_24px_70px_rgba(9,13,35,0.28)] lg:min-h-[654px]"
           >
-            <div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#e6edff] dark:bg-[#31458d]">
-              <CircleCheckBig className="size-8 text-[#2f6dff]" />
+            <div className="flex size-20 items-center justify-center rounded-full bg-[#e6edff] sm:size-24 dark:bg-[#294383] lg:size-[120px]">
+              <CircleCheckBig className="size-10 text-[#2470ff] sm:size-12 lg:size-16" />
             </div>
-            <h2 className="mt-8 text-4xl font-medium text-[#141b34] dark:text-white">
+            <h2 className="mt-8 text-4xl font-normal text-[#141b34] sm:mt-12 sm:text-5xl dark:text-white lg:text-[4.5rem]">
               You&apos;re in.
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-base leading-8 text-[#5b6b8c] dark:text-white/64">
-              Please check your email for confirmation. A member of our team
-              will be in touch shortly.
+            <p className="mt-4 max-w-5xl text-base leading-7 text-[#5b6b8c] sm:mt-6 sm:text-xl sm:leading-8 dark:text-white/64 lg:text-[2rem] lg:leading-[1.4]">
+              We&apos;ll get back to you within 24 hours. Meanwhile, follow us
+              on socials.
             </p>
           </motion.div>
         ) : (
@@ -291,6 +295,7 @@ export function ContactForm() {
               <ContactStepShell
                 canProceed={canProceed && !isSubmitting}
                 isLastStep
+                isSubmitting={isSubmitting}
                 onBack={previousStep}
                 onNext={nextStep}
                 step={step}
@@ -307,17 +312,6 @@ export function ContactForm() {
                   placeholder="Tell us what you're looking for..."
                   value={formData.message}
                 />
-
-                {isSubmitting ? (
-                  <div className="mt-5 flex justify-end">
-                    <Button
-                      className="h-12 rounded-xl bg-[#245dff] px-5 text-sm font-semibold text-white"
-                      disabled
-                    >
-                      Sending...
-                    </Button>
-                  </div>
-                ) : null}
               </ContactStepShell>
             ) : null}
           </motion.div>
