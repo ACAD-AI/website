@@ -19,9 +19,10 @@ export function FeatureCard({
     <article className="flex h-full min-h-[150px] flex-col rounded-lg border border-[#e3e8f5] bg-white p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] transition-transform duration-300 hover:-translate-y-1 sm:p-6 dark:border-[#55578f] dark:bg-[#373764] dark:shadow-[0_0_18px_rgba(64,142,255,0.16)]">
       <span
         className={cn(
-          "flex items-center justify-center text-[#1836b2] text-center dark:text-[#8ed1f1]",
-          iconStyle === "tile" &&
-            "size-12 rounded-xl bg-[#1769ed] text-white shadow-[0_10px_24px_rgba(23,105,237,0.25)] dark:text-white",
+          "flex items-center text-[#1836b2] dark:text-[#8ed1f1]",
+          iconStyle === "tile"
+            ? "size-12 justify-center rounded-xl bg-[#1769ed] text-white shadow-[0_10px_24px_rgba(23,105,237,0.25)] dark:text-white"
+            : "justify-start",
         )}
       >
         <Icon

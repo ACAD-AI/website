@@ -35,7 +35,7 @@ export function ContactOptionCard({
   return (
     <button
       className={cn(
-        "flex min-h-20 flex-col items-start justify-center rounded-xl border border-[#e3e8f5] bg-[#f5f7ff] px-5 py-4 text-left transition-all hover:border-[#b9c6ea] hover:bg-[#eef2fc] dark:border-transparent dark:bg-[#1b2141] dark:hover:border-[#5f67a7] dark:hover:bg-[#20274b]",
+        "flex min-h-20 w-full flex-col items-start justify-center rounded-xl border border-[#e3e8f5] bg-[#f5f7ff] px-5 py-4 text-left transition-all hover:border-[#b9c6ea] hover:bg-[#eef2fc] dark:border-transparent dark:bg-[#1b2141] dark:hover:border-[#5f67a7] dark:hover:bg-[#20274b]",
         isActive &&
           "border-[#2d63ff] bg-[#eef2fc] shadow-[0_0_0_1px_rgba(45,99,255,0.75)] dark:bg-[#20274b]",
       )}

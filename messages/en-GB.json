@@ -194,23 +194,23 @@
         "imageAlt": "Acad AI examination creation dashboard"
       },
       "secure": {
-        "title": "Secure the Exam",
-        "description": "Set timing, access rules, and malpractice controls before students begin.",
+        "title": "Create a Student Group",
+        "description": "Organise learners into a group and get everyone ready for the examination.",
         "imageAlt": "Acad AI examination security settings"
       },
       "deliver": {
-        "title": "Share with Students",
-        "description": "Invite your class and deliver the assessment from one organised workspace.",
+        "title": "Publish Examination",
+        "description": "Set the examination live and share it with your students from one organised workspace.",
         "imageAlt": "Acad AI student examination delivery dashboard"
       },
       "grade": {
-        "title": "Grade Instantly",
-        "description": "Let Acad AI grade every response and produce clear, useful feedback in minutes.",
+        "title": "Review & Approve Results",
+        "description": "Review AI-graded responses, make final adjustments, and approve the results.",
         "imageAlt": "Acad AI automatic grading dashboard"
       },
       "review": {
-        "title": "Review and Publish",
-        "description": "Check results, make any final adjustments, and release feedback when you're ready.",
+        "title": "Export & Share",
+        "description": "Export organised results and share clear feedback when you're ready.",
         "imageAlt": "Acad AI results review dashboard"
       }
     }

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, Loader2, Sparkles } from "lucide-react";
 
 import { Button } from "@/shared/components/ui/button";
 import { cn } from "@/shared/lib/utils";
@@ -8,6 +8,7 @@ interface ContactStepShellProps {
   canProceed?: boolean;
   children: React.ReactNode;
   isLastStep?: boolean;
+  isSubmitting?: boolean;
   onBack: () => void;
   onNext: () => void;
   step: number;
@@ -19,6 +20,7 @@ export function ContactStepShell({
   canProceed = true,
   children,
   isLastStep = false,
+  isSubmitting = false,
   onBack,
   onNext,
   step,
@@ -69,8 +71,12 @@ export function ContactStepShell({
         >
           {isLastStep ? (
             <>
-              <Sparkles className="size-4" />
-              Submit
+              {isSubmitting ? (
+                <Loader2 className="size-4 animate-spin" />
+              ) : (
+                <Sparkles className="size-4" />
+              )}
+              {isSubmitting ? "Submitting..." : "Submit"}
             </>
           ) : (
             <>

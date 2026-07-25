@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { BookOpenText } from "lucide-react";
+import { FilePlus2, ListChecks, Send, Share2, UsersRound } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
@@ -13,22 +13,27 @@ import { ONBOARDING_URL } from "@/shared/config/site";
 const steps = [
   {
     key: "create",
+    icon: FilePlus2,
     imageSrc: "/images/educators-guide/create-exam.png",
   },
   {
     key: "secure",
+    icon: UsersRound,
     imageSrc: "/images/educators-guide/create-student-group.png",
   },
   {
     key: "deliver",
+    icon: Send,
     imageSrc: "/images/educators-guide/publsh-exam.png",
   },
   {
     key: "grade",
+    icon: ListChecks,
     imageSrc: "/images/educators-guide/review-and-approve.png",
   },
   {
     key: "review",
+    icon: Share2,
     imageSrc: "/images/educators-guide/export-and-share.png",
   },
 ] as const;
@@ -38,18 +43,17 @@ const sharedFrameClass =
   "overflow-hidden rounded-md border border-[#2740c9] bg-[#2433c9] p-3 shadow-[0_24px_65px_rgba(7,15,51,0.32)] sm:p-4 lg:border-[#57588d] lg:bg-[#393967]";
 
 const stepCardClass =
-  "flex h-full flex-col overflow-hidden rounded-xl bg-[#f5f7ff] p-5 pb-7 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 sm:pb-9 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]";
+  "relative flex h-full flex-col overflow-hidden rounded-xl bg-[#f5f7ff] p-5 shadow-[0_16px_38px_rgba(46,73,139,0.08)] sm:p-7 dark:bg-[#141b34] dark:shadow-[0_25px_55px_rgba(0,0,0,0.3)]";
 
-const imageFrameClass =
-  "mx-auto mt-8 aspect-[872/627] w-[88%] overflow-hidden rounded-xl shadow-[0_18px_36px_rgba(0,0,0,0.25)]";
+const imageFrameClass = "relative mt-5 min-h-0 w-full flex-1 sm:mt-7";
 
 // The whole card tilts a different way per step for a hand-placed feel.
 const cardRotations = [
   "-rotate-[3deg]",
-  "rotate-[2.5deg]",
-  "-rotate-[2deg]",
   "rotate-[3deg]",
-  "-rotate-[1.5deg]",
+  "-rotate-[2.5deg]",
+  "rotate-[3deg]",
+  "-rotate-[2.5deg]",
 ];
 
 const slideHeightClass = "h-[clamp(24rem,calc(100svh-16rem),38rem)]";
@@ -107,7 +111,7 @@ export function EducatorsWorkflowSection() {
                   <motion.div className="flex flex-col" style={{ y: trackY }}>
                     {steps.map((step, index) => (
                       <article
-                        className={`shrink-0 px-3 py-5 sm:px-5 sm:py-7 ${slideHeightClass}`}
+                        className={`shrink-0 px-1.5 py-5 sm:px-2.5 sm:py-7 ${slideHeightClass}`}
                         key={step.key}
                       >
                         <div
@@ -115,34 +119,36 @@ export function EducatorsWorkflowSection() {
                             cardRotations[index % cardRotations.length]
                           }`}
                         >
-                          <div className="flex items-start justify-between gap-5">
-                            <BookOpenText
+                          <div className="flex min-h-8 items-start">
+                            <step.icon
                               aria-hidden="true"
-                              className="size-8 text-[#1836b2] dark:text-[#86c7ed]"
+                              className="size-6 text-[#1836b2] sm:size-8 dark:text-[#86c7ed]"
                               strokeWidth={1.7}
                             />
-                            <span className="text-7xl leading-none font-medium text-[#c2cbe4] sm:text-8xl dark:text-[#55568d]">
-                              {String(index + 1).padStart(2, "0")}
-                            </span>
                           </div>
 
-                          <h3 className="mt-6 text-2xl font-medium text-[#141b34] sm:text-3xl dark:text-white">
+                          <span
+                            aria-hidden="true"
+                            className="pointer-events-none absolute -top-4 right-3 text-[5rem] leading-none font-medium text-[#c2cbe4]/65 sm:-top-7 sm:right-5 sm:text-[7rem] dark:text-[#62639b]/75"
+                          >
+                            {String(index + 1).padStart(2, "0")}
+                          </span>
+
+                          <h3 className="relative mt-4 pr-16 text-xl font-medium text-[#141b34] sm:mt-5 sm:pr-24 sm:text-3xl dark:text-white">
                             {t(`steps.${step.key}.title`)}
                           </h3>
-                          <p className="mt-3 text-base leading-7 text-[#5b6b8c] dark:text-white/65">
+                          <p className="relative mt-2 pr-4 text-sm leading-6 text-[#5b6b8c] sm:mt-3 sm:text-base sm:leading-7 dark:text-white/65">
                             {t(`steps.${step.key}.description`)}
                           </p>
 
                           <div className={imageFrameClass}>
-                            <div className="relative h-full w-full">
-                              <Image
-                                alt={t(`steps.${step.key}.imageAlt`)}
-                                className="object-cover object-top"
-                                fill
-                                sizes="(max-width: 1023px) 100vw, 650px"
-                                src={step.imageSrc}
-                              />
-                            </div>
+                            <Image
+                              alt={t(`steps.${step.key}.imageAlt`)}
+                              className="object-contain object-center drop-shadow-[0_18px_25px_rgba(0,0,0,0.28)]"
+                              fill
+                              sizes="(max-width: 1023px) 90vw, 650px"
+                              src={step.imageSrc}
+                            />
                           </div>
                         </div>
                       </article>
