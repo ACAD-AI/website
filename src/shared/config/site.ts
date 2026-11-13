@@ -11,7 +11,7 @@ export const siteConfig = {
 } as const;
 
 export const ONBOARDING_URL = "https://app.acadai.co/login";
-export const CALENDAR_URL = "https://calendar.app.google/MkkGLysHBcHBFp8TA";
+export const CALENDAR_URL = "https://calendar.app.google/iwit91NiXXAVcRv88";
 export const STUDENT_COMMUNITY_URL =
   "https://chat.whatsapp.com/J8nwVNVkZK3Jw1521hhAjs";
 export const CONTACT_URL = "/company/contact";
