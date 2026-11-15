@@ -139,7 +139,7 @@ function StudentPlanCard({
     <button
       aria-pressed={isSelected}
       className={cn(
-        "flex h-full w-full flex-col rounded-[16px] border bg-white p-5 text-left shadow-[0_16px_38px_rgba(46,73,139,0.08)] transition-colors sm:p-6 dark:bg-[#433f7d] dark:shadow-[0_24px_60px_rgba(9,13,35,0.18)]",
+        "relative flex h-full w-full flex-col overflow-hidden rounded-[16px] border bg-white p-5 text-left shadow-[0_16px_38px_rgba(46,73,139,0.08)] transition-colors sm:p-6 dark:bg-[#433f7d] dark:shadow-[0_24px_60px_rgba(9,13,35,0.18)]",
         isSelected
           ? "border-[#2d6aff] ring-2 ring-[#2d6aff] dark:border-[#8ab5ff] dark:ring-[#8ab5ff]"
           : "border-[#e3e8f5] hover:border-[#b9c4e6] dark:border-[#595f93]",
@@ -147,32 +147,35 @@ function StudentPlanCard({
       onClick={onSelect}
       type="button"
     >
-      <div className="flex w-full items-start justify-between gap-4">
-        <div>
-          <h3 className="text-[2rem] leading-tight font-medium text-[#141b34] dark:text-white">
-            {plan.name}
-          </h3>
-          <p className="mt-2 text-sm leading-7 text-[#5b6b8c] dark:text-white/58">
-            {plan.billing}
-          </p>
-        </div>
+      {plan.badge ? (
+        <span
+          className={cn(
+            "absolute top-0 right-0 rounded-bl-xl px-3 py-1 text-xs font-semibold whitespace-nowrap text-white",
+            plan.badgeTone === "success" ? "bg-[#22c55e]" : "bg-[#2d6aff]",
+          )}
+        >
+          {plan.badge}
+        </span>
+      ) : null}
 
-        {plan.badge ? (
-          <span
-            className={cn(
-              "inline-flex shrink-0 rounded-full px-3 py-1 text-xs font-semibold text-white",
-              plan.badgeTone === "success" ? "bg-[#22c55e]" : "bg-[#2d6aff]",
-            )}
-          >
-            {plan.badge}
-          </span>
+      <div className="w-full pt-2">
+        <h3 className="text-[2rem] leading-tight font-medium text-[#141b34] dark:text-white">
+          {plan.name}
+        </h3>
+        {plan.note ? (
+          <p className="mt-1 text-sm text-[#1836b2] dark:text-[#8ab5ff]">
+            {plan.note}
+          </p>
         ) : null}
+        <p className="mt-2 text-sm leading-7 text-[#5b6b8c] dark:text-white/58">
+          {plan.billing}
+        </p>
       </div>
 
       {price ? (
         <div className="mt-auto space-y-2 pt-6">
-          <p className="flex items-baseline gap-2">
-            <span className="text-[2.3rem] leading-none font-semibold text-[#141b34] dark:text-white">
+          <p className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+            <span className="text-[2.3rem] leading-none font-semibold md:text-[1.9rem] lg:text-[2.3rem] text-[#141b34] dark:text-white">
               {price.weekly}
             </span>
             <span className="text-sm text-[#5b6b8c] dark:text-white/58">
@@ -184,11 +187,6 @@ function StudentPlanCard({
               </span>
             ) : null}
           </p>
-          {plan.note ? (
-            <p className="text-sm text-[#1836b2] dark:text-[#8ab5ff]">
-              {plan.note}
-            </p>
-          ) : null}
         </div>
       ) : null}
     </button>
