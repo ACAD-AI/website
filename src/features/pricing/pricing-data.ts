@@ -101,7 +101,7 @@ export const studentPricing: StudentPricingContent = {
       billing: "Billed every 13 weeks",
       badge: "Most popular",
       badgeTone: "primary",
-      prices: { NGN: { weekly: "₦799", original: "₦999" } },
+      prices: { NGN: { weekly: "₦599", original: "₦799" } },
     },
     {
       id: "students-yearly",
