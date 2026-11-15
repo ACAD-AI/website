@@ -1,5 +1,5 @@
-import { Link } from "@/i18n/navigation";
 import { FadeIn } from "@/shared";
+import { CALENDAR_URL } from "@/shared/config/site";
 
 interface InstitutionsHeroSectionProps {
   button: string;
@@ -29,12 +29,14 @@ export function InstitutionsHeroSection({
           <p className="mt-8 max-w-3xl text-base leading-8 text-[#5b6b8c] sm:text-lg dark:text-white/65">
             {description}
           </p>
-          <Link
+          <a
             className="mt-10 inline-flex items-center justify-center rounded-xl border border-[#3479ff] bg-[#1836b2] px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-[#2350d5]"
-            href="/company/contact"
+            href={CALENDAR_URL}
+            rel="noreferrer"
+            target="_blank"
           >
             {button}
-          </Link>
+          </a>
         </FadeIn>
       </div>
     </section>
