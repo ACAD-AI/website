@@ -20,6 +20,7 @@ import {
 } from "./pricing-data";
 import { PricingPlanCard } from "./pricing-plan-card";
 import type { PricingAudience } from "./pricing-types";
+import { StudentPricing } from "./student-pricing";
 
 export function PricingSection() {
   const [activeAudience, setActiveAudience] =
@@ -32,6 +33,7 @@ export function PricingSection() {
 
   const hasPlans = Boolean(content.plans?.length);
   const isInstitutions = activeAudience === "institutions";
+  const isStudents = activeAudience === "students";
 
   return (
     <section className="relative overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
@@ -73,7 +75,11 @@ export function PricingSection() {
         </div>
 
         <div className="w-full max-w-4xl">
-          {isInstitutions ? (
+          {isStudents ? (
+            <FadeIn key="students">
+              <StudentPricing />
+            </FadeIn>
+          ) : isInstitutions ? (
             <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
               <h2 className="text-[2.8rem] leading-tight font-medium text-[#141b34] sm:text-5xl dark:text-white">
                 {content.title}
@@ -101,12 +107,7 @@ export function PricingSection() {
             <div className="space-y-16">
               {hasPlans ? (
                 <Stagger
-                  className={cn(
-                    "grid gap-4",
-                    activeAudience === "students"
-                      ? "mx-auto max-w-107.5"
-                      : "md:grid-cols-2",
-                  )}
+                  className="grid gap-4 md:grid-cols-2"
                   key={activeAudience}
                 >
                   {content.plans?.map((plan) => (
