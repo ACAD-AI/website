@@ -1,6 +1,10 @@
 import { ONBOARDING_URL } from "@/shared/config/site";
 
-import type { PricingAudience, PricingAudienceContent } from "./pricing-types";
+import type {
+  PricingAudience,
+  PricingAudienceContent,
+  StudentPricingContent,
+} from "./pricing-types";
 
 export const pricingTabLabels: Record<PricingAudience, string> = {
   educators: "Educators",
@@ -72,29 +76,54 @@ export const pricingContent: Record<PricingAudience, PricingAudienceContent> = {
   },
   students: {
     audience: "students",
-    bullets: [
-      "Generate up to 60 flashcards instantly from one material or text.",
-      "Generate up to 100 questions in a practice quiz from one material or text.",
-      "Grade and review your practice quiz",
-    ],
     ctaHref: ONBOARDING_URL,
-    ctaLabel: "Get Free Credits on Signup. No Card Needed",
-    description:
-      "We use a credit system to make it easier and more cost-effective for students to generate flashcards and practice quizzes with AI.",
-    infoDescription:
-      "Each credit is a flexible unit that can be used for any of these actions:",
-    infoTitle: "What is one credit?",
-    plans: [
-      {
-        credits: "5 Credits",
-        ctaHref: ONBOARDING_URL,
-        ctaLabel: "Get started",
-        description: "Get as much credit as you require",
-        id: "students-credits",
-        price: "₦250",
-        unitPrice: "₦ 50 per credit",
-      },
-    ],
-    title: "Pay for what you use",
+    ctaLabel: "Get started",
+    description: "One plan. Full access. Cancel anytime.",
+    title: "Unlock your study plan",
   },
+};
+
+export const studentPricing: StudentPricingContent = {
+  title: "Unlock your study plan",
+  description: "One plan. Full access. Cancel anytime.",
+  defaultPlanId: "students-semester",
+  plans: [
+    {
+      id: "students-monthly",
+      name: "Monthly",
+      billing: "Billed monthly",
+      prices: { NGN: { weekly: "₦999" } },
+    },
+    {
+      id: "students-semester",
+      name: "Semester",
+      note: "First semester only",
+      billing: "Billed every 13 weeks",
+      badge: "Most popular",
+      badgeTone: "primary",
+      prices: { NGN: { weekly: "₦799", original: "₦999" } },
+    },
+    {
+      id: "students-yearly",
+      name: "Yearly",
+      billing: "Billed every 52 weeks",
+      badge: "Best Value",
+      badgeTone: "success",
+      prices: { NGN: { weekly: "₦499" } },
+    },
+  ],
+  featuresTitle: "All plans include",
+  features: [
+    "Unlimited study materials",
+    "Unlimited personalized exam prep plans",
+    "Unlimited courses",
+    "Unlimited study reminders",
+    "Unlimited practice quizzes with feedback",
+    "Unlimited AI flashcards",
+    "Unlimited AI summary notes",
+    "Unlimited AI tutoring",
+    "Priority support",
+  ],
+  ctaHref: ONBOARDING_URL,
+  footnote: "You can cancel anytime. No hidden fees.",
 };
